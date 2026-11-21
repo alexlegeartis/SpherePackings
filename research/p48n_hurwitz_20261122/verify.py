@@ -1,6 +1,7 @@
-"""Verify the P48n quaternionic gluing and replay the seed coset exclusion."""
+"""Verify the P48n quaternionic gluing and replay its coset exclusions."""
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor
 import hashlib
 from fractions import Fraction
 from itertools import product
@@ -25,10 +26,11 @@ ENUMERATOR = (HERE.parent / "covering_and_deep_cosets_20261115"
 FLAGS = ["-O3", "-std=c++17", "-fno-fast-math", "-ffp-contract=off", "-DCUTOFF=12"]
 BASE_COMMIT = "9a9851887da20ca75825342bfb09e8ab031f4153"
 ROOT_GRAM = [
-    [2, 1, 0, 0],
-    [1, 2, 1, 1],
-    [0, 1, 2, 0],
-    [0, 1, 0, 2],
+    [2, 1, 0, 0, -1],
+    [1, 2, 1, 1, 0],
+    [0, 1, 2, 0, 0],
+    [0, 1, 0, 2, 0],
+    [-1, 0, 0, 0, 2],
 ]
 
 
@@ -52,7 +54,7 @@ def catalogue_gram():
     return gram
 
 
-def interval_inputs(gram, residue):
+def interval_inputs(gram, residues):
     matrix = sympy.Matrix(gram.tolist())
     lower, diagonal = matrix.LDLdecomposition(hermitian=False)
     assert lower * diagonal * lower.T == matrix
@@ -69,38 +71,34 @@ def interval_inputs(gram, residue):
     return {
         "ldl.txt": "".join(ldl),
         "gram.txt": "".join(map(line, gram.tolist())),
-        "seed.txt": line(residue),
+        **{f"{name}.txt": line(residue) for name, residue in residues.items()},
         "control.txt": line(control),
     }
 
 
-def root_parities(parent, operators):
+def roots():
     gram = fmpz_mat(ROOT_GRAM)
     assert gram.det() == 4
-    assert all(fmpz_mat([row[:k] for row in ROOT_GRAM[:k]]).det() > 0 for k in range(1, 5))
+    assert all(fmpz_mat([row[:k] for row in ROOT_GRAM[:k]]).det() > 0 for k in range(1, 6))
     inverse = gram.inv()
     # A coefficient outside [-2,2] violates z_i^2 <= 2*(Gram^-1)_ii for roots.
-    assert all(2*inverse[i, i] < 9 for i in range(4))
-    root_colors = set()
-    root_count = 0
-    for z in product(range(-2, 3), repeat=4):
+    assert all(2*inverse[i, i] < 9 for i in range(5))
+    out = []
+    for z in product(range(-2, 3), repeat=5):
         row = fmpz_mat([z])
         if (row * gram * row.transpose())[0, 0] == 2:
-            operator = sum((k*A for k, A in zip(z, operators)), fmpz_mat(48, 48))
-            assert operator * parent * operator.transpose() == parent
-            root_colors.add(tuple(k % 2 for k in z))
-            root_count += 1
-    assert root_count == 24 and len(root_colors) == 12 and (0, 0, 0, 0) not in root_colors
-    return root_colors
+            out.append(z)
+    assert len(out) == 40 and sum(z[4] == 0 for z in out) == 24
+    return out
 
 
 def density_rows(parent, lifts):
-    old_file = HERE.parent / "adaptive_layers_20261115" / "p48_results.json"
     old = {row["dimension"]: Fraction(row["density_squared"])
-           for row in json.loads(old_file.read_text())["rows"]}
+           for name in ("p48_results.json", "section53_results.json")
+           for row in json.loads((HERE.parent / "adaptive_layers_20261115" / name).read_text())["rows"]}
     pi_lower, _ = pi_interval()
     rows = []
-    for r in (3, 4):
+    for r in (3, 4, 5):
         n = 48 + r
         vertical = fmpq_mat([row[:r] for row in ROOT_GRAM[:r]])
         B = fmpq_mat(lifts.tolist()[:r])
@@ -135,38 +133,63 @@ def setup():
     assert X*X == Y*Y == -ident and X*Y == -Y*X
     assert 2*U == ident + X + Y + X*Y
     operators = [ident, U, X, Y]
-    colors = root_parities(parent, operators)
+    root_list = roots()
+    for z in root_list:
+        if z[4] == 0:
+            operator = sum((k*A for k, A in zip(z, operators)), fmpz_mat(48, 48))
+            assert operator * parent * operator.transpose() == parent
 
     change = fmpz_mat(saved["unimodular_basis_change"])
     assert abs(change.det()) == 1
     reduced = change * parent * change.transpose()
-    residue = saved["seed_residue_in_reduced_basis"]
-    assert set(residue) <= {0, 1} and len(residue) == 48 and any(residue)
+    residue, fifth = (saved[f"{name}_residue_in_reduced_basis"] for name in ("seed", "fifth"))
+    for bits in [residue, fifth]:
+        assert set(bits) <= {0, 1} and len(bits) == 48 and any(bits)
     seed = fmpz_mat([residue]) * change
-    assert (seed * parent * seed.transpose())[0, 0] % 4 == 0
-    lifts = fmpz_mat([[int(x % 2) for x in (seed*A).tolist()[0]] for A in operators])
+    extra = fmpz_mat([fifth]) * change
+
+    def parity(row):
+        return tuple(int(x % 2) for x in row.tolist()[0])
+
+    lifts = fmpz_mat([parity(seed*A) for A in operators] + [parity(extra)])
     seen = set()
-    for color in product((0, 1), repeat=4):
+    for color in product((0, 1), repeat=5):
         if any(color):
             row = fmpz_mat([color]) * lifts
-            parity = tuple(int(x % 2) for x in row.tolist()[0])
-            assert any(parity) and parity not in seen
-            seen.add(parity)
+            label = parity(row)
+            assert any(label) and label not in seen
+            seen.add(label)
             # A nonroot class needs depth 2; squared norms are 0 mod 4.
-            if color not in colors:
-                assert (row * parent * row.transpose())[0, 0] % 4 == 0
-    assert len(seen) == 15
-    return interval_inputs(reduced, residue), reduced, density_rows(parent, lifts)
+            assert (row * parent * row.transpose())[0, 0] % 4 == 0
+    assert len(seen) == 31
+
+    new_labels = {parity(fmpz_mat([z]) * lifts) for z in root_list if z[4]}
+    assert len(new_labels) == 8
+    # The signed quaternion group acts through I, X, Y, XY on binary classes.
+    group = [ident, X, Y, X*Y]
+    assert all(A*parent*A.transpose() == parent for A in group)
+    change_inv = change.inv()
+    to_reduced = fmpz_mat([[int(x) for x in row] for row in change_inv.tolist()])
+    assert to_reduced * change == ident
+    residues = {"seed": residue}
+    remaining = set(new_labels)
+    while remaining:
+        label = fmpz_mat([min(remaining)])
+        residues[f"fifth_{len(residues)}"] = parity(label * to_reduced)
+        remaining.difference_update(parity(label * A) for A in group)
+    assert len(residues) == 6
+    return interval_inputs(reduced, residues), reduced, density_rows(parent, lifts)
 
 
 def check_reports(reports, reduced, inputs):
-    seed = reports["seed"]
     control = reports["control"]
-    for a in [seed, control]:
+    assert set(reports) == {name[:-4] for name in inputs if name not in ("ldl.txt", "gram.txt")}
+    for name, a in reports.items():
         assert a["cutoff"] == 12 and a["shard_id"] == 0 and a["shard_count"] == 1
         assert a["prefixes"] == a["assigned_prefixes"] > 0
-    assert seed["status"] == "COMPLETE" and not seed["found"]
-    assert seed["norm"] == -1 and not seed["witness"]
+        if name != "control":
+            assert a["status"] == "COMPLETE" and not a["found"]
+            assert a["norm"] == -1 and not a["witness"]
     assert control["status"] == "EXACT_REJECT" and control["found"] and control["norm"] == 6
     z = fmpz_mat([control["witness"]])
     assert (z * reduced * z.transpose())[0, 0] == 6
@@ -180,15 +203,20 @@ def replay(inputs):
             (path / name).write_text(text)
         binary = path / "exclude"
         subprocess.run(["g++", *FLAGS, str(ENUMERATOR), "-o", str(binary)], check=True)
-        reports = {}
-        for name, expected_code in [("control", 1), ("seed", 0)]:
+        def run(name):
+            expected_code = int(name == "control")
             process = subprocess.run([str(binary), "ldl.txt", "gram.txt", name + ".txt", "0", "1"],
                                      cwd=path, capture_output=True, text=True)
             if process.returncode != expected_code:
                 raise RuntimeError(process.stdout + process.stderr)
-            reports[name] = json.loads(process.stdout)
-            del reports[name]["seconds"]
-        return reports
+            report = json.loads(process.stdout)
+            del report["seconds"]
+            print(name, report["status"], flush=True)
+            return name, report
+
+        names = [name[:-4] for name in inputs if name not in ("ldl.txt", "gram.txt")]
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            return dict(pool.map(run, names))
 
 
 if __name__ == "__main__":

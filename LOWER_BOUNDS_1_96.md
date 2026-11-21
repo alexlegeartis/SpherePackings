@@ -61,7 +61,7 @@ challenge value is discussed in that proof.
 | 50 | 2.52244663789755e-9 | [P48q deep plane and fitted vertical metric](research/adaptive_layers_20261115/results.json) |
 | 51 | 9.34489307985541e-10 | [Explicit P48n quaternionic lattice](research/p48n_hurwitz_20261122/README.md) |
 | 52 | 3.95931817049999e-10 | [Explicit P48n quaternionic lattice](research/p48n_hurwitz_20261122/README.md) |
-| 53 | 1.49670565105724e-10 | [Explicit primitive section of Leterrier54](research/adaptive_layers_20261115/results.json) |
+| 53 | 1.66176494990127e-10 | [Explicit P48n quaternionic lattice](research/p48n_hurwitz_20261122/README.md) |
 | 54 | 1.46699394710872e-10 | [Leterrier54, Corollary 1.4 (2022)](https://doi.org/10.1007/s40993-022-00321-0) |
 | 55 | 7.47532795256284e-11 | [Cross-coset tilted lamination of Leterrier54](research/cross_coset55_20261116/PROOF.md) |
 | 56 | 5.35530073542807e-11 | [Shioda MW56](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) |
