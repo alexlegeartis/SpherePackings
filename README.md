@@ -11,6 +11,8 @@ Reproducible certificates for unrestricted sphere packings, lattice-only upper b
 
 ## Recent updates
 
+**22 November:** explicit minimum-6 lattices improve the preceding **51D** and **52D** lower bounds by **17.2603%** and **37.5%**. A nine-translate periodic packing improves **96D** by **2.2869%**. New lattice existence bounds cover **93–96D**. [51–52D proof](research/p48n_hurwitz_20261122/) · [93–96D proofs](research/mw92_extensions_20261122/) · [Complete 1–96D lower-bound table](LOWER_BOUNDS_1_96.md).
+
 **18 November:** seven independently verified unrestricted upper-bound improvements in **17–23D**, reducing the previous repository upper bounds by **0.319–1.498%**. [Exact before/after values and verification scope](CHANGES_20261118.md).
 
 <details>
@@ -103,6 +105,8 @@ Lower bounds in 38D–42D use the lattice sections of [Dorofeev–Sun–Wang, Th
 
 ## Packing constructions: lower bounds
 
+[All occupied-density lower bounds in dimensions 1–96](LOWER_BOUNDS_1_96.md).
+
 **17 November binary-CM update:** certified 57D **≥1.61599884109140e-11** and 58D **≥5.58243739609337e-12**. [Exact parent, complete independent coset exclusion and extension proof](research/packing_binary57_58_20261117/). Comparisons retain the pre-existing published-source consequences, not our own preceding constructions.
 
 **17 November update: six independently audited periodic packing improvements in 85D–90D.** The table compares with attributable external constructions and certified consequences of published theorems, not our own preceding results. [Exact construction and replay](research/packing_release8590_20261117/) · [External attribution, exact gain checks and separate internal progress](research/external_comparison85_90_20261117/). Previous constructions remain available.
@@ -119,8 +123,8 @@ The [literature review dated 16 November 2026](research/covering_and_deep_cosets
 | 36 | ≈6.1615e-7<br>[KP36 code-based lattice — Kschischang–Pasupathy (1992)](https://doi.org/10.1109/18.119683) · [Catalogue parameters](https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/KP36.html) | ≈7.3303e-7<br>[Contact-preserving metric deformation; exact Gram matrix and complete minimum certificate](constructions/dim36/) | 18.97% |
 | 49 | ≈4.128837170599e-9 (**derived**)<br>P48q × A1 — [Bos–Conway–Sloane (1982), §5](https://neilsloane.com/doc/Me103.pdf); [exact comparison](research/covering_and_deep_cosets_20261115/literature_comparisons.json) | ≈7.151355755657e-9<br>[Explicit deeper P48q half-coset; full minimum certificate](research/covering_and_deep_cosets_20261115/DEEPER_PROOF.md) | **73.205081%** |
 | 50 | ≈8.408155459659e-10 (**derived**)<br>P48q × A2 — [Bos–Conway–Sloane (1982), §5](https://neilsloane.com/doc/Me103.pdf); [exact comparison](research/covering_and_deep_cosets_20261115/literature_comparisons.json) | ≈2.522446637898e-9<br>[Deep plane + fitted metric; explicit minimum-6 lattice](research/adaptive_layers_20261115/P48_PROOF.md) | **200.000000%** |
-| 51 | ≈1.798425511734e-10 (**derived**)<br>P48q × A3 — [Bos–Conway–Sloane (1982), §5](https://neilsloane.com/doc/Me103.pdf); [exact comparison](research/covering_and_deep_cosets_20261115/literature_comparisons.json) | ≈7.969351595567e-10<br>[Deep plane + fitted metric; explicit minimum-6 lattice](research/adaptive_layers_20261115/P48_PROOF.md) | **343.129368%** |
-| 52 | ≈1.094979637686e-10 (**derived**)<br>Two Blichfeldt sections of Leterrier54 — [Leterrier (2022), Corollary 1.4](https://doi.org/10.1007/s40993-022-00321-0); [derivation](research/range48_96_20261115/verify_range.py) | ≈2.879504124e-10<br>[Deep plane + fitted metric; explicit minimum-6 lattice](research/adaptive_layers_20261115/P48_PROOF.md) | **162.973303%** |
+| 51 | ≈1.798425511734e-10 (**derived**)<br>P48q × A3 — [Bos–Conway–Sloane (1982), §5](https://neilsloane.com/doc/Me103.pdf); [exact comparison](research/covering_and_deep_cosets_20261115/literature_comparisons.json) | **≥9.34489307985541e-10**<br>[Explicit P48n quaternionic lattice](research/p48n_hurwitz_20261122/) | **419.615242%** |
+| 52 | ≈1.094979637686e-10 (**derived**)<br>Two Blichfeldt sections of Leterrier54 — [Leterrier (2022), Corollary 1.4](https://doi.org/10.1007/s40993-022-00321-0); [derivation](research/range48_96_20261115/verify_range.py) | **≥3.95931817049999e-10**<br>[Explicit P48n quaternionic lattice](research/p48n_hurwitz_20261122/) | **261.588292%** |
 | 53 | ≈1.256125809644e-10 (**derived**)<br>One Blichfeldt section of Leterrier54 — [Leterrier (2022), Corollary 1.4](https://doi.org/10.1007/s40993-022-00321-0); [comparison derivation](research/range48_96_20261115/verify_range.py) | ≈1.496705651057e-10<br>[Primitive dual normal; explicit minimum-10 lattice](research/adaptive_layers_20261115/SECTION53_PROOF.md) | **19.152528%** |
 | 57 | ≈8.85119018168e-12 (**derived**)<br>MW56 × A1 — [Schütt–Shioda, Theorem 13.35, p=29](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) | **≥1.61599884109140e-11**<br>[Exact depth-7 Mordell–Weil half-coset extension](research/packing_binary57_58_20261117/) | **82.574186%** |
 | 58 | ≈4.474935526505e-12 (**derived**)<br>Γ72 perpendicular to a rank-14 Leech block — [Nebe (2012), §4.2](https://arxiv.org/abs/1008.2862); [exact derived section](research/novel_routes_20261113/audits/verify_gamma72_leech_sections.py) | **≥5.58243739609337e-12**<br>[Exact depth-7 Mordell–Weil half-coset extension with complex-multiplication triangular layers](research/packing_binary57_58_20261117/) | **24.749002%** |
@@ -156,7 +160,7 @@ The [literature review dated 16 November 2026](research/covering_and_deep_cosets
 | 93 | ≈1.702354782363e-20 (**derived**)<br>MW92 × A1 — [Schütt–Shioda, Theorem 13.35, p=47](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) | ≈3.045563378489e-20<br>[Cubic covering bound + colored layers; periodic existence proof](research/adaptive_layers_20261115/COVERING_PROOF.md) | **78.902977%** |
 | 94 | ≈2.534314091589e-21 (**derived**)<br>MW92 × A2 — [Schütt–Shioda, Theorem 13.35, p=47](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) | **≥7.84434540405174e-21**<br>[Anisotropic parallelogram torus offsets + parity-weighted planar layers; periodic existence](research/mw92_flags9495_verified_20261117/) | **209.525383%** |
 | 95 | ≈3.980717377502e-22 (**derived**)<br>MW92 × A3 — [Schütt–Shioda, Theorem 13.35, p=47](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) | **≥2.06770138493108e-21**<br>[Recursive binary torus-offset flags + weighted A3 parity layers; periodic existence](research/mw92_flags9495_verified_20261117/) | **419.429336%** |
-| 96 | ≈2.795023294827e-22<br>P48q-based lattice — [Bos–Conway–Sloane (1982), Eq. (15), Table 1, p.177](https://neilsloane.com/doc/Me103.pdf); exact center density `3^48/2^24` | ≈6.111066241809e-22<br>[Cubic covering bound + colored layers; periodic existence proof](research/adaptive_layers_20261115/COVERING_PROOF.md) | **118.640977%** |
+| 96 | ≈2.795023294827e-22<br>P48q-based lattice — [Bos–Conway–Sloane (1982), Eq. (15), Table 1, p.177](https://neilsloane.com/doc/Me103.pdf); exact center density `3^48/2^24` | **≥6.25082581067615e-22**<br>[MW92 nine-translate periodic packing](research/mw92_extensions_20261122/) | **123.6412%** |
 
 **Scope:** Some rows are existence bounds, not explicit packings. Named comparisons include derived guarantees; they do not establish exhaustive priority. [Sources and exact gains](research/covering_and_deep_cosets_20261115/PRIORITY.md) · [Full audit and research notes](RELEASE_NOTES_20261117.md#packing-comparison-and-research-notes).
 
@@ -226,6 +230,8 @@ For the upper-bound suite, Python 3.12 or newer and a C++20 compiler are require
 Never disable assertions (`python -O`). No optimization solver or network is needed after dependency installation. The 48D compact triangle replay may take several minutes. Logs record the original audits; fresh replay is recommended. No GitHub Actions workflow is installed.
 
 The separate 36D lower-bound replay is `python constructions/dim36/verify_all.py`; it requires SymPy and a C++17 compiler and performs the complete minimum enumeration. It is not silently included in the historical upper-bound suite.
+
+The [51–52D lattice certificate](research/p48n_hurwitz_20261122/#replay) includes a full minimum replay. The [93–96D proofs](research/mw92_extensions_20261122/#replay) and the [1–96D table](LOWER_BOUNDS_1_96.md) can be checked with the Python standard library.
 
 ## Layout
 
