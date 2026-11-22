@@ -2,7 +2,7 @@
 
 ## Current lattice upper bounds in dimensions 9–48
 
-These bounds apply to every full-rank lattice packing in the stated dimension. They tighten **34 of 36** rows in N. Zubrilina’s *Lattice sphere-packing density bounds through dimension 48*, with **2** ties. The largest reduction against that benchmark is **0.027892% in 37D**. [Benchmark and pinned revision](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/COMPARISON.md) · [Machine-readable bounds](LATTICE_UPPER_BOUNDS_9_48.json)
+These bounds apply to every full-rank lattice packing in the stated dimension. They tighten **35 of 36** rows in N. Zubrilina’s *Lattice sphere-packing density bounds through dimension 48*, with equality in **24D**. The largest reduction against that benchmark is **0.027892% in 37D**. [Benchmark and pinned revision](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/COMPARISON.md) · [Machine-readable bounds](LATTICE_UPPER_BOUNDS_9_48.json)
 
 The prior project column uses the registry before the 22 November follow-ups. A dash indicates that the corresponding source has no entry. Density decimals are rounded upward. Each reduction divides the difference by its own baseline before rounding the percentage. [Prior registry](https://github.com/alexlegeartis/SpherePackings/blob/9a9851887da20ca75825342bfb09e8ab031f4153/LATTICE_RESULTS.json)
 
@@ -12,7 +12,7 @@ The prior project column uses the registry before the 22 November follow-ups. A 
 | 10 | — | — | **0.092021118431305557794** | — | — | [Published Hermite values](https://eprint.iacr.org/2026/2825) |
 | 11 | — | — | **0.060432660108165394377** | — | — | [Published Hermite values](https://eprint.iacr.org/2026/2825) |
 | 12 | — | — | **0.049454176624244055403** | — | — | [Published Hermite values](https://eprint.iacr.org/2026/2825) |
-| 13 | — | 0.042023513562578000000 | **0.042023513562578000000** | 0% | — | [Mordell and rank 12](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/sections/README.md) |
+| 13 | — | 0.042023513562577391279 | **0.042023513562577391279** | 8.0307e−636% | — | [Perfect determinant and Farey neighbors](verifications/lattice/perfect_determinant_13/) |
 | 14 | 0.034712755778000000000 | 0.033996879617500575371 | **0.033996852420018639356** | 0.00008% | 2.062364% | [New exact replay](verifications/lattice/universal_refinements_20261122/#replay) |
 | 15 | 0.025511135431000000000 | 0.025163915765318475005 | **0.025163909222702077102** | 0.000026% | 1.361077% | [New exact replay](verifications/lattice/universal_refinements_20261122/#replay) |
 | 16 | 0.018655117428000000000 | 0.017231432341588943504 | **0.017231432341539144664** | 2.89e−10% | 7.631606% | [New exact replay](verifications/lattice/universal_refinements_20261122/#replay) |
@@ -48,6 +48,8 @@ The prior project column uses the registry before the 22 November follow-ups. A 
 | 46 | 0.00000077215962280000000000 | 0.00000077176742457565234158 | **0.00000077176741198685131143** | 0.000002% | 0.050794% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
 | 47 | 0.00000051300335340000000000 | 0.00000051272563331981911329 | **0.00000051272562808697011342** | 0.000001% | 0.054137% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
 | 48 | 0.00000034559190288000000000 | 0.00000034530564242393277929 | **0.00000034530564099888273888** | 4.1269e−7% | 0.082832% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
+
+In 13D the two densities agree at the displayed precision. Its reduction compares the certified rational upper with the exact Mordell expression. [13D proof and replay](verifications/lattice/perfect_determinant_13/)
 
 The published 9–12D Hermite values use the classification and finite checks cited in their sources. The 13D and 14D bounds use the rank-12 input. The 16D refinement uses the class budgets from the published check kit. Its upstream replay covers the final stage and checks the hashes of the earlier audits. [Rank-9 proof](https://arxiv.org/abs/2508.20719) · [Rank-12 input](https://eprint.iacr.org/2026/2825) · [16D verification scope](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/dim16/README.md)
 
