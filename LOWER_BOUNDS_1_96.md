@@ -82,12 +82,12 @@ challenge value is discussed in that proof.
 | 70 | 1.73198888182953e-13 | [Gamma72 antipode, 3 translates](research/novel_routes_20261113/higher_parent/gamma72_verified.json) |
 | 71 | 1.41777248847496e-13 | [Gamma72 antipode, 2 translates](research/novel_routes_20261113/higher_parent/gamma72_verified.json) |
 | 72 | 1.45861310696239e-13 | [Nebe Gamma72](https://arxiv.org/abs/1008.2862) |
-| 73 | 3.81440098634152e-14 | [Explicit Γ72 lattice with Leech-block verification](research/gamma72_leech_layers_20261122/README.md) |
-| 74 | 1.14405687613928e-14 | [Explicit Γ72 lattice with Leech-block verification](research/gamma72_leech_layers_20261122/README.md) |
-| 75 | 3.61534657312238e-15 | [Explicit Γ72 lattice with Leech-block verification](research/gamma72_leech_layers_20261122/README.md) |
-| 76 | 1.31058292710898e-15 | [Explicit Γ72 lattice with Leech-block verification](research/gamma72_leech_layers_20261122/README.md) |
-| 77 | 3.98928481450320e-16 | [Explicit Γ72 lattice with Leech-block verification](research/gamma72_leech_layers_20261122/README.md) |
-| 78 | 1.41519803035180e-16 | [Three-fiber MW80 projection](research/packing78_verified_20261117/README.md) |
+| 73 | 4.26462994945094e-14 | [Explicit Γ72 half-coset lattice](research/gamma72_depth6_20261122/README.md) |
+| 74 | 1.43007109517410e-14 | [Explicit Γ72 half-coset lattice](research/gamma72_depth6_20261122/README.md) |
+| 75 | 5.05260043732660e-15 | [Explicit Γ72 half-coset lattice](research/gamma72_depth6_20261122/README.md) |
+| 76 | 2.04778582360778e-15 | [Explicit Γ72 half-coset lattice](research/gamma72_depth6_20261122/README.md) |
+| 77 | 5.83067851333243e-16 | [Explicit Γ72 half-coset lattice](research/gamma72_depth6_20261122/README.md) |
+| 78 | 1.90475519228084e-16 | [Explicit Γ72 half-coset lattice](research/gamma72_depth6_20261122/README.md) |
 | 79 | 1.11920881328318e-16 | [Explicit MW80 antipode, 2 translates](research/creative_sections_20261116/results.json) |
 | 80 | 1.14912817562331e-16 | [Shioda MW80](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) |
 | 81 | 2.87777416803990e-17 | [Bachoc–Nebe deep half-coset lattice](research/packing81_verified_20261117/README.md) |

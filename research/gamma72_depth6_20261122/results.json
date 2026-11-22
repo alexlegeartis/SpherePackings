@@ -1,0 +1,89 @@
+{
+  "prior_repo_commit": "8aa9ffdef6caf30f212b331943c1b20e58ba4dea",
+  "rows": [
+    {
+      "dimension": 73,
+      "kind": "explicit lattice",
+      "minimum_squared": 8,
+      "gram_determinant": "2",
+      "center_density_squared": "4722366482869645213696",
+      "occupied_density_floor": "4.26462994945094e-14",
+      "prior_unrestricted_center_density_squared": "18889465931478580854784/5",
+      "gain_over_prior_unrestricted_percent_floor": "11.803398",
+      "prior_lattice_center_density_squared": "18889465931478580854784/5",
+      "gain_over_prior_lattice_percent_floor": "11.803398",
+      "named_external_comparison_center_density_squared": "1180591620717411303424",
+      "gain_over_named_external_comparison_percent_floor": "100.000000"
+    },
+    {
+      "dimension": 74,
+      "kind": "explicit lattice",
+      "minimum_squared": 8,
+      "gram_determinant": "3",
+      "center_density_squared": "18889465931478580854784/3",
+      "occupied_density_floor": "1.43007109517410e-14",
+      "prior_unrestricted_center_density_squared": "302231454903657293676544/75",
+      "gain_over_prior_unrestricted_percent_floor": "25.000000",
+      "prior_lattice_center_density_squared": "302231454903657293676544/75",
+      "gain_over_prior_lattice_percent_floor": "25.000000",
+      "named_external_comparison_center_density_squared": "1180591620717411303424/3",
+      "gain_over_named_external_comparison_percent_floor": "300.000000"
+    },
+    {
+      "dimension": 75,
+      "kind": "explicit lattice",
+      "minimum_squared": 8,
+      "gram_determinant": "4",
+      "center_density_squared": "9444732965739290427392",
+      "occupied_density_floor": "5.05260043732660e-15",
+      "prior_unrestricted_center_density_squared": "604462909807314587353088/125",
+      "gain_over_prior_unrestricted_percent_floor": "39.754248",
+      "prior_lattice_center_density_squared": "604462909807314587353088/125",
+      "gain_over_prior_lattice_percent_floor": "39.754248",
+      "named_external_comparison_center_density_squared": "147573952589676412928",
+      "gain_over_named_external_comparison_percent_floor": "700.000000"
+    },
+    {
+      "dimension": 76,
+      "kind": "explicit lattice",
+      "minimum_squared": 8,
+      "gram_determinant": "4",
+      "center_density_squared": "18889465931478580854784",
+      "occupied_density_floor": "2.04778582360778e-15",
+      "prior_unrestricted_center_density_squared": "4835703278458516698824704/625",
+      "gain_over_prior_unrestricted_percent_floor": "56.250000",
+      "prior_lattice_center_density_squared": "4835703278458516698824704/625",
+      "gain_over_prior_lattice_percent_floor": "56.250000",
+      "named_external_comparison_center_density_squared": "73786976294838206464",
+      "gain_over_named_external_comparison_percent_floor": "1500.000000"
+    },
+    {
+      "dimension": 77,
+      "kind": "explicit lattice",
+      "minimum_squared": 8,
+      "gram_determinant": "8",
+      "center_density_squared": "18889465931478580854784",
+      "occupied_density_floor": "5.83067851333243e-16",
+      "prior_unrestricted_center_density_squared": "38685626227668133590597632/4375",
+      "gain_over_prior_unrestricted_percent_floor": "46.158491",
+      "prior_lattice_center_density_squared": "38685626227668133590597632/4375",
+      "gain_over_prior_lattice_percent_floor": "46.158491",
+      "named_external_comparison_center_density_squared": "37778931862957161709568/75",
+      "gain_over_named_external_comparison_percent_floor": "512.372435"
+    },
+    {
+      "dimension": 78,
+      "kind": "explicit lattice",
+      "minimum_squared": 8,
+      "gram_determinant": "12",
+      "center_density_squared": "75557863725914323419136/3",
+      "occupied_density_floor": "1.90475519228084e-16",
+      "prior_unrestricted_center_density_squared": "487630885758556083481080330248912839502942427218592856555006259949898455557019876211122799066553096911226373820664525051357812154352919033545664723609000000000000000000000000000000000000000000000000000000000000000000000000000000/35073304919131186085120472270481290068181749793973429148272280601869153635084663240521218885479619486517179854536547172046811249422827092082141539856783642388353691919168366945358927932670581326123616868163",
+      "gain_over_prior_unrestricted_percent_floor": "34.592837",
+      "prior_lattice_center_density_squared": "1237940039285380274899124224/91875",
+      "gain_over_prior_lattice_percent_floor": "36.718750",
+      "named_external_comparison_center_density_squared": "18889465931478580854784/3",
+      "gain_over_named_external_comparison_percent_floor": "100.000000"
+    }
+  ]
+}

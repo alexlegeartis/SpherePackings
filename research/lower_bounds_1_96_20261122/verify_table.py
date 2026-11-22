@@ -104,6 +104,7 @@ def build_table():
         ("p48n_hurwitz_20261122", "Explicit P48n quaternionic lattice"),
         ("uneven_layers55_20261122", "Three unevenly spaced Leterrier54 layers"),
         ("gamma72_leech_layers_20261122", "Explicit Γ72 lattice with Leech-block verification"),
+        ("gamma72_depth6_20261122", "Explicit Γ72 half-coset lattice"),
         ("mw92_extensions_20261122", "MW92 extension"),
     ]:
         path = f"research/{package}"
