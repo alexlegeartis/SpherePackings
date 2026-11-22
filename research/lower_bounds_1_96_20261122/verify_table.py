@@ -115,6 +115,11 @@ def build_table():
                 "MW92 nine-translate periodic packing" if row["kind"] == "periodic existence" else label,
                 f"{path}/README.md")
 
+    for row in data("research/lattice_lower_49_96_20261122/mw92_bare_results.json")["rows"]:
+        assert row["kind"] == "audited lattice section"
+        add(row["dimension"], row["center_density_squared"], "Primitive MW92 bare lattice section",
+            "research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#8691d-mw92-bare-kernels")
+
     assert set(candidates) == set(range(1, 97))
     pi_lower, _ = pi_interval()
     lines = [

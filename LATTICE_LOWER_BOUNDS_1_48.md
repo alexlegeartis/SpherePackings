@@ -1,5 +1,7 @@
 # Lattice sphere-packing lower bounds, dimensions 1–48
 
+[Companion lattice-only catalog for 49D–96D](LATTICE_LOWER_BOUNDS_49_96.md).
+
 These are densities attained by **lattice packings**. A genuinely nonlattice
 union of translates does not qualify. The baseline is the lattice-only table on
 [Henry Cohn’s sphere-packing page](https://cohn.mit.edu/sphere-packing/#lattice-data),

@@ -1,0 +1,816 @@
+{
+  "rows": [
+    {
+      "dimension": 49,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Leech--Sloane P48q x classical 1D lattice",
+        "link": "https://neilsloane.com/doc/Me103.pdf",
+        "center_density_squared": "79766443076872509863361/1125899906842624"
+      },
+      "repository": {
+        "kind": "explicit lattice",
+        "description": "P48q half-coset lift",
+        "link": "research/covering_and_deep_cosets_20261115/DEEPER_PROOF.md",
+        "center_density_squared": "239299329230617529590083/1125899906842624",
+        "minimum_squared": "6",
+        "gram_determinant": "2"
+      }
+    },
+    {
+      "dimension": 50,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Leech--Sloane P48q x classical 2D lattice",
+        "link": "https://neilsloane.com/doc/Me103.pdf",
+        "center_density_squared": "26588814358957503287787/1125899906842624"
+      },
+      "repository": {
+        "kind": "explicit lattice",
+        "description": "P48q deep plane with fitted vertical metric",
+        "link": "research/adaptive_layers_20261115/results.json",
+        "center_density_squared": "239299329230617529590083/1125899906842624",
+        "minimum_squared": "6",
+        "gram_determinant": "3"
+      }
+    },
+    {
+      "dimension": 51,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Leech--Sloane P48q x classical 3D lattice",
+        "link": "https://neilsloane.com/doc/Me103.pdf",
+        "center_density_squared": "79766443076872509863361/9007199254740992"
+      },
+      "repository": {
+        "kind": "explicit lattice",
+        "description": "P48n quaternionic extension",
+        "link": "research/p48n_hurwitz_20261122/README.md",
+        "center_density_squared": "2153693963075557766310747/9007199254740992",
+        "minimum_squared": "6",
+        "gram_determinant": "4"
+      }
+    },
+    {
+      "dimension": 52,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Leterrier54, Corollary 1.4 (2022) / Blichfeldt section to 52D",
+        "link": "https://doi.org/10.1007/s40993-022-00321-0",
+        "center_density_squared": "27431955"
+      },
+      "repository": {
+        "kind": "explicit lattice",
+        "description": "P48n quaternionic extension",
+        "link": "research/p48n_hurwitz_20261122/README.md",
+        "center_density_squared": "6461081889226673298932241/18014398509481984",
+        "minimum_squared": "6",
+        "gram_determinant": "4"
+      }
+    },
+    {
+      "dimension": 53,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Leterrier54, Corollary 1.4 (2022) / Blichfeldt section to 53D",
+        "link": "https://doi.org/10.1007/s40993-022-00321-0",
+        "center_density_squared": "307399975"
+      },
+      "repository": {
+        "kind": "explicit lattice",
+        "description": "P48n quaternionic extension",
+        "link": "research/p48n_hurwitz_20261122/README.md",
+        "center_density_squared": "19383245667680019896796723/36028797018963968",
+        "minimum_squared": "6",
+        "gram_determinant": "4"
+      }
+    },
+    {
+      "dimension": 54,
+      "prior": {
+        "kind": "published lattice",
+        "description": "Leterrier54 (2022), Corollary 1.4",
+        "link": "https://doi.org/10.1007/s40993-022-00321-0",
+        "center_density_squared": "55511151231257827021181583404541015625/15263394663051042073620774912",
+        "minimum_squared": "10",
+        "gram_determinant": "847288609443"
+      }
+    },
+    {
+      "dimension": 55,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Repaired order-three Leterrier lamination",
+        "link": "research/tilted55_20261116/PROOF.md#external-source-correction",
+        "center_density_squared": "55511151231257827021181583404541015625/6783730961356018699387011072",
+        "minimum_squared": "10",
+        "gram_determinant": "8472886094430/9"
+      },
+      "disputed": true,
+      "repository": {
+        "kind": "explicit lattice",
+        "description": "Cross-coset Leterrier54 tilt",
+        "link": "research/cross_coset55_20261116/PROOF.md",
+        "center_density_squared": "1942890293094023945741355419158935546875/232908096339889975345620713472",
+        "minimum_squared": "10",
+        "gram_determinant": "174541453545258/189"
+      }
+    },
+    {
+      "dimension": 56,
+      "prior": {
+        "kind": "published lattice",
+        "description": "Shioda MW56",
+        "link": "https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf",
+        "center_density_squared": "1387778780781445675529539585113525390625/36046552944073389769014378496",
+        "minimum_squared": "10",
+        "gram_determinant": "500246412961"
+      }
+    },
+    {
+      "dimension": 57,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Shioda MW56 x classical 1D lattice",
+        "link": "https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf",
+        "center_density_squared": "1387778780781445675529539585113525390625/144186211776293559076057513984"
+      },
+      "repository": {
+        "kind": "explicit lattice",
+        "description": "MW56 depth-7 half-coset lift",
+        "link": "research/packing_binary57_58_20261117/README.md",
+        "center_density_squared": "6938893903907228377647697925567626953125/216279317664440338614086270976",
+        "minimum_squared": "10",
+        "gram_determinant": "1500739238883"
+      }
+    },
+    {
+      "dimension": 58,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Classical Gamma72/Leech-block section",
+        "link": "research/novel_routes_20261113/audits/verify_gamma72_leech_sections.py",
+        "center_density_squared": "68719476736/3"
+      },
+      "repository": {
+        "kind": "explicit lattice",
+        "description": "MW56 depth-7 complex-multiplication lift",
+        "link": "research/packing_binary57_58_20261117/README.md",
+        "center_density_squared": "34694469519536141888238489627838134765625/973256929489981523763388219392",
+        "minimum_squared": "10",
+        "gram_determinant": "13506653149947/4"
+      }
+    },
+    {
+      "dimension": 59,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Γ72 section normal to √2 κ13",
+        "link": "research/covering_and_deep_cosets_20261115/PRIORITY.md",
+        "center_density_squared": "17592186044416/243"
+      },
+      "repository": {
+        "kind": "audited lattice section",
+        "description": "Explicit bare section of Ne64",
+        "link": "research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#5963d-bare-ne64-sections",
+        "minimum_squared": "12",
+        "gram_determinant": "296483230216294560",
+        "center_density_squared": "14130386091738734504764811067/296483230216294560"
+      }
+    },
+    {
+      "dimension": 60,
+      "prior": {
+        "kind": "reported lattice floor",
+        "description": "Elkies E60, reported by Vardy (1999), §4",
+        "link": "https://doi.org/10.1090/S0002-9947-99-02169-8",
+        "center_density_squared": "290550906591",
+        "log2_interval": [
+          "476/25",
+          "381/20"
+        ],
+        "center_density_squared_upper": "294606846101"
+      },
+      "repository": {
+        "kind": "derived lattice",
+        "description": "Γ72 section normal to √2 K12",
+        "link": "research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#60d-coxetertodd-section",
+        "center_density_squared": "281474976710656/729",
+        "minimum_squared": "8",
+        "gram_determinant": "2985984"
+      }
+    },
+    {
+      "dimension": 61,
+      "prior": {
+        "kind": "reported lattice floor",
+        "description": "Elkies E61, reported by Vardy (1999), §4",
+        "link": "https://doi.org/10.1090/S0002-9947-99-02169-8",
+        "center_density_squared": "2324407252732",
+        "log2_interval": [
+          "1027/50",
+          "411/20"
+        ],
+        "center_density_squared_upper": "2356854768801"
+      },
+      "repository": {
+        "kind": "audited lattice section",
+        "description": "Explicit bare section of Ne64",
+        "link": "research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#5963d-bare-ne64-sections",
+        "minimum_squared": "12",
+        "gram_determinant": "59296646043258912",
+        "center_density_squared": "127173474825648610542883299603/59296646043258912"
+      }
+    },
+    {
+      "dimension": 62,
+      "prior": {
+        "kind": "reported lattice floor",
+        "description": "Elkies E62, reported by Vardy (1999), §4",
+        "link": "https://doi.org/10.1090/S0002-9947-99-02169-8",
+        "center_density_squared": "21066268155882",
+        "log2_interval": [
+          "2213/100",
+          "1107/50"
+        ],
+        "center_density_squared_upper": "21360342300456"
+      },
+      "repository": {
+        "kind": "audited lattice section",
+        "description": "Explicit bare section of Ne64",
+        "link": "research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#5963d-bare-ne64-sections",
+        "minimum_squared": "12",
+        "gram_determinant": "22236242266222092",
+        "center_density_squared": "381520424476945831628649898809/22236242266222092"
+      }
+    },
+    {
+      "dimension": 63,
+      "prior": {
+        "kind": "reported lattice floor",
+        "description": "Elkies E63, reported by Vardy (1999), §4",
+        "link": "https://doi.org/10.1090/S0002-9947-99-02169-8",
+        "center_density_squared": "251927160994904",
+        "log2_interval": [
+          "598/25",
+          "2393/100"
+        ],
+        "center_density_squared_upper": "255443933107373"
+      },
+      "repository": {
+        "kind": "audited lattice section",
+        "description": "Explicit bare section of Ne64",
+        "link": "research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#5963d-bare-ne64-sections",
+        "center_density_squared": "617673396283947/4",
+        "minimum_squared": "12",
+        "gram_determinant": "7412080755407364"
+      }
+    },
+    {
+      "dimension": 64,
+      "prior": {
+        "kind": "published lattice",
+        "description": "Nebe Ne64",
+        "link": "https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/CQ64b.html",
+        "center_density_squared": "1853020188851841",
+        "minimum_squared": "12",
+        "gram_determinant": "1853020188851841"
+      }
+    },
+    {
+      "dimension": 65,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Classical Gamma72/Leech-block section",
+        "link": "research/novel_routes_20261113/audits/verify_gamma72_leech_sections.py",
+        "center_density_squared": "1125899906842624"
+      },
+      "repository": {
+        "kind": "explicit lattice",
+        "description": "Ne64 deep order-three lift",
+        "link": "research/novel_routes_20261113/higher_parent/ne65_verified.json",
+        "center_density_squared": "16677181699666569/10",
+        "minimum_squared": "12",
+        "gram_determinant": "6176733962839470"
+      }
+    },
+    {
+      "dimension": 66,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Γ72 Leech-block section",
+        "link": "research/novel_routes_20261113/audits/verify_gamma72_leech_sections.py",
+        "center_density_squared": "18014398509481984/3",
+        "minimum_squared": "8",
+        "gram_determinant": "12288"
+      }
+    },
+    {
+      "dimension": 67,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Γ72 Leech-block section",
+        "link": "research/novel_routes_20261113/audits/verify_gamma72_leech_sections.py",
+        "center_density_squared": "36028797018963968",
+        "minimum_squared": "8",
+        "gram_determinant": "4096"
+      }
+    },
+    {
+      "dimension": 68,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Γ72 Leech-block section",
+        "link": "research/novel_routes_20261113/audits/verify_gamma72_leech_sections.py",
+        "center_density_squared": "288230376151711744",
+        "minimum_squared": "8",
+        "gram_determinant": "1024"
+      }
+    },
+    {
+      "dimension": 69,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Γ72 Leech-block section",
+        "link": "research/novel_routes_20261113/audits/verify_gamma72_leech_sections.py",
+        "center_density_squared": "2305843009213693952",
+        "minimum_squared": "8",
+        "gram_determinant": "256"
+      }
+    },
+    {
+      "dimension": 70,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Γ72 Leech-block section",
+        "link": "research/novel_routes_20261113/audits/verify_gamma72_leech_sections.py",
+        "center_density_squared": "73786976294838206464/3",
+        "minimum_squared": "8",
+        "gram_determinant": "48"
+      }
+    },
+    {
+      "dimension": 71,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Γ72 Leech-block section",
+        "link": "research/novel_routes_20261113/audits/verify_gamma72_leech_sections.py",
+        "center_density_squared": "295147905179352825856",
+        "minimum_squared": "8",
+        "gram_determinant": "8"
+      }
+    },
+    {
+      "dimension": 72,
+      "prior": {
+        "kind": "published lattice",
+        "description": "Nebe Γ72",
+        "link": "https://arxiv.org/abs/1008.2862",
+        "center_density_squared": "4722366482869645213696",
+        "minimum_squared": "8",
+        "gram_determinant": "1"
+      }
+    },
+    {
+      "dimension": 73,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Nebe Gamma72 x classical 1D lattice",
+        "link": "https://arxiv.org/abs/1008.2862",
+        "center_density_squared": "1180591620717411303424"
+      },
+      "repository": {
+        "kind": "explicit lattice",
+        "description": "Γ72 deep half-coset lift",
+        "link": "research/gamma72_depth6_20261122/README.md",
+        "center_density_squared": "4722366482869645213696",
+        "minimum_squared": "8",
+        "gram_determinant": "2"
+      }
+    },
+    {
+      "dimension": 74,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Nebe Gamma72 x classical 2D lattice",
+        "link": "https://arxiv.org/abs/1008.2862",
+        "center_density_squared": "1180591620717411303424/3"
+      },
+      "repository": {
+        "kind": "explicit lattice",
+        "description": "Γ72 deep half-coset lift",
+        "link": "research/gamma72_depth6_20261122/README.md",
+        "center_density_squared": "18889465931478580854784/3",
+        "minimum_squared": "8",
+        "gram_determinant": "3"
+      }
+    },
+    {
+      "dimension": 75,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Nebe Gamma72 x classical 3D lattice",
+        "link": "https://arxiv.org/abs/1008.2862",
+        "center_density_squared": "147573952589676412928"
+      },
+      "repository": {
+        "kind": "explicit lattice",
+        "description": "Γ72 deep half-coset lift",
+        "link": "research/gamma72_depth6_20261122/README.md",
+        "center_density_squared": "9444732965739290427392",
+        "minimum_squared": "8",
+        "gram_determinant": "4"
+      }
+    },
+    {
+      "dimension": 76,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Nebe Gamma72 x classical 4D lattice",
+        "link": "https://arxiv.org/abs/1008.2862",
+        "center_density_squared": "73786976294838206464"
+      },
+      "repository": {
+        "kind": "explicit lattice",
+        "description": "Γ72 deep half-coset lift",
+        "link": "research/gamma72_depth6_20261122/README.md",
+        "center_density_squared": "18889465931478580854784",
+        "minimum_squared": "8",
+        "gram_determinant": "4"
+      }
+    },
+    {
+      "dimension": 77,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Bachoc–Nebe L80 section normal to 2A3",
+        "link": "research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#77d-bachocnebe-section",
+        "center_density_squared": "590295810358705651712",
+        "minimum_squared": "8",
+        "gram_determinant": "256"
+      },
+      "repository": {
+        "kind": "explicit lattice",
+        "description": "Half-root Γ72–D4 tilt",
+        "link": "research/gamma72_root_tilt_20261122/README.md",
+        "center_density_squared": "75557863725914323419136/3",
+        "minimum_squared": "8",
+        "gram_determinant": "6"
+      }
+    },
+    {
+      "dimension": 78,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Bachoc--Nebe L80 bare section, normal rank 2",
+        "link": "research/cross_dimension_lower_20261115/l80_results.json",
+        "center_density_squared": "18889465931478580854784/3"
+      },
+      "repository": {
+        "kind": "explicit lattice",
+        "description": "Half-root Γ72–D4 tilt",
+        "link": "research/gamma72_root_tilt_20261122/README.md",
+        "center_density_squared": "1208925819614629174706176/27",
+        "minimum_squared": "8",
+        "gram_determinant": "27/4"
+      }
+    },
+    {
+      "dimension": 79,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Bachoc--Nebe L80 perpendicular to a minimum vector",
+        "link": "https://www.math.rwth-aachen.de/~Gabriele.Nebe/papers/extremm22.pdf",
+        "center_density_squared": "75557863725914323419136"
+      },
+      "repository": {
+        "kind": "audited lattice section",
+        "description": "MW80 primitive section normal to 162/41",
+        "link": "research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#79d-bare-mw80-section",
+        "center_density_squared": "5790887942449198118866552301288096257267888893001726249456064921143/53889865033748562958644398112721566638800896",
+        "minimum_squared": "14",
+        "gram_determinant": "89153303138032247442"
+      }
+    },
+    {
+      "dimension": 80,
+      "prior": {
+        "kind": "published lattice",
+        "description": "Shioda MW80",
+        "link": "https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf",
+        "center_density_squared": "40536215597144386832065866109016673800875222251012083746192454448001/27277586004736926929684201513846718915936256",
+        "minimum_squared": "14",
+        "gram_determinant": "22563490300366186081"
+      }
+    },
+    {
+      "dimension": 81,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Shioda MW80 x classical 1D lattice",
+        "link": "https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf",
+        "center_density_squared": "40536215597144386832065866109016673800875222251012083746192454448001/109110344018947707718736806055386875663745024"
+      },
+      "repository": {
+        "kind": "explicit lattice",
+        "description": "Bachoc–Nebe deep half-coset lift",
+        "link": "research/packing81_verified_20261117/README.md",
+        "center_density_squared": "1208925819614629174706176",
+        "minimum_squared": "8",
+        "gram_determinant": "2"
+      }
+    },
+    {
+      "dimension": 82,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Shioda MW80 x classical 2D lattice",
+        "link": "https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf",
+        "center_density_squared": "40536215597144386832065866109016673800875222251012083746192454448001/327331032056843123156210418166160626991235072"
+      },
+      "repository": {
+        "kind": "explicit lattice",
+        "description": "A2 section of the 83D extension",
+        "link": "research/l80_a2_section_20261122/README.md",
+        "center_density_squared": "4835703278458516698824704/3",
+        "minimum_squared": "8",
+        "gram_determinant": "3"
+      }
+    },
+    {
+      "dimension": 83,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "BCS88 section normal to √2 D5",
+        "link": "research/bcs83_comparator_20261117/README.md",
+        "center_density_squared": "75557863725914323419136",
+        "minimum_squared": "8",
+        "gram_determinant": "128"
+      },
+      "repository": {
+        "kind": "explicit lattice",
+        "description": "Bachoc–Nebe parity extension",
+        "link": "research/packing83_85_deep_verified_20261117/README_DEEP.md",
+        "center_density_squared": "2417851639229258349412352",
+        "minimum_squared": "8",
+        "gram_determinant": "4"
+      }
+    },
+    {
+      "dimension": 84,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "BCS88 root-normal section (4 normals)",
+        "link": "research/priority_resolution_20261115/CLASSICAL_SECTIONS.md",
+        "center_density_squared": "302231454903657293676544",
+        "minimum_squared": "8",
+        "gram_determinant": "64"
+      },
+      "repository": {
+        "kind": "explicit lattice",
+        "description": "Bachoc–Nebe parity extension",
+        "link": "research/packing83_85_deep_verified_20261117/README_DEEP.md",
+        "center_density_squared": "4835703278458516698824704",
+        "minimum_squared": "8",
+        "gram_determinant": "4"
+      }
+    },
+    {
+      "dimension": 85,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "BCS88 root-normal section (3 normals)",
+        "link": "research/priority_resolution_20261115/CLASSICAL_SECTIONS.md",
+        "center_density_squared": "1208925819614629174706176",
+        "minimum_squared": "8",
+        "gram_determinant": "32"
+      },
+      "repository": {
+        "kind": "explicit lattice",
+        "description": "Bachoc–Nebe parity extension",
+        "link": "research/packing83_85_deep_verified_20261117/README_DEEP.md",
+        "center_density_squared": "9671406556917033397649408",
+        "minimum_squared": "8",
+        "gram_determinant": "4"
+      }
+    },
+    {
+      "dimension": 86,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "BCS88 root-normal section (2 normals)",
+        "link": "research/priority_resolution_20261115/CLASSICAL_SECTIONS.md",
+        "center_density_squared": "19342813113834066795298816/3",
+        "minimum_squared": "8",
+        "gram_determinant": "12"
+      },
+      "repository": {
+        "kind": "audited lattice section",
+        "minimum_squared": "16",
+        "gram_determinant": "136906925353591860016036347",
+        "center_density_squared": "5986310706507378352962293074805895248510699696029696/136906925353591860016036347",
+        "description": "Primitive MW92 kernel section",
+        "link": "research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#8691d-mw92-bare-kernels"
+      }
+    },
+    {
+      "dimension": 87,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "BCS88 root-normal section (1 normals)",
+        "link": "research/priority_resolution_20261115/CLASSICAL_SECTIONS.md",
+        "center_density_squared": "38685626227668133590597632",
+        "minimum_squared": "8",
+        "gram_determinant": "4"
+      },
+      "repository": {
+        "kind": "audited lattice section",
+        "minimum_squared": "16",
+        "gram_determinant": "63900189944629684910124756",
+        "center_density_squared": "5986310706507378352962293074805895248510699696029696/15975047486157421227531189",
+        "description": "Primitive MW92 kernel section",
+        "link": "research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#8691d-mw92-bare-kernels"
+      }
+    },
+    {
+      "dimension": 88,
+      "prior": {
+        "kind": "published lattice",
+        "description": "Bos–Conway–Sloane BCS88 (1982)",
+        "link": "https://neilsloane.com/doc/Me103.pdf",
+        "center_density_squared": "309485009821345068724781056",
+        "minimum_squared": "8",
+        "gram_determinant": "1"
+      },
+      "repository": {
+        "kind": "audited lattice section",
+        "minimum_squared": "16",
+        "gram_determinant": "22076758873879228531411281",
+        "center_density_squared": "95780971304118053647396689196894323976171195136475136/22076758873879228531411281",
+        "description": "Primitive MW92 kernel section",
+        "link": "research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#8691d-mw92-bare-kernels"
+      }
+    },
+    {
+      "dimension": 89,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Guaranteed MW92 section via Rogers’ inequality",
+        "link": "research/covering_and_deep_cosets_20261115/SECTIONS_PROOF.md",
+        "center_density_squared": "5104602996031595472989331014",
+        "center_density_squared_upper": "5107305916620839496792415007"
+      },
+      "repository": {
+        "kind": "audited lattice section",
+        "minimum_squared": "16",
+        "gram_determinant": "9217776902775561129384102",
+        "center_density_squared": "191561942608236107294793378393788647952342390272950272/4608888451387780564692051",
+        "description": "Primitive MW92 kernel section",
+        "link": "research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#8691d-mw92-bare-kernels"
+      }
+    },
+    {
+      "dimension": 90,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Guaranteed MW92 section via Rogers’ inequality",
+        "link": "research/covering_and_deep_cosets_20261115/SECTIONS_PROOF.md",
+        "center_density_squared": "130525452541473631443444339977",
+        "center_density_squared_upper": "130571293881565460587721559077"
+      },
+      "repository": {
+        "kind": "audited lattice section",
+        "minimum_squared": "16",
+        "gram_determinant": "2886545014875609529241163",
+        "center_density_squared": "1532495540865888858358347027150309183618739122183602176/2886545014875609529241163",
+        "description": "Primitive MW92 kernel section",
+        "link": "research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#8691d-mw92-bare-kernels"
+      }
+    },
+    {
+      "dimension": 91,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Guaranteed MW92 section via Rogers’ inequality",
+        "link": "research/covering_and_deep_cosets_20261115/SECTIONS_PROOF.md",
+        "center_density_squared": "3465777275373358982931076036994",
+        "center_density_squared_upper": "3466382823540105635939545773989"
+      },
+      "repository": {
+        "kind": "audited lattice section",
+        "minimum_squared": "16",
+        "gram_determinant": "993901946513946138273514",
+        "center_density_squared": "3064991081731777716716694054300618367237478244367204352/496950973256973069136757",
+        "description": "Primitive MW92 kernel section",
+        "link": "research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#8691d-mw92-bare-kernels"
+      }
+    },
+    {
+      "dimension": 92,
+      "prior": {
+        "kind": "published lattice",
+        "description": "Shioda MW92",
+        "link": "https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf",
+        "center_density_squared": "24519928653854221733733552434404946937899825954937634816/256666986187667409334369",
+        "minimum_squared": "16",
+        "gram_determinant": "256666986187667409334369"
+      }
+    },
+    {
+      "dimension": 93,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Shioda MW92 x classical 1D lattice",
+        "link": "https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf",
+        "center_density_squared": "6129982163463555433433388108601236734474956488734408704/256666986187667409334369"
+      },
+      "repository": {
+        "kind": "lattice existence",
+        "description": "MW92 lattice shear",
+        "link": "research/mw92_extensions_20261122/README.md#lattice-shears",
+        "center_density_squared": "24519928653854221733733552434404946937899825954937634816000000000/320770831099612263828288266854801"
+      }
+    },
+    {
+      "dimension": 94,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Shioda MW92 x classical 2D lattice",
+        "link": "https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf",
+        "center_density_squared": "6129982163463555433433388108601236734474956488734408704/770000958563002228003107"
+      },
+      "repository": {
+        "kind": "lattice existence",
+        "description": "MW92 lattice shear",
+        "link": "research/mw92_extensions_20261122/README.md#lattice-shears",
+        "center_density_squared": "98079714615416886934934209737619787751599303819750539264000000000000000000/1307414950240825746224413416409072268536411"
+      }
+    },
+    {
+      "dimension": 95,
+      "prior": {
+        "kind": "derived lattice",
+        "description": "Shioda MW92 x classical 3D lattice",
+        "link": "https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf",
+        "center_density_squared": "766247770432944429179173513575154591809369561091801088/256666986187667409334369"
+      },
+      "repository": {
+        "kind": "lattice existence",
+        "description": "MW92 lattice shear",
+        "link": "research/mw92_extensions_20261122/README.md#lattice-shears",
+        "center_density_squared": "2451992865385422173373355243440494693789982595493763481600000000000000000000000000/30606639786513885644026793973024762749142056100009"
+      }
+    },
+    {
+      "dimension": 96,
+      "prior": {
+        "kind": "published lattice",
+        "description": "BCS96, Table 1 (1982)",
+        "link": "https://neilsloane.com/doc/Me103.pdf",
+        "center_density_squared": "6362685441135942358474828762538534230890216321/281474976710656"
+      },
+      "repository": {
+        "kind": "lattice existence",
+        "description": "MW92 lattice shear",
+        "link": "research/mw92_extensions_20261122/README.md#lattice-shears",
+        "center_density_squared": "15692754338466701909589473558019166040255888611160086282240000000000000000000000000000000000/179270284038299916523002579826112129019545593074355373978021"
+      }
+    }
+  ],
+  "catalog_date": "2026-11-22",
+  "scope": "Prior literature and repository lattice-only lower bounds; not unrestricted.",
+  "strict_comparison_dimensions": [
+    49,
+    50,
+    51,
+    52,
+    53,
+    57,
+    58,
+    60,
+    65,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    93,
+    94,
+    95,
+    96
+  ],
+  "catalog_inputs_commit": "b52106deabce910270382b06632aa7607678902f"
+}
