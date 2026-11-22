@@ -103,8 +103,8 @@ challenge value is discussed in that proof.
 | 91 | 1.28046110298280e-19 | [Primitive MW92 bare lattice section](research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#8691d-mw92-bare-kernels) |
 | 92 | 1.31340615344155e-19 | [Shioda MW92](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) |
 | 93 | 3.04556337848885e-20 | [Cubic covering-simplex bound and colored layers](research/adaptive_layers_20261115/results.json) |
-| 94 | 7.84434540405174e-21 | [MW92 torus offset flags](research/mw92_flags9495_verified_20261117/README.md) |
-| 95 | 2.06770138493108e-21 | [MW92 torus offset flags](research/mw92_flags9495_verified_20261117/README.md) |
+| 94 | 8.03567126556234e-21 | [MW92 order-three lattice dichotomy](research/mw92_order3_dichotomy_20261122/README.md) |
+| 95 | 2.10405317054093e-21 | [MW92 order-three lattice dichotomy](research/mw92_order3_dichotomy_20261122/README.md) |
 | 96 | 6.25082581067615e-22 | [MW92 nine-translate periodic packing](research/mw92_extensions_20261122/README.md) |
 
 Rebuild the table with

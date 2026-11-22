@@ -741,9 +741,9 @@
       },
       "repository": {
         "kind": "lattice existence",
-        "description": "MW92 lattice shear",
-        "link": "research/mw92_extensions_20261122/README.md#lattice-shears",
-        "center_density_squared": "98079714615416886934934209737619787751599303819750539264000000000000000000/1307414950240825746224413416409072268536411"
+        "description": "MW92 order-three dichotomy",
+        "link": "research/mw92_order3_dichotomy_20261122/README.md",
+        "center_density_squared": "1765434863077503964828815775277156179528787468755509706752000/22057704125981949490786337491"
       }
     },
     {
@@ -756,9 +756,9 @@
       },
       "repository": {
         "kind": "lattice existence",
-        "description": "MW92 lattice shear",
-        "link": "research/mw92_extensions_20261122/README.md#lattice-shears",
-        "center_density_squared": "2451992865385422173373355243440494693789982595493763481600000000000000000000000000/30606639786513885644026793973024762749142056100009"
+        "description": "MW92 order-three dichotomy",
+        "link": "research/mw92_order3_dichotomy_20261122/README.md",
+        "center_density_squared": "98079714615416886934934209737619787751599303819750539264000000000000000000000000000/1175951063427608913946836039372211651081887510605159"
       }
     },
     {
@@ -771,9 +771,9 @@
       },
       "repository": {
         "kind": "lattice existence",
-        "description": "MW92 lattice shear",
-        "link": "research/mw92_extensions_20261122/README.md#lattice-shears",
-        "center_density_squared": "15692754338466701909589473558019166040255888611160086282240000000000000000000000000000000000/179270284038299916523002579826112129019545593074355373978021"
+        "description": "MW92 order-three dichotomy",
+        "link": "research/mw92_order3_dichotomy_20261122/README.md",
+        "center_density_squared": "282469578092400634372610524044344988724605995000881553080320000000000000000000/3076373329366350208476552628270523788347133601"
       }
     }
   ],
@@ -812,5 +812,5 @@
     95,
     96
   ],
-  "catalog_inputs_commit": "b52106deabce910270382b06632aa7607678902f"
+  "catalog_inputs_commit": "f35cf8724f816c5299b56911b8155ee2a7b89c94"
 }
