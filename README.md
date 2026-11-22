@@ -331,7 +331,7 @@ The subsequent [46D](verifications/dim46/refinement_joint/) and [47D](verificati
 
 If you use these bounds, packing constructions, or verification packages, please cite:
 
-Alexey Kravatskiy. (2026). *Sphere-packing density: upper and lower bounds for unrestricted and lattice packings*. https://github.com/alexlegeartis/SpherePackings
+Alexey Kravatskiy. (2026). *Sphere-packing density: lower and upper bounds for unrestricted and lattice packings*. https://github.com/alexlegeartis/SpherePackings
 
 [CITATION.cff](CITATION.cff) supplies GitHub's citation metadata; [CITATION.bib](CITATION.bib) provides BibTeX. For a reproducible reference to particular results, also record the commit used.
 

@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use these bounds or this verification code, please cite this repository."
-title: "Sphere-packing density: upper and lower bounds for unrestricted and lattice packings"
+title: "Sphere-packing density: lower and upper bounds for unrestricted and lattice packings"
 type: software
 authors:
   - family-names: Kravatskiy
@@ -12,7 +12,7 @@ repository-code: "https://github.com/alexlegeartis/SpherePackings"
 url: "https://github.com/alexlegeartis/SpherePackings"
 preferred-citation:
   type: generic
-  title: "Sphere-packing density: upper and lower bounds for unrestricted and lattice packings"
+  title: "Sphere-packing density: lower and upper bounds for unrestricted and lattice packings"
   authors:
     - family-names: Kravatskiy
       given-names: Alexey
@@ -23,6 +23,6 @@ keywords:
   - packing density
   - lattice packings
   - periodic packings
-  - upper and lower bounds
+  - lower and upper bounds
   - exact verification
   - proof certificates
