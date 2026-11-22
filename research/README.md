@@ -1,6 +1,6 @@
 # Research index
 
-The current lower-bound leaderboard is the [packing constructions table](../README.md#packing-constructions-lower-bounds).
+The [1–96D lower-bound table](../LOWER_BOUNDS_1_96.md) gives the current occupied-density floors.
 The current upper-bound leaderboard is [RESULTS.md](../RESULTS.md), generated
 from [RESULTS.json](../RESULTS.json). Each entry links to its certificate,
 normalization, dependencies and comparison sources.
@@ -35,6 +35,8 @@ pins all three branch heads and records fresh replay scope and leaderboard check
 | [Lower-bound search and follow-ups](lower_bound_search_20261114/README.txt) | Exact obstructions and unsuccessful low-dimensional searches, with explicit limits on what was excluded. |
 | [Combined branch tools](combined_branches_20261115/README.md) | Certified upper-bound improvements plus lower-bound searches. The registry identifies the current certificates. |
 | [Adaptive layers](adaptive_layers_20261115/README.md) | Certified constructions and finite research screens; see the lower-bound leaderboard for current values. |
+| [Quaternionic P48n extensions](p48n_hurwitz_20261122/README.md) | Explicit lattices in 51–53D with determinant 4 and squared minimum 6. |
+| [MW92 extensions](mw92_extensions_20261122/README.md) | Lattice existence bounds in 93–96D and a stronger nine-translate periodic packing in 96D. |
 | [48D–96D audit](range48_96_20261115/README.md) | Exact constructions, source comparisons and dimensions where no improvement was obtained. |
 | [CM-plane construction and frontier](cm58_20261116/FRONTIER.md) | Certified advances and rejected or unresolved targets. |
 | [Correlated normals and Craig/code routes](simplex_normals_20261116/PROOF.md) | Certified 86D–89D improvements and a separately scoped unsuccessful code search. |
