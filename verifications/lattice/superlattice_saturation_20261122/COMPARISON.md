@@ -1,5 +1,7 @@
 # Lattice density comparisons in dimensions 13–48
 
+This table records the comparison at the time of the superlattice follow-up. See the current registry for the latest certified values. [Current 9–48D comparison](../../../LATTICE_RESULTS.md)
+
 The benchmark is N. Zubrilina’s *Lattice sphere-packing density bounds through dimension 48*, as listed in the `AstroNinja389/sphere-packings` repository. Its comparison table starts at dimension 13. The pre–22 November column comes from this project’s last lattice registry before that date. A dash marks a missing entry in that registry. [Benchmark table](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/COMPARISON.md) · [Exact benchmark values](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/comparison.json) · [Previous project registry](https://github.com/alexlegeartis/SpherePackings/blob/9a9851887da20ca75825342bfb09e8ab031f4153/LATTICE_RESULTS.json)
 
 The follow-up certificates tighten **28 of the 36** benchmark rows. The other eight rows carry forward the benchmark values, including the exact Leech optimum in dimension 24. The largest reduction against the benchmark is **0.027892% in dimension 37**. Density decimals are rounded upward. Each reduction is relative to its own baseline and is computed from the exact values. [25–35D and 37D proofs](../angular_kernel_followup_20261122/) · [38–48D proofs](../dual_mass_angular_energy_38_48_20261122/) · [17–18D and 20–22D proofs](README.md)

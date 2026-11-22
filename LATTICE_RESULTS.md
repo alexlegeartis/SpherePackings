@@ -1,12 +1,55 @@
 # Lattice-only results
 
-## Lattice-only upper bounds
+## Current lattice upper bounds in dimensions 9–48
 
-The 13–48D comparison uses Zubrilina’s *Lattice sphere-packing density bounds through dimension 48* repository and includes our previous project bounds. [Dimension-by-dimension comparison](verifications/lattice/superlattice_saturation_20261122/COMPARISON.md) · [Certificates and replay](verifications/lattice/superlattice_saturation_20261122/)
+These bounds apply to every full-rank lattice packing in the stated dimension. They tighten **31 of 36** rows in N. Zubrilina’s *Lattice sphere-packing density bounds through dimension 48*, with **5** ties. The largest reduction against that benchmark is **0.027892% in 37D**. [Benchmark and pinned revision](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/COMPARISON.md) · [Machine-readable bounds](LATTICE_UPPER_BOUNDS_9_48.json)
 
-The 22 November follow-up gives smaller certified upper bounds in dimensions 25–35 and 37. It replays the exact benchmark inputs and publishes the rational refinements. [Follow-up bounds and replay](verifications/lattice/angular_kernel_followup_20261122/)
+The prior project column uses the registry before the 22 November follow-ups. A dash indicates that the corresponding source has no entry. Density decimals are rounded upward. Each reduction divides the difference by its own baseline before rounding the percentage. [Prior registry](https://github.com/alexlegeartis/SpherePackings/blob/9a9851887da20ca75825342bfb09e8ab031f4153/LATTICE_RESULTS.json)
 
-A second follow-up gives revised certified bounds in every dimension from 38 through 48, with exact comparisons against AstroNinja389 and Zubrilina’s Gaussian certificates. [38–48D bounds and replay](verifications/lattice/dual_mass_angular_energy_38_48_20261122/)
+| D | Prior project | Zubrilina benchmark | Current upper | Below Zubrilina | Below prior project | Proof |
+|---:|---:|---:|---:|---:|---:|:---|
+| 9 | — | — | **0.14577487580817111054** | — | — | [Published Hermite value](https://arxiv.org/abs/2508.20719) |
+| 10 | — | — | **0.092021118431305557794** | — | — | [Published Hermite values](https://eprint.iacr.org/2026/2825) |
+| 11 | — | — | **0.060432660108165394377** | — | — | [Published Hermite values](https://eprint.iacr.org/2026/2825) |
+| 12 | — | — | **0.049454176624244055403** | — | — | [Published Hermite values](https://eprint.iacr.org/2026/2825) |
+| 13 | — | 0.042023513562578000000 | **0.042023513562578000000** | 0% | — | [Mordell and rank 12](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/sections/README.md) |
+| 14 | 0.034712755778000000000 | 0.033996879617500575371 | **0.033996852420018639356** | 0.00008% | 2.062364% | [New exact replay](verifications/lattice/universal_refinements_20261122/#replay) |
+| 15 | 0.025511135431000000000 | 0.025163915765318475005 | **0.025163909222702077102** | 0.000026% | 1.361077% | [New exact replay](verifications/lattice/universal_refinements_20261122/#replay) |
+| 16 | 0.018655117428000000000 | 0.017231432341600000000 | **0.017231432341600000000** | 0% | 7.631606% | [Published bound and final-stage kit](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/dim16/README.md) |
+| 17 | 0.013832417384000000000 | 0.013626238393104560702 | **0.013626238385270738360** | 5.7491e−8% | 1.490549% | [Superlattice follow-up](verifications/lattice/superlattice_saturation_20261122/) |
+| 18 | 0.010343803448000000000 | 0.010209809396645684617 | **0.010209790219301887418** | 0.000188% | 1.295589% | [Superlattice follow-up](verifications/lattice/superlattice_saturation_20261122/) |
+| 19 | 0.0078084303270000000000 | 0.0076312827957449064956 | **0.0076312827957449064956** | 0% | 2.26867% | [Pinned native proof](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/README.md) |
+| 20 | 0.0059546307160000000000 | 0.0058128746464007348550 | **0.0058128746402904153757** | 1.0512e−7% | 2.380602% | [Superlattice follow-up](verifications/lattice/superlattice_saturation_20261122/) |
+| 21 | 0.0045579591750000000000 | 0.0044091934148594921857 | **0.0044091934123105448398** | 5.781e−8% | 3.263868% | [Superlattice follow-up](verifications/lattice/superlattice_saturation_20261122/) |
+| 22 | 0.0034829323340000000000 | 0.0033300672941105808279 | **0.0033300672928228325478** | 3.867e−8% | 4.388975% | [Superlattice follow-up](verifications/lattice/superlattice_saturation_20261122/) |
+| 23 | 0.0026084015810000000000 | 0.0025265652019048007308 | **0.0025265652019048007308** | 0% | 3.137415% | [Pinned native proof](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/README.md) |
+| 24 | — | π¹²/12! | **π¹²/12!** | 0% | — | [Exact Leech optimum](https://arxiv.org/abs/1603.06518) |
+| 25 | 0.0013252324330000000000 | 0.0012865580466895762002 | **0.0012865566944499901305** | 0.000105% | 2.918412% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
+| 26 | 0.00090720999700000000000 | 0.00086911029381370068778 | **0.00086900243887731789880** | 0.01241% | 4.211545% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
+| 27 | 0.00062293895300000000000 | 0.00058059392751453588197 | **0.00058048752470736150330** | 0.018327% | 6.814701% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
+| 28 | 0.00042963910100000000000 | 0.00039185020580726843221 | **0.00039179882422262013580** | 0.013113% | 8.807456% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
+| 29 | 0.00029802503900000000000 | 0.00027185785299942605068 | **0.00027185739946637818470** | 0.000167% | 8.780349% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
+| 30 | 0.00020793294600000000000 | 0.00018914606252674561181 | **0.00018914577034463185630** | 0.000154% | 9.035209% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
+| 31 | 0.00014608721700000000000 | 0.00013542960697911123778 | **0.00013541398085940899060** | 0.011538% | 7.306071% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
+| 32 | 0.00010151177700000000000 | 0.000095876900128017280000 | **0.000095868994308168250800** | 0.008246% | 5.558747% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
+| 33 | 0.000073827123000000000000 | 0.000073452496873458058600 | **0.000073445325008250398100** | 0.009764% | 0.517151% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
+| 34 | 0.000053148401000000000000 | 0.000052765505427206304080 | **0.000052758376962763145600** | 0.01351% | 0.73384% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
+| 35 | 0.000037664745000000000000 | 0.000037469507068663344450 | **0.000037465045043454272100** | 0.011908% | 0.530204% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
+| 36 | 0.000027277050000000000000 | 0.000027145882256491636230 | **0.000027145879604620582428** | 0.00001% | 0.480882% | [New exact replay](verifications/lattice/universal_refinements_20261122/#replay) |
+| 37 | 0.000018268708324000000000 | 0.000018245562973058698415 | **0.000018240473897953853607** | 0.027892% | 0.154551% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
+| 38 | 0.000012352154930400000000 | 0.000012342904844235365890 | **0.000012342188828202277498** | 0.005801% | 0.080683% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
+| 39 | 0.0000084799401622000000000 | 0.0000084768372418329309000 | **0.0000084768304132050218169** | 0.000081% | 0.036672% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
+| 40 | 0.0000059777359372000000000 | 0.0000059759954762954402419 | **0.0000059759954747923372602** | 2.5152e−8% | 0.029116% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
+| 41 | 0.0000043927514316000000000 | 0.0000043915395007280125410 | **0.0000043915394964222208570** | 9.8047e−8% | 0.027589% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
+| 42 | 0.0000034730376430000000000 | 0.0000034723546108616219544 | **0.0000034723546103562322282** | 1.4555e−8% | 0.019667% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
+| 43 | 0.0000025363822051000000000 | 0.0000025359881093975040500 | **0.0000025359881069348761411** | 9.7107e−8% | 0.015538% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
+| 44 | 0.0000017676809433000000000 | 0.0000017667499405165533285 | **0.0000017667499405165497950** | 2e−13% | 0.052668% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
+| 45 | 0.0000011728551765000000000 | 0.0000011727226221949307364 | **0.0000011727225939886516584** | 0.000002% | 0.011304% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
+| 46 | 0.00000077215962280000000000 | 0.00000077176742457565234158 | **0.00000077176741198685131143** | 0.000002% | 0.050794% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
+| 47 | 0.00000051300335340000000000 | 0.00000051272563331981911329 | **0.00000051272562808697011342** | 0.000001% | 0.054137% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
+| 48 | 0.00000034559190288000000000 | 0.00000034530564242393277929 | **0.00000034530564099888273888** | 4.1269e−7% | 0.082832% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
+
+The published 9–12D Hermite values use the classification and finite checks cited in their sources. The 13D and 14D bounds use the rank-12 input. The 16D check kit replays the final stage and checks the hashes of the upstream audits. [Rank-9 proof](https://arxiv.org/abs/2508.20719) · [Rank-12 input](https://eprint.iacr.org/2026/2825) · [16D verification scope](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/dim16/README.md)
 
 ### Historical project registry
 
@@ -67,4 +110,4 @@ Install the selected package requirements. Run `python verifications/lattice/rep
 The [portable proof package](verifications/lattice/compact_power6_45_48_20261117/README.md) supplies the shared 48D rank-two geometry, exact harmonic restrictions to 45–47D, separately certified scalar Fourier pairs, and independent full replay. Run `python verifications/lattice/compact_power6_45_48_20261117/run_all.py` for all four, or use the top-level selected-dimension runner. This supersedes the older rank-two packages for these dimensions. The selected 38–40D runner also now executes the previously published sharp collinear transfer after its predecessor proof; this is a routing correction, not an additional bound improvement.
 
 
-Latest 36D replay: `python verifications/lattice/compact_restriction36_20261117/run_all.py`; the aggregate runner dispatches 36D to this release. Earlier proofs remain preserved.
+Historical 36D replay: `python verifications/lattice/compact_restriction36_20261117/run_all.py`; the aggregate runner dispatches 36D to this release. Earlier proofs remain preserved.
