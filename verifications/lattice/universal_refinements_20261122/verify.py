@@ -440,8 +440,9 @@ def dim36(path):
     )
     sys.path.insert(0, str(path / "p"))
     from independent_fourier import transform
-    from independent_compact import compact_data
+    from independent_compact import compact_data, differential_check
     from portable_local import matrices
+    from audit_geometry import check_prefix
 
     old = F(read(path / "BOUNDS.json")["36"]["upper"])
     source = read(path / "p" / "pd36b.json")
@@ -450,7 +451,7 @@ def dim36(path):
     assert F(row["upper"]) == old and len(source["kernels"]) == 1
     (atom,) = source["kernels"]
     file = path / "p" / atom["local_kernel"]
-    data, R, powers, qscale, _, B = matrices(file, atom["source_sha"], 36)
+    data, R, powers, qscale, diagonal, B = matrices(file, atom["source_sha"], 36)
     assert (
         powers == sorted(powers)
         and len(powers) == 3
@@ -459,20 +460,54 @@ def dim36(path):
     assert not F(data.get("angular_debit", 0))
     B = B * rational(atom["alpha"]) / qscale**2
     z = fmpq_mat(3, 1, [rational(c) / qscale for c in atom["z"]])
-    w = fmpq_mat(3, 1, [0, -1, 1])
-    u = B.solve(-z)
-    gap = (w.transpose() * u)[0, 0]
-    assert gap > 0
-    drop = gap**2 / (w.transpose() * B.solve(w))[0, 0]
+    certificate = read(HERE / "joint-slack36.json")
+    w = fmpq_mat(3, 1, list(map(rational, certificate["direction"])))
+    dilation = rational(atom["dilation"])
+    cutoff = R / dilation
+    assert cutoff == fmpq(8, 5)
+    diagonal = diagonal * rational(atom["alpha"]) / qscale**2
+    radial = fmpq_poly([R / (R - 1), -dilation / (R - 1)])
+    features = [radial**power for power in powers]
+    shifted = 2 * sum(((z[i, 0] + w[i, 0]) * features[i] for i in range(3)), fmpq_poly())
+    shifted += 2 * sum(
+        (diagonal[i, j] * features[i] * features[j] for i, j in product(range(3), repeat=2)),
+        fmpq_poly(),
+    )
+
+    prefix = read(path / "p" / "baseline" / "prefix-36-degree7.json")
+    caps = {}
+    for key, witness in prefix.items():
+        limit = rational(key)
+        assert limit == rational(witness["end"])
+        caps[limit] = check_prefix(36, witness)
+    edges = sorted({cutoff} | {key for key in caps if 1 < key < cutoff})
+    counts = [min([(1 << 36) - 1] + [v for r, v in caps.items() if r >= end]) for end in edges]
+    assert all(a <= b for a, b in zip([1] + counts, counts))
+    heights = list(map(rational, certificate["heights"]))
+    assert len(heights) == len(edges)
+    following = heights[1:] + [fmpq(0)]
+    assert all(a >= b for a, b in zip(heights, following))
+
+    p, q = transform(36, source["d"])
+    tau = rational(source["tau"])
+    minimum_upper = rational(certificate["minimum_upper"])
+    minimum_value = arb(p(tau)) * (-arb(tau) / 2).exp() + arb(shifted(1))
+    assert minimum_value <= arb(minimum_upper)
+    parts = [(cutoff, shifted)] + [
+        (r, fmpq_poly([b - a])) for r, a, b in zip(edges, heights, following)
+    ]
+    differential_check(p, tau, parts)
+
+    allowance = 2 * minimum_upper + 2 * sum(
+        (current - prior) * h for prior, current, h in zip([1] + counts, counts, heights)
+    )
+    drop = (-2 * w.transpose() * B.solve(z) - w.transpose() * B.solve(w))[0, 0] - allowance
     assert drop > 0
-    _, q = transform(36, source["d"])
     reciprocal, *_ = compact_data(dict(n=36, kernels=source["reciprocal_kernels"]))
     assert 0 <= reciprocal < q(0)
     factor = (ball(source["tau"]) / 8) ** 18 / ball(19).gamma()
-    debit = F(
-        int((factor * arb(drop / q(0)) * DENSITY_UNIT).lower().floor().unique_fmpz()),
-        DENSITY_UNIT,
-    )
+    scale = 10**30
+    debit = F(int((factor * arb(drop / q(0)) * scale).lower().floor().unique_fmpz()), scale)
     floor = F(source["dual_target"])
     new = max(floor, old - debit)
     assert new < old

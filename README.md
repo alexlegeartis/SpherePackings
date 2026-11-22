@@ -202,9 +202,10 @@ The current register gives certified upper bounds in **9–48D** and compares th
 | 16 | **0.017231432341539144664** | 2.89e−10% |
 | 19 | **0.0076312827957442716237** | 8.3193e−12% |
 | 23 | **0.0025265652019047523943** | 1.9131e−12% |
-| 36 | **0.000027145879604620582428** | 0.00001% |
-| 37 | **0.000018240473897953853607** | 0.027892% |
+| 36 | **0.000027145852648811524495** | 0.000109% |
+| 37 | **0.00001818025053030711279** | 0.357963% |
 | 38 | **0.00001229554573503757040** | 0.383695% |
+| 39 | **0.00000845291367154137428** | 0.282223% |
 | 48 | **0.00000034530564099888273888** | 4.1269e−7% |
 
 The exact comparison gives **35 smaller upper bounds** and **one tie**, the exact 24D optimum, across the 36 benchmark dimensions. The largest reduction is **0.383695% in 38D**. [Pinned benchmark](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/COMPARISON.md) · [Historical project registry](LATTICE_RESULTS.md#historical-project-registry)

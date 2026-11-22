@@ -1,14 +1,16 @@
 # Compact-plane refits for lattice packing
 
-The certificate applies to all full-rank lattice packings in its dimension. The quantities in the table are occupied volume fractions.
+The certificate applies to all full-rank lattice packings in its dimension. The quantities in the table are occupied volume fractions. Benchmark decimals are rounded upward where needed. Reductions use the exact archive values.
 
 | Dimension | New upper bound | Pinned parent upper bound | Relative reduction |
 |---:|---:|---:|---:|
+| 37 | 0.00001818025053030711279 | 0.000018245562973058698414114862 | 0.35796343% |
 | 38 | 0.00001229554573503757040 | 0.00001234290484423536589 | 0.38369500% |
+| 39 | 0.00000845291367154137428 | 0.0000084768372418329309 | 0.28222283% |
 
 ## Offline replay
 
-Use Python 3.11 or later, NumPy, and python-flint 0.9.0. The verifier accepts the [pinned parent proof ZIP](https://github.com/AstroNinja389/sphere-packings/raw/d7ffd0df47dfeb11814631858205f05ed73ec8ff/proofs/n25-48-proofs-r9.zip) or its extracted directory. It checks the source manifest and replays the parent ranks used for comparison before it checks the refit.
+Use Python 3.11 or later, NumPy, and python-flint 0.9.0. The verifier accepts the [pinned parent proof ZIP](https://github.com/AstroNinja389/sphere-packings/raw/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/n25-48-proofs-r9.zip) or its extracted directory. It checks the source manifest and replays the parent ranks used for comparison before it checks the refit.
 
 ~~~sh
 python -m pip install numpy python-flint==0.9.0
@@ -50,4 +52,4 @@ The reciprocal polynomial $Q$ is nonnegative for every squared length. Its Fouri
 \frac{P(0)+s}{Q(0)}.
 ~~~
 
-The benchmark is the exact final bound in the pinned parent archive. [Parent bounds](https://github.com/AstroNinja389/sphere-packings/blob/d7ffd0df47dfeb11814631858205f05ed73ec8ff/proofs/bounds-25-48.json)
+The benchmark is the exact final bound in the pinned parent archive. [Parent bounds](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/bounds-25-48.json)

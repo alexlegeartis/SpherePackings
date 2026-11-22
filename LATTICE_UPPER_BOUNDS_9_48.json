@@ -340,27 +340,27 @@
     },
     {
       "dimension": 36,
-      "density_upper": "0.000027145879604620582428",
-      "proof_upper_rational": "6786469901155145606751/250000000000000000000000000",
+      "density_upper": "0.000027145852648811524495",
+      "proof_upper_rational": "2714585264881152449406623/100000000000000000000000000000",
       "exact_value": null,
-      "proof_label": "New exact replay",
+      "proof_label": "Joint spatial and radial moments",
       "proof": "verifications/lattice/universal_refinements_20261122/#replay",
       "benchmark_upper_rational": "2714588225649163623/100000000000000000000000",
       "previous_project_upper": "545541/20000000000",
-      "reduction_vs_benchmark_percent": "0.00001%",
-      "reduction_vs_previous_project_percent": "0.480882%"
+      "reduction_vs_benchmark_percent": "0.000109%",
+      "reduction_vs_previous_project_percent": "0.480981%"
     },
     {
       "dimension": 37,
-      "density_upper": "0.000018240473897953853607",
-      "proof_upper_rational": "18240473897953853607/1000000000000000000000000",
+      "density_upper": "0.00001818025053030711279",
+      "proof_upper_rational": "1818025053030711279/100000000000000000000000",
       "exact_value": null,
-      "proof_label": "Angular follow-up",
-      "proof": "verifications/lattice/angular_kernel_followup_20261122/",
+      "proof_label": "Joint Fourier and plane certificate",
+      "proof": "verifications/lattice/joint_fourier_plane_20261122/",
       "benchmark_upper_rational": "182455629730586984141148615676056825798352869641063/10000000000000000000000000000000000000000000000000000000",
       "previous_project_upper": "4567177081/250000000000000",
-      "reduction_vs_benchmark_percent": "0.027892%",
-      "reduction_vs_previous_project_percent": "0.154551%"
+      "reduction_vs_benchmark_percent": "0.357963%",
+      "reduction_vs_previous_project_percent": "0.484204%"
     },
     {
       "dimension": 38,
@@ -376,15 +376,15 @@
     },
     {
       "dimension": 39,
-      "density_upper": "0.0000084768304132050218169",
-      "proof_upper_rational": "42384152066025109084167008557/5000000000000000000000000000000000",
+      "density_upper": "0.00000845291367154137428",
+      "proof_upper_rational": "211322841788534357/25000000000000000000000",
       "exact_value": null,
-      "proof_label": "Reciprocal and angular follow-up",
-      "proof": "verifications/lattice/dual_mass_angular_energy_38_48_20261122/",
+      "proof_label": "Joint Fourier and plane certificate",
+      "proof": "verifications/lattice/joint_fourier_plane_20261122/",
       "benchmark_upper_rational": "84768372418329309/10000000000000000000000",
       "previous_project_upper": "42399700811/5000000000000000",
-      "reduction_vs_benchmark_percent": "0.000081%",
-      "reduction_vs_previous_project_percent": "0.036672%"
+      "reduction_vs_benchmark_percent": "0.282223%",
+      "reduction_vs_previous_project_percent": "0.318711%"
     },
     {
       "dimension": 40,

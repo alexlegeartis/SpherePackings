@@ -9,7 +9,7 @@ Each result is an upper bound on the occupied volume fraction for every full-ran
 | 16 | 0.017231432341539144664 |
 | 19 | 0.0076312827957442716237 |
 | 23 | 0.0025265652019047523943 |
-| 36 | 0.000027145879604620582428 |
+| 36 | 0.000027145852648811524495 |
 
 ## Reciprocal vectors in dimensions 14–16
 
@@ -27,15 +27,11 @@ The native proofs enclose a reduced dual plane by a rational box in three parame
 
 Every remaining box is covered by lower bounds for the sum over a fixed finite set of opposite pairs. A mesh provides the first bound. In smaller boxes, the checker also encloses the endpoints and all real stationary points of the Gaussian polynomial on each possible length interval. The stationary points are roots of the exact polynomial $2q'-q$. This yields new plane contributions $\mu=7.25\cdot10^{-12}$ in rank 19 and $\mu=1.005\cdot10^{-12}$ in rank 23. If the old plane contribution was $\mu_0$, the new upper is $\max(T,U_n(q(0)+\mu_0)/(q(0)+\mu))$. The improvement is tiny because the first shells can lie close to a Fourier minimum in the reduced-plane domain.
 
-## Radial moments in dimension 36
+## Joint spatial and radial-moment bound in dimension 36
 
-The parent's spatial kernel uses three features $(h^6,h^9,h^{12})$ with $0\le h\le1$ on the supported nonzero lattice vectors. Let $u$ be the sum of those vectors of features. The parent completes the square in the constant spherical harmonic of its kernel, minimizing $u^{\mathsf T}Bu+2z^{\mathsf T}u$ over all real $u$. For a lattice, $u_3\le u_2$ pointwise after summation. The verifier reconstructs $B$ and $z$ and checks that the unrestricted minimizer $u_*=-B^{-1}z$ satisfies $w^{\mathsf T}u_*>0$ for $w=(0,-1,1)$. The constrained minimum is higher by
+Write $H(a)$ for the parent’s three compact radial features, $B$ for the constant harmonic block and $z$ for its origin vector. Replacing $z$ by $z+w$ changes the Schur cost by $2w^T B^{-1}z+w^T B^{-1}w$. It adds $2w^T H(a)$ to the spatial test at each nonzero lattice vector. The witness supplies $w$ and a decreasing list of rational upper bounds for that shifted test on successive squared-length intervals.
 
-$$
-\gamma=\frac{(w^{\mathsf T}u_*)^2}{w^{\mathsf T}B^{-1}w}.
-$$
-
-The parent uses the quadratic minimum to bound the spatial numerator, so it falls by $\gamma$. The parent's certified reciprocal denominator is positive and at most $q(0)$. Dividing by $q(0)$ gives a conservative deduction in the same density normalization. The replay takes the larger of the revised upper and the parent's density threshold. [Parent compact-kernel certificates](https://github.com/AstroNinja389/sphere-packings/blob/d7ffd0df47dfeb11814631858205f05ed73ec8ff/proofs/README.md)
+The verifier checks the interval heights with directed exponential arithmetic and uses the certified prefix counts to bound their sum. One opposite pair at squared length one is present in every normalized lattice. The verifier bounds its contribution at that exact point and reserves one place for it in each cumulative count. Both signs are included. The decrease in Schur cost exceeds the spatial allowance. Dividing that saving by the larger denominator $Q(0)$ gives a conservative density decrease on the parent’s high-density branch. Taking the maximum with its complementary threshold yields the universal bound. [Rational witness](joint-slack36.json)
 
 ## Replay
 
