@@ -1,0 +1,28 @@
+{
+  "rows": [
+    {
+      "dimension": 77,
+      "kind": "lattice",
+      "minimum_squared": 8,
+      "gram_determinant": 7,
+      "center_density_squared": "151115727451828646838272/7",
+      "occupied_density_floor": "6.23325752266126e-16",
+      "preceding_repository_gram_determinant": 8,
+      "gain_over_preceding_repository_percent_floor": "6.904496",
+      "named_external_gram_determinant": 300,
+      "gain_over_named_external_percent_floor": "554.65367"
+    },
+    {
+      "dimension": 78,
+      "kind": "lattice",
+      "minimum_squared": 8,
+      "gram_determinant": 10,
+      "center_density_squared": "151115727451828646838272/5",
+      "occupied_density_floor": "2.08655477067461e-16",
+      "preceding_repository_gram_determinant": 12,
+      "gain_over_preceding_repository_percent_floor": "9.544511",
+      "named_external_gram_determinant": 48,
+      "gain_over_named_external_percent_floor": "119.089023"
+    }
+  ]
+}
