@@ -96,7 +96,7 @@ It follows that $(1-x)^{55/2}\,(19/5)/U_0\le1$, which is the bound on the
 the gap bound. These arguments allow any number of layers per period.
 
 The number of available horizontal offsets gives separate bounds for fixed
-parent constructions in 55D, 56D, 80D and 92D. [Layer offset limits](COLOR_LIMITS.md).
+parent constructions in the seven target dimensions. [Layer offset limits](COLOR_LIMITS.md).
 
 Run `python research/uneven_layers55_20261122/verify.py` with python-flint
 and NumPy. The check reconstructs the parent, verifies all layer distances

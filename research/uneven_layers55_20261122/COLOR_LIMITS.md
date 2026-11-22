@@ -19,15 +19,26 @@ by its residue class modulo twice that lattice gives $s\le 2^r$.
 
 ## Consequences for the target dimensions
 
+- Starting from the 53D quaternionic lattice, matching Leterrier54 requires
+  at least **six** horizontal translates even with free choice of layer
+  heights. The required real-valued ratio is
+  $2\delta_{54}/\delta_{53}=5.2000339\ldots$.
+  [53D construction](../p48n_hurwitz_20261122/README.md) · [Leterrier54](https://doi.org/10.1007/s40993-022-00321-0).
 - Starting from Leterrier54, three translates can give center density at
   most $3\delta_{54}/2=90,459.8387\ldots$ in 55D. The printed figure would
   require at least four translates. Starting from the same parent in 56D,
   even matching MW56 would require at least **12** translates, since
   $2\sqrt3\,\delta_{56}/\delta_{54}=11.270789\ldots$.
   [Leterrier54 and the printed 55D comparison](../cross_coset55_20261116/PROOF.md#external-comparison) · [MW56](../cm58_20261116/PROOF.md#published-parent-and-exact-gram-binding).
+- Starting from the verified 62D Ne64 projection of center density
+  $3(35/12)^{31}/(3^{16}\sqrt{12})$, 63D requires at least **seven**
+  horizontal translates to reach Elkies’s published guarantee. Six give a
+  ceiling below $2^{23.9}$. In 64D, matching Ne64 requires at least **29**
+  translates, since $28\delta_{62}/(2\sqrt3)<3^{16}$.
+  [62D certificate](../novel_routes_20261113/dual64/constructed.json) · [63D comparison](https://doi.org/10.1090/S0002-9947-99-02169-8) · [Ne64](https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/CQ64b.html).
 - Starting from Γ72 and using a label for each residue class modulo twice
   an 8D vertical lattice, any such 80D packing has center density at most
-  $2^8\cdot2^{36}/16=2^{40}$. This is **90.20%** of the MW80 benchmark,
+  $2^8\cdot2^{36}/16=2^{40}$. This is less than **90.20%** of the MW80 benchmark,
   irrespective of the chosen coset depths. [Γ72](https://arxiv.org/abs/1008.2862) · [Optimal 8D center density](https://cohn.mit.edu/sphere-packing/#data) · [MW80](../creative_sections_20261116/PROOF.md#78d-and-79d-antipodes-from-the-reconstructed-mw80).
 - Starting from MW80 and using a label for each residue class modulo twice
   a 12D vertical lattice, the 92D center density is at most $2^{12}\delta_{80}$.
