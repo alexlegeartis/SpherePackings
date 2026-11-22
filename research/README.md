@@ -36,6 +36,7 @@ pins all three branch heads and records fresh replay scope and leaderboard check
 | [Combined branch tools](combined_branches_20261115/README.md) | Certified upper-bound improvements plus lower-bound searches. The registry identifies the current certificates. |
 | [Adaptive layers](adaptive_layers_20261115/README.md) | Certified constructions and finite research screens; see the lower-bound leaderboard for current values. |
 | [Quaternionic P48n extensions](p48n_hurwitz_20261122/README.md) | Explicit lattices in 51–53D with determinant 4 and squared minimum 6. |
+| [Explicit Γ72 extensions](gamma72_leech_layers_20261122/README.md) | Stronger 73–77D lower bounds and a 78D lattice, with complete integer half-coset enumeration. |
 | [MW92 extensions](mw92_extensions_20261122/README.md) | Lattice existence bounds in 93–96D and a stronger nine-translate periodic packing in 96D. |
 | [48D–96D audit](range48_96_20261115/README.md) | Exact constructions, source comparisons and dimensions where no improvement was obtained. |
 | [CM-plane construction and frontier](cm58_20261116/FRONTIER.md) | Certified advances and rejected or unresolved targets. |

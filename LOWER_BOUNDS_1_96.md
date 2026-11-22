@@ -81,11 +81,11 @@ challenge value is discussed in that proof.
 | 70 | 1.73198888182953e-13 | [Gamma72 antipode, 3 translates](research/novel_routes_20261113/higher_parent/gamma72_verified.json) |
 | 71 | 1.41777248847496e-13 | [Gamma72 antipode, 2 translates](research/novel_routes_20261113/higher_parent/gamma72_verified.json) |
 | 72 | 1.45861310696239e-13 | [Nebe Gamma72](https://arxiv.org/abs/1008.2862) |
-| 73 | 3.48205577264867e-14 | [Gamma72 compatible half-cosets, rank 1](research/cross_dimension_lower_20261115/counting_results.json) |
-| 74 | 9.53380730116070e-15 | [Gamma72 compatible half-cosets, rank 2](research/cross_dimension_lower_20261115/counting_results.json) |
-| 75 | 2.75028732124740e-15 | [Gamma72 compatible half-cosets, rank 3](research/cross_dimension_lower_20261115/counting_results.json) |
-| 76 | 9.10127032714570e-16 | [Gamma72 compatible half-cosets, rank 4](research/cross_dimension_lower_20261115/counting_results.json) |
-| 77 | 2.99230560820502e-16 | [Gamma72 adaptive singular cosets above D5](research/adaptive_layers_20261115/results.json) |
+| 73 | 3.81440098634152e-14 | [Explicit Γ72 lattice with Leech-block verification](research/gamma72_leech_layers_20261122/README.md) |
+| 74 | 1.14405687613928e-14 | [Explicit Γ72 lattice with Leech-block verification](research/gamma72_leech_layers_20261122/README.md) |
+| 75 | 3.61534657312238e-15 | [Explicit Γ72 lattice with Leech-block verification](research/gamma72_leech_layers_20261122/README.md) |
+| 76 | 1.31058292710898e-15 | [Explicit Γ72 lattice with Leech-block verification](research/gamma72_leech_layers_20261122/README.md) |
+| 77 | 3.98928481450320e-16 | [Explicit Γ72 lattice with Leech-block verification](research/gamma72_leech_layers_20261122/README.md) |
 | 78 | 1.41519803035180e-16 | [Three-fiber MW80 projection](research/packing78_verified_20261117/README.md) |
 | 79 | 1.11920881328318e-16 | [Explicit MW80 antipode, 2 translates](research/creative_sections_20261116/results.json) |
 | 80 | 1.14912817562331e-16 | [Shioda MW80](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) |

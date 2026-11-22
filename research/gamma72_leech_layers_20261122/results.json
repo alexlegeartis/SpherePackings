@@ -1,0 +1,441 @@
+{
+  "comparison_base_commit": "0974b5afeac553a218a66a6f5340d926ecc8b01f",
+  "hashes": {
+    "neb72.html": "92daeaf0d93672e82ca5e5bc4479e5775daf59029aa4e983fb464e36ef002044",
+    "certificate.json": "09c03bf697b820b52cf1635b0598df703647cda9e38cb97c48fa5748a2ddc6af",
+    "decode.cpp": "ef978c15374dd0d79c32d6238c6ad4f5e0189597fd789aa0092f5ab3ddd55b17"
+  },
+  "enumeration": [
+    {
+      "class": "100000000000000000000000000000000000000000000000000000000000000000000000",
+      "gamma_norm_cutoff": 7,
+      "status": "EXCLUDED",
+      "pairs_checked": 0,
+      "block_norm_vectors": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "class": "100000000000000000000000000000000000000000000000000000000000000000000000",
+      "gamma_norm_cutoff": 8,
+      "status": "FOUND",
+      "pairs_checked": 1,
+      "block_norm_vectors": [
+        2,
+        2,
+        48
+      ]
+    },
+    {
+      "class": "000000000110100110111010111011001000111101011000110100001110000011110001",
+      "gamma_norm_cutoff": 8,
+      "status": "EXCLUDED",
+      "pairs_checked": 0,
+      "block_norm_vectors": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "class": "000000101001010101000101011010110101011011110100001111010100011101000100",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 6486,
+      "block_norm_vectors": [
+        377710,
+        377710,
+        1231792
+      ]
+    },
+    {
+      "class": "000011001011101100110000110110011101001000101001100110001100000001000100",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 41164,
+      "block_norm_vectors": [
+        1231792,
+        377710,
+        377710
+      ]
+    },
+    {
+      "class": "000011001111010111001101100000111111100001111100011001100100001101110110",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 40770,
+      "block_norm_vectors": [
+        1231792,
+        377710,
+        377710
+      ]
+    },
+    {
+      "class": "000101101010100110101010010110110101110001111001001010110100001101011000",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 41312,
+      "block_norm_vectors": [
+        1231792,
+        377710,
+        377710
+      ]
+    },
+    {
+      "class": "000101101100000000010000101101111101001100100001111110111010001110101001",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 40760,
+      "block_norm_vectors": [
+        1231792,
+        377710,
+        377710
+      ]
+    },
+    {
+      "class": "000110011011011101101100100000101111010111110101110010110000100110111011",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 41224,
+      "block_norm_vectors": [
+        377710,
+        1231792,
+        377710
+      ]
+    },
+    {
+      "class": "000110100011010111011101001101000010101101011101100111011110000011011111",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 6412,
+      "block_norm_vectors": [
+        377710,
+        377710,
+        1231792
+      ]
+    },
+    {
+      "class": "001011110011110010101011011101010011000110111001000011101101001010010111",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 6496,
+      "block_norm_vectors": [
+        377710,
+        377710,
+        1231792
+      ]
+    },
+    {
+      "class": "001100000111111001011011011100101101101110110000111110101010101011111101",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 6542,
+      "block_norm_vectors": [
+        101296,
+        101296,
+        101296
+      ]
+    },
+    {
+      "class": "001100101000001010100100111101010000001000011100000101110000110101001000",
+      "gamma_norm_cutoff": 18,
+      "status": "EXCLUDED",
+      "pairs_checked": 227340,
+      "block_norm_vectors": [
+        1231792,
+        1231792,
+        1231792
+      ]
+    },
+    {
+      "class": "001100101110101100011110000110011000110101000100110001111110110110111001",
+      "gamma_norm_cutoff": 18,
+      "status": "EXCLUDED",
+      "pairs_checked": 227290,
+      "block_norm_vectors": [
+        1231792,
+        1231792,
+        1231792
+      ]
+    },
+    {
+      "class": "001101101000101111000111111101111100010001001100110001011101101100101100",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 40724,
+      "block_norm_vectors": [
+        377710,
+        1231792,
+        377710
+      ]
+    },
+    {
+      "class": "001101101110001001111101000110110100101100010100000101010011101111011101",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 41122,
+      "block_norm_vectors": [
+        377710,
+        1231792,
+        377710
+      ]
+    },
+    {
+      "class": "001111001010110011010001010001111000011011000001101100101000101001001000",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 41090,
+      "block_norm_vectors": [
+        1231792,
+        377710,
+        377710
+      ]
+    },
+    {
+      "class": "001111001100010101101011101010110000100110011001011000100110101010111001",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 41196,
+      "block_norm_vectors": [
+        1231792,
+        377710,
+        377710
+      ]
+    },
+    {
+      "class": "001111100101000000101110110000000101111101101101010111110010110111111101",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 41298,
+      "block_norm_vectors": [
+        377710,
+        1231792,
+        377710
+      ]
+    },
+    {
+      "class": "001111100111011101101001011101101111101001100000011100010100111000111110",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 41488,
+      "block_norm_vectors": [
+        377710,
+        1231792,
+        377710
+      ]
+    },
+    {
+      "class": "010001110001000110110011000011111101001011000101111110011001101011001111",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 40488,
+      "block_norm_vectors": [
+        377710,
+        1231792,
+        377710
+      ]
+    },
+    {
+      "class": "010001110111100000001001111000110101110110011101001010010111101000111110",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 40960,
+      "block_norm_vectors": [
+        377710,
+        1231792,
+        377710
+      ]
+    },
+    {
+      "class": "010010000110011011001111001110101111010000010001110010010011000011011101",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 40960,
+      "block_norm_vectors": [
+        1231792,
+        377710,
+        377710
+      ]
+    },
+    {
+      "class": "010111010000001100101001100011010101110010010101010010100001100111010011",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 41326,
+      "block_norm_vectors": [
+        377710,
+        1231792,
+        377710
+      ]
+    },
+    {
+      "class": "011000011010111111111000110010101101101001010100111110001001001110011011",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 40770,
+      "block_norm_vectors": [
+        1231792,
+        377710,
+        377710
+      ]
+    },
+    {
+      "class": "011000110011101010111101101000011000110010100000110001011101010011011111",
+      "gamma_norm_cutoff": 18,
+      "status": "EXCLUDED",
+      "pairs_checked": 227340,
+      "block_norm_vectors": [
+        1231792,
+        1231792,
+        1231792
+      ]
+    },
+    {
+      "class": "011000110101001100000111010011010000001111111000000101010011010000101110",
+      "gamma_norm_cutoff": 18,
+      "status": "EXCLUDED",
+      "pairs_checked": 227290,
+      "block_norm_vectors": [
+        1231792,
+        1231792,
+        1231792
+      ]
+    },
+    {
+      "class": "011011111000000110001101011110000101111010001001010111010001010010011011",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 6496,
+      "block_norm_vectors": [
+        101296,
+        101296,
+        101296
+      ]
+    },
+    {
+      "class": "011110010110011011011010011110010010100010100101100010001101010011110001",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 6468,
+      "block_norm_vectors": [
+        377710,
+        377710,
+        1231792
+      ]
+    },
+    {
+      "class": "100010101000110000110101110101100010011110101110001110010000100110000111",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 41210,
+      "block_norm_vectors": [
+        1231792,
+        377710,
+        377710
+      ]
+    },
+    {
+      "class": "100111111000000001101001100011010000000001110010011010101100000001111000",
+      "gamma_norm_cutoff": 16,
+      "status": "EXCLUDED",
+      "pairs_checked": 41002,
+      "block_norm_vectors": [
+        1231792,
+        377710,
+        377710
+      ]
+    },
+    {
+      "class": "101000011011100111111101101000011101000001000111111001010000110101110100",
+      "gamma_norm_cutoff": 8,
+      "status": "EXCLUDED",
+      "pairs_checked": 0,
+      "block_norm_vectors": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "class": "101000011101000001000111010011010101111100011111001101011110110110000101",
+      "gamma_norm_cutoff": 8,
+      "status": "EXCLUDED",
+      "pairs_checked": 0,
+      "block_norm_vectors": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "dimension": 73,
+      "kind": "explicit lattice",
+      "minimum_squared": 8,
+      "gram_determinant": "5/2",
+      "center_density_squared": "18889465931478580854784/5",
+      "occupied_density_floor": "3.81440098634152E-14",
+      "gain_over_repository_percent_floor": "9.5445",
+      "named_external_comparison_center_density_squared": "1180591620717411303424",
+      "gain_over_named_external_comparison_percent_floor": "78.885438"
+    },
+    {
+      "dimension": 74,
+      "kind": "explicit lattice",
+      "minimum_squared": 8,
+      "gram_determinant": "75/16",
+      "center_density_squared": "302231454903657293676544/75",
+      "occupied_density_floor": "1.14405687613928E-14",
+      "gain_over_repository_percent_floor": "20.0000",
+      "named_external_comparison_center_density_squared": "1180591620717411303424/3",
+      "gain_over_named_external_comparison_percent_floor": "220.000000"
+    },
+    {
+      "dimension": 75,
+      "kind": "explicit lattice",
+      "minimum_squared": 8,
+      "gram_determinant": "125/16",
+      "center_density_squared": "604462909807314587353088/125",
+      "occupied_density_floor": "3.61534657312238E-15",
+      "gain_over_repository_percent_floor": "31.4534",
+      "named_external_comparison_center_density_squared": "147573952589676412928",
+      "gain_over_named_external_comparison_percent_floor": "472.433402"
+    },
+    {
+      "dimension": 76,
+      "kind": "explicit lattice",
+      "minimum_squared": 8,
+      "gram_determinant": "625/64",
+      "center_density_squared": "4835703278458516698824704/625",
+      "occupied_density_floor": "1.31058292710898E-15",
+      "gain_over_repository_percent_floor": "44.0000",
+      "named_external_comparison_center_density_squared": "73786976294838206464",
+      "gain_over_named_external_comparison_percent_floor": "924.000000"
+    },
+    {
+      "dimension": 77,
+      "kind": "explicit lattice",
+      "minimum_squared": 8,
+      "gram_determinant": "4375/256",
+      "center_density_squared": "38685626227668133590597632/4375",
+      "occupied_density_floor": "3.98928481450320E-16",
+      "gain_over_repository_percent_floor": "33.3180",
+      "named_external_comparison_center_density_squared": "37778931862957161709568/75",
+      "gain_over_named_external_comparison_percent_floor": "318.978349"
+    },
+    {
+      "dimension": 78,
+      "kind": "explicit lattice",
+      "minimum_squared": 8,
+      "gram_determinant": "91875/4096",
+      "center_density_squared": "1237940039285380274899124224/91875",
+      "occupied_density_floor": "1.39319236921112E-16",
+      "gain_over_repository_percent_floor": "-1.5550",
+      "named_external_comparison_center_density_squared": "18889465931478580854784/3",
+      "gain_over_named_external_comparison_percent_floor": "46.285714"
+    }
+  ]
+}
