@@ -134,15 +134,18 @@ These certificates use the existing [Cohn–de Laat–Salmon continuum framework
 
 ## Lattice-only lower bounds
 
-[Complete 1–48D catalog](LATTICE_LOWER_BOUNDS_1_48.md) with exact center densities, occupied-volume density floors and construction references.
+| n | Comparison density / method | Our density / method | Increase |
+| ---: | --- | --- | ---: |
+| 29 | ≈2.78789874568e-5<br>[B29 lattice — Bacher (1996)](https://doi.org/10.1007/S002220050180) · [Cohn’s lattice table](https://cohn.mit.edu/sphere-packing/#lattice-data) | **≥3.3623323974379e-5**<br>[Shifted Bacher lattice, exact center density `4/sqrt(33)`](research/bacher_slip_29_30_20261122/) | **20.60%** |
+| 30 | ≈1.44286438425e-5<br>[Q30 lattice — Quebbemann (1984)](https://doi.org/10.1112/S0025579300010731) · [Cohn’s lattice table](https://cohn.mit.edu/sphere-packing/#lattice-data) | **≥1.7109756022744e-5**<br>[Shifted Bacher lattice, exact center density `8/sqrt(105)`](research/bacher_slip_29_30_20261122/) | **18.58%** |
+| 36 | ≈6.1615e-7<br>[KP36 code-based lattice — Kschischang–Pasupathy (1992)](https://doi.org/10.1109/18.119683) · [Catalogue parameters](https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/KP36.html) | **≥7.3303477831670e-7**<br>[Contact-preserving metric deformation, exact Gram matrix and complete minimum certificate](constructions/dim36/) | **18.97%** |
 
-| Dimension | Exact center density | Occupied density at least | Status |
-|---:|---:|---:|---|
-| 29 | `4/sqrt(33)` | 3.3623323974379e-5 | [Shifted Bacher lattice](research/bacher_slip_29_30_20261122/): **+20.60%** vs. Cohn’s lattice entry |
-| 30 | `8/sqrt(105)` | 1.7109756022744e-5 | [Shifted Bacher lattice](research/bacher_slip_29_30_20261122/): **+18.58%** vs. Cohn’s lattice entry |
-| 36 | `16777216/3176523` | 7.3303477831670e-7 | [Metric deformation](constructions/dim36/): already listed by Cohn |
+Densities are occupied-volume fractions. The 29D and 30D entries improve
+Cohn’s listed lattice bounds without changing his unrestricted bounds.
+Cohn already lists the 36D result in both tables; its increase is over KP36.
 
-The 29D and 30D advances do not change the unrestricted lower bounds.
+[Complete 1–48D lattice catalog](LATTICE_LOWER_BOUNDS_1_48.md), with exact center
+densities, occupied-volume density floors and construction references.
 
 <!-- lattice-upper-20261116:start -->
 ## Lattice-only upper bounds
