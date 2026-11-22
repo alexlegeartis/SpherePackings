@@ -1,0 +1,160 @@
+{
+  "original_30d_stack": {
+    "low_bits": 4,
+    "high_syndrome": 5,
+    "horizontal_squared_distances_times_16": [
+      56,
+      32
+    ],
+    "center_density_squared": "1",
+    "kissing_number": 128844
+  },
+  "horizontal_29d_kissing_number": 98520,
+  "trials": [
+    {
+      "horizontal_dimension": 29,
+      "height_squared": "1/4",
+      "cosets_checked": 536870912,
+      "certificates": []
+    },
+    {
+      "horizontal_dimension": 29,
+      "height_squared": "1/2",
+      "cosets_checked": 536870912,
+      "certificates": [
+        {
+          "low_bits": 66121728,
+          "high_syndrome": 8,
+          "horizontal_squared_distances_times_16": [
+            56,
+            32
+          ],
+          "center_density_squared": "1",
+          "kissing_number": 125260
+        },
+        {
+          "low_bits": 66121728,
+          "high_syndrome": 10,
+          "horizontal_squared_distances_times_16": [
+            56,
+            32
+          ],
+          "center_density_squared": "1",
+          "kissing_number": 125260
+        },
+        {
+          "low_bits": 66121728,
+          "high_syndrome": 12,
+          "horizontal_squared_distances_times_16": [
+            56,
+            32
+          ],
+          "center_density_squared": "1",
+          "kissing_number": 123212
+        },
+        {
+          "low_bits": 66121728,
+          "high_syndrome": 14,
+          "horizontal_squared_distances_times_16": [
+            56,
+            32
+          ],
+          "center_density_squared": "1",
+          "kissing_number": 123212
+        },
+        {
+          "low_bits": 66121728,
+          "high_syndrome": 57,
+          "horizontal_squared_distances_times_16": [
+            56,
+            32
+          ],
+          "center_density_squared": "1",
+          "kissing_number": 125260
+        },
+        {
+          "low_bits": 66121728,
+          "high_syndrome": 59,
+          "horizontal_squared_distances_times_16": [
+            56,
+            32
+          ],
+          "center_density_squared": "1",
+          "kissing_number": 125260
+        },
+        {
+          "low_bits": 66121728,
+          "high_syndrome": 61,
+          "horizontal_squared_distances_times_16": [
+            56,
+            32
+          ],
+          "center_density_squared": "1",
+          "kissing_number": 123212
+        },
+        {
+          "low_bits": 66121728,
+          "high_syndrome": 63,
+          "horizontal_squared_distances_times_16": [
+            56,
+            32
+          ],
+          "center_density_squared": "1",
+          "kissing_number": 123212
+        },
+        {
+          "low_bits": 217116672,
+          "high_syndrome": 57,
+          "horizontal_squared_distances_times_16": [
+            56,
+            32
+          ],
+          "center_density_squared": "1",
+          "kissing_number": 124748
+        },
+        {
+          "low_bits": 217116672,
+          "high_syndrome": 59,
+          "horizontal_squared_distances_times_16": [
+            56,
+            32
+          ],
+          "center_density_squared": "1",
+          "kissing_number": 124748
+        },
+        {
+          "low_bits": 217116672,
+          "high_syndrome": 61,
+          "horizontal_squared_distances_times_16": [
+            56,
+            32
+          ],
+          "center_density_squared": "1",
+          "kissing_number": 128844
+        },
+        {
+          "low_bits": 217116672,
+          "high_syndrome": 63,
+          "horizontal_squared_distances_times_16": [
+            56,
+            32
+          ],
+          "center_density_squared": "1",
+          "kissing_number": 128844
+        }
+      ]
+    },
+    {
+      "horizontal_dimension": 30,
+      "height_squared": "1/4",
+      "cosets_checked": 1073741824,
+      "certificates": []
+    },
+    {
+      "horizontal_dimension": 30,
+      "height_squared": "1/2",
+      "cosets_checked": 1073741824,
+      "certificates": []
+    }
+  ]
+}
