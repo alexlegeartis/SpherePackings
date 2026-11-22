@@ -2,16 +2,18 @@
 import argparse
 from decimal import Decimal, ROUND_FLOOR, localcontext
 from fractions import Fraction as F
-from math import factorial, prod
+from math import factorial, isqrt, prod
 import json
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 DEST = ROOT / "LATTICE_LOWER_BOUNDS_1_48.md"
+PACK = "research/quaternary_29_30_20261122"
 SLIP = "research/bacher_slip_29_30_20261122"
 COHN = "https://cohn.mit.edu/sphere-packing/"
-LABELS = {29: "4/sqrt(33)", 30: "8/sqrt(105)"}
+LABELS = {29: "1/sqrt(2)", 30: "1"}
+METHODS = {29: "Section of quaternary-code lattice", 30: "Quaternary-code lattice"}
 
 
 def atan_interval(q):
@@ -69,7 +71,9 @@ def render():
     c36_sq = F(16777216, 3176523)**2
     assert density_squared(rows[35][1]) == c36_sq
 
-    proofs = json.loads((ROOT / SLIP / "results.json").read_text())["rows"]
+    proofs = json.loads((ROOT / PACK / "results.json").read_text())["rows"]
+    predecessor = {r["dimension"]: F(r["center_density_squared"])
+                   for r in json.loads((ROOT / SLIP / "results.json").read_text())["rows"]}
     improvements = {r["dimension"]: r for r in proofs}
     assert set(improvements) == LABELS.keys()
     pi_lo, pi_hi = pi_interval()
@@ -92,17 +96,23 @@ is separate. This table does not claim optimality or exhaustive priority.
         r = improvements[n]
         old = density_squared(factors)
         new = F(r["center_density_squared"])
-        assert old == F(r["previous_lattice_center_density_squared"]) < new
+        assert old == F(r["cohn_lattice_center_density_squared"])
+        assert old < predecessor[n] == F(r["preceding_repository_center_density_squared"]) < new
+        assert new == F(r["cohn_unrestricted_center_density_squared"])
         assert new == F(r["minimum_squared"], 4)**n / F(r["gram_determinant"])
         occupied = floor_sqrt(new*ball_squared(n, pi_lo), new*ball_squared(n, pi_hi))
-        assert F(r["occupied_density_floor"])**2 <= new*ball_squared(n, pi_lo)
-        gain = F(r["gain_percent_floor"])
-        assert (1+gain/100)**2 <= new/old < (1+(gain+F(1, 10**11))/100)**2
-        gain_display = f"{int(gain*100)//100}.{int(gain*100)%100:02d}%"
-        t.append(f"| {n} | `{center_formula(factors)}` | **`{LABELS[n]}`** | **{occupied}** | **{gain_display}** | [Shifted Bacher lattice]({SLIP}/) |")
+        q = 10**8 * new/old
+        pct = isqrt(q.numerator//q.denominator)-10000
+        if F((2*pct+20001)**2, 4*10**8) <= new/old:
+            pct += 1
+        gain_display = f"{pct//100}.{pct%100:02d}%"
+        t.append(f"| {n} | `{center_formula(factors)}` | **`{LABELS[n]}`** | **{occupied}** | **{gain_display}** | [{METHODS[n]}]({PACK}/) |")
     t.append("""
-The 29D and 30D packings are strictly denser than the lattice entries B29 and
-Q30, respectively, but do not beat the unrestricted B29* and T30 entries.
+The 29D and 30D lattices are strictly denser than B29 and Q30, respectively,
+and match the listed unrestricted B29* and T30 lower bounds. They supersede
+the repository’s [shifted Bacher lattices](research/bacher_slip_29_30_20261122/)
+by 1.55% and 28.09%, respectively.
+
 The repository’s [36D lattice](constructions/dim36/) improved on KP36 by
 18.97%; Cohn already lists that result in both tables, so it is not a new
 update for his table.
@@ -124,7 +134,7 @@ construction references in the pinned Cohn table, as listed on the review date.
         if n in improvements:
             sq = F(improvements[n]["center_density_squared"])
             expression = f"**`{LABELS[n]}`**"
-            source = f"[Shifted Bacher lattice]({SLIP}/) (improves Cohn’s listed lattice)"
+            source = f"[{METHODS[n]}]({PACK}/) (improves Cohn’s listed lattice)"
         elif n == 36:
             expression = "`16777216/3176523`"
             source = "[Metric deformation](constructions/dim36/) (already listed by Cohn)"
@@ -140,7 +150,7 @@ record the lattice-only table as read on 22 November. Run
 `python3 research/lattice_lower_bounds_1_48_20261122/verify_table.py` to check
 this catalog (add `--write` to rebuild it). This checks density arithmetic
 with rational enclosures of π; it does not re-prove the source packings.
-For the new lattices, run `python3 {SLIP}/verify.py` for
+For the new lattices, run `python3 {PACK}/verify.py` for
 the separate complete minimum and determinant proof.
 """.rstrip())
     return "\n".join(t) + "\n"

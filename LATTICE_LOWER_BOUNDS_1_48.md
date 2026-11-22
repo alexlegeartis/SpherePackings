@@ -10,11 +10,14 @@ is separate. This table does not claim optimality or exhaustive priority.
 
 | Dimension | Listed center density | New exact center density | Occupied density (lower bound) | Gain vs. listed lattice | Construction |
 |---:|---:|---:|---:|---:|---|
-| 29 | `3^(-1/2)` | **`4/sqrt(33)`** | **3.3623323974379e-5** | **20.60%** | [Shifted Bacher lattice](research/bacher_slip_29_30_20261122/) |
-| 30 | `2^-22 * 3^(27/2)` | **`8/sqrt(105)`** | **1.7109756022744e-5** | **18.58%** | [Shifted Bacher lattice](research/bacher_slip_29_30_20261122/) |
+| 29 | `3^(-1/2)` | **`1/sqrt(2)`** | **3.4144646907422e-5** | **22.47%** | [Section of quaternary-code lattice](research/quaternary_29_30_20261122/) |
+| 30 | `2^-22 * 3^(27/2)` | **`1`** | **2.1915353447830e-5** | **51.89%** | [Quaternary-code lattice](research/quaternary_29_30_20261122/) |
 
-The 29D and 30D packings are strictly denser than the lattice entries B29 and
-Q30, respectively, but do not beat the unrestricted B29* and T30 entries.
+The 29D and 30D lattices are strictly denser than B29 and Q30, respectively,
+and match the listed unrestricted B29* and T30 lower bounds. They supersede
+the repository’s [shifted Bacher lattices](research/bacher_slip_29_30_20261122/)
+by 1.55% and 28.09%, respectively.
+
 The repository’s [36D lattice](constructions/dim36/) improved on KP36 by
 18.97%; Cohn already lists that result in both tables, so it is not a new
 update for his table.
@@ -57,8 +60,8 @@ construction references in the pinned Cohn table, as listed on the review date.
 | 26 | `3^(-1/2)` | 2.6922005043380e-4 | [Cohn, ref. 11](https://cohn.mit.edu/sphere-packing/#11) |
 | 27 | `3^(-1/2)` | 1.2867528120269e-4 | [Cohn, ref. 1](https://cohn.mit.edu/sphere-packing/#1) |
 | 28 | `2 * 3^-1` | 6.9758736616563e-5 | [Cohn, ref. 1](https://cohn.mit.edu/sphere-packing/#1) |
-| 29 | **`4/sqrt(33)`** | 3.3623323974379e-5 | [Shifted Bacher lattice](research/bacher_slip_29_30_20261122/) (improves Cohn’s listed lattice) |
-| 30 | **`8/sqrt(105)`** | 1.7109756022744e-5 | [Shifted Bacher lattice](research/bacher_slip_29_30_20261122/) (improves Cohn’s listed lattice) |
+| 29 | **`1/sqrt(2)`** | 3.4144646907422e-5 | [Section of quaternary-code lattice](research/quaternary_29_30_20261122/) (improves Cohn’s listed lattice) |
+| 30 | **`1`** | 2.1915353447830e-5 | [Quaternary-code lattice](research/quaternary_29_30_20261122/) (improves Cohn’s listed lattice) |
 | 31 | `2^(-47/2) * 3^15` | 1.1837765185933e-5 | [Cohn, ref. 31](https://cohn.mit.edu/sphere-packing/#31) |
 | 32 | `2^-24 * 3^16` | 1.1040749308859e-5 | [Cohn, ref. 31](https://cohn.mit.edu/sphere-packing/#31) |
 | 33 | `2^-25 * 3^(33/2)` | 4.1406882896496e-6 | [Cohn, ref. 13](https://cohn.mit.edu/sphere-packing/#13) |
@@ -85,5 +88,5 @@ record the lattice-only table as read on 22 November. Run
 `python3 research/lattice_lower_bounds_1_48_20261122/verify_table.py` to check
 this catalog (add `--write` to rebuild it). This checks density arithmetic
 with rational enclosures of π; it does not re-prove the source packings.
-For the new lattices, run `python3 research/bacher_slip_29_30_20261122/verify.py` for
+For the new lattices, run `python3 research/quaternary_29_30_20261122/verify.py` for
 the separate complete minimum and determinant proof.

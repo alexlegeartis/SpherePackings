@@ -136,12 +136,12 @@ These certificates use the existing [Cohn–de Laat–Salmon continuum framework
 
 | n | Comparison density / method | Our density / method | Increase |
 | ---: | --- | --- | ---: |
-| 29 | ≈2.78789874568e-5<br>[B29 lattice — Bacher (1996)](https://doi.org/10.1007/S002220050180) · [Cohn’s lattice table](https://cohn.mit.edu/sphere-packing/#lattice-data) | **≥3.3623323974379e-5**<br>[Shifted Bacher lattice, exact center density `4/sqrt(33)`](research/bacher_slip_29_30_20261122/) | **20.60%** |
-| 30 | ≈1.44286438425e-5<br>[Q30 lattice — Quebbemann (1984)](https://doi.org/10.1112/S0025579300010731) · [Cohn’s lattice table](https://cohn.mit.edu/sphere-packing/#lattice-data) | **≥1.7109756022744e-5**<br>[Shifted Bacher lattice, exact center density `8/sqrt(105)`](research/bacher_slip_29_30_20261122/) | **18.58%** |
+| 29 | ≈2.78789874568e-5<br>[B29 lattice — Bacher (1996)](https://doi.org/10.1007/S002220050180) · [Cohn’s lattice table](https://cohn.mit.edu/sphere-packing/#lattice-data) | **≥3.4144646907422e-5**<br>[Quaternary-code lattice section, exact center density `1/sqrt(2)`](research/quaternary_29_30_20261122/) | **22.47%** |
+| 30 | ≈1.44286438425e-5<br>[Q30 lattice — Quebbemann (1984)](https://doi.org/10.1112/S0025579300010731) · [Cohn’s lattice table](https://cohn.mit.edu/sphere-packing/#lattice-data) | **≥2.1915353447830e-5**<br>[Quaternary-code lattice, exact center density `1`](research/quaternary_29_30_20261122/) | **51.89%** |
 | 36 | ≈6.1615e-7<br>[KP36 code-based lattice — Kschischang–Pasupathy (1992)](https://doi.org/10.1109/18.119683) · [Catalogue parameters](https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/KP36.html) | **≥7.3303477831670e-7**<br>[Contact-preserving metric deformation, exact Gram matrix and complete minimum certificate](constructions/dim36/) | **18.97%** |
 
 Densities are occupied-volume fractions. The 29D and 30D entries improve
-Cohn’s listed lattice bounds without changing his unrestricted bounds.
+Cohn’s listed lattice bounds and tie his unrestricted lower bounds. They supersede the [shifted Bacher lattices](research/bacher_slip_29_30_20261122/) by 1.55% and 28.09%, respectively.
 Cohn already lists the 36D result in both tables; its increase is over KP36.
 
 [Complete 1–48D lattice catalog](LATTICE_LOWER_BOUNDS_1_48.md), with exact center
@@ -196,6 +196,8 @@ Lower bounds in 38D–42D use the lattice sections of [Dorofeev–Sun–Wang, Th
 <!-- lattice-upper-20261116:end -->
 
 ## Recent updates
+
+**22 November:** a [quaternary-code lattice and its section](research/quaternary_29_30_20261122/) match the unrestricted lower-bound densities in **29D** and **30D**, improving the immediately preceding lattice bounds by **1.55%** and **28.09%**, respectively.
 
 **22 November:** shifted Bacher lattices improve the catalogued **29D and 30D lattice-only density lower bounds by 20.60% and 18.58%**, respectively. The unrestricted B29* and T30 bounds are unchanged. [Exact construction and replay](research/bacher_slip_29_30_20261122/).
 **22 November:** the summary table now reflects the already verified **82D density lower bound of 9.17033181889404e-18**, 7.0436% above the stale mixed-depth entry. The [principal-section proof](research/l80_a2_section_20261122/) is a simpler alternative to the [earlier all-deep binary-plane proof](research/packing83_85_deep_verified_20261117/README.md), not a new density record.
