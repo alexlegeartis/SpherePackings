@@ -86,8 +86,8 @@ challenge value is discussed in that proof.
 | 74 | 1.43007109517410e-14 | [Explicit Γ72 half-coset lattice](research/gamma72_depth6_20261122/README.md) |
 | 75 | 5.05260043732660e-15 | [Explicit Γ72 half-coset lattice](research/gamma72_depth6_20261122/README.md) |
 | 76 | 2.04778582360778e-15 | [Explicit Γ72 half-coset lattice](research/gamma72_depth6_20261122/README.md) |
-| 77 | 6.23325752266126e-16 | [Tilted Γ72–D4 lattice](research/gamma72_tilted_d4_20261122/README.md) |
-| 78 | 2.08655477067461e-16 | [Tilted Γ72–D4 lattice](research/gamma72_tilted_d4_20261122/README.md) |
+| 77 | 6.73268761846130e-16 | [Half-root Γ72–D4 lattice](research/gamma72_root_tilt_20261122/README.md) |
+| 78 | 2.53967358970778e-16 | [Half-root Γ72–D4 lattice](research/gamma72_root_tilt_20261122/README.md) |
 | 79 | 1.11920881328318e-16 | [Explicit MW80 antipode, 2 translates](research/creative_sections_20261116/results.json) |
 | 80 | 1.14912817562331e-16 | [Shioda MW80](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) |
 | 81 | 2.87777416803990e-17 | [Bachoc–Nebe deep half-coset lattice](research/packing81_verified_20261117/README.md) |

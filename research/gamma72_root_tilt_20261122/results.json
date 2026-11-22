@@ -1,0 +1,70 @@
+{
+  "rows": [
+    {
+      "dimension": 77,
+      "kind": "lattice",
+      "minimum_squared": 8,
+      "gram_determinant": "6",
+      "center_density_squared": "75557863725914323419136/3",
+      "occupied_density_floor": "6.73268761846130e-16",
+      "comparisons": {
+        "preceding_repository_lattice": [
+          "7",
+          "8.012344"
+        ],
+        "opening_lattice_this_push": [
+          "8",
+          "15.470053"
+        ],
+        "named_external_section": [
+          "300",
+          "607.106781"
+        ]
+      }
+    },
+    {
+      "dimension": 78,
+      "kind": "lattice",
+      "minimum_squared": 8,
+      "gram_determinant": "27/4",
+      "center_density_squared": "1208925819614629174706176/27",
+      "occupied_density_floor": "2.53967358970778e-16",
+      "comparisons": {
+        "preceding_repository_lattice": [
+          "10",
+          "21.716123"
+        ],
+        "opening_lattice_this_push": [
+          "12",
+          "33.333333"
+        ],
+        "named_external_section": [
+          "48",
+          "166.666666"
+        ]
+      }
+    },
+    {
+      "dimension": 79,
+      "kind": "lattice",
+      "minimum_squared": 8,
+      "gram_determinant": "27/4",
+      "center_density_squared": "2417851639229258349412352/27",
+      "occupied_density_floor": "1.00970609107212e-16",
+      "comparisons": {
+        "preceding_repository_lattice": [
+          "8",
+          "8.866210"
+        ],
+        "opening_lattice_this_push": [
+          "8",
+          "8.866210"
+        ],
+        "named_external_section": [
+          "8",
+          "8.866210"
+        ]
+      }
+    }
+  ]
+}

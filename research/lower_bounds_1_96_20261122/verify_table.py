@@ -106,6 +106,7 @@ def build_table():
         ("gamma72_leech_layers_20261122", "Explicit Γ72 lattice with Leech-block verification"),
         ("gamma72_depth6_20261122", "Explicit Γ72 half-coset lattice"),
         ("gamma72_tilted_d4_20261122", "Tilted Γ72–D4 lattice"),
+        ("gamma72_root_tilt_20261122", "Half-root Γ72–D4 lattice"),
         ("mw92_extensions_20261122", "MW92 extension"),
     ]:
         path = f"research/{package}"
