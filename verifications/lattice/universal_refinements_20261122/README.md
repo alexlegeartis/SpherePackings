@@ -1,4 +1,4 @@
-# Lattice packing upper bounds in 14D, 15D and 36D
+# Lattice packing upper bounds in 14D, 15D, 19D, 23D and 36D
 
 Each result is an upper bound on the occupied volume fraction for every full-rank lattice packing in the stated dimension. The table rounds upward. The replay computes the rational bounds from pinned proof inputs using exact rational arithmetic and enclosing real intervals. [Exact results](certificates.json) · [Full 9–48D comparison](../../../LATTICE_RESULTS.md)
 
@@ -6,6 +6,8 @@ Each result is an upper bound on the occupied volume fraction for every full-ran
 |---:|---:|
 | 14 | 0.033996852420018639356 |
 | 15 | 0.025163909222702077102 |
+| 19 | 0.0076312827957442716237 |
+| 23 | 0.0025265652019047523943 |
 | 36 | 0.000027145879604620582428 |
 
 ## Reciprocal vectors in dimensions 14 and 15
@@ -15,6 +17,12 @@ Scale the lattice $L$ to shortest length one. Write $V_n$ for the volume of the 
 For $\Delta>T$, these inequalities enclose the Fourier coordinate $s=4\pi^2|y|^2/\tau$ using $T\le\Delta\le U_n$. The rank-14 parent uses Gram determinant at most 314 in its minimum-four normalization for the Fourier case. In rank 15 the parent uses a threshold for its parity profiles. The chosen $T$ in each replay includes the corresponding parent threshold. The rank-13 and rank-14 inputs come from the pinned section proofs. [Rank-14 matching certificate](https://github.com/AstroNinja389/sphere-packings/blob/d7ffd0df47dfeb11814631858205f05ed73ec8ff/sections/n14/MATCHING.md) · [Native rank-15 certificate guide](https://github.com/AstroNinja389/sphere-packings/blob/d7ffd0df47dfeb11814631858205f05ed73ec8ff/proofs/README.md)
 
 Write the parent's Fourier function as $e^{-s/2}q(s)$, normalized so its value at the origin is $q(0)$. In rank 14, exact Bernstein coefficients certify a contribution of at least $\mu=8\cdot10^{-7}$ from the pair $\pm y$. In rank 15, exact bounds on $e^{-s/2}q(s)$ over a rational mesh certify at least $\mu=2.6\cdot10^{-7}$ from the three pairs $\pm y,\pm2y,\pm3y$. The parent Fourier sign bounds cover all remaining vectors. Thus the Poisson summation denominator is at least $q(0)+\mu$. The resulting upper bound is $\max(T,U_n q(0)/(q(0)+\mu))$, which includes lattices of density at most $T$.
+
+## Reciprocal planes in dimensions 19 and 23
+
+The native proofs enclose a reduced dual plane by a rational box in three parameters. Write $a$ for the first squared length, $b$ for the squared length of the perpendicular projection of the second basis vector, and $\alpha\in[0,1/2]$ for its signed coefficient along the first vector after choosing signs. The squared lengths in Fourier coordinates are $a(i+\alpha j)^2+bj^2$ for integers $i,j$. The replay uses the same area, projection and reduction inequalities as the parents to discard impossible boxes. [Native plane domains and Fourier proofs](https://github.com/AstroNinja389/sphere-packings/blob/d7ffd0df47dfeb11814631858205f05ed73ec8ff/proofs/README.md)
+
+Every remaining box is covered by lower bounds for the sum over a fixed finite set of opposite pairs. A mesh provides the first bound. In smaller boxes, the checker also encloses the endpoints and all real stationary points of the Gaussian polynomial on each possible length interval. The stationary points are roots of the exact polynomial $2q'-q$. This yields new plane contributions $\mu=7.25\cdot10^{-12}$ in rank 19 and $\mu=1.005\cdot10^{-12}$ in rank 23. If the old plane contribution was $\mu_0$, the new upper is $\max(T,U_n(q(0)+\mu_0)/(q(0)+\mu))$. The improvement is tiny because the first shells can lie close to a Fourier minimum in the reduced-plane domain.
 
 ## Radial moments in dimension 36
 
@@ -34,5 +42,7 @@ Use Python 3.11 or later with assertions enabled. From this directory, install t
 python -m pip install python-flint==0.9.0 numpy scipy sympy mpmath
 python -B verify.py 14 /path/to/sphere-packings
 python -B verify.py 15 /path/to/native-proofs.zip
+python -B verify.py 19 /path/to/native-proofs.zip
+python -B verify.py 23 /path/to/native-proofs.zip
 python -B verify.py 36 /path/to/n25-48-proofs-r9.zip
 ```

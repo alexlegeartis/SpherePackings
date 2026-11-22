@@ -2,7 +2,7 @@
 
 ## Current lattice upper bounds in dimensions 9–48
 
-These bounds apply to every full-rank lattice packing in the stated dimension. They tighten **31 of 36** rows in N. Zubrilina’s *Lattice sphere-packing density bounds through dimension 48*, with **5** ties. The largest reduction against that benchmark is **0.027892% in 37D**. [Benchmark and pinned revision](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/COMPARISON.md) · [Machine-readable bounds](LATTICE_UPPER_BOUNDS_9_48.json)
+These bounds apply to every full-rank lattice packing in the stated dimension. They tighten **33 of 36** rows in N. Zubrilina’s *Lattice sphere-packing density bounds through dimension 48*, with **3** ties. The largest reduction against that benchmark is **0.027892% in 37D**. [Benchmark and pinned revision](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/COMPARISON.md) · [Machine-readable bounds](LATTICE_UPPER_BOUNDS_9_48.json)
 
 The prior project column uses the registry before the 22 November follow-ups. A dash indicates that the corresponding source has no entry. Density decimals are rounded upward. Each reduction divides the difference by its own baseline before rounding the percentage. [Prior registry](https://github.com/alexlegeartis/SpherePackings/blob/9a9851887da20ca75825342bfb09e8ab031f4153/LATTICE_RESULTS.json)
 
@@ -18,11 +18,11 @@ The prior project column uses the registry before the 22 November follow-ups. A 
 | 16 | 0.018655117428000000000 | 0.017231432341600000000 | **0.017231432341600000000** | 0% | 7.631606% | [Published bound and final-stage kit](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/dim16/README.md) |
 | 17 | 0.013832417384000000000 | 0.013626238393104560702 | **0.013626238385270738360** | 5.7491e−8% | 1.490549% | [Superlattice follow-up](verifications/lattice/superlattice_saturation_20261122/) |
 | 18 | 0.010343803448000000000 | 0.010209809396645684617 | **0.010209790219301887418** | 0.000188% | 1.295589% | [Superlattice follow-up](verifications/lattice/superlattice_saturation_20261122/) |
-| 19 | 0.0078084303270000000000 | 0.0076312827957449064956 | **0.0076312827957449064956** | 0% | 2.26867% | [Pinned native proof](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/README.md) |
+| 19 | 0.0078084303270000000000 | 0.0076312827957449064956 | **0.0076312827957442716237** | 8.3193e−12% | 2.26867% | [New exact replay](verifications/lattice/universal_refinements_20261122/#replay) |
 | 20 | 0.0059546307160000000000 | 0.0058128746464007348550 | **0.0058128746402904153757** | 1.0512e−7% | 2.380602% | [Superlattice follow-up](verifications/lattice/superlattice_saturation_20261122/) |
 | 21 | 0.0045579591750000000000 | 0.0044091934148594921857 | **0.0044091934123105448398** | 5.781e−8% | 3.263868% | [Superlattice follow-up](verifications/lattice/superlattice_saturation_20261122/) |
 | 22 | 0.0034829323340000000000 | 0.0033300672941105808279 | **0.0033300672928228325478** | 3.867e−8% | 4.388975% | [Superlattice follow-up](verifications/lattice/superlattice_saturation_20261122/) |
-| 23 | 0.0026084015810000000000 | 0.0025265652019048007308 | **0.0025265652019048007308** | 0% | 3.137415% | [Pinned native proof](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/README.md) |
+| 23 | 0.0026084015810000000000 | 0.0025265652019048007308 | **0.0025265652019047523943** | 1.9131e−12% | 3.137415% | [New exact replay](verifications/lattice/universal_refinements_20261122/#replay) |
 | 24 | — | π¹²/12! | **π¹²/12!** | 0% | — | [Exact Leech optimum](https://arxiv.org/abs/1603.06518) |
 | 25 | 0.0013252324330000000000 | 0.0012865580466895762002 | **0.0012865566944499901305** | 0.000105% | 2.918412% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
 | 26 | 0.00090720999700000000000 | 0.00086911029381370068778 | **0.00086900243887731789880** | 0.01241% | 4.211545% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |

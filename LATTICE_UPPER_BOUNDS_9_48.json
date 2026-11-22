@@ -133,14 +133,14 @@
     },
     {
       "dimension": 19,
-      "density_upper": "0.0076312827957449064956",
-      "proof_upper_rational": "76312827957449064955623/10000000000000000000000000",
+      "density_upper": "0.0076312827957442716237",
+      "proof_upper_rational": "953910349468033952954517/125000000000000000000000000",
       "exact_value": null,
-      "proof_label": "Pinned native proof",
-      "proof": "https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/README.md",
+      "proof_label": "New exact replay",
+      "proof": "verifications/lattice/universal_refinements_20261122/#replay",
       "benchmark_upper_rational": "76312827957449064955623/10000000000000000000000000",
       "previous_project_upper": "7808430327/1000000000000",
-      "reduction_vs_benchmark_percent": "0%",
+      "reduction_vs_benchmark_percent": "8.3193e\u221212%",
       "reduction_vs_previous_project_percent": "2.26867%"
     },
     {
@@ -181,14 +181,14 @@
     },
     {
       "dimension": 23,
-      "density_upper": "0.0025265652019048007308",
-      "proof_upper_rational": "22968774562790877353124593519630912902436267/9090909090916991603246905395844000000000000000",
+      "density_upper": "0.0025265652019047523943",
+      "proof_upper_rational": "1263282600952376197131043/500000000000000000000000000",
       "exact_value": null,
-      "proof_label": "Pinned native proof",
-      "proof": "https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/README.md",
+      "proof_label": "New exact replay",
+      "proof": "verifications/lattice/universal_refinements_20261122/#replay",
       "benchmark_upper_rational": "22968774562790877353124593519630912902436267/9090909090916991603246905395844000000000000000",
       "previous_project_upper": "2608401581/1000000000000",
-      "reduction_vs_benchmark_percent": "0%",
+      "reduction_vs_benchmark_percent": "1.9131e\u221212%",
       "reduction_vs_previous_project_percent": "3.137415%"
     },
     {

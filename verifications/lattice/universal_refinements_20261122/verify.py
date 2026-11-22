@@ -4,6 +4,7 @@ import argparse
 from fractions import Fraction as F
 from functools import lru_cache
 from hashlib import file_digest
+from itertools import product
 import json
 from math import comb
 from pathlib import Path
@@ -12,7 +13,7 @@ import sys
 from tempfile import TemporaryDirectory
 from zipfile import ZipFile
 
-from flint import arb, ctx, fmpq, fmpq_mat, fmpq_poly
+from flint import arb, arb_poly, ctx, fmpq, fmpq_mat, fmpq_poly
 
 
 HERE = Path(__file__).resolve().parent
@@ -20,6 +21,7 @@ ARCHIVE_SHA = {
     "native": "4cae881e275464d6555a9beff843c887141830da8978fd4ee8b75f0b4d968b8f",
     "high": "bd9490675ecc38e96c4dddbc484ee7a99bae0a231902d5f3ac974eae9d2143b6",
 }
+NATIVE_PROOFS = {15: "minfix-lift15a", 19: "nativeflag19v2", 23: "flag23a"}
 V13_UPPER = F("0.042023513562578")
 V14_UPPER = F(169984398087502876851, 5000000000000000000000)
 DENSITY_UNIT = 10**27
@@ -137,6 +139,123 @@ def bernstein_ray(q, span, payment):
     return (checks,)
 
 
+def stationary_lower_bounds(q, units, end=128):
+    """Enclose the minimum of the Gaussian polynomial on a closed interval."""
+    derivative = 2 * q.derivative() - q
+    roots = derivative.complex_roots()
+    assert sum(m for _, m in roots) == derivative.degree()
+    pol = arb_poly([arb(r) for r in q.coeffs()])
+
+    def value(point):
+        return pol(point) * (-point / 2).exp()
+
+    real = [
+        root.real
+        for root, _ in roots
+        if root.imag.contains(0) and not (root.real < 0 or root.real > end)
+    ]
+    interior = [(point, value(point)) for point in real]
+
+    @lru_cache(maxsize=16384)
+    def endpoint(point):
+        return arb(q(rational(point))) * (-ball(point) / 2).exp()
+
+    def lower(a, b):
+        assert 0 <= a <= b
+        if b > end:
+            return 0
+        left, right = ball(a), ball(b)
+        candidates = [endpoint(a), endpoint(b)]
+        candidates.extend(
+            val for point, val in interior if not (point < left or point > right)
+        )
+        return max(
+            0, min(int((v * units).lower().floor().unique_fmpz()) for v in candidates)
+        )
+
+    return lower
+
+
+def cover_plane(n, q, g, payment):
+    """Cover the parent reduced-plane domain using exact signed bounds."""
+    # It suffices to take one representative of each opposite pair.
+    from independent_fourier import nonnegative_ray
+
+    mesh, units, analytic = signed_lower_mesh(q)
+    assert nonnegative_ray(q, F(g["gap"]))
+    local = stationary_lower_bounds(q, units)
+    needed = payment * units / 2
+    G, L = g["R"], g["L"]
+    index = sorted(
+        (
+            (i, j)
+            for i, j in product(range(-4, 5), range(5))
+            if j > 0 or (j == 0 and i > 0)
+        ),
+        key=lambda pair: sum(t * t for t in pair),
+    )
+    assert len(index) == len(set(index))
+    granularity = 16
+    G *= granularity
+    L *= granularity
+    area = g["area"] * granularity**2
+    projection = int(g["projection_power_upper"]) * granularity**n
+    pending = [tuple(granularity * v for v in g["box"])]
+    checked = discarded = 0
+    while pending:
+        a, A, b, B, l, h = pending.pop()
+        # These are the parent area, projection and reduction inequalities.
+        if (
+            A * B < area
+            or a * b ** (n - 1) > projection
+            or a * (L * L - h * h) > B * L * L
+        ):
+            discarded += 1
+            continue
+        amount = 0
+        lengths = []
+        for i, j in index:
+            lo, hi = i * L + j * l, i * L + j * h
+            s = max(0, lo, -hi)
+            t = max(abs(lo), abs(hi))
+            span = (
+                F(a * s * s + b * j * j * L * L, G * L * L),
+                F(A * t * t + B * j * j * L * L, G * L * L),
+            )
+            amount += mesh(*span)
+            lengths.append(span)
+            if amount >= needed:
+                break
+        if amount >= needed:
+            checked += 1
+            continue
+        # A small box can be resolved using the stationary-point enclosures.
+        if max(F(A - a, G), F(B - b, G), F((h - l) * max(A, G), L * G)) <= F(1, 40):
+            refined = 0
+            for span in lengths:
+                refined += local(*span)
+                if refined >= needed:
+                    break
+            if refined >= needed:
+                checked += 1
+                continue
+        axes = [i for i, v in enumerate((A - a, B - b, h - l)) if v >= 2]
+        assert axes, (a, A, b, B, l, h, payment)
+        axis = max(
+            axes,
+            key=lambda k: (F(A - a, G), F(B - b, G), F((h - l) * max(A, G), L * G))[k],
+        )
+        node = [a, A, b, B, l, h]
+        left, right = 2 * axis, 2 * axis + 1
+        middle = (node[left] + node[right]) // 2
+        assert node[left] < middle < node[right], (node, payment, F(2 * amount, units))
+        one, two = node.copy(), node.copy()
+        one[right] = two[left] = middle
+        pending.extend([tuple(one), tuple(two)])
+    assert checked > 0
+    return checked, analytic, discarded
+
+
 def output(n, old, floor, denominator, old_payment, new_payment, budget):
     assert denominator > 0 and new_payment > old_payment >= 0
     result = max(floor, old * (denominator + old_payment) / (denominator + new_payment))
@@ -191,23 +310,43 @@ def dim14(benchmark, payment):
     return output(14, V14_UPPER, floor, F(str(q(0))), F(0), payment, checked)
 
 
-def dim15(path, payment):
+def native(n, path, payment):
     base = path / "native"
     sys.path.insert(0, str(base))
     from independent_fourier import transform
     from review_native_final import replay
 
-    name = "minfix-lift15a-final-packing-proof.json"
+    name = NATIVE_PROOFS[n] + "-final-packing-proof.json"
     record = read(base / name)
     old = F(replay(name)["upper"])
-    assert old == F(record["upper"])
-    source = read(base / "lift15a.json")
-    _, q = transform(15, source["d"])
-    floor = max(F(record["profile_threshold"]), F(989, 1000) * old)
-    span = line_domain(15, F(source["tau"]), old, floor, V14_UPPER)
-    return output(
-        15, old, floor, F(str(q(0))), F(0), payment, cover_ray(q, span, payment)
-    )
+    assert old == F(record["upper"]) and record["n"] == n
+    if n == 15:
+        source = read(base / "lift15a.json")
+        _, q = transform(n, source["d"])
+        floor = max(F(record["profile_threshold"]), F(989, 1000) * old)
+        span = line_domain(n, F(source["tau"]), old, floor, V14_UPPER)
+        return output(
+            n, old, floor, F(str(q(0))), F(0), payment, cover_ray(q, span, payment)
+        )
+
+    if n == 19:
+        source_path = base / "nativeflag19v2.json"
+        source = read(source_path)
+        plane = read(base / "nativeflag19v2-reciprocal-flag.json")
+        geometry = source["dual_flag"]
+        floor = max(F(record["profile_threshold"]), F(geometry["target"]))
+    else:
+        plane = read(base / "flag23a-dual-plane.json")
+        geometry = plane["geometry"]
+        source_path = base / plane["prior_fourier"]
+        source = read(source_path)
+        floor = F(geometry["target"])
+    assert digest(source_path) == plane["prior_sha"]
+    assert geometry["n"] == source["n"] == n
+    previous = F(2 * plane["lower"], plane["unit"])
+    _, q = transform(n, source["d"])
+    checked = cover_plane(n, q, geometry, payment)
+    return output(n, old, floor, F(str(q(0))), previous, payment, checked)
 
 
 def dim36(path):
@@ -274,17 +413,17 @@ def run(n, argument, payment):
     ctx.prec = 512
     if n == 14:
         return dim14(argument, payment)
-    archive = "native" if n == 15 else "high"
+    archive = "native" if n in NATIVE_PROOFS else "high"
     if argument.is_dir():
         assert digest(argument / "MANIFEST.json") == MANIFEST_SHA[archive]
         check_manifest(argument, "MANIFEST.json")
-        return dim15(argument, payment) if n == 15 else dim36(argument)
+        return native(n, argument, payment) if archive == "native" else dim36(argument)
     assert digest(argument) == ARCHIVE_SHA[archive]
     with TemporaryDirectory() as temp:
         with ZipFile(argument) as proof:
             proof.extractall(temp)
         path = Path(temp)
-        return dim15(path, payment) if n == 15 else dim36(path)
+        return native(n, path, payment) if archive == "native" else dim36(path)
 
 
 if __name__ == "__main__":
