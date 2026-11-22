@@ -1,0 +1,16 @@
+{
+  "rows": [
+    {
+      "dimension": 29,
+      "kind": "explicit nonlattice periodic",
+      "center_density_squared": "1",
+      "squared_minimum": "32",
+      "code_generator_first_row_mask": 471,
+      "binary_phase_two_masks": [715, 15538],
+      "horizontal_shift": "twice binary phase",
+      "vertical_spacing_squared": "8",
+      "comparison_center_density_squared": "1/2",
+      "comparison_source": "https://doi.org/10.1090/S0002-9947-99-02169-8"
+    }
+  ]
+}

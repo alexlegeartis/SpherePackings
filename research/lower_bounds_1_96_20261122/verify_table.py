@@ -50,6 +50,12 @@ def build_table():
             source = cohn["source"] + "#data"
         add(n, center_squared, label, source)
 
+    package = "research/vardy28_stack29_20261122"
+    for row in data(f"{package}/results.json")["rows"]:
+        assert row["dimension"] == 29 and row["kind"] == "explicit nonlattice periodic"
+        add(row["dimension"], row["center_density_squared"],
+            "Alternating Vardy-type layers", f"{package}/README.md")
+
     history = data("research/range48_96_20261115/results.json")
     for row in history["rows"]:
         best = row["best_checked"]
@@ -111,7 +117,8 @@ def build_table():
     lines = [
         "# Sphere-packing lower bounds in dimensions 1–96", "",
         "The table gives occupied-volume density floors. It uses Cohn’s literature table for",
-        "1–48D and the strongest checked constructions in the repository’s 48–96D audit",
+        "1–48D and replaces its bounds where this repository has verified improvements.",
+        "For 49–96D it uses the strongest checked constructions in the repository’s audit",
         "and later certificates. The source coverage reflects the 22 November 2026 review.",
         "The bounds in 1–3D, 8D and 24D are exact optima. The 55D entry is the proved",
         "lower bound documented by its linked construction. The printed Leterrier55",

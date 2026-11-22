@@ -1,7 +1,8 @@
 # Sphere-packing lower bounds in dimensions 1–96
 
 The table gives occupied-volume density floors. It uses Cohn’s literature table for
-1–48D and the strongest checked constructions in the repository’s 48–96D audit
+1–48D and replaces its bounds where this repository has verified improvements.
+For 49–96D it uses the strongest checked constructions in the repository’s audit
 and later certificates. The source coverage reflects the 22 November 2026 review.
 The bounds in 1–3D, 8D and 24D are exact optima. The 55D entry is the proved
 lower bound documented by its linked construction. The printed Leterrier55
@@ -37,7 +38,7 @@ challenge value is discussed in that proof.
 | 26 | 2.69220050433808e-4 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 27 | 1.57594390727866e-4 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 28 | 1.04638104924845e-4 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
-| 29 | 3.41446469074224e-5 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
+| 29 | 4.82878227389174e-5 | [Alternating Vardy-type layers](research/vardy28_stack29_20261122/README.md) |
 | 30 | 2.19153534478302e-5 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 31 | 1.18377651859338e-5 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 32 | 1.10407493088598e-5 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
