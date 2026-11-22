@@ -364,15 +364,15 @@
     },
     {
       "dimension": 38,
-      "density_upper": "0.000012342188828202277498",
-      "proof_upper_rational": "123421888282022774971680867539/10000000000000000000000000000000000",
+      "density_upper": "0.00001229554573503757040",
+      "proof_upper_rational": "15369432168796963/1250000000000000000000",
       "exact_value": null,
-      "proof_label": "Reciprocal and angular follow-up",
-      "proof": "verifications/lattice/dual_mass_angular_energy_38_48_20261122/",
+      "proof_label": "Joint Fourier and plane certificate",
+      "proof": "verifications/lattice/joint_fourier_plane_20261122/",
       "benchmark_upper_rational": "1234290484423536589/100000000000000000000000",
       "previous_project_upper": "15440193663/1250000000000000",
-      "reduction_vs_benchmark_percent": "0.005801%",
-      "reduction_vs_previous_project_percent": "0.080683%"
+      "reduction_vs_benchmark_percent": "0.383695%",
+      "reduction_vs_previous_project_percent": "0.458294%"
     },
     {
       "dimension": 39,

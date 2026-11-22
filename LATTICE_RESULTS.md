@@ -2,7 +2,7 @@
 
 ## Current lattice upper bounds in dimensions 9–48
 
-These bounds apply to every full-rank lattice packing in the stated dimension. They tighten **35 of 36** rows in N. Zubrilina’s *Lattice sphere-packing density bounds through dimension 48*, with equality in **24D**. The largest reduction against that benchmark is **0.027892% in 37D**. [Benchmark and pinned revision](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/COMPARISON.md) · [Machine-readable bounds](LATTICE_UPPER_BOUNDS_9_48.json)
+These bounds apply to every full-rank lattice packing in the stated dimension. They tighten **35 of 36** rows in N. Zubrilina’s *Lattice sphere-packing density bounds through dimension 48*, with equality in **24D**. The largest reduction against that benchmark is **0.383695% in 38D**. [Benchmark and pinned revision](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/COMPARISON.md) · [Machine-readable bounds](LATTICE_UPPER_BOUNDS_9_48.json)
 
 The prior project column uses the registry before the 22 November follow-ups. A dash indicates that the corresponding source has no entry. Density decimals are rounded upward. Each reduction divides the difference by its own baseline before rounding the percentage. [Prior registry](https://github.com/alexlegeartis/SpherePackings/blob/9a9851887da20ca75825342bfb09e8ab031f4153/LATTICE_RESULTS.json)
 
@@ -37,7 +37,7 @@ The prior project column uses the registry before the 22 November follow-ups. A 
 | 35 | 0.000037664745000000000000 | 0.000037469507068663344450 | **0.000037465045043454272100** | 0.011908% | 0.530204% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
 | 36 | 0.000027277050000000000000 | 0.000027145882256491636230 | **0.000027145879604620582428** | 0.00001% | 0.480882% | [New exact replay](verifications/lattice/universal_refinements_20261122/#replay) |
 | 37 | 0.000018268708324000000000 | 0.000018245562973058698415 | **0.000018240473897953853607** | 0.027892% | 0.154551% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
-| 38 | 0.000012352154930400000000 | 0.000012342904844235365890 | **0.000012342188828202277498** | 0.005801% | 0.080683% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
+| 38 | 0.000012352154930400000000 | 0.000012342904844235365890 | **0.00001229554573503757040** | 0.383695% | 0.458294% | [Joint Fourier and plane certificate](verifications/lattice/joint_fourier_plane_20261122/) |
 | 39 | 0.0000084799401622000000000 | 0.0000084768372418329309000 | **0.0000084768304132050218169** | 0.000081% | 0.036672% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
 | 40 | 0.0000059777359372000000000 | 0.0000059759954762954402419 | **0.0000059759954747923372602** | 2.5152e−8% | 0.029116% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
 | 41 | 0.0000043927514316000000000 | 0.0000043915395007280125410 | **0.0000043915394964222208570** | 9.8047e−8% | 0.027589% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |

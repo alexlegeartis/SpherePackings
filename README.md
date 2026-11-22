@@ -205,7 +205,7 @@ or exhaustive historical priority.
 <!-- lattice-upper-20261116:start -->
 ## Lattice-only upper bounds
 
-The current register gives certified upper bounds in **9–48D** and compares them with Zubrilina’s **13–48D** repository and our prior registry. In 13D a determinant-denominator bound gives a strict improvement of about 8.03 × 10⁻⁶³⁶% over the exact Mordell value. Recent refinements also cover 14D, 15D, 16D, 19D, 23D and 36D. [13D proof](verifications/lattice/perfect_determinant_13/) [Full table and proof links](LATTICE_RESULTS.md#current-lattice-upper-bounds-in-dimensions-948) · [Machine-readable bounds](LATTICE_UPPER_BOUNDS_9_48.json) · [Latest replay package](verifications/lattice/universal_refinements_20261122/)
+The current register gives certified upper bounds in **9–48D** and compares them with Zubrilina’s **13–48D** repository and our prior registry. The latest high-dimensional bounds jointly optimize the Fourier test and the interactions of short vectors in each lattice plane. In 13D a determinant-denominator bound gives a strict improvement of about 8.03 × 10⁻⁶³⁶% over the exact Mordell value. [Joint certificate and replay](verifications/lattice/joint_fourier_plane_20261122/) · [13D proof](verifications/lattice/perfect_determinant_13/) · [Full comparison](LATTICE_RESULTS.md#current-lattice-upper-bounds-in-dimensions-948) · [Machine-readable bounds](LATTICE_UPPER_BOUNDS_9_48.json)
 
 | Dimension | Current lattice density upper | Below Zubrilina’s 13–48D bound |
 |---:|---:|---:|
@@ -216,10 +216,10 @@ The current register gives certified upper bounds in **9–48D** and compares th
 | 23 | **0.0025265652019047523943** | 1.9131e−12% |
 | 36 | **0.000027145879604620582428** | 0.00001% |
 | 37 | **0.000018240473897953853607** | 0.027892% |
-| 38 | **0.000012342188828202277498** | 0.005801% |
+| 38 | **0.00001229554573503757040** | 0.383695% |
 | 48 | **0.00000034530564099888273888** | 4.1269e−7% |
 
-The exact comparison gives **35 smaller upper bounds** and **one tie**, the exact 24D optimum, across the 36 benchmark dimensions. The largest reduction is **0.027892% in 37D**. [Pinned benchmark](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/COMPARISON.md) · [Historical project registry](LATTICE_RESULTS.md#historical-project-registry)
+The exact comparison gives **35 smaller upper bounds** and **one tie**, the exact 24D optimum, across the 36 benchmark dimensions. The largest reduction is **0.383695% in 38D**. [Pinned benchmark](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/COMPARISON.md) · [Historical project registry](LATTICE_RESULTS.md#historical-project-registry)
 <!-- lattice-upper-20261116:end -->
 
 ## Recent updates
