@@ -8,6 +8,11 @@ layer spacings and sphere radii. The new center density is exactly `15/19`
 of the figure printed in Leterrier’s thesis. The thesis figure remains the
 challenge target. [Previous packing and source audit](../cross_coset55_20261116/PROOF.md).
 
+The packing is also a strict local maximum among three-translate 55D
+packings with arbitrary period and motif perturbations. The proof counts
+2,499,741 closest points in the parent coset and checks positive stresses
+on the active contacts. [Exact contact count and local optimality](LOCAL_OPTIMUM.md).
+
 ## Construction and minimum
 
 Let $L$ be Leterrier’s 54D lattice of squared minimum 10 and Gram determinant

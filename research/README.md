@@ -45,6 +45,8 @@ pins all three branch heads and records fresh replay scope and leaderboard check
 | [Tilted 55D lamination and source correction](tilted55_20261116/PROOF.md) | New certified minimum10 lattice; explicit norm6 counterexample withdraws the former55D claim. Improves the repaired lamination; no world-record claim. |
 | [Cross-coset tilt in 55D; overlattice searches in 54D and 56D](cross_coset55_20261116/PROOF.md) | Further certified 55D gain of 0.064704%; a larger candidate and 348 overlattices have exact short-vector counterexamples. No new SOTA. |
 | [MW56 projections against the full Leterrier55 target](mw56_projection55_20261116/PROOF.md) | Starts from published MW56. Exact distance witnesses and graph colorings exclude all coset subsets in 24 specified projection families from beating 116,783.149646…. No new lower bound. |
+| [54D coset contacts and 55D local optimality](uneven_layers55_20261122/LOCAL_OPTIMUM.md) | Complete count of 2,499,741 closest points and a strict local maximum for the three-translate 55D packing. |
+| [Characteristic-three 80D lattice](char3_80_20261122/README.md) | Exact determinant and minimum, with a short-vector obstruction for all index-two and index-three sublattices. |
 
 Use each package's own reproduction commands. `run_all.py` replays the registered
 upper-bound proof chains; lower-bound and exploratory checks have separate runners.
