@@ -95,8 +95,8 @@ challenge value is discussed in that proof.
 | 83 | 3.08087078338732e-18 | [Bachoc–Nebe parity extension](research/packing83_85_deep_verified_20261117/README_DEEP.md) |
 | 84 | 1.18808157306620e-18 | [Bachoc–Nebe parity extension](research/packing83_85_deep_verified_20261117/README_DEEP.md) |
 | 85 | 4.55474871517601e-19 | [Bachoc–Nebe parity extension](research/packing83_85_deep_verified_20261117/README_DEEP.md) |
-| 86 | 2.84477266080525e-19 | [Correlated MW92 antipode](research/packing_release8590_20261117/README.md) |
-| 87 | 2.58037767092447e-19 | [Correlated MW92 antipode](research/packing_release8590_20261117/README.md) |
+| 86 | 3.2157847626326119e-19 | [MW92 projected-simplex packing](research/mw92_small_simplexes_20261122/README.md) |
+| 87 | 2.6231014000959713e-19 | [MW92 projected-simplex packing](research/mw92_small_simplexes_20261122/README.md) |
 | 88 | 2.42250297455694e-19 | [Correlated MW92 antipode](research/packing_release8590_20261117/README.md) |
 | 89 | 1.98411302345717e-19 | [Correlated MW92 antipode](research/packing_release8590_20261117/README.md) |
 | 90 | 1.61584267273781e-19 | [Correlated MW92 antipode](research/packing_release8590_20261117/README.md) |
