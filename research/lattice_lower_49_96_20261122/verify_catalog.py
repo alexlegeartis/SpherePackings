@@ -104,12 +104,80 @@ def build(data):
       '', 'Run the Python script in [the proof directory](research/lattice_lower_49_96_20261122/verify_catalog.py) to check the table, or add --write to rebuild it.', ''])
     return '\n'.join(lines)
 
+BEGIN = '<!-- lattice-lower-49-96:start -->'
+END = '<!-- lattice-lower-49-96:end -->'
+
+def readme_section(data):
+    p=pi_floor()
+    p_hi=16*arctan(5,61)-4*arctan(239,60)
+    assert p < p_hi < Q(22,7)
+    improved=set(data['strict_comparison_dimensions'])
+    lines=[BEGIN, '## Lattice-only lower bounds in 49D–96D', '',
+      f'These **{len(improved)} lattice improvements** are over the named prior comparisons.',
+      'The table uses occupied-volume density, not center density.',
+      'Periodic packings that are not lattices are excluded.',
+      'The [full 49D–96D catalog](LATTICE_LOWER_BOUNDS_49_96.md) also includes ties,',
+      'dimensions without verified gains, exact center-density data, and source notes.',
+      '',
+      '| n | Prior lattice density / source | Our lattice density / construction | Increase |',
+      '|---:|---|---|---:|']
+    def upper_decimal(value_squared,digits=12):
+        x=Decimal(float_floor(value_squared,digits))
+        step=Decimal(1).scaleb(x.adjusted()+1-digits)
+        high=x+step
+        assert Q(high)**2 > value_squared
+        return f"{high:.{digits-1}E}".lower()
+    for row in data['rows']:
+        n=row['dimension']
+        if n not in improved: continue
+        prev,new=row['prior'],row['repository']
+        lo=Q(prev['center_density_squared'])
+        hi=Q(prev.get('center_density_squared_upper',prev['center_density_squared']))
+        now=Q(new['center_density_squared'])
+        assert now>hi and not row.get('disputed')
+        old_display=float_floor(lo*ball_squared(n,p))
+        if hi>lo:
+            old_display=f"[{old_display}, {upper_decimal(hi*ball_squared(n,p_hi))}]"
+        elif prev['kind']=='reported lattice floor':
+            old_display=f"≥{old_display}"
+        else:
+            old_display=f"≈{old_display}"
+        source=f"[{prev['description']}]({prev['link']})"
+        if prev['kind']=='derived lattice': source += ' (derived)'
+        new_display=float_floor(now*ball_squared(n,p))
+        method=f"[{new['description']}]({new['link']})"
+        if new['kind']=='lattice existence': method += ' (existence proof)'
+        lines.append(f"| {n} | {old_display}<br>{source} | **≥{new_display}**<br>{method} | **+{gain(now,hi)}** |")
+    assert len(lines)==11+len(improved)
+    lines.extend(['','Gains are rounded down and use the upper end of a prior comparison interval',
+                  'when one is given. These comparisons do not establish global optimality',
+                  'or exhaustive historical priority.',END])
+    return '\n'.join(lines)
+
+def write_readme(text, section):
+    if BEGIN in text:
+        assert text.count(BEGIN)==text.count(END)==1
+        begin=text.index(BEGIN)
+        end=text.index(END,begin)+len(END)
+        return text[:begin]+section+text[end:]
+    anchor='<!-- lattice-upper-20261116:start -->'
+    assert text.count(anchor)==1
+    return text.replace(anchor,section+'\n\n'+anchor)
+
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--write',action='store_true')
     args=p.parse_args()
     output=build(json.loads((HERE/'catalog.json').read_text()))
     dest=ROOT/'LATTICE_LOWER_BOUNDS_49_96.md'
-    if args.write: dest.write_text(output)
-    else: assert dest.read_text()==output
-    print('Verified 48 lattice-only rows and exact comparison arithmetic.')
+    readme=ROOT/'README.md'
+    section=readme_section(json.loads((HERE/'catalog.json').read_text()))
+    original=readme.read_text()
+    rendered=write_readme(original,section)
+    if args.write:
+        dest.write_text(output)
+        readme.write_text(rendered)
+    else:
+        assert dest.read_text()==output
+        assert original==rendered
+    print('Verified 48 lattice-only rows, the README summary, and exact comparison arithmetic.')
