@@ -90,7 +90,7 @@ challenge value is discussed in that proof.
 | 79 | 1.11920881328318e-16 | [Explicit MW80 antipode, 2 translates](research/creative_sections_20261116/results.json) |
 | 80 | 1.14912817562331e-16 | [Shioda MW80](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) |
 | 81 | 2.87777416803990e-17 | [Bachoc–Nebe deep half-coset lattice](research/packing81_verified_20261117/README.md) |
-| 82 | 8.56691236634380e-18 | [Bachoc–Nebe mixed-depth lattice](research/packing82_verified_20261117/README.md) |
+| 82 | 9.17033181889404e-18 | [A2 section of the 83D Bachoc–Nebe extension](research/l80_a2_section_20261122/README.md) |
 | 83 | 3.08087078338732e-18 | [Bachoc–Nebe parity extension](research/packing83_85_deep_verified_20261117/README_DEEP.md) |
 | 84 | 1.18808157306620e-18 | [Bachoc–Nebe parity extension](research/packing83_85_deep_verified_20261117/README_DEEP.md) |
 | 85 | 4.55474871517601e-19 | [Bachoc–Nebe parity extension](research/packing83_85_deep_verified_20261117/README_DEEP.md) |

@@ -1,0 +1,12 @@
+{
+  "dimension": 82,
+  "kind": "explicit lattice",
+  "minimum_squared": 8,
+  "gram_determinant": 3,
+  "previous_center_density_squared": "77371252455336267181195264/55",
+  "center_density_squared": "4835703278458516698824704/3",
+  "ratio_squared": "55/48",
+  "occupied_density_floor": "9.17033181889404e-18",
+  "gain_over_repository_percent_floor": "7.0436048222094",
+  "parent_83_gram_blob": "a8a4ff05846d126e29b0580967989832dfea4b00"
+}

@@ -75,6 +75,12 @@ def build_table():
         assert row["dimension"] == n
         add(n, row["center_density_squared"], "Bachoc–Nebe parity extension", f"{package}/README_DEEP.md")
 
+    package = "research/l80_a2_section_20261122"
+    row = data(f"{package}/results.json")
+    assert row["dimension"] == 82
+    add(row["dimension"], row["center_density_squared"],
+        "A2 section of the 83D Bachoc–Nebe extension", f"{package}/README.md")
+
     package = "research/packing_release8590_20261117"
     for row in data(f"{package}/RESULTS.json")["rows"]:
         file = row["file"].replace(".json", "_verified.json")

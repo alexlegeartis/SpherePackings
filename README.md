@@ -11,6 +11,8 @@ Reproducible certificates for unrestricted sphere packings, lattice-only upper b
 
 ## Recent updates
 
+**22 November:** an explicit **82D lattice** obtained from the certified 83D Bachoc–Nebe extension improves the preceding 82D density lower bound by **7.0436%**, to **9.17033181889404e-18**. The squared minimum stays 8 while the Gram determinant drops to 3. [Construction and exact replay](research/l80_a2_section_20261122/).
+
 **22 November:** explicit lattices based on Nebe’s Γ72 improve the previous lower bounds in **73–77D** by **9.5445%, 20%, 31.4534%, 44% and 33.3180%**, respectively. The same construction gives a new 78D lattice lower bound of **1.39319236921112e-16**. [Construction and exact replay](research/gamma72_leech_layers_20261122/).
 
 **22 November:** explicit minimum-6 lattices improve the preceding **51–53D** lower bounds by **17.2603%**, **37.5%** and **11.0281%**, respectively. A nine-translate periodic packing improves **96D** by **2.2869%**. New lattice existence bounds cover **93–96D**. [51–53D proof](research/p48n_hurwitz_20261122/) · [93–96D proofs](research/mw92_extensions_20261122/) · [Complete 1–96D lower-bound table](LOWER_BOUNDS_1_96.md).
