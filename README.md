@@ -9,110 +9,13 @@
 
 Reproducible certificates for unrestricted sphere packings, lattice-only upper bounds and packing constructions are separated below. Comparisons remain source-attributed; derived guarantees, numerical benchmarks and certified bounds are not interchangeable, and no exhaustive worldwide-priority claim is made.
 
-## Recent updates
+[General lower bounds](#general-lower-bounds) · [General upper bounds](#general-upper-bounds) · [Lattice-only lower bounds](#lattice-only-lower-bounds) · [Lattice-only upper bounds](#lattice-only-upper-bounds)
 
-**22 November:** shifted Bacher lattices improve the catalogued **29D and 30D lattice-only density lower bounds by 20.60% and 18.58%**, respectively. The unrestricted B29* and T30 bounds are unchanged. [Exact construction and replay](research/bacher_slip_29_30_20261122/).
-**22 November:** the summary table now reflects the already verified **82D density lower bound of 9.17033181889404e-18**, 7.0436% above the stale mixed-depth entry. The [principal-section proof](research/l80_a2_section_20261122/) is a simpler alternative to the [earlier all-deep binary-plane proof](research/packing83_85_deep_verified_20261117/README.md), not a new density record.
+<a id="packing-constructions-lower-bounds"></a>
 
-**22 November:** explicit lattices based on Nebe’s Γ72 improve the previous lower bounds in **73–77D** by **9.5445%, 20%, 31.4534%, 44% and 33.3180%**, respectively. The same construction gives a new 78D lattice lower bound of **1.39319236921112e-16**. [Construction and exact replay](research/gamma72_leech_layers_20261122/).
-
-**22 November:** explicit minimum-6 lattices improve the preceding **51–53D** lower bounds by **17.2603%**, **37.5%** and **11.0281%**, respectively. A nine-translate periodic packing improves **96D** by **2.2869%**. New lattice existence bounds cover **93–96D**. [51–53D proof](research/p48n_hurwitz_20261122/) · [93–96D proofs](research/mw92_extensions_20261122/) · [Complete 1–96D lower-bound table](LOWER_BOUNDS_1_96.md).
-
-**18 November:** seven independently verified unrestricted upper-bound improvements in **17–23D**, reducing the previous repository upper bounds by **0.319–1.498%**. [Exact before/after values and verification scope](CHANGES_20261118.md).
-
-<details>
-<summary><strong>Week of 16 November 2026</strong> · stronger upper bounds and new packing constructions</summary>
-
-**17 November:** unrestricted 49–54D certificates were followed by stronger compact-kernel refinements, while three-feature kernels and dimensional transfers tightened lattice-only bounds. Packing work added advances in 57–58D, 81–90D and 94–95D; explicit constructions and existence results remain distinguished in their tables. [Chronological release notes and exact comparisons](CHANGES_20261117.md).
-
-Latest verified values from this week:
-
-| Scope | Current release | Proof and comparison |
-| --- | --- | --- |
-| Unrestricted upper, 58D | **<1.073633e-8** | [Complete audit](verifications/general58_pc29_geomfix_20261117/); [numerical comparison](NUMERICAL_BENCHMARKS49_96.md#57d-and-58d-certified-bounds-with-numerical-literature-comparisons), no SOTA claim |
-| Unrestricted upper, 57D | **<1.5718326e-8** | [Complete audit](verifications/general57_pc29_geomfix_20261117/); [numerical comparison](NUMERICAL_BENCHMARKS49_96.md#57d-and-58d-certified-bounds-with-numerical-literature-comparisons), no SOTA claim |
-| Unrestricted upper, 54D | **<4.8695034e-8** | [Complete audit](verifications/general54_pc29_geomfix_20261117/); [numerical benchmark comparison](NUMERICAL_BENCHMARKS49_96.md) |
-| Unrestricted upper, 53D | **<6.8841195e-8** | [Complete audit](verifications/general53_pc29_geomfix_20261117/); 7.0662% below the previous repository certificate |
-| Unrestricted upper, 51D | **<1.37012082e-7** | [Joint scalar/kernel and complete audit](verifications/general51_jointp6_20261117/); 0.5584% below the preceding certificate |
-| Unrestricted upper, 52D | **<9.6610185e-8** | [Three-feature kernel and complete audit](verifications/general52_rank3mid_20261117/); 0.8519% below the preceding certificate |
-| Unrestricted upper, 50D | **<1.99548924e-7** | [Complete audit](verifications/general50_pc29_20261117/) |
-| Lattice-only upper, 36D | **<2.727705e-5** | [Dimension restriction and free-origin optimization](verifications/lattice/compact_restriction36_20261117/); 0.457675% below the preceding certificate |
-| Lattice-only upper, 40–42D | 40D: **<5.9777359372e-6**<br>41D: **<4.3927514316e-6**<br>42D: **<3.473037643e-6** | [Dimension-specific compact kernels](verifications/lattice/compact_power6_40_42_20261117/); complete independent audits |
-| Lattice-only upper, 37–39D | 37D: **<1.8268708324e-5**<br>38D: **<1.23521549304e-5**<br>39D: **<8.4799401622e-6** | [Dimension-specific compact kernels](verifications/lattice/compact_power6_37_39_20261117/); complete independent audits |
-| Lattice-only upper, 43–44D | 43D: **<2.5363822051e-6**<br>44D: **<1.7676809433e-6** | [Dimension-specific three-feature kernels](verifications/lattice/compact_power6_adapted_20261117/); complete independent audits |
-| Lattice-only upper, 45–48D | 45D: **<1.1728551765e-6**<br>46D: **<7.721596228e-7**<br>47D: **<5.130033534e-7**<br>48D: **<3.4559190288e-7** | [Three-feature kernels and exact dimensional transfers](verifications/lattice/compact_power6_45_48_20261117/) |
-| Packing lower, 94D/95D | **≥7.84434540405174e-21; ≥2.06770138493108e-21** | [Anisotropic torus-offset flags](research/mw92_flags9495_verified_20261117/); periodic existence, not explicit offsets or lattice claims |
-
-[49–96D numerical benchmark comparisons](NUMERICAL_BENCHMARKS49_96.md) are explicitly **not certified prior upper bounds**. [Release history](RELEASE_NOTES_20261117.md) preserves earlier announcements, superseded values and proof links; [17 November changes](CHANGES_20261117.md) records exact updates.
-
-</details>
-
-<details>
-<summary><strong>Week of 9 November 2026</strong> · initial constructions and successive upper-bound refinements</summary>
-
-- **12 November:** added the explicit 36D packing improvement over KP36 and upper-bound certificates in 9D, 10D and 16D. [Original releases and proofs](RELEASE_NOTES_20261117.md).
-- **14 November:** strengthened upper bounds in 16 dimensions, using signed logarithmic profiles and radial enrichment. [Exact before/after values](CHANGES_20261114.md).
-- **15 November:** extended the attributed 4D certificate, added further upper-bound refinements, and verified an explicit 59D packing with a stronger literature-derived comparison. [Chronology, attribution and replay](CHANGES_20261115.md).
-
-Proof dependencies remain in each package. In particular, the 9D certificate retains external average-neighbor bound 373; the 36D minimum proof uses outward-rounded binary64 enumeration under documented compiler/arithmetic assumptions, with an independent rerun of the same audited implementation. The 4D result extends the attributed pinned Felpix-Studios certificate. Packing constructions are lower bounds, not optimality claims.
-
-</details>
-
-[Full release history and archived research notes](RELEASE_NOTES_20261117.md). Historical values may be superseded; the current result tables and linked certificates govern.
-
-<!-- lattice-upper-20261116:start -->
-## Lattice-only upper bounds
-
-Comparison sources must predate this work and be external to it. Zubrilina’s Table 1 supplies the external lattice bounds shown. Dimensions 41–42 use published numerical spinless-bootstrap estimates, not certified upper bounds; their percentages are numerical comparisons. The general same-radius Cohn–Elkies lift is conjectural, and displayed arithmetic precision is not source accuracy. Our earlier certificates are internal history, not external comparators. These are lattice-only bounds, not unrestricted-packing claims or exhaustive priority guarantees. [Scope and reproduction](LATTICE_RESULTS.md).
-
-| n | Lower | Prior / source | New | Gain ≈ | Gap ≈ | Method |
-|---:|---:|---:|---:|---:|---:|---|
-| 14 | 0.0216240 | .0352392080<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.0347128** | 1.49% | 3.87% | [Near-frame index exclusion + weighted mod-2 class profiles](verifications/lattice/dim14/README.md) |
-| 15 | 0.0168575 | .0256118267<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.0255112** | 0.39% | 1.15% | [Near-frame index exclusion + weighted mod-2 class profiles](verifications/lattice/dim15/README.md) |
-| 16 | 0.0147081 | .0187461206<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.0186552** | 0.49% | 2.25% | [Near-frame index exclusion + weighted mod-2 class profiles](verifications/lattice/dim16/README.md) |
-| 17 | 0.00881131 | .0138839313<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.0138325** | 0.37% | 1.01% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim17/README.md) |
-| 18 | 0.00592836 | .0103704834<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.0103439** | 0.26% | 0.60% | [Near-frame index exclusion + weighted mod-2 class profiles](verifications/lattice/dim18/README.md) |
-| 19 | 0.00412080 | .00782447361<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.00780844** | 0.20% | 0.43% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim19/README.md) |
-| 20 | 0.00322586 | .00595808443<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.00595464** | 0.06% | 0.13% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim20/README.md) |
-| 21 | 0.00246588 | .00456045297<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.00455796** | 0.05% | 0.12% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim21/README.md) |
-| 22 | 0.00212766 | .00348596988<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.00348294** | 0.09% | 0.22% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim22/README.md) |
-| 23 | 0.00190532 | .00264134013<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.00260841** | 1.25% | 4.47% | [Conditioned nested Gram-moment class profiles](verifications/lattice/dim23/README.md) |
-| 25 | 6.77212e-4 | .00132930810<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.00132524** | 0.31% | 0.62% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim25/README.md) |
-| 26 | 2.69220e-4 | .000915119176<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤9.07210e-4** | 0.86% | 1.22% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim26/README.md) |
-| 27 | 1.28675e-4 | .000631342154<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤6.22939e-4** | 1.33% | 1.67% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim27/README.md) |
-| 28 | 6.97587e-5 | .000437000598<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤4.29640e-4** | 1.68% | 2.00% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim28/README.md) |
-| 29 | 2.78789e-5 | .000303842544<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤2.98026e-4** | 1.91% | 2.11% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim29/README.md) |
-| 30 | 1.44286e-5 | .000212402597<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤2.07933e-4** | 2.10% | 2.26% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim30/README.md) |
-| 31 | 1.18377e-5 | .000149408588<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤1.46088e-4** | 2.22% | 2.41% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim31/README.md) |
-| 32 | 1.10407e-5 | .000105764483<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤1.01512e-4** | 4.02% | 4.49% | [Multiwindow cross-class pair-sum coupling + mod-2 profiles](verifications/lattice/dim32_threewindow/README.md) |
-| 33 | 4.14068e-6 | 7.55167890e-5<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤7.38272e-5** | 2.24% | 2.37% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim33/README.md) |
-| 34 | 1.76697e-6 | 5.43081491e-5<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤5.31485e-5** | 2.14% | 2.21% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim34/README.md) |
-| 35 | 9.46190e-7 | 3.93266737e-5<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤3.76648e-5** | 4.23% | 4.33% | [Multiwindow cross-class pair-sum coupling + mod-2 profiles](verifications/lattice/dim35_threewindow/README.md) |
-| 36 | 7.33034e-7 | 2.86680609e-5<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<2.727705e-5** | 4.85% | 4.98% | [Exact dimension restriction of compact harmonic kernels + free-origin Schur optimization + certified Fourier and mod-2 annular closure](verifications/lattice/compact_restriction36_20261117/README.md) |
-| 37 | 3.21356e-7 | 2.09981537e-5<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<1.8268708324e-5** | 13.00% | 13.20% | [Dimension-specific three-feature compact harmonic PSD kernels + universal rank-two lattice-plane geometry + exact Fourier and mod-2 annular closure](verifications/lattice/compact_power6_37_39_20261117/README.md) |
-| 38 | 2.17566e-7 | 1.52662254e-5<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<1.23521549304e-5** | 19.09% | 19.36% | [Dimension-specific three-feature compact harmonic PSD kernels + universal rank-two lattice-plane geometry + exact Fourier and mod-2 annular closure](verifications/lattice/compact_power6_37_39_20261117/README.md) |
-| 39 | 1.68028e-7 | 1.09486830e-5<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<8.4799401622e-6** | 22.55% | 22.90% | [Dimension-specific three-feature compact harmonic PSD kernels + universal rank-two lattice-plane geometry + exact Fourier and mod-2 annular closure](verifications/lattice/compact_power6_37_39_20261117/README.md) |
-| 40 | 1.47983e-7 | 7.82816106e-6<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<5.9777359372e-6** | 23.64% | 24.09% | [Dimension-specific three-feature compact harmonic PSD kernels + universal rank-two lattice-plane geometry + exact Fourier and mod-2 annular closure](verifications/lattice/compact_power6_40_42_20261117/README.md) |
-| 41 | 8.63683e-8 | 5.53064643947781393827465524604e-6<br>[Numerical spinless bootstrap — Afkhami-Jeddi, Cohn et al. (2020); not certified](https://hdl.handle.net/1721.1/125646) | **<4.3927514316e-6** | 20.57% | 20.90% | [Dimension-specific three-feature compact harmonic PSD kernels + universal rank-two lattice-plane geometry + exact Fourier and mod-2 annular closure](verifications/lattice/compact_power6_40_42_20261117/README.md) |
-| 42 | 5.75168e-8 | 3.87809709067400932749629726155e-6<br>[Numerical spinless bootstrap — Afkhami-Jeddi, Cohn et al. (2020); not certified](https://hdl.handle.net/1721.1/125646) | **<3.473037643e-6** | 10.44% | 10.60% | [Dimension-specific three-feature compact harmonic PSD kernels + universal rank-two lattice-plane geometry + exact Fourier and mod-2 annular closure](verifications/lattice/compact_power6_40_42_20261117/README.md) |
-| 43 | 4.01571e-8 | 2.70203239e-6<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<2.5363822051e-6** | 6.13% | 6.22% | [Dimension-specific three-feature compact harmonic PSD kernels + universal rank-two lattice-plane geometry + exact Fourier closure](verifications/lattice/compact_power6_adapted_20261117/README.md) |
-| 44 | 3.20085e-8 | 1.86230595e-6<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<1.7676809433e-6** | 5.08% | 5.17% | [Dimension-specific three-feature compact harmonic PSD kernels + universal rank-two lattice-plane geometry + exact Fourier and mod-2 annular closure](verifications/lattice/compact_power6_adapted_20261117/README.md) |
-| 45 | 2.52315e-8 | 1.28034519e-6<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<1.1728551765e-6** | 8.40% | 8.56% | [Exact dimension restriction of optimized three-feature compact harmonic kernels + separately certified Fourier and mod-2 annular closure](verifications/lattice/compact_power6_45_48_20261117/README.md) |
-| 46 | 2.27179e-8 | 8.80676408e-7<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<7.721596228e-7** | 12.32% | 12.65% | [Exact dimension restriction of optimized three-feature compact harmonic kernels + separately certified Fourier and mod-2 annular closure](verifications/lattice/compact_power6_45_48_20261117/README.md) |
-| 47 | 2.14660e-8 | 6.07126117e-7<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<5.130033534e-7** | 15.50% | 16.07% | [Exact dimension restriction of optimized three-feature compact harmonic kernels + separately certified Fourier and mod-2 annular closure](verifications/lattice/compact_power6_45_48_20261117/README.md) |
-| 48 | 2.31782e-8 | 4.19948220e-7<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<3.4559190288e-7** | 17.71% | 18.74% | [Optimized three-feature compact harmonic kernels + universal rank-two geometry + separately certified Fourier and mod-2 annular closure](verifications/lattice/compact_power6_45_48_20261117/README.md) |
-
-Upper bounds rounded **up**, lower bounds **down**, to6 significant digits. [Exact registered values](LATTICE_RESULTS.json). Gain is the reduction from the named upper; Gap is the reduction in its additive gap to the named lattice lower bound.
-
-Lower bounds in 38D–42D use the lattice sections of [Dorofeev–Sun–Wang, Theorem1 and Table1](https://arxiv.org/html/2607.20359v4).43D–44D use Conway–Sloane lattice constructions([1982, Corollary8](https://doi.org/10.2307/2007025)); these are not the larger nonlattice entries in the unrestricted table. Source formulas remain in the JSON.
-
-<!-- lattice-upper-20261116:end -->
-
-## Packing constructions: lower bounds
+## General lower bounds
 
 [All occupied-density lower bounds in dimensions 1–96](LOWER_BOUNDS_1_96.md).
-
-[Lattice-only 29D and 30D advances](research/bacher_slip_29_30_20261122/): exact center densities 4/√33 and 8/√105, respectively.
 
 **17 November binary-CM update:** certified 57D **≥1.61599884109140e-11** and 58D **≥5.58243739609337e-12**. [Exact parent, complete independent coset exclusion and extension proof](research/packing_binary57_58_20261117/). Comparisons retain the pre-existing published-source consequences, not our own preceding constructions.
 
@@ -173,7 +76,9 @@ The [literature review dated 16 November 2026](research/covering_and_deep_cosets
 
 **55D** now has a verified occupied density of **≥7.54599036285564e-11**, a **0.9452%** increase over the preceding repository bound. The center density is `15/19` of the full printed challenge target. [Three-layer construction and exact check](research/uneven_layers55_20261122/README.md) · [Printed comparison audit](research/cross_coset55_20261116/PROOF.md#external-comparison).
 
-## Registered results
+<a id="registered-results"></a>
+
+## General upper bounds
 
 **Recorded upper U** is the historical comparison used for the percentages in that row. **Comparison method / source** names the method behind U and links to its paper or pinned certificate; **Our method / proof** describes the new bound N. A recorded comparison is not a claim about the latest worldwide record. [Full source titles, versions and comparison scope](COMPARISONS.md#table-comparison-methods-and-sources).
 
@@ -226,6 +131,117 @@ The [literature review dated 16 November 2026](research/covering_and_deep_cosets
 The 4D comparison uses the pinned Felpix-Studios certificate and its complete full-mode replay; extra digits show the small strict improvement. The 16D strict bound is 0.024900975, compared with the paper’s displayed 0.02492121. The full widened-shell count certificate is included and independently replayed. No worldwide-priority claim is made. Other densities are shown approximately to five significant digits and percentages to two decimals. Rounded display values are not substitute rigorous bounds. Full values and certificate bounds remain in [RESULTS.json](RESULTS.json); percentages use those unshortened values. The 5D, 6D, 7D and 9–16D baselines are pinned paper-reported decimal values, not independently replayed here.
 
 These certificates use the existing [Cohn–de Laat–Salmon continuum framework](https://arxiv.org/abs/2206.15373). Proof notes state the analytic hypotheses and normalization; exact rational witnesses and independent interval verifiers check the computational conditions over full domains. Historical numerical comparisons in package notes are pinned comparisons, not current best-known claims.
+
+## Lattice-only lower bounds
+
+[Complete 1–48D catalog](LATTICE_LOWER_BOUNDS_1_48.md) with exact center densities, occupied-volume density floors and construction references.
+
+| Dimension | Exact center density | Occupied density at least | Status |
+|---:|---:|---:|---|
+| 29 | `4/sqrt(33)` | 3.3623323974379e-5 | [Shifted Bacher lattice](research/bacher_slip_29_30_20261122/): **+20.60%** vs. Cohn’s lattice entry |
+| 30 | `8/sqrt(105)` | 1.7109756022744e-5 | [Shifted Bacher lattice](research/bacher_slip_29_30_20261122/): **+18.58%** vs. Cohn’s lattice entry |
+| 36 | `16777216/3176523` | 7.3303477831670e-7 | [Metric deformation](constructions/dim36/): already listed by Cohn |
+
+The 29D and 30D advances do not change the unrestricted lower bounds.
+
+<!-- lattice-upper-20261116:start -->
+## Lattice-only upper bounds
+
+Comparison sources must predate this work and be external to it. Zubrilina’s Table 1 supplies the external lattice bounds shown. Dimensions 41–42 use published numerical spinless-bootstrap estimates, not certified upper bounds; their percentages are numerical comparisons. The general same-radius Cohn–Elkies lift is conjectural, and displayed arithmetic precision is not source accuracy. Our earlier certificates are internal history, not external comparators. These are lattice-only bounds, not unrestricted-packing claims or exhaustive priority guarantees. [Scope and reproduction](LATTICE_RESULTS.md).
+
+| n | Comparison lower | Prior / source | New | Gain ≈ | Gap ≈ | Method |
+|---:|---:|---:|---:|---:|---:|---|
+| 14 | 0.0216240 | .0352392080<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.0347128** | 1.49% | 3.87% | [Near-frame index exclusion + weighted mod-2 class profiles](verifications/lattice/dim14/README.md) |
+| 15 | 0.0168575 | .0256118267<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.0255112** | 0.39% | 1.15% | [Near-frame index exclusion + weighted mod-2 class profiles](verifications/lattice/dim15/README.md) |
+| 16 | 0.0147081 | .0187461206<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.0186552** | 0.49% | 2.25% | [Near-frame index exclusion + weighted mod-2 class profiles](verifications/lattice/dim16/README.md) |
+| 17 | 0.00881131 | .0138839313<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.0138325** | 0.37% | 1.01% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim17/README.md) |
+| 18 | 0.00592836 | .0103704834<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.0103439** | 0.26% | 0.60% | [Near-frame index exclusion + weighted mod-2 class profiles](verifications/lattice/dim18/README.md) |
+| 19 | 0.00412080 | .00782447361<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.00780844** | 0.20% | 0.43% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim19/README.md) |
+| 20 | 0.00322586 | .00595808443<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.00595464** | 0.06% | 0.13% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim20/README.md) |
+| 21 | 0.00246588 | .00456045297<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.00455796** | 0.05% | 0.12% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim21/README.md) |
+| 22 | 0.00212766 | .00348596988<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.00348294** | 0.09% | 0.22% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim22/README.md) |
+| 23 | 0.00190532 | .00264134013<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.00260841** | 1.25% | 4.47% | [Conditioned nested Gram-moment class profiles](verifications/lattice/dim23/README.md) |
+| 25 | 6.77212e-4 | .00132930810<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤0.00132524** | 0.31% | 0.62% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim25/README.md) |
+| 26 | 2.69220e-4 | .000915119176<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤9.07210e-4** | 0.86% | 1.22% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim26/README.md) |
+| 27 | 1.28675e-4 | .000631342154<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤6.22939e-4** | 1.33% | 1.67% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim27/README.md) |
+| 28 | 6.97587e-5 | .000437000598<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤4.29640e-4** | 1.68% | 2.00% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim28/README.md) |
+| 29 | 2.78789e-5 | .000303842544<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤2.98026e-4** | 1.91% | 2.11% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim29/README.md) |
+| 30 | 1.44286e-5 | .000212402597<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤2.07933e-4** | 2.10% | 2.26% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim30/README.md) |
+| 31 | 1.18377e-5 | .000149408588<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤1.46088e-4** | 2.22% | 2.41% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim31/README.md) |
+| 32 | 1.10407e-5 | .000105764483<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤1.01512e-4** | 4.02% | 4.49% | [Multiwindow cross-class pair-sum coupling + mod-2 profiles](verifications/lattice/dim32_threewindow/README.md) |
+| 33 | 4.14068e-6 | 7.55167890e-5<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤7.38272e-5** | 2.24% | 2.37% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim33/README.md) |
+| 34 | 1.76697e-6 | 5.43081491e-5<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤5.31485e-5** | 2.14% | 2.21% | [Cross-class pair-sum angular coupling + mod-2 profile bounds](verifications/lattice/dim34/README.md) |
+| 35 | 9.46190e-7 | 3.93266737e-5<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **≤3.76648e-5** | 4.23% | 4.33% | [Multiwindow cross-class pair-sum coupling + mod-2 profiles](verifications/lattice/dim35_threewindow/README.md) |
+| 36 | 7.33034e-7 | 2.86680609e-5<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<2.727705e-5** | 4.85% | 4.98% | [Exact dimension restriction of compact harmonic kernels + free-origin Schur optimization + certified Fourier and mod-2 annular closure](verifications/lattice/compact_restriction36_20261117/README.md) |
+| 37 | 3.21356e-7 | 2.09981537e-5<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<1.8268708324e-5** | 13.00% | 13.20% | [Dimension-specific three-feature compact harmonic PSD kernels + universal rank-two lattice-plane geometry + exact Fourier and mod-2 annular closure](verifications/lattice/compact_power6_37_39_20261117/README.md) |
+| 38 | 2.17566e-7 | 1.52662254e-5<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<1.23521549304e-5** | 19.09% | 19.36% | [Dimension-specific three-feature compact harmonic PSD kernels + universal rank-two lattice-plane geometry + exact Fourier and mod-2 annular closure](verifications/lattice/compact_power6_37_39_20261117/README.md) |
+| 39 | 1.68028e-7 | 1.09486830e-5<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<8.4799401622e-6** | 22.55% | 22.90% | [Dimension-specific three-feature compact harmonic PSD kernels + universal rank-two lattice-plane geometry + exact Fourier and mod-2 annular closure](verifications/lattice/compact_power6_37_39_20261117/README.md) |
+| 40 | 1.47983e-7 | 7.82816106e-6<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<5.9777359372e-6** | 23.64% | 24.09% | [Dimension-specific three-feature compact harmonic PSD kernels + universal rank-two lattice-plane geometry + exact Fourier and mod-2 annular closure](verifications/lattice/compact_power6_40_42_20261117/README.md) |
+| 41 | 8.63683e-8 | 5.53064643947781393827465524604e-6<br>[Numerical spinless bootstrap — Afkhami-Jeddi, Cohn et al. (2020); not certified](https://hdl.handle.net/1721.1/125646) | **<4.3927514316e-6** | 20.57% | 20.90% | [Dimension-specific three-feature compact harmonic PSD kernels + universal rank-two lattice-plane geometry + exact Fourier and mod-2 annular closure](verifications/lattice/compact_power6_40_42_20261117/README.md) |
+| 42 | 5.75168e-8 | 3.87809709067400932749629726155e-6<br>[Numerical spinless bootstrap — Afkhami-Jeddi, Cohn et al. (2020); not certified](https://hdl.handle.net/1721.1/125646) | **<3.473037643e-6** | 10.44% | 10.60% | [Dimension-specific three-feature compact harmonic PSD kernels + universal rank-two lattice-plane geometry + exact Fourier and mod-2 annular closure](verifications/lattice/compact_power6_40_42_20261117/README.md) |
+| 43 | 4.01571e-8 | 2.70203239e-6<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<2.5363822051e-6** | 6.13% | 6.22% | [Dimension-specific three-feature compact harmonic PSD kernels + universal rank-two lattice-plane geometry + exact Fourier closure](verifications/lattice/compact_power6_adapted_20261117/README.md) |
+| 44 | 3.20085e-8 | 1.86230595e-6<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<1.7676809433e-6** | 5.08% | 5.17% | [Dimension-specific three-feature compact harmonic PSD kernels + universal rank-two lattice-plane geometry + exact Fourier and mod-2 annular closure](verifications/lattice/compact_power6_adapted_20261117/README.md) |
+| 45 | 2.52315e-8 | 1.28034519e-6<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<1.1728551765e-6** | 8.40% | 8.56% | [Exact dimension restriction of optimized three-feature compact harmonic kernels + separately certified Fourier and mod-2 annular closure](verifications/lattice/compact_power6_45_48_20261117/README.md) |
+| 46 | 2.27179e-8 | 8.80676408e-7<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<7.721596228e-7** | 12.32% | 12.65% | [Exact dimension restriction of optimized three-feature compact harmonic kernels + separately certified Fourier and mod-2 annular closure](verifications/lattice/compact_power6_45_48_20261117/README.md) |
+| 47 | 2.14660e-8 | 6.07126117e-7<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<5.130033534e-7** | 15.50% | 16.07% | [Exact dimension restriction of optimized three-feature compact harmonic kernels + separately certified Fourier and mod-2 annular closure](verifications/lattice/compact_power6_45_48_20261117/README.md) |
+| 48 | 2.31782e-8 | 4.19948220e-7<br>[Lattice class-profile LP — Zubrilina (2026), Table 1](https://arxiv.org/html/2610.35830v1#S4.T1) | **<3.4559190288e-7** | 17.71% | 18.74% | [Optimized three-feature compact harmonic kernels + universal rank-two geometry + separately certified Fourier and mod-2 annular closure](verifications/lattice/compact_power6_45_48_20261117/README.md) |
+
+Upper bounds are rounded **up** and historical comparison lower bounds **down** to six significant digits. See the [current lattice lower-bound catalog](LATTICE_LOWER_BOUNDS_1_48.md) for the latest values. [Exact registered values](LATTICE_RESULTS.json). Gain is the reduction from the named upper; Gap is the reduction in its additive gap to the named lattice lower bound.
+
+Lower bounds in 38D–42D use the lattice sections of [Dorofeev–Sun–Wang, Theorem1 and Table1](https://arxiv.org/html/2607.20359v4).43D–44D use Conway–Sloane lattice constructions([1982, Corollary8](https://doi.org/10.2307/2007025)); these are not the larger nonlattice entries in the unrestricted table. Source formulas remain in the JSON.
+
+<!-- lattice-upper-20261116:end -->
+
+## Recent updates
+
+**22 November:** shifted Bacher lattices improve the catalogued **29D and 30D lattice-only density lower bounds by 20.60% and 18.58%**, respectively. The unrestricted B29* and T30 bounds are unchanged. [Exact construction and replay](research/bacher_slip_29_30_20261122/).
+**22 November:** the summary table now reflects the already verified **82D density lower bound of 9.17033181889404e-18**, 7.0436% above the stale mixed-depth entry. The [principal-section proof](research/l80_a2_section_20261122/) is a simpler alternative to the [earlier all-deep binary-plane proof](research/packing83_85_deep_verified_20261117/README.md), not a new density record.
+
+**22 November:** explicit lattices based on Nebe’s Γ72 improve the previous lower bounds in **73–77D** by **9.5445%, 20%, 31.4534%, 44% and 33.3180%**, respectively. The same construction gives a new 78D lattice lower bound of **1.39319236921112e-16**. [Construction and exact replay](research/gamma72_leech_layers_20261122/).
+
+**22 November:** explicit minimum-6 lattices improve the preceding **51–53D** lower bounds by **17.2603%**, **37.5%** and **11.0281%**, respectively. A nine-translate periodic packing improves **96D** by **2.2869%**. New lattice existence bounds cover **93–96D**. [51–53D proof](research/p48n_hurwitz_20261122/) · [93–96D proofs](research/mw92_extensions_20261122/) · [Complete 1–96D lower-bound table](LOWER_BOUNDS_1_96.md).
+
+**18 November:** seven independently verified unrestricted upper-bound improvements in **17–23D**, reducing the previous repository upper bounds by **0.319–1.498%**. [Exact before/after values and verification scope](CHANGES_20261118.md).
+
+<details>
+<summary><strong>Week of 16 November 2026</strong> · stronger upper bounds and new packing constructions</summary>
+
+**17 November:** unrestricted 49–54D certificates were followed by stronger compact-kernel refinements, while three-feature kernels and dimensional transfers tightened lattice-only bounds. Packing work added advances in 57–58D, 81–90D and 94–95D; explicit constructions and existence results remain distinguished in their tables. [Chronological release notes and exact comparisons](CHANGES_20261117.md).
+
+Latest verified values from this week:
+
+| Scope | Current release | Proof and comparison |
+| --- | --- | --- |
+| Unrestricted upper, 58D | **<1.073633e-8** | [Complete audit](verifications/general58_pc29_geomfix_20261117/); [numerical comparison](NUMERICAL_BENCHMARKS49_96.md#57d-and-58d-certified-bounds-with-numerical-literature-comparisons), no SOTA claim |
+| Unrestricted upper, 57D | **<1.5718326e-8** | [Complete audit](verifications/general57_pc29_geomfix_20261117/); [numerical comparison](NUMERICAL_BENCHMARKS49_96.md#57d-and-58d-certified-bounds-with-numerical-literature-comparisons), no SOTA claim |
+| Unrestricted upper, 54D | **<4.8695034e-8** | [Complete audit](verifications/general54_pc29_geomfix_20261117/); [numerical benchmark comparison](NUMERICAL_BENCHMARKS49_96.md) |
+| Unrestricted upper, 53D | **<6.8841195e-8** | [Complete audit](verifications/general53_pc29_geomfix_20261117/); 7.0662% below the previous repository certificate |
+| Unrestricted upper, 51D | **<1.37012082e-7** | [Joint scalar/kernel and complete audit](verifications/general51_jointp6_20261117/); 0.5584% below the preceding certificate |
+| Unrestricted upper, 52D | **<9.6610185e-8** | [Three-feature kernel and complete audit](verifications/general52_rank3mid_20261117/); 0.8519% below the preceding certificate |
+| Unrestricted upper, 50D | **<1.99548924e-7** | [Complete audit](verifications/general50_pc29_20261117/) |
+| Lattice-only upper, 36D | **<2.727705e-5** | [Dimension restriction and free-origin optimization](verifications/lattice/compact_restriction36_20261117/); 0.457675% below the preceding certificate |
+| Lattice-only upper, 40–42D | 40D: **<5.9777359372e-6**<br>41D: **<4.3927514316e-6**<br>42D: **<3.473037643e-6** | [Dimension-specific compact kernels](verifications/lattice/compact_power6_40_42_20261117/); complete independent audits |
+| Lattice-only upper, 37–39D | 37D: **<1.8268708324e-5**<br>38D: **<1.23521549304e-5**<br>39D: **<8.4799401622e-6** | [Dimension-specific compact kernels](verifications/lattice/compact_power6_37_39_20261117/); complete independent audits |
+| Lattice-only upper, 43–44D | 43D: **<2.5363822051e-6**<br>44D: **<1.7676809433e-6** | [Dimension-specific three-feature kernels](verifications/lattice/compact_power6_adapted_20261117/); complete independent audits |
+| Lattice-only upper, 45–48D | 45D: **<1.1728551765e-6**<br>46D: **<7.721596228e-7**<br>47D: **<5.130033534e-7**<br>48D: **<3.4559190288e-7** | [Three-feature kernels and exact dimensional transfers](verifications/lattice/compact_power6_45_48_20261117/) |
+| Packing lower, 94D/95D | **≥7.84434540405174e-21; ≥2.06770138493108e-21** | [Anisotropic torus-offset flags](research/mw92_flags9495_verified_20261117/); periodic existence, not explicit offsets or lattice claims |
+
+[49–96D numerical benchmark comparisons](NUMERICAL_BENCHMARKS49_96.md) are explicitly **not certified prior upper bounds**. [Release history](RELEASE_NOTES_20261117.md) preserves earlier announcements, superseded values and proof links; [17 November changes](CHANGES_20261117.md) records exact updates.
+
+</details>
+
+<details>
+<summary><strong>Week of 9 November 2026</strong> · initial constructions and successive upper-bound refinements</summary>
+
+- **12 November:** added the explicit 36D packing improvement over KP36 and upper-bound certificates in 9D, 10D and 16D. [Original releases and proofs](RELEASE_NOTES_20261117.md).
+- **14 November:** strengthened upper bounds in 16 dimensions, using signed logarithmic profiles and radial enrichment. [Exact before/after values](CHANGES_20261114.md).
+- **15 November:** extended the attributed 4D certificate, added further upper-bound refinements, and verified an explicit 59D packing with a stronger literature-derived comparison. [Chronology, attribution and replay](CHANGES_20261115.md).
+
+Proof dependencies remain in each package. In particular, the 9D certificate retains external average-neighbor bound 373; the 36D minimum proof uses outward-rounded binary64 enumeration under documented compiler/arithmetic assumptions, with an independent rerun of the same audited implementation. The 4D result extends the attributed pinned Felpix-Studios certificate. Packing constructions are lower bounds, not optimality claims.
+
+</details>
+
+[Full release history and archived research notes](RELEASE_NOTES_20261117.md). Historical values may be superseded; the current result tables and linked certificates govern.
 
 ## Reproduce
 
