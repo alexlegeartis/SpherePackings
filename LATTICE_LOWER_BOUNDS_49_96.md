@@ -63,7 +63,7 @@ Years in derived rows date the cited inputs, not publication of the derived boun
 | 93 | 4.88702544074e+15 · [Shioda MW92 x classical 1D lattice](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) (derived; 1991/2019 sources) | 8.74303398226e+15 · [MW92 lattice shear](research/mw92_extensions_20261122/README.md#lattice-shears) (existence) | +78.90% | 3.04556337848e-20 |
 | 94 | 2.82152545374e+15 · [Shioda MW92 x classical 2D lattice](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) (derived; 1991/2019 sources) | 8.94634610958e+15 · [MW92 order-three dichotomy](research/mw92_order3_dichotomy_20261122/README.md) (existence) | +217.07% | 8.03567126556e-21 |
 | 95 | 1.72782441448e+15 · [Shioda MW92 x classical 3D lattice](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) (derived; 1991/2019 sources) | 9.13261126748e+15 · [MW92 order-three dichotomy](research/mw92_order3_dichotomy_20261122/README.md) (existence) | +428.56% | 2.10405317054e-21 |
-| 96 | 4.75445050459e+15 · [BCS96, Table 1 (1982)](https://neilsloane.com/doc/Me103.pdf) | 9.60319359100e+15 · [Refined MW92 order-three lattice](research/mw92_96_equal_cover_20261122/README.md) (existence) | +101.98% | 5.64547885516e-22 |
+| 96 | 4.75445050459e+15 · [BCS96, Table 1 (1982)](https://neilsloane.com/doc/Me103.pdf) | 1.00992690950e+16 · [MW92 cusp reduction glued to D4](research/mw92_cusp_d4_20261122/README.md) (existence) | +112.41% | 5.93710931559e-22 |
 
 ## Scope and replay
 

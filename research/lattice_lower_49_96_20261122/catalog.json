@@ -912,9 +912,11 @@
       },
       "repository": {
         "kind": "lattice existence",
-        "description": "Refined MW92 order-three lattice",
-        "link": "research/mw92_96_equal_cover_20261122/README.md",
-        "center_density_squared": "470782630154001057287684206740574981207676658334802588467200000000000000000/5104921439776057931517782239322133981907513"
+        "description": "MW92 cusp reduction glued to D4",
+        "link": "research/mw92_cusp_d4_20261122/README.md",
+        "center_density_squared": "40483766022843281411184472189571654752207506882090305742200116101065766026718820758174775041/396918204317758862666652901858757046430456255926485873852416",
+        "minimum_squared": 18,
+        "gram_determinant": "5009812063308892366592572225156"
       }
     }
   ],
