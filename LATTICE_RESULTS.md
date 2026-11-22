@@ -2,6 +2,8 @@
 
 ## Lattice-only upper bounds
 
+The 22 November follow-up gives smaller certified upper bounds in dimensions 25–35 and 37. It replays the exact benchmark inputs and publishes the rational refinements. [Follow-up bounds and replay](verifications/lattice/angular_kernel_followup_20261122/)
+
 Comparison sources must predate this work and be external to it. Zubrilina’s Table 1 supplies the external lattice bounds shown. Dimensions 41–42 use published numerical spinless-bootstrap estimates, not certified upper bounds; their percentages are numerical comparisons. The general same-radius Cohn–Elkies lift is conjectural, and displayed arithmetic precision is not source accuracy. Our earlier certificates are internal history, not external comparators. These are lattice-only bounds, not unrestricted-packing claims or exhaustive priority guarantees. [Scope and reproduction](LATTICE_RESULTS.md).
 
 | n | Lower | Prior / source | New | Gain ≈ | Gap ≈ | Method |
