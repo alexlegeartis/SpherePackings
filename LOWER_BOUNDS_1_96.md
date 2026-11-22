@@ -63,7 +63,7 @@ challenge value is discussed in that proof.
 | 52 | 3.95931817049999e-10 | [Explicit P48n quaternionic lattice](research/p48n_hurwitz_20261122/README.md) |
 | 53 | 1.66176494990127e-10 | [Explicit P48n quaternionic lattice](research/p48n_hurwitz_20261122/README.md) |
 | 54 | 1.46699394710872e-10 | [Leterrier54, Corollary 1.4 (2022)](https://doi.org/10.1007/s40993-022-00321-0) |
-| 55 | 7.47532795256284e-11 | [Cross-coset tilted lamination of Leterrier54](research/cross_coset55_20261116/PROOF.md) |
+| 55 | 7.54599036285564e-11 | [Three unevenly spaced Leterrier54 layers](research/uneven_layers55_20261122/README.md) |
 | 56 | 5.35530073542807e-11 | [Shioda MW56](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) |
 | 57 | 1.61599884109140e-11 | [Exact depth-7 Mordell–Weil half-coset extension](research/packing_binary57_58_20261117/README.md) |
 | 58 | 5.58243739609338e-12 | [Exact depth-7 Mordell–Weil half-coset extension with complex-multiplication triangular layers](research/packing_binary57_58_20261117/README.md) |

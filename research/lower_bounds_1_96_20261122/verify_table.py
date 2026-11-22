@@ -90,6 +90,7 @@ def build_table():
 
     for package, label in [
         ("p48n_hurwitz_20261122", "Explicit P48n quaternionic lattice"),
+        ("uneven_layers55_20261122", "Three unevenly spaced Leterrier54 layers"),
         ("gamma72_leech_layers_20261122", "Explicit Γ72 lattice with Leech-block verification"),
         ("mw92_extensions_20261122", "MW92 extension"),
     ]:

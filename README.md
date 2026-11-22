@@ -166,7 +166,7 @@ The [literature review dated 16 November 2026](research/covering_and_deep_cosets
 
 **Scope:** Some rows are existence bounds, not explicit packings. Named comparisons include derived guarantees; they do not establish exhaustive priority. [Sources and exact gains](research/covering_and_deep_cosets_20261115/PRIORITY.md) · [Full audit and research notes](RELEASE_NOTES_20261117.md#packing-comparison-and-research-notes).
 
-**55D: no SOTA claim.** Our certified construction falls below the full printed comparison target; the earlier minimum/local-optimality claim is withdrawn. [Details](research/cross_coset55_20261116/PROOF.md).
+**55D** now has a verified occupied density of **≥7.54599036285564e-11**, a **0.9452%** increase over the preceding repository bound. The center density is `15/19` of the full printed challenge target. [Three-layer construction and exact check](research/uneven_layers55_20261122/README.md) · [Printed comparison audit](research/cross_coset55_20261116/PROOF.md#external-comparison).
 
 ## Registered results
 
