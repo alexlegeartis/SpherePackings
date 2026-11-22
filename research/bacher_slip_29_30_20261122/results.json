@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "dimension": 29,
+      "minimum_squared": 8,
+      "gram_determinant": "1107296256",
+      "center_density_squared": "16/33",
+      "previous_lattice_center_density_squared": "1/3",
+      "occupied_density_floor": "0.0000336233239743799",
+      "gain_percent_floor": "20.604537831105",
+      "kind": "explicit lattice"
+    },
+    {
+      "dimension": 30,
+      "minimum_squared": 8,
+      "gram_determinant": "1761607680",
+      "center_density_squared": "64/105",
+      "previous_lattice_center_density_squared": "7625597484987/17592186044416",
+      "occupied_density_floor": "0.0000171097560227443",
+      "gain_percent_floor": "18.581872346647",
+      "kind": "explicit lattice"
+    }
+  ]
+}

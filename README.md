@@ -11,6 +11,7 @@ Reproducible certificates for unrestricted sphere packings, lattice-only upper b
 
 ## Recent updates
 
+**22 November:** shifted Bacher lattices improve the catalogued **29D and 30D lattice-only density lower bounds by 20.60% and 18.58%**, respectively. The unrestricted B29* and T30 bounds are unchanged. [Exact construction and replay](research/bacher_slip_29_30_20261122/).
 **22 November:** the summary table now reflects the already verified **82D density lower bound of 9.17033181889404e-18**, 7.0436% above the stale mixed-depth entry. The [principal-section proof](research/l80_a2_section_20261122/) is a simpler alternative to the [earlier all-deep binary-plane proof](research/packing83_85_deep_verified_20261117/README.md), not a new density record.
 
 **22 November:** explicit lattices based on Nebe’s Γ72 improve the previous lower bounds in **73–77D** by **9.5445%, 20%, 31.4534%, 44% and 33.3180%**, respectively. The same construction gives a new 78D lattice lower bound of **1.39319236921112e-16**. [Construction and exact replay](research/gamma72_leech_layers_20261122/).
@@ -110,6 +111,8 @@ Lower bounds in 38D–42D use the lattice sections of [Dorofeev–Sun–Wang, Th
 ## Packing constructions: lower bounds
 
 [All occupied-density lower bounds in dimensions 1–96](LOWER_BOUNDS_1_96.md).
+
+[Lattice-only 29D and 30D advances](research/bacher_slip_29_30_20261122/): exact center densities 4/√33 and 8/√105, respectively.
 
 **17 November binary-CM update:** certified 57D **≥1.61599884109140e-11** and 58D **≥5.58243739609337e-12**. [Exact parent, complete independent coset exclusion and extension proof](research/packing_binary57_58_20261117/). Comparisons retain the pre-existing published-source consequences, not our own preceding constructions.
 
