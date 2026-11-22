@@ -1,6 +1,6 @@
 # Lattice packing bounds with forced parity classes
 
-The superlattice argument gives stricter lattice-only upper bounds in dimensions 17, 18, 20, 21, and 22. A separate Fourier refit gives the strongest bound in dimension 18. The [9–48D comparison](COMPARISON.md) includes these bounds, the previous follow-ups, and the published exact low-dimensional inputs. [Native proof sources](https://github.com/AstroNinja389/sphere-packings/blob/d7ffd0df47dfeb11814631858205f05ed73ec8ff/proofs/COMPARISON.md)
+The superlattice argument gives stricter lattice-only upper bounds in dimensions 17, 18, 20, 21, and 22. A separate Fourier refit gives the strongest bound in dimension 18. The [13–48D comparison](COMPARISON.md) compares these bounds and the earlier follow-ups against Zubrilina’s `sphere-packings` benchmark. [Native proof sources](https://github.com/AstroNinja389/sphere-packings/blob/d7ffd0df47dfeb11814631858205f05ed73ec8ff/proofs/COMPARISON.md)
 
 | Dimension | New upper bound | Reduction from native certificate |
 |---:|---:|---:|

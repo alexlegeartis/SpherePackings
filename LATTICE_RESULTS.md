@@ -2,11 +2,13 @@
 
 ## Lattice-only upper bounds
 
-The 9–48D comparison collects the cited certified bounds and the latest improvements in dimensions 17, 18, and 20–22. [Dimension-by-dimension comparison](verifications/lattice/superlattice_saturation_20261122/COMPARISON.md) · [Certificates and replay](verifications/lattice/superlattice_saturation_20261122/)
+The 13–48D comparison uses Zubrilina’s *Lattice sphere-packing density bounds through dimension 48* repository and includes our previous project bounds. [Dimension-by-dimension comparison](verifications/lattice/superlattice_saturation_20261122/COMPARISON.md) · [Certificates and replay](verifications/lattice/superlattice_saturation_20261122/)
 
 The 22 November follow-up gives smaller certified upper bounds in dimensions 25–35 and 37. It replays the exact benchmark inputs and publishes the rational refinements. [Follow-up bounds and replay](verifications/lattice/angular_kernel_followup_20261122/)
 
 A second follow-up gives revised certified bounds in every dimension from 38 through 48, with exact comparisons against AstroNinja389 and Zubrilina’s Gaussian certificates. [38–48D bounds and replay](verifications/lattice/dual_mass_angular_energy_38_48_20261122/)
+
+### Historical project registry
 
 Comparison sources must predate this work and be external to it. Zubrilina’s Table 1 supplies the external lattice bounds shown. Dimensions 41–42 use published numerical spinless-bootstrap estimates, not certified upper bounds; their percentages are numerical comparisons. The general same-radius Cohn–Elkies lift is conjectural, and displayed arithmetic precision is not source accuracy. Our earlier certificates are internal history, not external comparators. These are lattice-only bounds, not unrestricted-packing claims or exhaustive priority guarantees. [Scope and reproduction](LATTICE_RESULTS.md).
 
