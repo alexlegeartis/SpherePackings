@@ -4,9 +4,11 @@ The certificate applies to all full-rank lattice packings in its dimension. The 
 
 | Dimension | New upper bound | Pinned parent upper bound | Relative reduction |
 |---:|---:|---:|---:|
-| 37 | 0.00001818025053030711279 | 0.000018245562973058698414114862 | 0.35796343% |
+| 37 | 0.00001817642454038903306 | 0.000018245562973058698414114862 | 0.37893285% |
 | 38 | 0.00001229554573503757040 | 0.00001234290484423536589 | 0.38369500% |
 | 39 | 0.00000845291367154137428 | 0.0000084768372418329309 | 0.28222283% |
+| 42 | 0.00000346603735498588186 | 0.0000034723546108616219543444225 | 0.18193003% |
+| 48 | 0.00000034510710122965769 | 3.4530564242393277928417642E-7 | 0.05749723% |
 
 ## Offline replay
 
@@ -18,6 +20,12 @@ python -B verify.py /path/to/n25-48-proofs-r9.zip
 ~~~
 
 The witness stores rational Laguerre coefficients, compact harmonic matrices, and a compact origin vector. The replay uses rational Bernstein subdivision for the plane signs, exact polynomial arithmetic for the Fourier signs, and Arb bounds for the exponential and gamma factors. It needs no optimizer.
+
+## How the plane kernels were found
+
+The search varied the Fourier coefficients and all the plane matrices together. In dimension 37, reducing selected positive semidefinite blocks removed the remaining angular sign violations. In dimension 39, subtracting a nonnegative even angular polynomial that vanishes at $t=1$ tightened the off-diagonal inequality while preserving its spatial diagonal.
+
+In dimensions 37, 42 and 48, write $A_0=zz^{\mathsf T}/s+C$ with $s=z^{\mathsf T}A_0^{-1}z$. Cauchy–Schwarz gives $C\succeq0$. Keeping the first term while reducing positive rank-one components of $C$ preserves the same Schur allowance $s$. Rank-one components of the higher harmonic blocks can also be reduced. This makes it possible to repair the plane signs with a small, explicitly calculated loss on the one component that controls the origin cost. The verifier checks the resulting rational matrices and Fourier coefficients directly.
 
 ## Density inequality
 

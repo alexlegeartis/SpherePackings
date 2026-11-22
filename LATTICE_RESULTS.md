@@ -24,30 +24,30 @@ The prior project column uses the registry before the 22 November follow-ups. A 
 | 22 | 0.0034829323340000000000 | 0.0033300672941105808279 | **0.0033300672928228325478** | 3.867e−8% | 4.388975% | [Superlattice follow-up](verifications/lattice/superlattice_saturation_20261122/) |
 | 23 | 0.0026084015810000000000 | 0.0025265652019048007308 | **0.0025265652019047523943** | 1.9131e−12% | 3.137415% | [New exact replay](verifications/lattice/universal_refinements_20261122/#replay) |
 | 24 | — | π¹²/12! | **π¹²/12!** | 0% | — | [Exact Leech optimum](https://arxiv.org/abs/1603.06518) |
-| 25 | 0.0013252324330000000000 | 0.0012865580466895762002 | **0.0012865566944499901305** | 0.000105% | 2.918412% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
+| 25 | 0.0013252324330000000000 | 0.0012865580466895762002 | **0.0012865460837431921899** | 0.00093% | 2.919212% | [Poisson counts in short-vector windows](verifications/lattice/poisson_anchor_windows_20261122/) |
 | 26 | 0.00090720999700000000000 | 0.00086911029381370068778 | **0.00086900243887731789880** | 0.01241% | 4.211545% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
 | 27 | 0.00062293895300000000000 | 0.00058059392751453588197 | **0.00058048752470736150330** | 0.018327% | 6.814701% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
 | 28 | 0.00042963910100000000000 | 0.00039185020580726843221 | **0.00039179882422262013580** | 0.013113% | 8.807456% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
 | 29 | 0.00029802503900000000000 | 0.00027185785299942605068 | **0.00027185739946637818470** | 0.000167% | 8.780349% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
 | 30 | 0.00020793294600000000000 | 0.00018914606252674561181 | **0.00018914577034463185630** | 0.000154% | 9.035209% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
-| 31 | 0.00014608721700000000000 | 0.00013542960697911123778 | **0.00013541398085940899060** | 0.011538% | 7.306071% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
-| 32 | 0.00010151177700000000000 | 0.000095876900128017280000 | **0.000095868994308168250800** | 0.008246% | 5.558747% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
+| 31 | 0.00014608721700000000000 | 0.00013542960697911123778 | **0.00013541049750198333762** | 0.01411% | 7.308456% | [Poisson counts in short-vector windows](verifications/lattice/poisson_anchor_windows_20261122/) |
+| 32 | 0.00010151177700000000000 | 0.000095876900128017280000 | **0.000095866360403730692796** | 0.010993% | 5.561342% | [Poisson counts in short-vector windows](verifications/lattice/poisson_anchor_windows_20261122/) |
 | 33 | 0.000073827123000000000000 | 0.000073452496873458058600 | **0.000073445325008250398100** | 0.009764% | 0.517151% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
 | 34 | 0.000053148401000000000000 | 0.000052765505427206304080 | **0.000052758376962763145600** | 0.01351% | 0.73384% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
 | 35 | 0.000037664745000000000000 | 0.000037469507068663344450 | **0.000037465045043454272100** | 0.011908% | 0.530204% | [Angular follow-up](verifications/lattice/angular_kernel_followup_20261122/) |
 | 36 | 0.000027277050000000000000 | 0.000027145882256491636230 | **0.000027145852648811524495** | 0.000109% | 0.480981% | [Joint spatial and radial moments](verifications/lattice/universal_refinements_20261122/#replay) |
-| 37 | 0.000018268708324000000000 | 0.000018245562973058698415 | **0.00001818025053030711279** | 0.357963% | 0.484204% | [Joint Fourier and plane certificate](verifications/lattice/joint_fourier_plane_20261122/) |
+| 37 | 0.000018268708324000000000 | 0.000018245562973058698415 | **0.00001817642454038903306** | 0.378933% | 0.505147% | [Joint Fourier and plane certificate](verifications/lattice/joint_fourier_plane_20261122/) |
 | 38 | 0.000012352154930400000000 | 0.000012342904844235365890 | **0.00001229554573503757040** | 0.383695% | 0.458294% | [Joint Fourier and plane certificate](verifications/lattice/joint_fourier_plane_20261122/) |
 | 39 | 0.0000084799401622000000000 | 0.0000084768372418329309000 | **0.00000845291367154137428** | 0.282223% | 0.318711% | [Joint Fourier and plane certificate](verifications/lattice/joint_fourier_plane_20261122/) |
 | 40 | 0.0000059777359372000000000 | 0.0000059759954762954402419 | **0.0000059759954747923372602** | 2.5152e−8% | 0.029116% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
 | 41 | 0.0000043927514316000000000 | 0.0000043915395007280125410 | **0.0000043915394964222208570** | 9.8047e−8% | 0.027589% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
-| 42 | 0.0000034730376430000000000 | 0.0000034723546108616219544 | **0.0000034723546103562322282** | 1.4555e−8% | 0.019667% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
+| 42 | 0.0000034730376430000000000 | 0.0000034723546108616219544 | **0.00000346603735498588186** | 0.18193% | 0.201561% | [Joint Fourier and plane certificate](verifications/lattice/joint_fourier_plane_20261122/) |
 | 43 | 0.0000025363822051000000000 | 0.0000025359881093975040500 | **0.0000025359881069348761411** | 9.7107e−8% | 0.015538% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
 | 44 | 0.0000017676809433000000000 | 0.0000017667499405165533285 | **0.0000017667499405165497950** | 2e−13% | 0.052668% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
 | 45 | 0.0000011728551765000000000 | 0.0000011727226221949307364 | **0.0000011727225939886516584** | 0.000002% | 0.011304% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
 | 46 | 0.00000077215962280000000000 | 0.00000077176742457565234158 | **0.00000077176741198685131143** | 0.000002% | 0.050794% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
 | 47 | 0.00000051300335340000000000 | 0.00000051272563331981911329 | **0.00000051272562808697011342** | 0.000001% | 0.054137% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
-| 48 | 0.00000034559190288000000000 | 0.00000034530564242393277929 | **0.00000034530564099888273888** | 4.1269e−7% | 0.082832% | [Reciprocal and angular follow-up](verifications/lattice/dual_mass_angular_energy_38_48_20261122/) |
+| 48 | 0.00000034559190288000000000 | 0.00000034530564242393277929 | **0.00000034510710122965769** | 0.057497% | 0.140282% | [Joint Fourier and plane certificate](verifications/lattice/joint_fourier_plane_20261122/) |
 
 In 13D the two densities agree at the displayed precision. Its reduction compares the certified rational upper with the exact Mordell expression. [13D proof and replay](verifications/lattice/perfect_determinant_13/)
 

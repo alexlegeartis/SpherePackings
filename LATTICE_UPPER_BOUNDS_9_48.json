@@ -208,15 +208,15 @@
     },
     {
       "dimension": 25,
-      "density_upper": "0.0012865566944499901305",
-      "proof_upper_rational": "2573113388899980261/2000000000000000000000",
+      "density_upper": "0.0012865460837431921899",
+      "proof_upper_rational": "643273041871596094944685337/500000000000000000000000000000",
       "exact_value": null,
-      "proof_label": "Angular follow-up",
-      "proof": "verifications/lattice/angular_kernel_followup_20261122/",
+      "proof_label": "Poisson counts in short-vector windows",
+      "proof": "verifications/lattice/poisson_anchor_windows_20261122/",
       "benchmark_upper_rational": "12865580466895762001978425190229579147732443000143703/10000000000000000000000000000000000000000000000000000000",
       "previous_project_upper": "1325232433/1000000000000",
-      "reduction_vs_benchmark_percent": "0.000105%",
-      "reduction_vs_previous_project_percent": "2.918412%"
+      "reduction_vs_benchmark_percent": "0.00093%",
+      "reduction_vs_previous_project_percent": "2.919212%"
     },
     {
       "dimension": 26,
@@ -280,27 +280,27 @@
     },
     {
       "dimension": 31,
-      "density_upper": "0.00013541398085940899060",
-      "proof_upper_rational": "677069904297044953/5000000000000000000000",
+      "density_upper": "0.00013541049750198333762",
+      "proof_upper_rational": "135410497501983337616757649/1000000000000000000000000000000",
       "exact_value": null,
-      "proof_label": "Angular follow-up",
-      "proof": "verifications/lattice/angular_kernel_followup_20261122/",
+      "proof_label": "Poisson counts in short-vector windows",
+      "proof": "verifications/lattice/poisson_anchor_windows_20261122/",
       "benchmark_upper_rational": "1354296069791112377790981476395495339895409370591189/10000000000000000000000000000000000000000000000000000000",
       "previous_project_upper": "146087217/1000000000000",
-      "reduction_vs_benchmark_percent": "0.011538%",
-      "reduction_vs_previous_project_percent": "7.306071%"
+      "reduction_vs_benchmark_percent": "0.01411%",
+      "reduction_vs_previous_project_percent": "7.308456%"
     },
     {
       "dimension": 32,
-      "density_upper": "0.000095868994308168250800",
-      "proof_upper_rational": "239672485770420627/2500000000000000000000",
+      "density_upper": "0.000095866360403730692796",
+      "proof_upper_rational": "95866360403730692795236277/1000000000000000000000000000000",
       "exact_value": null,
-      "proof_label": "Angular follow-up",
-      "proof": "verifications/lattice/angular_kernel_followup_20261122/",
+      "proof_label": "Poisson counts in short-vector windows",
+      "proof": "verifications/lattice/poisson_anchor_windows_20261122/",
       "benchmark_upper_rational": "149807656450027/1562500000000000000",
       "previous_project_upper": "101511777/1000000000000",
-      "reduction_vs_benchmark_percent": "0.008246%",
-      "reduction_vs_previous_project_percent": "5.558747%"
+      "reduction_vs_benchmark_percent": "0.010993%",
+      "reduction_vs_previous_project_percent": "5.561342%"
     },
     {
       "dimension": 33,
@@ -352,15 +352,15 @@
     },
     {
       "dimension": 37,
-      "density_upper": "0.00001818025053030711279",
-      "proof_upper_rational": "1818025053030711279/100000000000000000000000",
+      "density_upper": "0.00001817642454038903306",
+      "proof_upper_rational": "908821227019451653/50000000000000000000000",
       "exact_value": null,
       "proof_label": "Joint Fourier and plane certificate",
       "proof": "verifications/lattice/joint_fourier_plane_20261122/",
       "benchmark_upper_rational": "182455629730586984141148615676056825798352869641063/10000000000000000000000000000000000000000000000000000000",
       "previous_project_upper": "4567177081/250000000000000",
-      "reduction_vs_benchmark_percent": "0.357963%",
-      "reduction_vs_previous_project_percent": "0.484204%"
+      "reduction_vs_benchmark_percent": "0.378933%",
+      "reduction_vs_previous_project_percent": "0.505147%"
     },
     {
       "dimension": 38,
@@ -412,15 +412,15 @@
     },
     {
       "dimension": 42,
-      "density_upper": "0.0000034723546103562322282",
-      "proof_upper_rational": "868088652588940665330910663190331113045719578291674835530557/249999999999966192477848748343615000000000000000000000000000000000",
+      "density_upper": "0.00000346603735498588186",
+      "proof_upper_rational": "173301867749294093/50000000000000000000000",
       "exact_value": null,
-      "proof_label": "Reciprocal and angular follow-up",
-      "proof": "verifications/lattice/dual_mass_angular_energy_38_48_20261122/",
+      "proof_label": "Joint Fourier and plane certificate",
+      "proof": "verifications/lattice/joint_fourier_plane_20261122/",
       "benchmark_upper_rational": "69447092217223047750454552741277409612799/19999999999997295398227899867489200000000000000",
       "previous_project_upper": "3473037643/1000000000000000",
-      "reduction_vs_benchmark_percent": "1.4555e\u22128%",
-      "reduction_vs_previous_project_percent": "0.019667%"
+      "reduction_vs_benchmark_percent": "0.18193%",
+      "reduction_vs_previous_project_percent": "0.201561%"
     },
     {
       "dimension": 43,
@@ -484,15 +484,15 @@
     },
     {
       "dimension": 48,
-      "density_upper": "0.00000034530564099888273888",
-      "proof_upper_rational": "269770032030439975273674191479375305736513619586602131532380927534420696329539/781250000000181970763163104337968750000000000000000000000000000000000000000000000000",
+      "density_upper": "0.00000034510710122965769",
+      "proof_upper_rational": "34510710122965769/100000000000000000000000",
       "exact_value": null,
-      "proof_label": "Reciprocal and angular follow-up",
-      "proof": "verifications/lattice/dual_mass_angular_energy_38_48_20261122/",
+      "proof_label": "Joint Fourier and plane certificate",
+      "proof": "verifications/lattice/joint_fourier_plane_20261122/",
       "benchmark_upper_rational": "269770033143760319347039232282149976717539612884283261057646552534420696329539/781250000000181970763163104337968750000000000000000000000000000000000000000000000000",
       "previous_project_upper": "2159949393/6250000000000000",
-      "reduction_vs_benchmark_percent": "4.1269e\u22127%",
-      "reduction_vs_previous_project_percent": "0.082832%"
+      "reduction_vs_benchmark_percent": "0.057497%",
+      "reduction_vs_previous_project_percent": "0.140282%"
     }
   ]
 }
