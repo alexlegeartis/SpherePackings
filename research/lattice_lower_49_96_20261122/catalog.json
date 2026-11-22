@@ -4,10 +4,11 @@
       "dimension": 49,
       "prior": {
         "kind": "derived lattice",
-        "description": "Leech--Sloane P48q x classical 1D lattice",
-        "link": "https://neilsloane.com/doc/Me103.pdf",
+        "description": "Thompson’s P48q x classical 1D lattice",
+        "link": "research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#dates-for-derived-comparators",
         "center_density_squared": "79766443076872509863361/1125899906842624",
         "source_years": [
+          1971,
           1982
         ]
       },
@@ -24,10 +25,11 @@
       "dimension": 50,
       "prior": {
         "kind": "derived lattice",
-        "description": "Leech--Sloane P48q x classical 2D lattice",
-        "link": "https://neilsloane.com/doc/Me103.pdf",
+        "description": "Thompson’s P48q x classical 2D lattice",
+        "link": "research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#dates-for-derived-comparators",
         "center_density_squared": "26588814358957503287787/1125899906842624",
         "source_years": [
+          1971,
           1982
         ]
       },
@@ -44,10 +46,11 @@
       "dimension": 51,
       "prior": {
         "kind": "derived lattice",
-        "description": "Leech--Sloane P48q x classical 3D lattice",
-        "link": "https://neilsloane.com/doc/Me103.pdf",
+        "description": "Thompson’s P48q x classical 3D lattice",
+        "link": "research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#dates-for-derived-comparators",
         "center_density_squared": "79766443076872509863361/9007199254740992",
         "source_years": [
+          1971,
           1982
         ]
       },
@@ -153,6 +156,7 @@
         "link": "https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf",
         "center_density_squared": "1387778780781445675529539585113525390625/144186211776293559076057513984",
         "source_years": [
+          1991,
           2019
         ]
       },
@@ -598,6 +602,7 @@
         "link": "https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf",
         "center_density_squared": "40536215597144386832065866109016673800875222251012083746192454448001/109110344018947707718736806055386875663745024",
         "source_years": [
+          1991,
           2019
         ]
       },
@@ -618,6 +623,7 @@
         "link": "https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf",
         "center_density_squared": "40536215597144386832065866109016673800875222251012083746192454448001/327331032056843123156210418166160626991235072",
         "source_years": [
+          1991,
           2019
         ]
       },
@@ -769,6 +775,7 @@
         "center_density_squared_upper": "5107305916620839496792415007",
         "source_years": [
           1958,
+          1991,
           2019
         ]
       },
@@ -791,6 +798,7 @@
         "center_density_squared_upper": "130571293881565460587721559077",
         "source_years": [
           1958,
+          1991,
           2019
         ]
       },
@@ -813,6 +821,7 @@
         "center_density_squared_upper": "3466382823540105635939545773989",
         "source_years": [
           1958,
+          1991,
           2019
         ]
       },
@@ -844,6 +853,7 @@
         "link": "https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf",
         "center_density_squared": "6129982163463555433433388108601236734474956488734408704/256666986187667409334369",
         "source_years": [
+          1991,
           2019
         ]
       },
@@ -862,6 +872,7 @@
         "link": "https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf",
         "center_density_squared": "6129982163463555433433388108601236734474956488734408704/770000958563002228003107",
         "source_years": [
+          1991,
           2019
         ]
       },
@@ -880,6 +891,7 @@
         "link": "https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf",
         "center_density_squared": "766247770432944429179173513575154591809369561091801088/256666986187667409334369",
         "source_years": [
+          1991,
           2019
         ]
       },
