@@ -157,12 +157,13 @@ densities, occupied-volume density floors and construction references.
 <!-- lattice-upper-20261116:start -->
 ## Lattice-only upper bounds
 
-The current register gives certified upper bounds in **9–48D** and compares them with Zubrilina’s **13–48D** repository and our prior registry. The latest exact refinements cover **14D, 15D, 19D, 23D and 36D**. [Full table and proof links](LATTICE_RESULTS.md#current-lattice-upper-bounds-in-dimensions-948) · [Machine-readable bounds](LATTICE_UPPER_BOUNDS_9_48.json) · [Latest replay package](verifications/lattice/universal_refinements_20261122/)
+The current register gives certified upper bounds in **9–48D** and compares them with Zubrilina’s **13–48D** repository and our prior registry. The latest exact refinements cover **14D, 15D, 16D, 19D, 23D and 36D**. [Full table and proof links](LATTICE_RESULTS.md#current-lattice-upper-bounds-in-dimensions-948) · [Machine-readable bounds](LATTICE_UPPER_BOUNDS_9_48.json) · [Latest replay package](verifications/lattice/universal_refinements_20261122/)
 
 | Dimension | Current lattice density upper | Below Zubrilina’s 13–48D bound |
 |---:|---:|---:|
 | 14 | **0.033996852420018639356** | 0.00008% |
 | 15 | **0.025163909222702077102** | 0.000026% |
+| 16 | **0.017231432341539144664** | 2.89e−10% |
 | 19 | **0.0076312827957442716237** | 8.3193e−12% |
 | 23 | **0.0025265652019047523943** | 1.9131e−12% |
 | 36 | **0.000027145879604620582428** | 0.00001% |
@@ -170,7 +171,7 @@ The current register gives certified upper bounds in **9–48D** and compares th
 | 38 | **0.000012342188828202277498** | 0.005801% |
 | 48 | **0.00000034530564099888273888** | 4.1269e−7% |
 
-The exact comparison gives **33 smaller upper bounds** and **3 ties** across the 36 benchmark dimensions. The largest reduction is **0.027892% in 37D**. [Pinned benchmark](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/COMPARISON.md) · [Historical project registry](LATTICE_RESULTS.md#historical-project-registry)
+The exact comparison gives **34 smaller upper bounds** and **2 ties** across the 36 benchmark dimensions. The largest reduction is **0.027892% in 37D**. [Pinned benchmark](https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/COMPARISON.md) · [Historical project registry](LATTICE_RESULTS.md#historical-project-registry)
 <!-- lattice-upper-20261116:end -->
 
 ## Recent updates

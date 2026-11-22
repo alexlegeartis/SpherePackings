@@ -6,10 +6,11 @@
     "author": "N. Zubrilina",
     "commit": "7b63ee2094b7489aea3da83349c547c8da4cb388",
     "data": "https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/comparison.json",
-    "exact_archive_bounds": "https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/bounds-25-48.json"
+    "exact_archive_bounds": "https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/proofs/bounds-25-48.json",
+    "dimension_16_exact_receipt": "https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/dim16/outputs/union-summary.json"
   },
   "previous_project_registry": "https://github.com/alexlegeartis/SpherePackings/blob/9a9851887da20ca75825342bfb09e8ab031f4153/LATTICE_RESULTS.json",
-  "note": "The rank-9 through rank-14 results inherit the classification and computational inputs cited by their proofs. The 16D check kit replays the last proof stage.",
+  "note": "The rank-9 through rank-14 results inherit the classification and computational inputs cited by their proofs. The 16D refinement uses the exact class budgets from the pinned check kit. The upstream replay covers the final proof stage.",
   "dimensions": [
     {
       "dimension": 9,
@@ -97,14 +98,14 @@
     },
     {
       "dimension": 16,
-      "density_upper": "0.017231432341600000000",
-      "proof_upper_rational": "21539290427/1250000000000",
+      "density_upper": "0.017231432341539144664",
+      "proof_upper_rational": "3446286468307828932762819/200000000000000000000000000",
       "exact_value": null,
-      "proof_label": "Published bound and final-stage kit",
-      "proof": "https://github.com/AstroNinja389/sphere-packings/blob/7b63ee2094b7489aea3da83349c547c8da4cb388/dim16/README.md",
-      "benchmark_upper_rational": "21539290427/1250000000000",
+      "proof_label": "New exact replay",
+      "proof": "verifications/lattice/universal_refinements_20261122/#replay",
+      "benchmark_upper_rational": "75107213411597376064562155125497778319881867695845087664195846836675190855154047387690906327301464213168904398684782726670246837230442060845147323065034646429705581287445904898270060531960242126426984546622541983577760407494570898850654989174655163/4358733036389683872551124128862066455276633303726259213300918421150693508632449959548125844472372985464147110707288147335245185725996067777473830169640286056109654257003839008940430687554917017452910866747690582016000000000000000000000000000000000000",
       "previous_project_upper": "4663779357/250000000000",
-      "reduction_vs_benchmark_percent": "0%",
+      "reduction_vs_benchmark_percent": "2.89e\u221210%",
       "reduction_vs_previous_project_percent": "7.631606%"
     },
     {

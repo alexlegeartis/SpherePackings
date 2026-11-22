@@ -3,10 +3,10 @@
 import argparse
 from fractions import Fraction as F
 from functools import lru_cache
-from hashlib import file_digest
+from hashlib import file_digest, sha256
 from itertools import product
 import json
-from math import comb
+from math import comb, factorial
 from pathlib import Path
 import subprocess
 import sys
@@ -18,12 +18,14 @@ from flint import arb, arb_poly, ctx, fmpq, fmpq_mat, fmpq_poly
 
 HERE = Path(__file__).resolve().parent
 ARCHIVE_SHA = {
+    "dim16": "6aecdfc93c617186127a3410ed45e330a581d60f1b0ed020f1cdded157a7ea67",
     "native": "4cae881e275464d6555a9beff843c887141830da8978fd4ee8b75f0b4d968b8f",
     "high": "bd9490675ecc38e96c4dddbc484ee7a99bae0a231902d5f3ac974eae9d2143b6",
 }
 NATIVE_PROOFS = {15: "minfix-lift15a", 19: "nativeflag19v2", 23: "flag23a"}
 V13_UPPER = F("0.042023513562578")
 V14_UPPER = F(169984398087502876851, 5000000000000000000000)
+V15_UPPER = F(1006556630612739000177, 40000000000000000000000)
 DENSITY_UNIT = 10**27
 MANIFEST_SHA = {
     "native": "fadef3b64904ab5d89b477fba2482a5b0a2e2e8669f57c3cac44a20205309d32",
@@ -274,6 +276,27 @@ def output(n, old, floor, denominator, old_payment, new_payment, budget):
     return row
 
 
+def unnormalized_fourier(n, coefficients):
+    alpha = n // 2 - 1
+    coefficients = list(map(rational, coefficients))
+    terms = []
+    factorial = 1
+    for k in range(len(coefficients)):
+        if k:
+            factorial *= k
+        terms.append(
+            sum(
+                (
+                    (-1) ** (j + k) * comb(j + alpha, j - k) * coefficients[j]
+                    for j in range(k, len(coefficients))
+                ),
+                fmpq(0),
+            )
+            / factorial
+        )
+    return fmpq_poly(terms)
+
+
 def dim14(benchmark, payment):
     for name, expected in DIM14_SHA.items():
         assert digest(benchmark / "sections" / name) == expected, name
@@ -285,24 +308,7 @@ def dim14(benchmark, payment):
     )
     source = read(mark / "geometry" / "sharp-ref-fourier.json")
     tau = F(source["tau0"])
-    # This parent stores unnormalized generalized Laguerre coefficients.
-    coefficients = list(map(rational, source["c"]))
-    terms = []
-    factorial = 1
-    for k in range(len(coefficients)):
-        if k:
-            factorial *= k
-        terms.append(
-            sum(
-                (
-                    (-1) ** (j + k) * comb(j + 6, j - k) * coefficients[j]
-                    for j in range(k, len(coefficients))
-                ),
-                fmpq(0),
-            )
-            / factorial
-        )
-    q = fmpq_poly(terms)
+    q = unnormalized_fourier(14, source["c"])
     floor = F("0.033818453867395")
     assert volume(14) / arb(314).sqrt() < ball(floor)
     domain = line_domain(14, tau, V14_UPPER, floor, V13_UPPER)
@@ -347,6 +353,85 @@ def native(n, path, payment):
     _, q = transform(n, source["d"])
     checked = cover_plane(n, q, geometry, payment)
     return output(n, old, floor, F(str(q(0))), previous, payment, checked)
+
+
+def dim16(path, payment):
+    """Refine the low-count branch and close the complete count split."""
+    assert digest(path) == ARCHIVE_SHA["dim16"]
+    prefix = (
+        "n16-check-kit-v6/tree/A/scratch/n16-parallel-directions-20261109/"
+        "d1-kernel-audit"
+    )
+    with ZipFile(path) as kit:
+        frozen = kit.read(f"{prefix}/groupfloor-low-cert-v2/cert/n016.json")
+        source = json.loads(frozen)
+        low = json.loads(
+            kit.read(f"{prefix}/groupfloor-low-cert-v2/cert/DENSITY-AUDIT-v1.json")
+        )
+        union = json.loads(
+            kit.read(
+                f"{prefix}/groupfloor-union-v1/groupfloor-v1-COMPLETE-DENSITY-INTEGRITY-v1.json"
+            )
+        )
+
+    assert sha256(frozen).hexdigest() == low["sha256"]["n016.json"]
+    assert low["status"] == "PASS_INDEPENDENT_CONDITIONAL_LOW_COUNT_N16_DENSITY"
+    assert (
+        union["status"]
+        == "PASS_INDEPENDENT_COMPLETE_FIVE_CASE_COUPLED_FOURIER_N16_UNION"
+    )
+    assert union["trace_family_union_complete"]
+    assert union["actual_count_interval"] == [0, 4528]
+    assert union["minimum_squared"] == "1" and union["short_squared_cutoff"] == "53/48"
+    low_branch, high_branch = union["branches"]
+    assert low_branch["interval"] == [0, low["conditional_count_upper"]] == [0, 3700]
+    assert high_branch["interval"] == [3651, 4528]
+    covered = union["complete_integer_coverage"]
+    assert covered == [
+        {"interval": [0, 3650], "branch": 0},
+        {"interval": [3651, 4528], "branch": 1},
+    ]
+
+    assert source["n"] == 16 and len(source["c"]) == source["K"] + 1
+    q = unnormalized_fourier(16, source["c"])
+    denominator = F(str(q(0)))
+    assert denominator > 0
+    roots = q.complex_roots()
+    assert sum(m for _, m in roots) == q.degree()
+    assert all(not root.imag.contains(0) or root.real < 0 for root, _ in roots)
+    p0 = sum(F(c) * comb(j + 7, 7) for j, c in enumerate(source["c"]))
+    ordinary, mixed = low["branches"]
+    assert len(ordinary) == len(mixed) == 16
+    kappa = max(map(F, mixed))
+    assert 0 <= kappa <= max(map(F, ordinary))
+
+    tau = F(source["tau0"])
+    old = F(union["density_rational_bound"])
+    factor = (tau / 8) ** 8 / factorial(8)
+    assert (
+        factor * (p0 + 2 * 65535 * kappa) / denominator
+        == F(low["no_frame_density_rational"])
+        == F(low["density_rational_bound"])
+        == F(low_branch["bound"])
+        == old
+    )
+    floor = F("0.0172")
+    assert (
+        max(
+            F(high_branch["bound"]),
+            F(low["frame_density_rational"]),
+            F(low["quadratic_threshold"]),
+            F(union["trace_family_complement_rational_bound"]),
+        )
+        < floor
+        < old
+    )
+
+    span = line_domain(16, tau, old, floor, V15_UPPER)
+    units = 10**24
+    lower = stationary_lower_bounds(q, units)
+    assert F(2 * lower(*span), units) >= payment
+    return output(16, old, floor, denominator, F(0), payment, (1,))
 
 
 def dim36(path):
@@ -413,6 +498,8 @@ def run(n, argument, payment):
     ctx.prec = 512
     if n == 14:
         return dim14(argument, payment)
+    if n == 16:
+        return dim16(argument, payment)
     archive = "native" if n in NATIVE_PROOFS else "high"
     if argument.is_dir():
         assert digest(argument / "MANIFEST.json") == MANIFEST_SHA[archive]
