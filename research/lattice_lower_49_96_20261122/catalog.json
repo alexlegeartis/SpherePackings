@@ -771,9 +771,9 @@
       },
       "repository": {
         "kind": "lattice existence",
-        "description": "MW92 order-three dichotomy",
-        "link": "research/mw92_order3_dichotomy_20261122/README.md",
-        "center_density_squared": "282469578092400634372610524044344988724605995000881553080320000000000000000000/3076373329366350208476552628270523788347133601"
+        "description": "Refined MW92 order-three lattice",
+        "link": "research/mw92_96_equal_cover_20261122/README.md",
+        "center_density_squared": "470782630154001057287684206740574981207676658334802588467200000000000000000/5104921439776057931517782239322133981907513"
       }
     }
   ],

@@ -180,7 +180,7 @@ occupied-volume fractions. Periodic packings that are not lattices are excluded.
 | 93 | ≈1.70235478236e-20<br>[Shioda MW92 x classical 1D lattice](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) (derived) | **≥3.04556337848e-20**<br>[MW92 lattice shear](research/mw92_extensions_20261122/README.md#lattice-shears) (existence proof) | **+78.90%** |
 | 94 | ≈2.53431409158e-21<br>[Shioda MW92 x classical 2D lattice](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) (derived) | **≥8.03567126556e-21**<br>[MW92 order-three dichotomy](research/mw92_order3_dichotomy_20261122/README.md) (existence proof) | **+217.07%** |
 | 95 | ≈3.98071737750e-22<br>[Shioda MW92 x classical 3D lattice](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) (derived) | **≥2.10405317054e-21**<br>[MW92 order-three dichotomy](research/mw92_order3_dichotomy_20261122/README.md) (existence proof) | **+428.56%** |
-| 96 | ≈2.79502329482e-22<br>[BCS96, Table 1 (1982)](https://neilsloane.com/doc/Me103.pdf) | **≥5.63315139086e-22**<br>[MW92 order-three dichotomy](research/mw92_order3_dichotomy_20261122/README.md) (existence proof) | **+101.54%** |
+| 96 | ≈2.79502329482e-22<br>[BCS96, Table 1 (1982)](https://neilsloane.com/doc/Me103.pdf) | **≥5.64547885516e-22**<br>[Refined MW92 order-three lattice](research/mw92_96_equal_cover_20261122/README.md) (existence proof) | **+101.98%** |
 
 The 29D and 30D rows improve Cohn’s listed lattice bounds and tie his listed
 unrestricted bounds. Cohn already lists the 36D result; the gain is over KP36.
