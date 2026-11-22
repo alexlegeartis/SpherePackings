@@ -48,6 +48,7 @@ def exact(item,n):
     assert item['kind'] in ('published lattice','derived lattice','reported lattice floor',
                             'explicit lattice','lattice existence','audited lattice section')
     assert item['description'] and item['link']
+    if item['kind']=='derived lattice': derived_tag(item)
     url=item['link']
     if not url.startswith('https://'):
         assert (ROOT / url.split('#')[0]).is_file(), url
@@ -57,6 +58,13 @@ def exact(item,n):
         assert Q(item['minimum_squared'])>0
         assert q==(Q(item['minimum_squared'])/4)**n/Q(item['gram_determinant'])
     return q
+
+def derived_tag(item):
+    if item['kind'] != 'derived lattice':
+        return ''
+    years=item['source_years']
+    assert years and years==sorted(set(years)) and all(isinstance(y,int) and 1000<=y<=9999 for y in years)
+    return ' (derived; ' + '/'.join(map(str,years)) + ' source' + ('s' if len(years)>1 else '') + ')'
 
 def build(data):
     assert [r['dimension'] for r in data['rows']]==list(range(49,97))
@@ -72,7 +80,8 @@ def build(data):
         'Numerical columns are downward-rounded lower bounds. Gains are rounded down and use',
         'the upper end of a cited rounding interval when supplied; a dash means no',
         'verified increase is claimed. Prior values are the strongest comparisons found',
-        'in the cited source audit, not a claim of exhaustive historical priority.','',
+        'in the cited source audit, not a claim of exhaustive historical priority.',
+        'Years in derived rows date the cited inputs, not publication of the derived bound.','',
         '| Dim. | Prior lattice center density ≥ | Repository lattice center density ≥ | Gain over prior | Current occupied density ≥ |',
         '|---:|---|---|---:|---:|',
     ]
@@ -88,7 +97,7 @@ def build(data):
             assert old**u.denominator <= 2**(2*u.numerator)
             assert upper**v.denominator >= 2**(2*v.numerator)
         def cell(item,q):
-            tag=' (derived)' if item['kind']=='derived lattice' else ' (reported floor)' if item['kind']=='reported lattice floor' else ' (existence)' if item['kind']=='lattice existence' else ''
+            tag=derived_tag(item) if item['kind']=='derived lattice' else ' (reported floor)' if item['kind']=='reported lattice floor' else ' (existence)' if item['kind']=='lattice existence' else ''
             return f"{float_floor(q)} · [{item['description']}]({item['link']}){tag}"
         g='—'
         if new and now>upper:
@@ -137,9 +146,10 @@ def readme_high_rows(data):
         else:
             old_display=f"≈{old_display}"
         source=f"[{prev['description']}]({prev['link']})"
-        if prev['kind']=='derived lattice': source += ' (derived)'
+        source += derived_tag(prev)
         new_display=float_floor(now*ball_squared(n,p))
         method=f"[{new['description']}]({new['link']})"
+        method += derived_tag(new)
         if new['kind']=='lattice existence': method += ' (existence proof)'
         lines.append(f"| {n} | {old_display}<br>{source} | **≥{new_display}**<br>{method} | **+{gain(now,hi)}** |")
     assert len(lines)==len(improved)
@@ -175,7 +185,8 @@ def write_readme(text, high_rows):
         'The 29D and 30D rows improve Cohn’s listed lattice bounds and tie his listed',
         'unrestricted bounds. Cohn already lists the 36D result; the gain is over KP36.',
         'From 49D onward, the gains are rounded down and use the upper end of a prior',
-        'comparison interval where applicable. The full catalogs include ties, source',
+        'comparison interval where applicable. Years in derived rows date the cited',
+        'sources, not publication of the derived bound. The catalogs include ties, source',
         'notes and exact center densities. The comparisons do not establish global',
         'optimality or exhaustive historical priority.',END]
     return text[:start]+'\n'.join(lines)+text[end:]

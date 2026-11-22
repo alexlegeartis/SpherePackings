@@ -4,6 +4,19 @@ The bounds concern one lattice at a time. A minimum inherited from a parent
 is marked as a guarantee unless an attaining vector is checked. The catalog
 does not assert that every historical lattice has been located.
 
+## Dates for derived comparators
+
+Years identify the published input or method, not the year the listed
+derived density was first proved or printed. [Bos–Conway–Sloane (1982)](https://doi.org/10.1112/S0025579300012262)
+supplies the P48q/BCS constructions; [Bachoc–Nebe (1998)](https://www.math.rwth-aachen.de/~Gabriele.Nebe/papers/extremm22.pdf)
+supplies L80. The Γ72 construction appeared as a [2010 preprint](https://arxiv.org/abs/1008.2862)
+and in the [2012 journal volume](https://www.math.rwth-aachen.de/~Gabriele.Nebe/pl.html).
+The MW products and section bounds use the [2019 Schütt–Shioda reference](https://doi.org/10.1007/978-981-32-9301-4_13);
+the section inequality also uses [Rogers (1958)](https://doi.org/10.1112/plms/s3-8.4.609).
+The 52–53D input is [Leterrier (2022)](https://doi.org/10.1007/s40993-022-00321-0);
+55D references the separately repaired [thesis comparison (2024)](https://infoscience.epfl.ch/record/307330/files/EPFL_TH10417.pdf).
+The new 60D section also uses the [Coxeter–Todd lattice (1953)](https://doi.org/10.4153/CJM-1953-043-4).
+
 ## 60D Coxeter–Todd section
 
 Nebe's [Γ72 construction, §4.2](https://arxiv.org/abs/1008.2862) contains
