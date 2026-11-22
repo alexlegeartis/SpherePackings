@@ -91,3 +91,12 @@ A separate integer and rational check can be run with
 `python research/mw92_cusp_d4_20261122/audit_numbers.py`. Both
 scripts check the finite arithmetic; the published MW92 theorem and
 the height and reduction arguments above supply the geometric proof.
+
+## Explicit Gram matrix
+
+The [coordinate certificate](GRAM.md) gives the full 96-by-96 integer
+Gram matrix in [gram96.json.gz](gram96.json.gz). The frozen section
+replay checks its realization using 210 exact polynomial sections,
+and the separate matrix audit checks positive definiteness, the glue
+congruences and the determinant. This is the same packing and does not
+change the bound above.

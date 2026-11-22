@@ -911,7 +911,7 @@
         "center_density_squared": "6362685441135942358474828762538534230890216321/281474976710656"
       },
       "repository": {
-        "kind": "lattice existence",
+        "kind": "explicit lattice",
         "description": "MW92 cusp reduction glued to D4",
         "link": "research/mw92_cusp_d4_20261122/README.md",
         "center_density_squared": "40483766022843281411184472189571654752207506882090305742200116101065766026718820758174775041/396918204317758862666652901858757046430456255926485873852416",
