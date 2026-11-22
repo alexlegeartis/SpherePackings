@@ -137,34 +137,19 @@ The 4D comparison uses the pinned Felpix-Studios certificate and its complete fu
 
 These certificates use the existing [Cohn–de Laat–Salmon continuum framework](https://arxiv.org/abs/2206.15373). Proof notes state the analytic hypotheses and normalization; exact rational witnesses and independent interval verifiers check the computational conditions over full domains. Historical numerical comparisons in package notes are pinned comparisons, not current best-known claims.
 
-## Lattice-only lower bounds
+<!-- lattice-lower-1-96:start -->
+## Lattice-only lower bounds in 1D–96D
 
-The [49–96D lattice-only catalog](LATTICE_LOWER_BOUNDS_49_96.md) records prior named lattice comparisons separately from periodic constructions. A [new 91D MW92 lattice section](research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#8691d-mw92-bare-kernels) gives ordinary density **≥1.28046110298280e-19**, beating the previous unrestricted certificate by **>0.18453%**. The [MW92 order-three dichotomy](research/mw92_order3_dichotomy_20261122/README.md) further raises the **94D and 95D unrestricted** floors and the **96D lattice-only** floor.
-
-| n | Comparison density / method | Our density / method | Increase |
-| ---: | --- | --- | ---: |
-| 29 | ≈2.78789874568e-5<br>[B29 lattice — Bacher (1996)](https://doi.org/10.1007/S002220050180) · [Cohn’s lattice table](https://cohn.mit.edu/sphere-packing/#lattice-data) | **≥3.4144646907422e-5**<br>[Quaternary-code lattice section, exact center density `1/sqrt(2)`](research/quaternary_29_30_20261122/) | **22.47%** |
-| 30 | ≈1.44286438425e-5<br>[Q30 lattice — Quebbemann (1984)](https://doi.org/10.1112/S0025579300010731) · [Cohn’s lattice table](https://cohn.mit.edu/sphere-packing/#lattice-data) | **≥2.1915353447830e-5**<br>[Quaternary-code lattice, exact center density `1`](research/quaternary_29_30_20261122/) | **51.89%** |
-| 36 | ≈6.1615e-7<br>[KP36 code-based lattice — Kschischang–Pasupathy (1992)](https://doi.org/10.1109/18.119683) · [Catalogue parameters](https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/KP36.html) | **≥7.3303477831670e-7**<br>[Contact-preserving metric deformation, exact Gram matrix and complete minimum certificate](constructions/dim36/) | **18.97%** |
-
-Densities are occupied-volume fractions. The 29D and 30D entries improve
-Cohn’s listed lattice bounds and tie his unrestricted lower bounds. They supersede the [shifted Bacher lattices](research/bacher_slip_29_30_20261122/) by 1.55% and 28.09%, respectively.
-Cohn already lists the 36D result in both tables; its increase is over KP36.
-
-[Complete 1–48D lattice catalog](LATTICE_LOWER_BOUNDS_1_48.md), with exact center
-densities, occupied-volume density floors and construction references.
-
-<!-- lattice-lower-49-96:start -->
-## Lattice-only lower bounds in 49D–96D
-
-These **31 lattice improvements** are over the named prior comparisons.
-The table uses occupied-volume density, not center density.
-Periodic packings that are not lattices are excluded.
-The [full 49D–96D catalog](LATTICE_LOWER_BOUNDS_49_96.md) also includes ties,
-dimensions without verified gains, exact center-density data, and source notes.
+Verified improvements over the named prior lattice comparisons. Densities are
+occupied-volume fractions. Periodic packings that are not lattices are excluded.
+[Full 1D–48D catalog](LATTICE_LOWER_BOUNDS_1_48.md) ·
+[Full 49D–96D catalog](LATTICE_LOWER_BOUNDS_49_96.md)
 
 | n | Prior lattice density / source | Our lattice density / construction | Increase |
 |---:|---|---|---:|
+| 29 | ≈2.78789874568e-5<br>[B29 lattice — Bacher (1996)](https://doi.org/10.1007/S002220050180) · [Cohn’s lattice table](https://cohn.mit.edu/sphere-packing/#lattice-data) | **≥3.4144646907422e-5**<br>[Quaternary-code lattice section, exact center density `1/sqrt(2)`](research/quaternary_29_30_20261122/) | **22.47%** |
+| 30 | ≈1.44286438425e-5<br>[Q30 lattice — Quebbemann (1984)](https://doi.org/10.1112/S0025579300010731) · [Cohn’s lattice table](https://cohn.mit.edu/sphere-packing/#lattice-data) | **≥2.1915353447830e-5**<br>[Quaternary-code lattice, exact center density `1`](research/quaternary_29_30_20261122/) | **51.89%** |
+| 36 | ≈6.1615e-7<br>[KP36 code-based lattice — Kschischang–Pasupathy (1992)](https://doi.org/10.1109/18.119683) · [Catalogue parameters](https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/KP36.html) | **≥7.3303477831670e-7**<br>[Contact-preserving metric deformation, exact Gram matrix and complete minimum certificate](constructions/dim36/) | **18.97%** |
 | 49 | ≈4.12883717059e-9<br>[Leech--Sloane P48q x classical 1D lattice](https://neilsloane.com/doc/Me103.pdf) (derived) | **≥7.15135575565e-9**<br>[P48q half-coset lift](research/covering_and_deep_cosets_20261115/DEEPER_PROOF.md) | **+73.20%** |
 | 50 | ≈8.40815545965e-10<br>[Leech--Sloane P48q x classical 2D lattice](https://neilsloane.com/doc/Me103.pdf) (derived) | **≥2.52244663789e-9**<br>[P48q deep plane with fitted vertical metric](research/adaptive_layers_20261115/results.json) | **+200.00%** |
 | 51 | ≈1.79842551173e-10<br>[Leech--Sloane P48q x classical 3D lattice](https://neilsloane.com/doc/Me103.pdf) (derived) | **≥9.34489307985e-10**<br>[P48n quaternionic extension](research/p48n_hurwitz_20261122/README.md) | **+419.61%** |
@@ -197,10 +182,13 @@ dimensions without verified gains, exact center-density data, and source notes.
 | 95 | ≈3.98071737750e-22<br>[Shioda MW92 x classical 3D lattice](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) (derived) | **≥2.10405317054e-21**<br>[MW92 order-three dichotomy](research/mw92_order3_dichotomy_20261122/README.md) (existence proof) | **+428.56%** |
 | 96 | ≈2.79502329482e-22<br>[BCS96, Table 1 (1982)](https://neilsloane.com/doc/Me103.pdf) | **≥5.63315139086e-22**<br>[MW92 order-three dichotomy](research/mw92_order3_dichotomy_20261122/README.md) (existence proof) | **+101.54%** |
 
-Gains are rounded down and use the upper end of a prior comparison interval
-when one is given. These comparisons do not establish global optimality
-or exhaustive historical priority.
-<!-- lattice-lower-49-96:end -->
+The 29D and 30D rows improve Cohn’s listed lattice bounds and tie his listed
+unrestricted bounds. Cohn already lists the 36D result; the gain is over KP36.
+From 49D onward, the gains are rounded down and use the upper end of a prior
+comparison interval where applicable. The full catalogs include ties, source
+notes and exact center densities. The comparisons do not establish global
+optimality or exhaustive historical priority.
+<!-- lattice-lower-1-96:end -->
 
 <!-- lattice-upper-20261116:start -->
 ## Lattice-only upper bounds

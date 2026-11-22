@@ -5,6 +5,7 @@ from fractions import Fraction as Q
 from math import factorial, isqrt, prod
 from pathlib import Path
 import json
+import re
 from decimal import Decimal, localcontext
 
 HERE = Path(__file__).resolve().parent
@@ -104,23 +105,16 @@ def build(data):
       '', 'Run the Python script in [the proof directory](research/lattice_lower_49_96_20261122/verify_catalog.py) to check the table, or add --write to rebuild it.', ''])
     return '\n'.join(lines)
 
-BEGIN = '<!-- lattice-lower-49-96:start -->'
-END = '<!-- lattice-lower-49-96:end -->'
+BEGIN = '<!-- lattice-lower-1-96:start -->'
+END = '<!-- lattice-lower-1-96:end -->'
+HEADER = '## Lattice-only lower bounds in 1D–96D'
 
-def readme_section(data):
+def readme_high_rows(data):
     p=pi_floor()
     p_hi=16*arctan(5,61)-4*arctan(239,60)
     assert p < p_hi < Q(22,7)
     improved=set(data['strict_comparison_dimensions'])
-    lines=[BEGIN, '## Lattice-only lower bounds in 49D–96D', '',
-      f'These **{len(improved)} lattice improvements** are over the named prior comparisons.',
-      'The table uses occupied-volume density, not center density.',
-      'Periodic packings that are not lattices are excluded.',
-      'The [full 49D–96D catalog](LATTICE_LOWER_BOUNDS_49_96.md) also includes ties,',
-      'dimensions without verified gains, exact center-density data, and source notes.',
-      '',
-      '| n | Prior lattice density / source | Our lattice density / construction | Increase |',
-      '|---:|---|---|---:|']
+    lines=[]
     def upper_decimal(value_squared,digits=12):
         x=Decimal(float_floor(value_squared,digits))
         step=Decimal(1).scaleb(x.adjusted()+1-digits)
@@ -148,21 +142,43 @@ def readme_section(data):
         method=f"[{new['description']}]({new['link']})"
         if new['kind']=='lattice existence': method += ' (existence proof)'
         lines.append(f"| {n} | {old_display}<br>{source} | **≥{new_display}**<br>{method} | **+{gain(now,hi)}** |")
-    assert len(lines)==11+len(improved)
-    lines.extend(['','Gains are rounded down and use the upper end of a prior comparison interval',
-                  'when one is given. These comparisons do not establish global optimality',
-                  'or exhaustive historical priority.',END])
-    return '\n'.join(lines)
+    assert len(lines)==len(improved)
+    return lines
 
-def write_readme(text, section):
+def write_readme(text, high_rows):
+    anchor='<!-- lattice-upper-20261116:start -->'
     if BEGIN in text:
         assert text.count(BEGIN)==text.count(END)==1
-        begin=text.index(BEGIN)
-        end=text.index(END,begin)+len(END)
-        return text[:begin]+section+text[end:]
-    anchor='<!-- lattice-upper-20261116:start -->'
-    assert text.count(anchor)==1
-    return text.replace(anchor,section+'\n\n'+anchor)
+        start=text.index(BEGIN)
+        end=text.index(END,start)+len(END)
+    else:
+        # Migrate the former two separate tables without editing their rows.
+        legacy='## Lattice-only lower bounds\n'
+        assert text.count(legacy)==text.count(anchor)==1
+        start=text.index(legacy)
+        end=len(text[:text.index(anchor)].rstrip())
+    low=[]
+    for line in text[start:end].splitlines():
+        match=re.match(r'^\| (\d+) \|',line)
+        if match and int(match[1])<=48:
+            low.append((int(match[1]),line))
+    assert low and [n for n,_ in low]==sorted({n for n,_ in low})
+    lines=[BEGIN,HEADER,'',
+        'Verified improvements over the named prior lattice comparisons. Densities are',
+        'occupied-volume fractions. Periodic packings that are not lattices are excluded.',
+        '[Full 1D–48D catalog](LATTICE_LOWER_BOUNDS_1_48.md) ·',
+        '[Full 49D–96D catalog](LATTICE_LOWER_BOUNDS_49_96.md)',
+        '',
+        '| n | Prior lattice density / source | Our lattice density / construction | Increase |',
+        '|---:|---|---|---:|',
+        *[line for _,line in low],*high_rows,'',
+        'The 29D and 30D rows improve Cohn’s listed lattice bounds and tie his listed',
+        'unrestricted bounds. Cohn already lists the 36D result; the gain is over KP36.',
+        'From 49D onward, the gains are rounded down and use the upper end of a prior',
+        'comparison interval where applicable. The full catalogs include ties, source',
+        'notes and exact center densities. The comparisons do not establish global',
+        'optimality or exhaustive historical priority.',END]
+    return text[:start]+'\n'.join(lines)+text[end:]
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
@@ -171,9 +187,9 @@ if __name__=='__main__':
     output=build(json.loads((HERE/'catalog.json').read_text()))
     dest=ROOT/'LATTICE_LOWER_BOUNDS_49_96.md'
     readme=ROOT/'README.md'
-    section=readme_section(json.loads((HERE/'catalog.json').read_text()))
+    rows=readme_high_rows(json.loads((HERE/'catalog.json').read_text()))
     original=readme.read_text()
-    rendered=write_readme(original,section)
+    rendered=write_readme(original,rows)
     if args.write:
         dest.write_text(output)
         readme.write_text(rendered)
