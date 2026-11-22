@@ -1,0 +1,28 @@
+{
+  "rows": [
+    {
+      "dimension": 19,
+      "determinant": 300,
+      "maximum_periodic_center_density_squared": "1461920290375446110677/184736485004425048828125",
+      "maximum_lattice_center_density_squared": "1/300"
+    },
+    {
+      "dimension": 20,
+      "determinant": 125,
+      "maximum_periodic_center_density_squared": "12157665459056928801/500000000000000000000",
+      "maximum_lattice_center_density_squared": "1/125"
+    },
+    {
+      "dimension": 21,
+      "determinant": 36,
+      "maximum_periodic_center_density_squared": "20083415214428110320965436874242043/455248478498230314478619809397342208",
+      "maximum_lattice_center_density_squared": "1/36"
+    },
+    {
+      "dimension": 23,
+      "determinant": 6,
+      "maximum_periodic_center_density_squared": "20880467999847912034355032910567/83358486053142757778067592052736",
+      "maximum_lattice_center_density_squared": "1/6"
+    }
+  ]
+}

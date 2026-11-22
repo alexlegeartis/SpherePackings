@@ -3,7 +3,6 @@
 from pathlib import Path
 import itertools, json, math
 import numpy as np
-from flint import fmpz_mat
 
 P = Path(__file__).resolve().parent
 
@@ -52,6 +51,8 @@ def maximum_clique(adj, max_nodes=None):
 
 
 if __name__ == "__main__":
+    from flint import fmpz_mat
+
     cases = [
         ("44_C5", np.load(P / "antipode44_0.npz")["K"], 44, 509.61898264, 45),
         (
