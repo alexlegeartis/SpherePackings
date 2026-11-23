@@ -17,6 +17,8 @@ Reproducible certificates for unrestricted sphere packings, lattice-only upper b
 
 [All occupied-density lower bounds in dimensions 1–96](LOWER_BOUNDS_1_96.md).
 
+**23 November:** [One five-block E7 construction](research/e7_hermitian35_20261123/) raises the lattice and unrestricted density lower bounds in **34–37D** by **3.93%, 41.42%, 51.47%, and 41.42%**, respectively. The 36D comparison is the preceding repository result listed by Cohn. The proof also gives an exact optimum within the fixed 35D additive binary-phase family.
+
 **23 November:** [Degree-13 covering certificates](research/mw92_cfr_taylor13_20261123/) sharpen the 93–96D unrestricted density bounds, including the lattice bounds in 93–95D. Gains over the preceding certificates are all below 0.005%; the 96D lattice bound is unchanged.
 
 **23 November:** [Exact odd-Leech product-period optimum](research/odd_leech_product48_20261123/) matches P48 for arbitrary half-period motifs with two orthogonal, independently scaled odd-Leech factors.
@@ -52,7 +54,10 @@ The [literature review dated 16 November 2026](research/covering_and_deep_cosets
 | ---: | --- | --- | ---: |
 | 29 | ≈3.41446469074224e-5<br>[B29* — Vardy (1999)](https://doi.org/10.1090/S0002-9947-99-02169-8) · [Cohn’s unrestricted table](https://cohn.mit.edu/sphere-packing/#data) | **≥4.82878227389174e-5**<br>[Alternating Vardy-type layers, exact center density `1`](research/vardy28_stack29_20261122/) | **41.421356%** |
 | 31 | ≈1.18377651859338e-5<br>[Q31 — Quebbemann (1984), section of Q32](https://doi.org/10.1112/S0025579300010731) · [Cohn’s unrestricted table](https://cohn.mit.edu/sphere-packing/#data) | **≥1.38411060495194e-5**<br>[Order-four shear of Vardy-type stocks, exact center density `sqrt(2)`](research/vardy30_shear31_20261123/) | **16.923303%** |
-| 36 | ≈6.1615e-7<br>[KP36 code-based lattice — Kschischang–Pasupathy (1992)](https://doi.org/10.1109/18.119683) · [Catalogue parameters](https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/KP36.html) | ≈7.3303e-7<br>[Contact-preserving metric deformation; exact Gram matrix and complete minimum certificate](constructions/dim36/) | 18.97% |
+| 34 | ≈1.76697388915406e-6<br>[Cohn’s pinned table, ref. 13](https://cohn.mit.edu/sphere-packing/#13) | **≥1.83644820734493e-6**<br>[Hermitian E7 glue: primitive section; center density `4/sqrt(3)`](research/e7_hermitian35_20261123/) | **3.93%** |
+| 35 | ≈9.46190415115372e-7<br>[Cohn’s pinned table, ref. 13](https://cohn.mit.edu/sphere-packing/#13) | **≥1.33811531764358e-6**<br>[Five-block Hermitian E7 glue; center density `4`](research/e7_hermitian35_20261123/) | **41.42%** |
+| 36 | ≈7.33034778316707e-7<br>[Previous 36D metric-deformation lattice](constructions/dim36/) (listed by Cohn) | **≥1.11031619697710e-6**<br>[Hermitian E7 glue: order-four lift; center density `8`](research/e7_hermitian35_20261123/) | **51.47%** |
+| 37 | ≈3.21356200759300e-7<br>[Cohn’s pinned table, ref. 13](https://cohn.mit.edu/sphere-packing/#13) | **≥4.54466297466494e-7**<br>[Hermitian E7 glue: order-two lift; center density `8`](research/e7_hermitian35_20261123/) | **41.42%** |
 | 49 | ≈4.128837170599e-9 (**derived**)<br>P48q × A1 — [Bos–Conway–Sloane (1982), §5](https://neilsloane.com/doc/Me103.pdf); [exact comparison](research/covering_and_deep_cosets_20261115/literature_comparisons.json) | ≈7.151355755657e-9<br>[Explicit deeper P48q half-coset; full minimum certificate](research/covering_and_deep_cosets_20261115/DEEPER_PROOF.md) | **73.205081%** |
 | 50 | ≈8.408155459659e-10 (**derived**)<br>P48q × A2 — [Bos–Conway–Sloane (1982), §5](https://neilsloane.com/doc/Me103.pdf); [exact comparison](research/covering_and_deep_cosets_20261115/literature_comparisons.json) | ≈2.522446637898e-9<br>[Deep plane + fitted metric; explicit minimum-6 lattice](research/adaptive_layers_20261115/P48_PROOF.md) | **200.000000%** |
 | 51 | ≈1.798425511734e-10 (**derived**)<br>P48q × A3 — [Bos–Conway–Sloane (1982), §5](https://neilsloane.com/doc/Me103.pdf); [exact comparison](research/covering_and_deep_cosets_20261115/literature_comparisons.json) | **≥9.34489307985541e-10**<br>[Explicit P48n quaternionic lattice](research/p48n_hurwitz_20261122/) | **419.615242%** |
@@ -102,7 +107,7 @@ The [literature review dated 16 November 2026](research/covering_and_deep_cosets
 
 ## General upper bounds
 
-**Recorded upper U** is the historical comparison used for the percentages in that row. **Comparison method / source** names the method behind U and links to its paper or pinned certificate; **Our method / proof** describes the new bound N. A recorded comparison is not a claim about the latest worldwide record. [Full source titles, versions and comparison scope](COMPARISONS.md#table-comparison-methods-and-sources).
+**Recorded upper U** and **lower L** are the registered reference values used for the percentages in that row. For current lower bounds, use the [lower-bound catalog](LOWER_BOUNDS_1_96.md). **Comparison method / source** names the method behind U and links to its paper or pinned certificate; **Our method / proof** describes the new bound N. A recorded comparison is not a claim about the latest worldwide record. [Full source titles, versions and comparison scope](COMPARISONS.md#table-comparison-methods-and-sources).
 
 | Dimension / lower L | Recorded upper U / source | Our upper N / method | Upper decrease | Gap decrease |
 |---|---|---|---:|---:|
@@ -166,7 +171,10 @@ occupied-volume fractions. Periodic packings that are not lattices are excluded.
 |---:|---|---|---:|
 | 29 | ≈2.78789874568e-5<br>[B29 lattice — Bacher (1996)](https://doi.org/10.1007/S002220050180) · [Cohn’s lattice table](https://cohn.mit.edu/sphere-packing/#lattice-data) | **≥3.4144646907422e-5**<br>[Quaternary-code lattice section, exact center density `1/sqrt(2)`](research/quaternary_29_30_20261122/) | **22.47%** |
 | 30 | ≈1.44286438425e-5<br>[Q30 lattice — Quebbemann (1984)](https://doi.org/10.1112/S0025579300010731) · [Cohn’s lattice table](https://cohn.mit.edu/sphere-packing/#lattice-data) | **≥2.1915353447830e-5**<br>[Quaternary-code lattice, exact center density `1`](research/quaternary_29_30_20261122/) | **51.89%** |
-| 36 | ≈6.1615e-7<br>[KP36 code-based lattice — Kschischang–Pasupathy (1992)](https://doi.org/10.1109/18.119683) · [Catalogue parameters](https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/KP36.html) | **≥7.3303477831670e-7**<br>[Contact-preserving metric deformation, exact Gram matrix and complete minimum certificate](constructions/dim36/) | **18.97%** |
+| 34 | ≈1.76697388915406e-6<br>[Cohn’s pinned table, ref. 13](https://cohn.mit.edu/sphere-packing/#13) | **≥1.83644820734493e-6**<br>[Hermitian E7 glue: primitive section; center density `4/sqrt(3)`](research/e7_hermitian35_20261123/) | **3.93%** |
+| 35 | ≈9.46190415115372e-7<br>[Cohn’s pinned table, ref. 13](https://cohn.mit.edu/sphere-packing/#13) | **≥1.33811531764358e-6**<br>[Five-block Hermitian E7 glue; center density `4`](research/e7_hermitian35_20261123/) | **41.42%** |
+| 36 | ≈7.33034778316707e-7<br>[Previous 36D metric-deformation lattice](constructions/dim36/) (listed by Cohn) | **≥1.11031619697710e-6**<br>[Hermitian E7 glue: order-four lift; center density `8`](research/e7_hermitian35_20261123/) | **51.47%** |
+| 37 | ≈3.21356200759300e-7<br>[Cohn’s pinned table, ref. 13](https://cohn.mit.edu/sphere-packing/#13) | **≥4.54466297466494e-7**<br>[Hermitian E7 glue: order-two lift; center density `8`](research/e7_hermitian35_20261123/) | **41.42%** |
 | 49 | ≈4.12883717059e-9<br>[Thompson’s P48q x classical 1D lattice](research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#dates-for-derived-comparators) (derived; 1971/1982 sources) | **≥7.15135575565e-9**<br>[P48q half-coset lift](research/covering_and_deep_cosets_20261115/DEEPER_PROOF.md) | **+73.20%** |
 | 50 | ≈8.40815545965e-10<br>[Thompson’s P48q x classical 2D lattice](research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#dates-for-derived-comparators) (derived; 1971/1982 sources) | **≥2.52244663789e-9**<br>[P48q deep plane with fitted vertical metric](research/adaptive_layers_20261115/results.json) | **+200.00%** |
 | 51 | ≈1.79842551173e-10<br>[Thompson’s P48q x classical 3D lattice](research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#dates-for-derived-comparators) (derived; 1971/1982 sources) | **≥9.34489307985e-10**<br>[P48n quaternionic extension](research/p48n_hurwitz_20261122/README.md) | **+419.61%** |
@@ -200,7 +208,8 @@ occupied-volume fractions. Periodic packings that are not lattices are excluded.
 | 96 | ≈2.79502329482e-22<br>[BCS96, Table 1 (1982)](https://neilsloane.com/doc/Me103.pdf) | **≥5.93710931559e-22**<br>[MW92 cusp reduction glued to D4](research/mw92_cusp_d4_20261122/README.md) | **+112.41%** |
 
 The 29D and 30D rows improve Cohn’s listed lattice bounds and tie his listed
-unrestricted bounds. Cohn already lists the 36D result; the gain is over KP36.
+unrestricted bounds. The 34–37D E7 rows improve both pinned tables. The 36D
+gain is measured against the preceding Cohn-listed metric-deformation lattice.
 From 49D onward, the gains are rounded down and use the upper end of a prior
 comparison interval where applicable. Years in derived rows date the cited
 sources, not publication of the derived bound. The catalogs include ties, source
@@ -295,7 +304,7 @@ For the upper-bound suite, Python 3.12 or newer and a C++20 compiler are require
 
 Never disable assertions (`python -O`). No optimization solver or network is needed after dependency installation. The 48D compact triangle replay may take several minutes. Logs record the original audits; fresh replay is recommended. No GitHub Actions workflow is installed.
 
-The separate 36D lower-bound replay is `python constructions/dim36/verify_all.py`; it requires SymPy and a C++17 compiler and performs the complete minimum enumeration. It is not silently included in the historical upper-bound suite.
+For the latest 34–37D lower bounds, run `python research/e7_hermitian35_20261123/verify.py` and `python research/e7_hermitian35_20261123/basis.py`. The separate historical 36D lower-bound replay is `python constructions/dim36/verify_all.py`; it requires SymPy and a C++17 compiler and performs the complete minimum enumeration. It is not silently included in the historical upper-bound suite.
 
 The [51–53D lattice certificate](research/p48n_hurwitz_20261122/#replay) includes a full replay of its coset exclusions. The [93–96D proofs](research/mw92_extensions_20261122/#replay) and the [1–96D table](LOWER_BOUNDS_1_96.md) can be checked with the Python standard library.
 

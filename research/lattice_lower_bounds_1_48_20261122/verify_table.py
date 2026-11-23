@@ -11,6 +11,7 @@ ROOT = HERE.parents[1]
 DEST = ROOT / "LATTICE_LOWER_BOUNDS_1_48.md"
 PACK = "research/quaternary_29_30_20261122"
 SLIP = "research/bacher_slip_29_30_20261122"
+E7 = "research/e7_hermitian35_20261123"
 COHN = "https://cohn.mit.edu/sphere-packing/"
 LABELS = {29: "1/sqrt(2)", 30: "1"}
 METHODS = {29: "Section of quaternary-code lattice", 30: "Quaternary-code lattice"}
@@ -76,8 +77,15 @@ def render():
                    for r in json.loads((ROOT / SLIP / "results.json").read_text())["rows"]}
     improvements = {r["dimension"]: r for r in proofs}
     assert set(improvements) == LABELS.keys()
+    hermitian = json.loads((ROOT / E7 / "results.json").read_text())
+    assert hermitian["status"] == "PASS"
+    e7_rows = {r["dimension"]: r for r in hermitian["rows"]}
+    assert set(e7_rows) == set(range(34, 38))
+    improvements.update(e7_rows)
     pi_lo, pi_hi = pi_interval()
     t = ["""# Lattice sphere-packing lower bounds, dimensions 1–48
+
+[Companion lattice-only catalog for 49D–96D](LATTICE_LOWER_BOUNDS_49_96.md).
 
 These are densities attained by **lattice packings**. A genuinely nonlattice
 union of translates does not qualify. The baseline is the lattice-only table on
@@ -96,9 +104,14 @@ is separate. This table does not claim optimality or exhaustive priority.
         r = improvements[n]
         old = density_squared(factors)
         new = F(r["center_density_squared"])
-        assert old == F(r["cohn_lattice_center_density_squared"])
-        assert old < predecessor[n] == F(r["preceding_repository_center_density_squared"]) < new
-        assert new == F(r["cohn_unrestricted_center_density_squared"])
+        if n in e7_rows:
+            assert old == F(r["preceding_center_density_squared"]) < new
+            method, expression, package = r["method"], r["center_density"], E7
+        else:
+            assert old == F(r["cohn_lattice_center_density_squared"])
+            assert old < predecessor[n] == F(r["preceding_repository_center_density_squared"]) < new
+            assert new == F(r["cohn_unrestricted_center_density_squared"])
+            method, expression, package = METHODS[n], LABELS[n], PACK
         assert new == F(r["minimum_squared"], 4)**n / F(r["gram_determinant"])
         occupied = floor_sqrt(new*ball_squared(n, pi_lo), new*ball_squared(n, pi_hi))
         q = 10**8 * new/old
@@ -106,16 +119,17 @@ is separate. This table does not claim optimality or exhaustive priority.
         if F((2*pct+20001)**2, 4*10**8) <= new/old:
             pct += 1
         gain_display = f"{pct//100}.{pct%100:02d}%"
-        t.append(f"| {n} | `{center_formula(factors)}` | **`{LABELS[n]}`** | **{occupied}** | **{gain_display}** | [{METHODS[n]}]({PACK}/) |")
+        t.append(f"| {n} | `{center_formula(factors)}` | **`{expression}`** | **{occupied}** | **{gain_display}** | [{method}]({package}/) |")
     t.append("""
 The 29D and 30D lattices are strictly denser than B29 and Q30, respectively,
 and match the listed unrestricted B29* and T30 lower bounds. They supersede
 the repository’s [shifted Bacher lattices](research/bacher_slip_29_30_20261122/)
 by 1.55% and 28.09%, respectively.
 
-The repository’s [36D lattice](constructions/dim36/) improved on KP36 by
-18.97%; Cohn already lists that result in both tables, so it is not a new
-update for his table.
+The new Hermitian E7 family raises both lattice and unrestricted lower
+bounds in 34–37D. In 36D the comparison is the earlier
+[metric-deformation lattice](constructions/dim36/) that Cohn lists,
+not the weaker historical KP36 packing.
 
 ## Full 1–48D catalog
 
@@ -131,7 +145,12 @@ construction references in the pinned Cohn table, as listed on the review date.
     for n, factors, ref in rows:
         sq, expression = density_squared(factors), center_formula(factors)
         source = f"[Cohn, ref. {ref}]({COHN}#{ref})" if ref is not None else "Integer lattice"
-        if n in improvements:
+        if n in e7_rows:
+            r = e7_rows[n]
+            sq = F(r["center_density_squared"])
+            expression = f"**`{r['center_density']}`**"
+            source = f"[{r['method']}]({E7}/) (improves Cohn’s listed lattice)"
+        elif n in improvements:
             sq = F(improvements[n]["center_density_squared"])
             expression = f"**`{LABELS[n]}`**"
             source = f"[{METHODS[n]}]({PACK}/) (improves Cohn’s listed lattice)"
@@ -150,8 +169,8 @@ record the lattice-only table as read on 22 November. Run
 `python3 research/lattice_lower_bounds_1_48_20261122/verify_table.py` to check
 this catalog (add `--write` to rebuild it). This checks density arithmetic
 with rational enclosures of π; it does not re-prove the source packings.
-For the new lattices, run `python3 {PACK}/verify.py` for
-the separate complete minimum and determinant proof.
+For the new lattices, run `python3 {PACK}/verify.py` and
+`python3 {E7}/verify.py` (with `basis.py` for the four Gram determinants).
 """.rstrip())
     return "\n".join(t) + "\n"
 
@@ -165,7 +184,7 @@ def main():
         DEST.write_text(result, encoding="utf-8")
     elif DEST.read_text(encoding="utf-8") != result:
         raise SystemExit("Lattice lower-bound catalog is out of date")
-    print("PASS: 48 lattice rows, two gains against Cohn, established 36D tie")
+    print("PASS: 48 lattice rows, six gains against the listed values")
 
 
 if __name__ == "__main__":

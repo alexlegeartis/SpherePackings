@@ -61,6 +61,17 @@ def build_table():
     assert row["dimension"] == 31 and row["status"] == "PASS"
     add(31, row["squared_center_density"], "Order-four Vardy-type shear", f"{package}/README.md")
 
+    package = "research/e7_hermitian35_20261123"
+    proof = data(f"{package}/results.json")
+    assert proof["status"] == "PASS"
+    for row in proof["rows"]:
+        n = row["dimension"]
+        assert n in (34, 35, 36, 37)
+        new = Fraction(row["center_density_squared"])
+        assert new == Fraction(row["minimum_squared"], 4)**n / int(row["gram_determinant"])
+        assert new > Fraction(row["preceding_center_density_squared"]) == candidates[n][0][0]
+        add(n, new, row["method"], f"{package}/README.md")
+
     history = data("research/range48_96_20261115/results.json")
     for row in history["rows"]:
         best = row["best_checked"]

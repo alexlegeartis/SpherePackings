@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "dimension": 34,
+      "minimum_squared": 8,
+      "gram_determinant": "3221225472",
+      "center_density_squared": "16/3",
+      "preceding_center_density_squared": "5559060566555523/1125899906842624",
+      "center_density": "4/sqrt(3)",
+      "method": "Hermitian E7 glue: primitive section"
+    },
+    {
+      "dimension": 35,
+      "minimum_squared": 8,
+      "gram_determinant": "2147483648",
+      "center_density_squared": "16",
+      "preceding_center_density_squared": "8",
+      "center_density": "4",
+      "method": "Five-block Hermitian E7 glue"
+    },
+    {
+      "dimension": 36,
+      "minimum_squared": 8,
+      "gram_determinant": "1073741824",
+      "center_density_squared": "64",
+      "preceding_center_density_squared": "281474976710656/10090298369529",
+      "center_density": "8",
+      "method": "Hermitian E7 glue: order-four lift"
+    },
+    {
+      "dimension": 37,
+      "minimum_squared": 8,
+      "gram_determinant": "2147483648",
+      "center_density_squared": "64",
+      "preceding_center_density_squared": "32",
+      "center_density": "8",
+      "method": "Hermitian E7 glue: order-two lift"
+    }
+  ]
+}

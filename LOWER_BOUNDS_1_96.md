@@ -43,10 +43,10 @@ challenge value is discussed in that proof.
 | 31 | 1.38411060495194e-5 | [Order-four Vardy-type shear](research/vardy30_shear31_20261123/README.md) |
 | 32 | 1.10407493088598e-5 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 33 | 4.14068828964967e-6 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
-| 34 | 1.76697388915406e-6 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
-| 35 | 9.46190415115372e-7 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
-| 36 | 7.33034778316707e-7 | [Contact-preserving metric deformation](constructions/dim36/README.md) |
-| 37 | 3.21356200759300e-7 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
+| 34 | 1.83644820734493e-6 | [Hermitian E7 glue: primitive section](research/e7_hermitian35_20261123/README.md) |
+| 35 | 1.33811531764358e-6 | [Five-block Hermitian E7 glue](research/e7_hermitian35_20261123/README.md) |
+| 36 | 1.11031619697710e-6 | [Hermitian E7 glue: order-four lift](research/e7_hermitian35_20261123/README.md) |
+| 37 | 4.54466297466494e-7 | [Hermitian E7 glue: order-two lift](research/e7_hermitian35_20261123/README.md) |
 | 38 | 2.17566730891289e-7 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 39 | 1.68028177365432e-7 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 40 | 1.47983399313426e-7 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
