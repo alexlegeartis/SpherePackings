@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "dimension": 38,
+  "kind": "explicit lattice",
+  "center_density": "8*sqrt(2)",
+  "center_density_squared": "128",
+  "preceding_center_density_squared": "617673396283947/6871947673600",
+  "minimum_squared": 8,
+  "gram_determinant": 2147483648,
+  "method": "Hermitian E7 glue: coupled rank-three lift"
+}

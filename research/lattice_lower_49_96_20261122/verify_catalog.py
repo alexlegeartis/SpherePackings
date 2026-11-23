@@ -190,6 +190,7 @@ def write_readme(text, high_rows):
         'The 29D and 30D rows improve Cohn’s listed lattice bounds and tie his listed',
         'unrestricted bounds. The 34–37D E7 rows improve both pinned tables. The 36D',
         'gain is measured against the preceding Cohn-listed metric-deformation lattice.',
+        'The 38D lattice matches the previously verified periodic density. Its 37D section improves the prior 37D density.',
         'From 49D onward, the gains are rounded down and use the upper end of a prior',
         'comparison interval where applicable. Years in derived rows date the cited',
         'sources, not publication of the derived bound. The catalogs include ties, source',

@@ -72,6 +72,15 @@ def build_table():
         assert new > Fraction(row["preceding_center_density_squared"]) == candidates[n][0][0]
         add(n, new, row["method"], f"{package}/README.md")
 
+    package = "research/e7_37_section_20261123"
+    sec37 = data(f"{package}/results.json")
+    assert sec37["status"] == "PASS" and sec37["kind"] == "explicit lattice"
+    assert sec37["dimension"] == 37
+    new = Fraction(sec37["center_density_squared"])
+    assert new == Fraction(sec37["minimum_squared"], 4)**37 / int(sec37["gram_determinant"])
+    assert new > Fraction(sec37["preceding_center_density_squared"]) == max(x[0] for x in candidates[37])
+    add(37, new, sec37["method"], f"{package}/README.md")
+
     package = "research/e7_periodic38_20261123"
     row = data(f"{package}/results.json")
     assert row["dimension"] == 38 and row["status"] == "PASS"
@@ -79,7 +88,13 @@ def build_table():
     new = Fraction(row["center_density_squared"])
     assert new == Fraction(row["minimum_squared"], 4)**38 * row["motif_size"]**2 / int(row["period_gram_determinant"])
     assert new > Fraction(row["preceding_center_density_squared"]) == candidates[38][0][0]
-    add(38, new, "Hermitian E7 glue: two-parity D3 motif", f"{package}/README.md")
+    package = "research/e7_lattice38_20261123"
+    lattice = data(f"{package}/results.json")
+    assert lattice["status"] == "PASS" and lattice["kind"] == "explicit lattice"
+    assert lattice["dimension"] == 38
+    assert new == Fraction(lattice["center_density_squared"])
+    assert new == Fraction(lattice["minimum_squared"], 4)**38 / int(lattice["gram_determinant"])
+    add(38, new, lattice["method"], f"{package}/README.md")
 
     history = data("research/range48_96_20261115/results.json")
     for row in history["rows"]:

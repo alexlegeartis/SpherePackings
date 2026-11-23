@@ -17,15 +17,18 @@ is separate. This table does not claim optimality or exhaustive priority.
 | 34 | `2^-25 * 3^(33/2)` | **`4/sqrt(3)`** | **1.8364482073449e-6** | **3.93%** | [Hermitian E7 glue: primitive section](research/e7_hermitian35_20261123/) |
 | 35 | `2^(3/2)` | **`4`** | **1.3381153176435e-6** | **41.42%** | [Five-block Hermitian E7 glue](research/e7_hermitian35_20261123/) |
 | 36 | `2^24 * 3^-3 * 7^-6` | **`8`** | **1.1103161969771e-6** | **51.47%** | [Hermitian E7 glue: order-four lift](research/e7_hermitian35_20261123/) |
-| 37 | `2^(5/2)` | **`8`** | **4.5446629746649e-7** | **41.42%** | [Hermitian E7 glue: order-two lift](research/e7_hermitian35_20261123/) |
+| 37 | `2^(5/2)` | **`16/sqrt(3)`** | **5.2477247835978e-7** | **63.30%** | [Hermitian E7 glue: primitive section of the coupled lift](research/e7_37_section_20261123/) |
+| 38 | `2^-19 * 3^(31/2) * 5^-1` | **`8*sqrt(2)`** | **2.5963183618476e-7** | **19.33%** | [Hermitian E7 glue: coupled rank-three lift](research/e7_lattice38_20261123/) |
 
 The 29D and 30D lattices are strictly denser than B29 and Q30, respectively,
 and match the listed unrestricted B29* and T30 lower bounds. They supersede
 the repository’s [shifted Bacher lattices](research/bacher_slip_29_30_20261122/)
 by 1.55% and 28.09%, respectively.
 
-The new Hermitian E7 family raises both lattice and unrestricted lower
-bounds in 34–37D. In 36D the comparison is the earlier
+The new Hermitian E7 family raises lattice and unrestricted lower bounds
+in 34–37D. The 38D coupled lift improves the listed lattice bound and
+matches the repository’s earlier periodic bound. Its primitive 37D section
+improves the preceding 37D lattice and unrestricted lower bound. In 36D the comparison is the earlier
 [metric-deformation lattice](constructions/dim36/) that Cohn lists,
 not the weaker historical KP36 packing.
 
@@ -75,8 +78,8 @@ construction references in the pinned Cohn table, as listed on the review date.
 | 34 | **`4/sqrt(3)`** | 1.8364482073449e-6 | [Hermitian E7 glue: primitive section](research/e7_hermitian35_20261123/) (improves Cohn’s listed lattice) |
 | 35 | **`4`** | 1.3381153176435e-6 | [Five-block Hermitian E7 glue](research/e7_hermitian35_20261123/) (improves Cohn’s listed lattice) |
 | 36 | **`8`** | 1.1103161969771e-6 | [Hermitian E7 glue: order-four lift](research/e7_hermitian35_20261123/) (improves Cohn’s listed lattice) |
-| 37 | **`8`** | 4.5446629746649e-7 | [Hermitian E7 glue: order-two lift](research/e7_hermitian35_20261123/) (improves Cohn’s listed lattice) |
-| 38 | `2^-19 * 3^(31/2) * 5^-1` | 2.1756673089128e-7 | [Cohn, ref. 15](https://cohn.mit.edu/sphere-packing/#15) |
+| 37 | **`16/sqrt(3)`** | 5.2477247835978e-7 | [Hermitian E7 glue: primitive section of the coupled lift](research/e7_37_section_20261123/) (improves Cohn’s listed lattice) |
+| 38 | **`8*sqrt(2)`** | 2.5963183618476e-7 | [Hermitian E7 glue: coupled rank-three lift](research/e7_lattice38_20261123/) (improves Cohn’s listed lattice) |
 | 39 | `2^-20 * 3^16 * 5^(-1/2)` | 1.6802817736543e-7 | [Cohn, ref. 15](https://cohn.mit.edu/sphere-packing/#15) |
 | 40 | `2^-20 * 3^16` | 1.4798339931342e-7 | [Cohn, ref. 15](https://cohn.mit.edu/sphere-packing/#15) |
 | 41 | `2^-21 * 3^17` | 8.6368303579508e-8 | [Cohn, ref. 15](https://cohn.mit.edu/sphere-packing/#15) |
@@ -97,3 +100,5 @@ this catalog (add `--write` to rebuild it). This checks density arithmetic
 with rational enclosures of π; it does not re-prove the source packings.
 For the new lattices, run `python3 research/quaternary_29_30_20261122/verify.py` and
 `python3 research/e7_hermitian35_20261123/verify.py` (with `basis.py` for the four Gram determinants).
+The 38D package includes its own basis and coset-minimum verification.
+The 37D section package replays that parent and checks the section basis.

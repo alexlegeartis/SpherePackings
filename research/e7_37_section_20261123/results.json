@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "dimension": 37,
+  "kind": "explicit lattice",
+  "center_density": "16/sqrt(3)",
+  "center_density_squared": "256/3",
+  "cohn_center_density_squared": "32",
+  "preceding_center_density_squared": "64",
+  "minimum_squared": 8,
+  "gram_determinant": 1610612736,
+  "method": "Hermitian E7 glue: primitive section of the coupled lift"
+}
