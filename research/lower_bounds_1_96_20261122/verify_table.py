@@ -135,6 +135,13 @@ def build_table():
                 "MW92 nine-translate periodic packing" if row["kind"] == "periodic existence" else label,
                 f"{path}/README.md")
 
+    package = "mw92_cfr_taylor13_20261123"
+    path = f"research/{package}"
+    for row in data(f"{path}/result.json")["rows"]:
+        assert row["dimension"] in (93, 94, 95, 96)
+        add(row["dimension"], row["center_density_squared"], "MW92 degree-13 covering refinement",
+            f"{path}/README.md", row["occupied_density_floor"])
+
     for row in data("research/lattice_lower_49_96_20261122/mw92_bare_results.json")["rows"]:
         assert row["kind"] == "audited lattice section"
         add(row["dimension"], row["center_density_squared"], "Primitive MW92 bare lattice section",
