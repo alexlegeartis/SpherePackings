@@ -19,6 +19,10 @@ Reproducible certificates for unrestricted sphere packings, lattice-only upper b
 
 **23 November:** [Degree-13 covering certificates](research/mw92_cfr_taylor13_20261123/) sharpen the 93–96D unrestricted density bounds, including the lattice bounds in 93–95D. Gains over the preceding certificates are all below 0.005%; the 96D lattice bound is unchanged.
 
+**23 November:** [Exact odd-Leech product-period optimum](research/odd_leech_product48_20261123/) matches P48 for arbitrary half-period motifs with two orthogonal, independently scaled odd-Leech factors.
+
+**23 November:** [Ternary phase-depth bounds](research/order_three_tori_48_72_20261123/) cap the squared depth of every order-three torus phase by 4 in any extremal 48D even unimodular lattice and 6 in any extremal 72D one. The proof also gives sharper residue-dependent bounds.
+
 **23 November:** [One-Leech-period projection bounds](research/leech_single_period_20261123/) give exact scoped optima in 48D and in 25–36D for lattices (symbolic in 34–36D), including arbitrary periodic motifs in 25–27D and 32D. The result allows arbitrary transverse periods and applies in the stated high-minimum regimes.
 
 **23 November:** [Exact 48D scalar-shear bound](research/leech_scalar_shear48_20261123/) extends the Leech product-period optimum to arbitrary real scalar coupling between the two factors. It covers every half-period motif and arbitrary real shifts at normalized squared minimum at least 6. It does not settle general 48D packing.

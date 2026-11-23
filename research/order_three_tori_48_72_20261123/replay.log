@@ -1,0 +1,8 @@
+A= 6*q**3 + 6*q + 1 U= 6*q**3 - 3*q + 1 B= -9*q**3 + 27*q**2 - 9*q + 1 C= 9*q**3 + 3*q**2 + q
+48 0 max possible d 6 distance 4 mat [[0, 0, 1], [0, 1, -72], [1, -60, 2484]] coeff [1836, 72, 1] lead 1836
+48 1 max possible d 5 distance 32/9 mat [[0, 0, 1], [0, 1, -54], [1, -42, 1323]] coeff [945, 54, 1] lead 105
+48 2 max possible d 5 distance 34/9 mat [[0, 0, 1], [0, 1, -63], [1, -51, 1863]] coeff [1350, 63, 1] lead 450
+72 0 max possible d 9 distance 6 mat [[0, 0, 0, 1], [0, 0, 1, -108], [0, 1, -96, 5670], [1, -84, 4464, -192564]] coeff [105084, 4698, 108, 1] lead 105084
+72 1 max possible d 8 distance 50/9 mat [[0, 0, 0, 1], [0, 0, 1, -90], [0, 1, -78, 3861], [1, -66, 2871, -104436]] coeff [54540, 3159, 90, 1] lead 6060
+72 2 max possible d 8 distance 52/9 mat [[0, 0, 0, 1], [0, 0, 1, -99], [0, 1, -87, 4725], [1, -75, 3627, -144369]] coeff [76896, 3888, 99, 1] lead 25632
+PASS: all six bounds and conditional equality-shell coefficients
