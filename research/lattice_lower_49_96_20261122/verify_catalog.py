@@ -36,13 +36,15 @@ def float_floor(q, digits=12):
         assert Q(k*unit)**2 <= q < Q((k+1)*unit)**2
         return f"{k*unit:.{digits-1}E}".lower()
 
-def gain(q, p):
-    """Downward-rounded 100*(sqrt(q/p)-1) to two decimal places."""
-    v = (q/p) * 10**8
+def gain(q, p, digits=2):
+    """Downward-rounded 100*(sqrt(q/p)-1)."""
+    unit = 10**digits
+    scale = 100*unit
+    v = (q/p) * scale**2
     k = isqrt(v.numerator // v.denominator)
-    assert Q(k,10**4)**2 <= q/p < Q(k+1,10**4)**2
-    assert k>=10000
-    return f"{(k-10000)//100}.{(k-10000)%100:02d}%"
+    assert Q(k,scale)**2 <= q/p < Q(k+1,scale)**2
+    assert k>=scale
+    return f"{(k-scale)//unit}.{(k-scale)%unit:0{digits}d}%"
 
 def exact(item,n):
     assert item['kind'] in ('published lattice','derived lattice','reported lattice floor',
@@ -147,11 +149,14 @@ def readme_high_rows(data):
             old_display=f"≈{old_display}"
         source=f"[{prev['description']}]({prev['link']})"
         source += derived_tag(prev)
-        new_display=float_floor(now*ball_squared(n,p))
+        refined = new["link"] == "research/mw92_cfr_taylor13_20261123/README.md"
+        new_display=float_floor(now*ball_squared(n,p), 16 if refined else 12)
         method=f"[{new['description']}]({new['link']})"
         method += derived_tag(new)
-        if new['kind']=='lattice existence': method += ' (existence proof)'
-        lines.append(f"| {n} | {old_display}<br>{source} | **≥{new_display}**<br>{method} | **+{gain(now,hi)}** |")
+        if refined:
+            method='[MW92 degree-13 covering refinement; lattice existence proof](research/mw92_cfr_taylor13_20261123/)'
+        elif new['kind']=='lattice existence': method += ' (existence proof)'
+        lines.append(f"| {n} | {old_display}<br>{source} | **≥{new_display}**<br>{method} | **+{gain(now,hi,4 if refined else 2)}** |")
     assert len(lines)==len(improved)
     return lines
 
@@ -183,7 +188,8 @@ def write_readme(text, high_rows):
         '|---:|---|---|---:|',
         *[line for _,line in low],*high_rows,'',
         'The 29D and 30D rows improve Cohn’s listed lattice bounds and tie his listed',
-        'unrestricted bounds. Cohn already lists the 36D result; the gain is over KP36.',
+        'unrestricted bounds. The 34–37D E7 rows improve both pinned tables. The 36D',
+        'gain is measured against the preceding Cohn-listed metric-deformation lattice.',
         'From 49D onward, the gains are rounded down and use the upper end of a prior',
         'comparison interval where applicable. Years in derived rows date the cited',
         'sources, not publication of the derived bound. The catalogs include ties, source',
