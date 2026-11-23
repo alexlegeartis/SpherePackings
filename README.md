@@ -17,6 +17,8 @@ Reproducible certificates for unrestricted sphere packings, lattice-only upper b
 
 [All occupied-density lower bounds in dimensions 1–96](LOWER_BOUNDS_1_96.md).
 
+**23 November:** [A four-layer shear](research/vardy30_shear31_20261123/) raises the unrestricted 31D packing lower bound by **16.92%**. The lattice-only bound is unchanged.
+
 **22 November:** [Half-root Γ72–D4 lattices](research/gamma72_root_tilt_20261122/) improve the preceding 77D and 78D bounds by **8.01%** and **21.72%**, respectively (net **15.47%** and **33.33%** over the bounds before the tilt search). The historical 79D lattice has since been superseded by the [bare MW80 section](research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#79d-bare-mw80-section). The denser 79D periodic packing remains the unrestricted bound.
 
 **22 November:** six explicit lattices improve the preceding 73–78D lattice bounds by **11.80% to 56.25%**. The 78D lattice also improves the preceding unrestricted bound by **34.59%**. [Exact construction and comparisons](research/gamma72_depth6_20261122/).
@@ -35,6 +37,7 @@ The [literature review dated 16 November 2026](research/covering_and_deep_cosets
 | n | Comparison density / method | Our density / method | Increase |
 | ---: | --- | --- | ---: |
 | 29 | ≈3.41446469074224e-5<br>[B29* — Vardy (1999)](https://doi.org/10.1090/S0002-9947-99-02169-8) · [Cohn’s unrestricted table](https://cohn.mit.edu/sphere-packing/#data) | **≥4.82878227389174e-5**<br>[Alternating Vardy-type layers, exact center density `1`](research/vardy28_stack29_20261122/) | **41.421356%** |
+| 31 | ≈1.18377651859338e-5<br>[Q31 — Quebbemann (1984), section of Q32](https://doi.org/10.1112/S0025579300010731) · [Cohn’s unrestricted table](https://cohn.mit.edu/sphere-packing/#data) | **≥1.38411060495194e-5**<br>[Order-four shear of Vardy-type stocks, exact center density `sqrt(2)`](research/vardy30_shear31_20261123/) | **16.923303%** |
 | 36 | ≈6.1615e-7<br>[KP36 code-based lattice — Kschischang–Pasupathy (1992)](https://doi.org/10.1109/18.119683) · [Catalogue parameters](https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/KP36.html) | ≈7.3303e-7<br>[Contact-preserving metric deformation; exact Gram matrix and complete minimum certificate](constructions/dim36/) | 18.97% |
 | 49 | ≈4.128837170599e-9 (**derived**)<br>P48q × A1 — [Bos–Conway–Sloane (1982), §5](https://neilsloane.com/doc/Me103.pdf); [exact comparison](research/covering_and_deep_cosets_20261115/literature_comparisons.json) | ≈7.151355755657e-9<br>[Explicit deeper P48q half-coset; full minimum certificate](research/covering_and_deep_cosets_20261115/DEEPER_PROOF.md) | **73.205081%** |
 | 50 | ≈8.408155459659e-10 (**derived**)<br>P48q × A2 — [Bos–Conway–Sloane (1982), §5](https://neilsloane.com/doc/Me103.pdf); [exact comparison](research/covering_and_deep_cosets_20261115/literature_comparisons.json) | ≈2.522446637898e-9<br>[Deep plane + fitted metric; explicit minimum-6 lattice](research/adaptive_layers_20261115/P48_PROOF.md) | **200.000000%** |

@@ -40,7 +40,7 @@ challenge value is discussed in that proof.
 | 28 | 1.04638104924845e-4 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 29 | 4.82878227389174e-5 | [Alternating Vardy-type layers](research/vardy28_stack29_20261122/README.md) |
 | 30 | 2.19153534478302e-5 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
-| 31 | 1.18377651859338e-5 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
+| 31 | 1.38411060495194e-5 | [Order-four Vardy-type shear](research/vardy30_shear31_20261123/README.md) |
 | 32 | 1.10407493088598e-5 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 33 | 4.14068828964967e-6 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 34 | 1.76697388915406e-6 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
