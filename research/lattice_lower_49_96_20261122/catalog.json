@@ -608,11 +608,11 @@
       },
       "repository": {
         "kind": "explicit lattice",
-        "description": "Bachoc–Nebe deep half-coset lift",
-        "link": "research/packing81_verified_20261117/README.md",
-        "center_density_squared": "1208925819614629174706176",
-        "minimum_squared": "8",
-        "gram_determinant": "2"
+        "description": "MW80 half-coset lift",
+        "link": "research/mw80_half_coset_81_20261123/README.md",
+        "center_density_squared": "283753509180010707824461062763116716606126555757084586223347181136007/218220688037895415437473612110773751327490048",
+        "minimum_squared": "14",
+        "gram_determinant": "90253961201464744324"
       }
     },
     {
