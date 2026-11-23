@@ -1,0 +1,7 @@
+rank 6 65
+rank 8 650
+rank 10 3380
+admissible planes 975 homogeneous 975
+PASS Leech Q4 least eigenvalue -24, degree 98280
+PASS target 20280-character embedding with inner product -1/15 on every allowed difference
+PASS N cap 65536 max center ceiling 4722366482869645213696/531441 ceil/prior ~ 0.8357037205039934

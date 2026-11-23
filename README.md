@@ -17,6 +17,10 @@ Reproducible certificates for unrestricted sphere packings, lattice-only upper b
 
 [All occupied-density lower bounds in dimensions 1–96](LOWER_BOUNDS_1_96.md).
 
+**23 November:** [An exact 96D four-Leech family ceiling](research/gamma96_fourleech_motif96_20261123/) rules out beating the current periodic bound when the three-block Γ72 carrier and integral horizontal phases are retained and the fourth Leech block has arbitrary scalar scale. The proof covers arbitrary nonlinear motifs and multiple fibres at a vertical residue. It does not exclude larger phase alphabets or arbitrary four-block geometry.
+
+**23 November:** [A quantitative 39D obstruction](research/e7_half_radical39_20261123/) rules out improving the current bound by assigning the five-E7 half-radical phases to every site of any 4D vertical lattice at the inherited minimum. It allows nonlinear phase assignment and small perturbations of phases and vertical sites. In 48D, [ternary phases cannot attain one-period equality](research/leech_order3_equality48_20261123/) and [mixed half-period motifs with a second factor of minimum at most 3](research/leech_mixed_half_period48_20261123/) stay below 72% of P48. These are family restrictions, not global upper bounds.
+
 **23 November:** [Quantitative metric rigidity](research/p48_gamma72_metric_and_equality_20261123/) proves that no arbitrary metric of condition number at most 2 improves a fixed extremal 48D even unimodular lattice. The corresponding 72D threshold is 19/10. The same package classifies equality in the 48D additive Leech half-period family by a binary quadratic-form isometry. These are scoped statements, not global density bounds.
 
 **23 November:** [Two-parity D3 stacking](research/e7_periodic38_20261123/) reuses the E7 glue to raise the **38D unrestricted lower bound by 19.33%**. It is a nonlattice periodic packing; the 38D lattice-only bound stays unchanged.
