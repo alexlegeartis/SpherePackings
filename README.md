@@ -19,6 +19,8 @@ Reproducible certificates for unrestricted sphere packings, lattice-only upper b
 
 **23 November:** [Degree-13 covering certificates](research/mw92_cfr_taylor13_20261123/) sharpen the 93–96D unrestricted density bounds, including the lattice bounds in 93–95D. Gains over the preceding certificates are all below 0.005%; the 96D lattice bound is unchanged.
 
+**23 November:** [Exact 48D scalar-shear bound](research/leech_scalar_shear48_20261123/) extends the Leech product-period optimum to arbitrary real scalar coupling between the two factors. It covers every half-period motif and arbitrary real shifts at normalized squared minimum at least 6. It does not settle general 48D packing.
+
 **23 November:** [Leech product-period optima](research/leech_product_periods_48_72_20261123/) match the 48D and 72D bounds in scoped families of periodic packings. The 48D result includes arbitrary real shifts when the squared minimum is at least 6 in the stated normalization. These are not global upper bounds.
 
 **23 November:** [A six-translate Ne64 packing](research/ne64_dual_matching59_20261123/) improves the unrestricted 59D density lower bound by **0.3246%**. It is not a lattice.
