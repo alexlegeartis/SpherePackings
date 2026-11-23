@@ -26,8 +26,8 @@ def source_link(evidence):
 def build_table():
     candidates = defaultdict(list)
 
-    def add(n, squared_density, label, evidence):
-        candidates[n].append((Fraction(squared_density), label, source_link(evidence)))
+    def add(n, squared_density, label, evidence, digits=None):
+        candidates[n].append((Fraction(squared_density), label, source_link(evidence), digits))
 
     cohn = json.loads((HERE / "cohn_inputs.json").read_text())
     assert [row["dimension"] for row in cohn["rows"]] == list(range(1, 49))
@@ -56,10 +56,20 @@ def build_table():
         add(row["dimension"], row["center_density_squared"],
             "Alternating Vardy-type layers", f"{package}/README.md")
 
+    package = "research/vardy30_shear31_20261123"
+    row = data(f"{package}/verification.log")
+    assert row["dimension"] == 31 and row["status"] == "PASS"
+    add(31, row["squared_center_density"], "Order-four Vardy-type shear", f"{package}/README.md")
+
     history = data("research/range48_96_20261115/results.json")
     for row in history["rows"]:
         best = row["best_checked"]
         add(row["dimension"], best["density_squared"], best["name"], best["evidence"])
+
+    package = "research/ne64_dual_matching59_20261123"
+    row = data(f"{package}/data/results.json")
+    assert row["dimension"] == 59 and row["status"] == "PASS" and row["periodic_not_lattice"]
+    add(59, row["center_density_squared_floor"], "Ne64 antipode with matched normal", f"{package}/README.md")
 
     package = "research/packing_binary57_58_20261117"
     for row in data(f"{package}/RESULTS.json")["rows"]:
@@ -80,6 +90,15 @@ def build_table():
         row = data(f"{package}/deep_extension/verified{n}.json")
         assert row["dimension"] == n
         add(n, row["center_density_squared"], "Bachoc–Nebe parity extension", f"{package}/README_DEEP.md")
+
+    add(81, Fraction(7, 2)**81 / (4*41**12), "MW80 half-coset lift",
+        "research/mw80_half_coset_81_20261123/README.md")
+
+    package = "research/mw92_small_simplexes_20261122"
+    for row in data(f"{package}/verified_results.json"):
+        assert row["dimension"] in (86, 87)
+        add(row["dimension"], row["center_density_squared"],
+            "MW92 projected-simplex packing", f"{package}/README.md", row["occupied_density_floor"])
 
     package = "research/l80_a2_section_20261122"
     row = data(f"{package}/results.json")
@@ -108,6 +127,7 @@ def build_table():
         ("gamma72_tilted_d4_20261122", "Tilted Γ72–D4 lattice"),
         ("gamma72_root_tilt_20261122", "Half-root Γ72–D4 lattice"),
         ("mw92_extensions_20261122", "MW92 extension"),
+        ("mw92_order3_dichotomy_20261122", "MW92 order-three lattice dichotomy"),
     ]:
         path = f"research/{package}"
         for row in data(f"{path}/results.json")["rows"]:
@@ -135,8 +155,11 @@ def build_table():
         "|---:|---:|---|",
     ]
     for n, choices in sorted(candidates.items()):
-        center_squared, title, source = max(choices, key=lambda row: row[0])
-        density = display_floor(center_squared*unit_ball_squared(n, pi_lower)).lower()
+        center_squared, title, source, exact_floor = max(choices, key=lambda row: row[0])
+        occupied_squared = center_squared * unit_ball_squared(n, pi_lower)
+        if exact_floor is not None:
+            assert Fraction(exact_floor)**2 <= occupied_squared
+        density = (exact_floor or display_floor(occupied_squared)).lower()
         if n == 1:
             density = "1"
         lines.append(f"| {n} | {density} | [{title}]({source}) |")

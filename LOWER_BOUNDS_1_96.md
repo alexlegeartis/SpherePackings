@@ -68,7 +68,7 @@ challenge value is discussed in that proof.
 | 56 | 5.35530073542807e-11 | [Shioda MW56](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) |
 | 57 | 1.61599884109140e-11 | [Exact depth-7 Mordell–Weil half-coset extension](research/packing_binary57_58_20261117/README.md) |
 | 58 | 5.58243739609338e-12 | [Exact depth-7 Mordell–Weil half-coset extension with complex-multiplication triangular layers](research/packing_binary57_58_20261117/README.md) |
-| 59 | 2.63760259072000e-12 | [Ne64 antipode, six translates](constructions/dim59/result.json) |
+| 59 | 2.64616393271302e-12 | [Ne64 antipode with matched normal](research/ne64_dual_matching59_20261123/README.md) |
 | 60 | 2.39525064168178e-12 | [Ne64 antipode, 5 translates](research/novel_routes_20261113/dual64/constructed.json) |
 | 61 | 2.02203523238191e-12 | [Ne64 antipode, 4 translates](research/novel_routes_20261113/dual64/constructed.json) |
 | 62 | 1.62819189421383e-12 | [Ne64 antipode, 3 translates](research/novel_routes_20261113/dual64/constructed.json) |
