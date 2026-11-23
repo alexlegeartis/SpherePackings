@@ -72,6 +72,15 @@ def build_table():
         assert new > Fraction(row["preceding_center_density_squared"]) == candidates[n][0][0]
         add(n, new, row["method"], f"{package}/README.md")
 
+    package = "research/e7_periodic38_20261123"
+    row = data(f"{package}/results.json")
+    assert row["dimension"] == 38 and row["status"] == "PASS"
+    assert row["kind"] == "explicit nonlattice periodic"
+    new = Fraction(row["center_density_squared"])
+    assert new == Fraction(row["minimum_squared"], 4)**38 * row["motif_size"]**2 / int(row["period_gram_determinant"])
+    assert new > Fraction(row["preceding_center_density_squared"]) == candidates[38][0][0]
+    add(38, new, "Hermitian E7 glue: two-parity D3 motif", f"{package}/README.md")
+
     history = data("research/range48_96_20261115/results.json")
     for row in history["rows"]:
         best = row["best_checked"]

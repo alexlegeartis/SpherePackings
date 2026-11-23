@@ -47,7 +47,7 @@ challenge value is discussed in that proof.
 | 35 | 1.33811531764358e-6 | [Five-block Hermitian E7 glue](research/e7_hermitian35_20261123/README.md) |
 | 36 | 1.11031619697710e-6 | [Hermitian E7 glue: order-four lift](research/e7_hermitian35_20261123/README.md) |
 | 37 | 4.54466297466494e-7 | [Hermitian E7 glue: order-two lift](research/e7_hermitian35_20261123/README.md) |
-| 38 | 2.17566730891289e-7 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
+| 38 | 2.59631836184760e-7 | [Hermitian E7 glue: two-parity D3 motif](research/e7_periodic38_20261123/README.md) |
 | 39 | 1.68028177365432e-7 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 40 | 1.47983399313426e-7 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 41 | 8.63683035795082e-8 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |

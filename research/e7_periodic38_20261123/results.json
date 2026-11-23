@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "dimension": 38,
+  "kind": "explicit nonlattice periodic",
+  "minimum_squared": 8,
+  "motif_size": 16,
+  "period_gram_determinant": "549755813888",
+  "center_density_squared": "128",
+  "preceding_center_density_squared": "617673396283947/6871947673600"
+}
