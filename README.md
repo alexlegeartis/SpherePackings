@@ -17,6 +17,8 @@ Reproducible certificates for unrestricted sphere packings, lattice-only upper b
 
 [All occupied-density lower bounds in dimensions 1–96](LOWER_BOUNDS_1_96.md).
 
+**23 November:** [Quantitative metric rigidity](research/p48_gamma72_metric_and_equality_20261123/) proves that no arbitrary metric of condition number at most 2 improves a fixed extremal 48D even unimodular lattice. The corresponding 72D threshold is 19/10. The same package classifies equality in the 48D additive Leech half-period family by a binary quadratic-form isometry. These are scoped statements, not global density bounds.
+
 **23 November:** [One five-block E7 construction](research/e7_hermitian35_20261123/) raises the lattice and unrestricted density lower bounds in **34–37D** by **3.93%, 41.42%, 51.47%, and 41.42%**, respectively. The 36D comparison is the preceding repository result listed by Cohn. The proof also gives an exact optimum within the fixed 35D additive binary-phase family.
 
 **23 November:** [Degree-13 covering certificates](research/mw92_cfr_taylor13_20261123/) sharpen the 93–96D unrestricted density bounds, including the lattice bounds in 93–95D. Gains over the preceding certificates are all below 0.005%; the 96D lattice bound is unchanged.
