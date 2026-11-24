@@ -52,3 +52,49 @@ pure vertical colour-zero kernel has minimum squared 20, and
 every mixed vector has squared norm >20. This only rules out
 this derivative functional and tail strategy, not other 96D
 constructions.
+
+## Stronger obstruction: replacing the derivative line by arbitrary coloured tails
+
+In fact the same five polynomial pairs give a squared-norm-18 vector for
+**each** of the 2,208 nonzero derivatives, not just each projective line.
+The sixth power of 35+i is 30, a generator of F47*, and the projective
+calculation above covers every line. The script checks both statements.
+
+Let H={P : rho(P)=r(P)=0}. Its covolume is 47^11: the parent
+covolume is 47^7, and the two residue coordinates are onto because
+the witnessed derivative values already cover F47[i] in ker rho,
+while the cusp residue is onto by the original construction.
+For each vertical point v in R^4, allow any one full affine coset of H
+inside ker rho, with arbitrary choice of its derivative label r_v.
+This includes nonlattice and nonadditive periodic choices of labels and
+tail geometry, but not horizontal shifts outside the fixed cusp lattice.
+
+The file `H20polys.json` gives an additional polynomial solution with
+degrees 20 and 30. In the original chart the excess degrees (4,6)
+mean exactly a double meeting with the zero section at t0 and no other
+poles, hence squared height 20. This is a literal vector of H. Thus any
+packing in this family has squared separation q at most 20.
+
+For each label separately the vertical centers have squared separation
+at least q, since the full horizontal coset is identical. If q>18 then
+distinct labels cannot occupy the same vertical point, and points with
+distinct labels have squared vertical separation at least q−18, by
+the short horizontal difference in that derivative class. Equal labels
+also satisfy the weaker q−18 bound. The elementary disjoint-ball
+bound on the vertical point count per unit 4-volume now gives the
+following upper bounds, either by summing over labels, or, for q>18,
+by ignoring labels:
+
+    47^2 * 32/(pi^2 q^2),     32/(pi^2 (q−18)^2).
+
+The center density in 96D is the vertical point count per unit 4-volume
+times (q/4)^48/47^11. This follows by counting each affine H-coset
+in a large horizontal box; the estimate is uniform over the finitely
+many labels. To bound the ratio to the existing cusp+D4 lattice, use
+the first estimate for q≤q* = 18·47/46; it increases as q^46. Use the
+second bound for q*≤q≤20; its logarithmic derivative is 48/q−2/(q−18),
+which changes from negative to positive just once, so the maximum
+is at an endpoint. Both endpoint ratios are strictly below 0.116
+(using pi>3.14). Therefore arbitrary choices of vertical tail and
+full derivative cosets in this family cannot produce an improvement,
+even if the labels and vertical geometry are nonlinear or nonlattice.

@@ -70,3 +70,23 @@ vals=[depth(m)for m in range(1,47)]
 assert min(vals)==478 and [j+1 for j,k in enumerate(vals)if k==478]==[3,44]
 assert F(10*min(vals),47**2)>2
 print('PASS: every derivative line has an exact squared-norm-18 witness.')
+
+D=set()
+for obj in w.values():
+    r=div(fp(obj['X'])[-1],fp(obj['Y'])[-1])
+    for j in range(276):
+        for z in (r,conj(r)):
+            D.add(div(mul(z,pw(dilation,j)),change))
+assert len(D)==p*p-1 and (0,0) not in D
+assert F(16,47**2)*F(10,9)**48/F(314,100)**2<F(116,1000)
+print('PASS: all 2,208 nonzero derivatives; arbitrary coloured tail ratio <0.116.')
+
+h20=json.loads(Path(__file__).with_name('H20polys.json').read_text())['H20']
+assert h20['t0']=='2*z + 18' and h20['k']=='9*z + 9'
+X,Y=fp(h20['X']),fp(h20['Y'])
+assert len(X)==21 and len(Y)==31 and X[-1]!=(0,0) and Y[-1]!=(0,0)
+C,D=fm(fm(X,X),X),fm(Y,Y)
+assert all(add(d,neg(c))==((int(j==47)-int(j==1))%p,0)for j,(c,d) in enumerate(zip(C,D)))
+qs=F(18*p,p-1)
+assert F(64,1)*F(qs/18)**48/(F(314,100)**2*qs**2)<F(116,1000)
+print('PASS: H has a literal norm-20 vector; both endpoint ratios <0.116.')
