@@ -37,3 +37,7 @@ stated constructions and relaxations, not unrestricted packing optima.
   positivity, but a replacement survives 1,953 joint marked shell
   rows and 221 additional affine-unit rows. These are formal
   histograms, not lattices or a disproof of existence.
+* [Additive deformations](48-96-additive-deformations/README.md):
+  a separate uniform Cartier-index argument excludes four of the five
+  CM families for every separable linearized degree-25 or degree-49
+  base polynomial. The cubic 48D deformation remains open.
