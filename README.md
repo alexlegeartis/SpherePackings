@@ -106,7 +106,7 @@ The [literature review dated 16 November 2026](research/covering_and_deep_cosets
 | 93 | ≈1.702354782363e-20 (**derived**)<br>MW92 × A1 — [Schütt–Shioda, Theorem 13.35, p=47](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) | **≥3.045564894259504e-20**<br>[MW92 degree-13 covering refinement; lattice existence proof](research/mw92_cfr_taylor13_20261123/) | **>78.9030%** |
 | 94 | ≈2.534314091589e-21 (**derived**)<br>MW92 × A2 — [Schütt–Shioda, Theorem 13.35, p=47](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) | **≥8.036027386567117e-21**<br>[MW92 degree-13 covering refinement; lattice existence proof](research/mw92_cfr_taylor13_20261123/) | **>217.0888%** |
 | 95 | ≈3.980717377502e-22 (**derived**)<br>MW92 × A3 — [Schütt–Shioda, Theorem 13.35, p=47](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) | **≥2.104056220143222e-21**<br>[MW92 degree-13 covering refinement; lattice existence proof](research/mw92_cfr_taylor13_20261123/) | **>428.5620%** |
-| 96 | ≈2.795023294827e-22<br>P48q-based lattice — [Bos–Conway–Sloane (1982), Eq. (15), Table 1, p.177](https://neilsloane.com/doc/Me103.pdf); exact center density `3^48/2^24` | **≥6.250833919802144e-22**<br>[MW92 degree-13 covering refinement; nine-translate periodic existence proof](research/mw92_cfr_taylor13_20261123/) | **>123.6415%** |
+| 96 | ≈2.795023294827e-22<br>P48q-based lattice — [Bos–Conway–Sloane (1982), Eq. (15), Table 1, p.177](https://neilsloane.com/doc/Me103.pdf); exact center density `3^48/2^24` | **≥6.367774598225213e-22**<br>[MW92 half-phase with twelve colored translates; periodic packing](research/mw92_96_periodic12_20261124/) | **>127.8254%** |
 
 **Scope:** Some rows are existence bounds, not explicit packings. Named comparisons include derived guarantees; they do not establish exhaustive priority. [Sources and exact gains](research/covering_and_deep_cosets_20261115/PRIORITY.md) · [Full audit and research notes](RELEASE_NOTES_20261117.md#packing-comparison-and-research-notes).
 
@@ -254,6 +254,8 @@ The exact comparison gives **35 smaller upper bounds** and **one tie**, the exac
 <!-- lattice-upper-20261116:end -->
 
 ## Recent updates
+
+**24 November:** a [twelve-color periodic MW92 packing](research/mw92_96_periodic12_20261124/) improves the **96D** occupied density lower bound to **≥6.367774598225213e-22**, up **1.8708%** from the preceding repository bound. The lattice-only lower bound is unchanged.
 
 **22 November:** a [quaternary-code lattice and its section](research/quaternary_29_30_20261122/) match the unrestricted lower-bound densities in **29D** and **30D**, improving the immediately preceding lattice bounds by **1.55%** and **28.09%**, respectively.
 

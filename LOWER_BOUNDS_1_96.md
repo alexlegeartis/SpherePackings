@@ -105,7 +105,7 @@ challenge value is discussed in that proof.
 | 93 | 3.045564894259504e-20 | [MW92 degree-13 covering refinement](research/mw92_cfr_taylor13_20261123/README.md) |
 | 94 | 8.036027386567117e-21 | [MW92 degree-13 covering refinement](research/mw92_cfr_taylor13_20261123/README.md) |
 | 95 | 2.104056220143222e-21 | [MW92 degree-13 covering refinement](research/mw92_cfr_taylor13_20261123/README.md) |
-| 96 | 6.250833919802144e-22 | [MW92 degree-13 covering refinement](research/mw92_cfr_taylor13_20261123/README.md) |
+| 96 | 6.367774598225213e-22 | [MW92 half-phase with twelve colored translates](research/mw92_96_periodic12_20261124/README.md) |
 
 Rebuild the table with
 `python research/lower_bounds_1_96_20261122/verify_table.py --write`.

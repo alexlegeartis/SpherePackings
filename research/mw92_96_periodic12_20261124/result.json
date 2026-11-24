@@ -1,0 +1,14 @@
+{
+  "dimension": 96,
+  "kind": "periodic existence",
+  "minimum_squared": 16,
+  "number_of_phase_colors": 12,
+  "fixed_half_depth_squared_lower": "21/2",
+  "vertical_covolume_per_site_squared": "53361/256",
+  "center_density_squared": "1606938044258990275541962092341162602522202993782792835301376/13696007049960120629491264209",
+  "occupied_density_floor": "6.367774598225213e-22",
+  "previous_occupied_density_floor": "6.250833919802144e-22",
+  "gain_percent_approx": 1.870801239057239,
+  "comparison_ref": "294712432b1044f2e4762823297bbceb3462b498",
+  "proof_archive_sha256": "2d16ac908a226e6e3a959ff4bb4ffeec4b8e9891a8a365f73066993a4ff9175d"
+}

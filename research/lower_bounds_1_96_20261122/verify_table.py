@@ -177,6 +177,13 @@ def build_table():
         add(row["dimension"], row["center_density_squared"], "MW92 degree-13 covering refinement",
             f"{path}/README.md", row["occupied_density_floor"])
 
+    package = "mw92_96_periodic12_20261124"
+    path = f"research/{package}"
+    row = data(f"{path}/result.json")
+    assert row["dimension"] == 96
+    add(96, row["center_density_squared"], "MW92 half-phase with twelve colored translates",
+        f"{path}/README.md", row["occupied_density_floor"])
+
     for row in data("research/lattice_lower_49_96_20261122/mw92_bare_results.json")["rows"]:
         assert row["kind"] == "audited lattice section"
         add(row["dimension"], row["center_density_squared"], "Primitive MW92 bare lattice section",
