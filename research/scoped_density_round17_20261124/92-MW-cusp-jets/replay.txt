@@ -1,0 +1,6 @@
+Exact Gram, cusp reduction and translation provenance verified
+Depth two and four norm witnesses verified; independent first jets verified
+All consecutive intermediate sublattices through depth four are below MW92
+Remaining translated-line cases: before/after finite isometries 864 864 in orbits [12, 12, 12, 276, 276, 276]
+Representatives (a,b,c), orbit size: [((1, 1, 0), 276), ((1, 2, 1), 276), ((1, 2, 27), 12), ((1, 3, 0), 276), ((1, 3, 12), 12), ((1, 6, 24), 12)]
+All 103823 graph quadratics hit >=68 literal norm-16 residues; q16 hits every nonzero u
