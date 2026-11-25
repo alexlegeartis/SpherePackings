@@ -43,7 +43,7 @@ challenge value is discussed in that proof.
 | 31 | 1.38411060495194e-5 | [Order-four Vardy-type shear](research/vardy30_shear31_20261123/README.md) |
 | 32 | 1.10407493088598e-5 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 33 | 4.30349290013661e-6 | [Two-bank A5/E7 periodic packing](research/e7_a5_twobank33_20261125/README.md) |
-| 34 | 1.83644820734493e-6 | [Hermitian E7 glue: primitive section](research/e7_hermitian35_20261123/README.md) |
+| 34 | 2.40447512000688e-6 | [Two-bank A6/E7 periodic packing](research/e7_a6_twobank34_20261125/README.md) |
 | 35 | 1.33811531764358e-6 | [Five-block Hermitian E7 glue](research/e7_hermitian35_20261123/README.md) |
 | 36 | 1.11031619697710e-6 | [Hermitian E7 glue: order-four lift](research/e7_hermitian35_20261123/README.md) |
 | 37 | 5.24772478359786e-7 | [Hermitian E7 glue: primitive section of the coupled lift](research/e7_37_section_20261123/README.md) |
