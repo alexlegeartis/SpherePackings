@@ -3,23 +3,24 @@
 [Companion lattice-only catalog for 49D–96D](LATTICE_LOWER_BOUNDS_49_96.md).
 
 These are densities attained by **lattice packings**. A genuinely nonlattice
-union of translates does not qualify. The baseline is the lattice-only table on
-[Henry Cohn’s sphere-packing page](https://cohn.mit.edu/sphere-packing/#lattice-data),
-checked on 22 November 2026. The [unrestricted lower-bound catalog](LOWER_BOUNDS_1_96.md)
+union of translates does not qualify. The gain column uses the older named
+external construction, not the live Cohn table (which may now list our work).
+The [22 November source snapshot](research/lattice_lower_bounds_1_48_20261122/cohn_inputs.json)
+is retained unchanged for provenance. The [unrestricted lower-bound catalog](LOWER_BOUNDS_1_96.md)
 is separate. This table does not claim optimality or exhaustive priority.
 
-## Updates for Cohn’s lattice table
+## Improvements over named historical lattice comparisons
 
-| Dimension | Listed center density | New exact center density | Occupied density (lower bound) | Gain vs. listed lattice | Construction |
-|---:|---:|---:|---:|---:|---|
-| 29 | `3^(-1/2)` | **`1/sqrt(2)`** | **3.4144646907422e-5** | **22.47%** | [Section of quaternary-code lattice](research/quaternary_29_30_20261122/) |
-| 30 | `2^-22 * 3^(27/2)` | **`1`** | **2.1915353447830e-5** | **51.89%** | [Quaternary-code lattice](research/quaternary_29_30_20261122/) |
-| 31 | `2^(-47/2) * 3^15` | **`sqrt(2)`** | **1.3841106049519e-5** | **16.92%** | [Shortened Cheng–Sloane code with a parity-corrected weight-24 glue](research/cheng_sloane_lattice31_20261125/) |
-| 34 | `2^-25 * 3^(33/2)` | **`4/sqrt(3)`** | **1.8364482073449e-6** | **3.93%** | [Hermitian E7 glue: primitive section](research/e7_hermitian35_20261123/) |
-| 35 | `2^(3/2)` | **`4`** | **1.3381153176435e-6** | **41.42%** | [Five-block Hermitian E7 glue](research/e7_hermitian35_20261123/) |
-| 36 | `2^24 * 3^-3 * 7^-6` | **`8`** | **1.1103161969771e-6** | **51.47%** | [Hermitian E7 glue: order-four lift](research/e7_hermitian35_20261123/) |
-| 37 | `2^(5/2)` | **`16/sqrt(3)`** | **5.2477247835978e-7** | **63.30%** | [Hermitian E7 glue: primitive section of the coupled lift](research/e7_37_section_20261123/) |
-| 38 | `2^-19 * 3^(31/2) * 5^-1` | **`8*sqrt(2)`** | **2.5963183618476e-7** | **19.33%** | [Hermitian E7 glue: coupled rank-three lift](research/e7_lattice38_20261123/) |
+| Dimension | Historical center density / source | New exact center density | Occupied density (lower bound) | Gain vs. historical lattice | Construction |
+|---:|---|---:|---:|---:|---|
+| 29 | `3^(-1/2)` · [B29 — Bacher (1996)](https://doi.org/10.1007/S002220050180) | **`1/sqrt(2)`** | **3.4144646907422e-5** | **22.47%** | [Section of quaternary-code lattice](research/quaternary_29_30_20261122/) |
+| 30 | `2^-22 * 3^(27/2)` · [Q30 — Quebbemann (1984)](https://doi.org/10.1112/S0025579300010731) | **`1`** | **2.1915353447830e-5** | **51.89%** | [Quaternary-code lattice](research/quaternary_29_30_20261122/) |
+| 31 | `2^(-47/2) * 3^15` · [Q31 — Quebbemann (1984)](https://doi.org/10.1112/S0025579300010731) | **`sqrt(2)`** | **1.3841106049519e-5** | **16.92%** | [Shortened Cheng–Sloane code with a parity-corrected weight-24 glue](research/cheng_sloane_lattice31_20261125/) |
+| 34 | `2^-25 * 3^(33/2)` · [Q34 — Elkies, in Conway–Sloane (1999), p. xx](https://neilsloane.com/doc/splag.html) | **`4/sqrt(3)`** | **1.8364482073449e-6** | **3.93%** | [Hermitian E7 glue: primitive section](research/e7_hermitian35_20261123/) |
+| 35 | `2^(3/2)` · [B35 — Nebe–Sloane catalogue](https://www.math.rwth-aachen.de/homes/Gabriele.Nebe/LATTICES/density.html) | **`4`** | **1.3381153176435e-6** | **41.42%** | [Five-block Hermitian E7 glue](research/e7_hermitian35_20261123/) |
+| 36 | `2^18 * 3^-10` · [KP36 — Kschischang–Pasupathy (1992)](https://doi.org/10.1109/18.119683) | **`8`** | **1.1103161969771e-6** | **80.20%** | [Hermitian E7 glue: order-four lift](research/e7_hermitian35_20261123/) |
+| 37 | `2^(5/2)` · [D37 — Conway–Sloane (1999), p. xxxvii](https://www.math.rwth-aachen.de/homes/Gabriele.Nebe/LATTICES/density.html) | **`16/sqrt(3)`** | **5.2477247835978e-7** | **63.30%** | [Hermitian E7 glue: primitive section of the coupled lift](research/e7_37_section_20261123/) |
+| 38 | `2^-19 * 3^(31/2) * 5^-1` · [Dorofeev–Sun–Wang (2026), Table 1](https://arxiv.org/html/2607.20359v4#S1.T1) | **`8*sqrt(2)`** | **2.5963183618476e-7** | **19.33%** | [Hermitian E7 glue: coupled rank-three lift](research/e7_lattice38_20261123/) |
 
 The 29D and 30D lattices are strictly denser than B29 and Q30, respectively,
 and match the listed unrestricted B29* and T30 lower bounds. They supersede
@@ -32,9 +33,9 @@ and matches the repository’s existing unrestricted lower bound.
 The new Hermitian E7 family raises lattice and unrestricted lower bounds
 in 34–37D. The 38D coupled lift improves the listed lattice bound and
 matches the repository’s earlier periodic bound. Its primitive 37D section
-improves the preceding 37D lattice and unrestricted lower bound. In 36D the comparison is the earlier
-[metric-deformation lattice](constructions/dim36/) that Cohn lists,
-not the weaker historical KP36 packing.
+improves the preceding 37D lattice and unrestricted lower bound. In 36D the historical
+comparison is KP36; the separate gain over our earlier
+[metric-deformation lattice](constructions/dim36/) is 51.47%.
 
 ## Full 1–48D catalog
 
@@ -74,16 +75,16 @@ construction references in the pinned Cohn table, as listed on the review date.
 | 26 | `3^(-1/2)` | 2.6922005043380e-4 | [Cohn, ref. 11](https://cohn.mit.edu/sphere-packing/#11) |
 | 27 | `3^(-1/2)` | 1.2867528120269e-4 | [Cohn, ref. 1](https://cohn.mit.edu/sphere-packing/#1) |
 | 28 | `2 * 3^-1` | 6.9758736616563e-5 | [Cohn, ref. 1](https://cohn.mit.edu/sphere-packing/#1) |
-| 29 | **`1/sqrt(2)`** | 3.4144646907422e-5 | [Section of quaternary-code lattice](research/quaternary_29_30_20261122/) (improves Cohn’s listed lattice) |
-| 30 | **`1`** | 2.1915353447830e-5 | [Quaternary-code lattice](research/quaternary_29_30_20261122/) (improves Cohn’s listed lattice) |
-| 31 | **`sqrt(2)`** | 1.3841106049519e-5 | [Shortened Cheng–Sloane code with a parity-corrected weight-24 glue](research/cheng_sloane_lattice31_20261125/) (improves Cohn’s listed lattice) |
+| 29 | **`1/sqrt(2)`** | 3.4144646907422e-5 | [Section of quaternary-code lattice](research/quaternary_29_30_20261122/) (improves the historical external comparison) |
+| 30 | **`1`** | 2.1915353447830e-5 | [Quaternary-code lattice](research/quaternary_29_30_20261122/) (improves the historical external comparison) |
+| 31 | **`sqrt(2)`** | 1.3841106049519e-5 | [Shortened Cheng–Sloane code with a parity-corrected weight-24 glue](research/cheng_sloane_lattice31_20261125/) (improves the historical external comparison) |
 | 32 | `2^-24 * 3^16` | 1.1040749308859e-5 | [Cohn, ref. 31](https://cohn.mit.edu/sphere-packing/#31) |
 | 33 | `2^-25 * 3^(33/2)` | 4.1406882896496e-6 | [Cohn, ref. 13](https://cohn.mit.edu/sphere-packing/#13) |
-| 34 | **`4/sqrt(3)`** | 1.8364482073449e-6 | [Hermitian E7 glue: primitive section](research/e7_hermitian35_20261123/) (improves Cohn’s listed lattice) |
-| 35 | **`4`** | 1.3381153176435e-6 | [Five-block Hermitian E7 glue](research/e7_hermitian35_20261123/) (improves Cohn’s listed lattice) |
-| 36 | **`8`** | 1.1103161969771e-6 | [Hermitian E7 glue: order-four lift](research/e7_hermitian35_20261123/) (improves Cohn’s listed lattice) |
-| 37 | **`16/sqrt(3)`** | 5.2477247835978e-7 | [Hermitian E7 glue: primitive section of the coupled lift](research/e7_37_section_20261123/) (improves Cohn’s listed lattice) |
-| 38 | **`8*sqrt(2)`** | 2.5963183618476e-7 | [Hermitian E7 glue: coupled rank-three lift](research/e7_lattice38_20261123/) (improves Cohn’s listed lattice) |
+| 34 | **`4/sqrt(3)`** | 1.8364482073449e-6 | [Hermitian E7 glue: primitive section](research/e7_hermitian35_20261123/) (improves the historical external comparison) |
+| 35 | **`4`** | 1.3381153176435e-6 | [Five-block Hermitian E7 glue](research/e7_hermitian35_20261123/) (improves the historical external comparison) |
+| 36 | **`8`** | 1.1103161969771e-6 | [Hermitian E7 glue: order-four lift](research/e7_hermitian35_20261123/) (improves the historical external comparison) |
+| 37 | **`16/sqrt(3)`** | 5.2477247835978e-7 | [Hermitian E7 glue: primitive section of the coupled lift](research/e7_37_section_20261123/) (improves the historical external comparison) |
+| 38 | **`8*sqrt(2)`** | 2.5963183618476e-7 | [Hermitian E7 glue: coupled rank-three lift](research/e7_lattice38_20261123/) (improves the historical external comparison) |
 | 39 | `2^-20 * 3^16 * 5^(-1/2)` | 1.6802817736543e-7 | [Cohn, ref. 15](https://cohn.mit.edu/sphere-packing/#15) |
 | 40 | `2^-20 * 3^16` | 1.4798339931342e-7 | [Cohn, ref. 15](https://cohn.mit.edu/sphere-packing/#15) |
 | 41 | `2^-21 * 3^17` | 8.6368303579508e-8 | [Cohn, ref. 15](https://cohn.mit.edu/sphere-packing/#15) |

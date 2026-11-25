@@ -16,6 +16,18 @@ E7L38 = "research/e7_lattice38_20261123"
 E7L37 = "research/e7_37_section_20261123"
 L31 = "research/cheng_sloane_lattice31_20261125"
 COHN = "https://cohn.mit.edu/sphere-packing/"
+# Historical external references, not mutable comparison rows on the live table.
+EXTERNAL_SOURCES = {
+    29: ("B29 — Bacher (1996)", "https://doi.org/10.1007/S002220050180"),
+    30: ("Q30 — Quebbemann (1984)", "https://doi.org/10.1112/S0025579300010731"),
+    31: ("Q31 — Quebbemann (1984)", "https://doi.org/10.1112/S0025579300010731"),
+    34: ("Q34 — Elkies, in Conway–Sloane (1999), p. xx", "https://neilsloane.com/doc/splag.html"),
+    35: ("B35 — Nebe–Sloane catalogue", "https://www.math.rwth-aachen.de/homes/Gabriele.Nebe/LATTICES/density.html"),
+    36: ("KP36 — Kschischang–Pasupathy (1992)", "https://doi.org/10.1109/18.119683"),
+    37: ("D37 — Conway–Sloane (1999), p. xxxvii", "https://www.math.rwth-aachen.de/homes/Gabriele.Nebe/LATTICES/density.html"),
+    38: ("Dorofeev–Sun–Wang (2026), Table 1", "https://arxiv.org/html/2607.20359v4#S1.T1"),
+}
+EXTERNAL_FACTOR_OVERRIDES = {36: [[2, "18"], [3, "-10"]]}  # KP36, not our metric-deformation lattice
 LABELS = {29: "1/sqrt(2)", 30: "1"}
 METHODS = {29: "Section of quaternary-code lattice", 30: "Quaternary-code lattice"}
 
@@ -108,15 +120,16 @@ def render():
 [Companion lattice-only catalog for 49D–96D](LATTICE_LOWER_BOUNDS_49_96.md).
 
 These are densities attained by **lattice packings**. A genuinely nonlattice
-union of translates does not qualify. The baseline is the lattice-only table on
-[Henry Cohn’s sphere-packing page](https://cohn.mit.edu/sphere-packing/#lattice-data),
-checked on 22 November 2026. The [unrestricted lower-bound catalog](LOWER_BOUNDS_1_96.md)
+union of translates does not qualify. The gain column uses the older named
+external construction, not the live Cohn table (which may now list our work).
+The [22 November source snapshot](research/lattice_lower_bounds_1_48_20261122/cohn_inputs.json)
+is retained unchanged for provenance. The [unrestricted lower-bound catalog](LOWER_BOUNDS_1_96.md)
 is separate. This table does not claim optimality or exhaustive priority.
 
-## Updates for Cohn’s lattice table
+## Improvements over named historical lattice comparisons
 
-| Dimension | Listed center density | New exact center density | Occupied density (lower bound) | Gain vs. listed lattice | Construction |
-|---:|---:|---:|---:|---:|---|
+| Dimension | Historical center density / source | New exact center density | Occupied density (lower bound) | Gain vs. historical lattice | Construction |
+|---:|---|---:|---:|---:|---|
 """.rstrip()]
     for n, factors, ref in rows:
         if n not in improvements:
@@ -134,12 +147,17 @@ is separate. This table does not claim optimality or exhaustive priority.
             method, expression, package = METHODS[n], LABELS[n], PACK
         assert new == F(r["minimum_squared"], 4)**n / F(r["gram_determinant"])
         occupied = floor_sqrt(new*ball_squared(n, pi_lo), new*ball_squared(n, pi_hi))
-        q = 10**8 * new/old
+        external_factors = EXTERNAL_FACTOR_OVERRIDES.get(n, factors)
+        external_sq = density_squared(external_factors)
+        assert external_sq <= old < new
+        q = 10**8 * new/external_sq
         pct = isqrt(q.numerator//q.denominator)-10000
-        if F((2*pct+20001)**2, 4*10**8) <= new/old:
+        if F((2*pct+20001)**2, 4*10**8) <= new/external_sq:
             pct += 1
         gain_display = f"{pct//100}.{pct%100:02d}%"
-        t.append(f"| {n} | `{center_formula(factors)}` | **`{expression}`** | **{occupied}** | **{gain_display}** | [{method}]({package}/) |")
+        label, url = EXTERNAL_SOURCES[n]
+        source = f"`{center_formula(external_factors)}` · [{label}]({url})"
+        t.append(f"| {n} | {source} | **`{expression}`** | **{occupied}** | **{gain_display}** | [{method}]({package}/) |")
     t.append("""
 The 29D and 30D lattices are strictly denser than B29 and Q30, respectively,
 and match the listed unrestricted B29* and T30 lower bounds. They supersede
@@ -152,9 +170,9 @@ and matches the repository’s existing unrestricted lower bound.
 The new Hermitian E7 family raises lattice and unrestricted lower bounds
 in 34–37D. The 38D coupled lift improves the listed lattice bound and
 matches the repository’s earlier periodic bound. Its primitive 37D section
-improves the preceding 37D lattice and unrestricted lower bound. In 36D the comparison is the earlier
-[metric-deformation lattice](constructions/dim36/) that Cohn lists,
-not the weaker historical KP36 packing.
+improves the preceding 37D lattice and unrestricted lower bound. In 36D the historical
+comparison is KP36; the separate gain over our earlier
+[metric-deformation lattice](constructions/dim36/) is 51.47%.
 
 ## Full 1–48D catalog
 
@@ -174,11 +192,11 @@ construction references in the pinned Cohn table, as listed on the review date.
             r = updates[n]
             sq = F(r["center_density_squared"])
             expression = f"**`{r['center_density']}`**"
-            source = f"[{r['method']}]({update_paths[n]}/) (improves Cohn’s listed lattice)"
+            source = f"[{r['method']}]({update_paths[n]}/) (improves the historical external comparison)"
         elif n in improvements:
             sq = F(improvements[n]["center_density_squared"])
             expression = f"**`{LABELS[n]}`**"
-            source = f"[{METHODS[n]}]({PACK}/) (improves Cohn’s listed lattice)"
+            source = f"[{METHODS[n]}]({PACK}/) (improves the historical external comparison)"
         elif n == 36:
             expression = "`16777216/3176523`"
             source = "[Metric deformation](constructions/dim36/) (already listed by Cohn)"

@@ -1,5 +1,7 @@
 # Comparison sources and conventions
 
+**25 November 2026, packing lower bounds:** gain percentages use named historical external constructions, not live catalogue rows that may list this repository. In 34–38D these are Elkies’s Q34, the catalogued B35, Kschischang–Pasupathy KP36, the catalogued D37 and the Dorofeev–Sun–Wang 38D lattice, respectively. The 36D gain over KP36 is 80.20%; the gain over our earlier metric-deformation lattice is 51.47%. No construction or lower bound was changed. See the [lattice lower-bound comparison table](LATTICE_LOWER_BOUNDS_1_48.md#improvements-over-named-historical-lattice-comparisons) for source links and exact values.
+
 **17 November 51D/52D general and 78D packing update:** general bounds <1.52983244e-7 and <1.06516626e-7 compare with the named numerical spinless-bootstrap benchmarks (reductions 0.1503654791% and 0.0897767549%). The 78D packing floor ≥1.41519803035180e-16 compares with a pinned Bachoc–Nebe L80/2A2 derived example (+48.5963168482%), not a printed record or proven strongest prior value. [General proof](verifications/general51_52_20261117/) · [Packing proof and external derivation](research/packing78_verified_20261117/).
 
 **17 November 49D/50D unrestricted bounds:** <2.85041752e-7 and <2.04993038e-7, compared with the attributable Afkhami-Jeddi,Cohn et al.(2020) numerical spinless-bootstrap benchmarks, not with our own predecessors. The numerical reductions are 9.7387573447% and 6.8379867092%; the benchmark caveats remain explicit. [Complete proof and comparison](verifications/general49_50_20261117/).
