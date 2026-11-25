@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "dimension": 33,
+      "kind": "explicit lattice",
+      "minimum_squared": 8,
+      "gram_determinant": 1610612736,
+      "center_density_squared": "16/3",
+      "center_density": "4/sqrt(3)",
+      "method": "Primitive section of D6/E7 glue",
+      "preceding_center_density_squared": "5559060566555523/1125899906842624",
+      "cohn_center_density_squared": "5559060566555523/1125899906842624",
+      "occupied_density_floor": "4.30349290013661e-6"
+    },
+    {
+      "dimension": 34,
+      "kind": "explicit lattice",
+      "minimum_squared": 8,
+      "gram_determinant": 1073741824,
+      "center_density_squared": "16",
+      "center_density": "4",
+      "method": "D6/E7 index-two lattice",
+      "preceding_center_density_squared": "16/3",
+      "cohn_center_density_squared": "5559060566555523/1125899906842624",
+      "occupied_density_floor": "3.18082160059020e-6"
+    }
+  ]
+}

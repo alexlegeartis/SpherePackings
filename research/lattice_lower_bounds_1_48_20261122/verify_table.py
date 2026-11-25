@@ -15,12 +15,14 @@ E7 = "research/e7_hermitian35_20261123"
 E7L38 = "research/e7_lattice38_20261123"
 E7L37 = "research/e7_37_section_20261123"
 L31 = "research/cheng_sloane_lattice31_20261125"
+D6E7 = "research/e7_d6_lattice34_20261125"
 COHN = "https://cohn.mit.edu/sphere-packing/"
 # Historical external references, not mutable comparison rows on the live table.
 EXTERNAL_SOURCES = {
     29: ("B29 — Bacher (1996)", "https://doi.org/10.1007/S002220050180"),
     30: ("Q30 — Quebbemann (1984)", "https://doi.org/10.1112/S0025579300010731"),
     31: ("Q31 — Quebbemann (1984)", "https://doi.org/10.1112/S0025579300010731"),
+    33: ("Q33 — Elkies, in Conway–Sloane (1999), p. xx", "https://neilsloane.com/doc/splag.html"),
     34: ("Q34 — Elkies, in Conway–Sloane (1999), p. xx", "https://neilsloane.com/doc/splag.html"),
     35: ("B35 — Nebe–Sloane catalogue", "https://www.math.rwth-aachen.de/homes/Gabriele.Nebe/LATTICES/density.html"),
     36: ("KP36 — Kschischang–Pasupathy (1992)", "https://doi.org/10.1109/18.119683"),
@@ -110,10 +112,15 @@ def render():
     assert lift31["status"] == "PASS" and lift31["kind"] == "explicit lattice"
     assert lift31["dimension"] == 31
     assert F(lift31["center_density_squared"]) == 2
-    updates = {**e7_rows, 31: lift31}
+    d6 = json.loads((ROOT / D6E7 / "results.json").read_text())
+    assert d6["status"] == "PASS"
+    d6_rows = {r["dimension"]: r for r in d6["rows"]}
+    assert set(d6_rows) == {33, 34} and all(r["kind"] == "explicit lattice" for r in d6_rows.values())
+    assert F(d6_rows[34]["preceding_center_density_squared"]) == F(e7_rows[34]["center_density_squared"])
+    updates = {**e7_rows, 31: lift31, **d6_rows}
     improvements.update(updates)
     e7_path = {n: {37:E7L37,38:E7L38}.get(n,E7) for n in e7_rows}
-    update_paths = {**e7_path, 31: L31}
+    update_paths = {**e7_path, 31: L31, 33: D6E7, 34: D6E7}
     pi_lo, pi_hi = pi_interval()
     t = ["""# Lattice sphere-packing lower bounds, dimensions 1–48
 
@@ -230,7 +237,7 @@ def main():
         DEST.write_text(result, encoding="utf-8")
     elif DEST.read_text(encoding="utf-8") != result:
         raise SystemExit("Lattice lower-bound catalog is out of date")
-    print("PASS: 48 lattice rows, eight gains against the listed values")
+    print("PASS: 48 lattice rows, nine gains against the listed values")
 
 
 if __name__ == "__main__":
