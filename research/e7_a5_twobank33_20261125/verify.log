@@ -1,0 +1,11 @@
+local costs (fourfold): [[0, 8, 16, 24], [6, 14]]
+nonzero external kernel minimum incl. period: 32 /4
+wt, fourfold exterior minimum, fourfold local minimum, number of masks
+0 0 0 1
+1 18 14 6
+2 24 8 15
+3 26 6 20
+4 16 16 15
+5 18 14 6
+6 24 24 1
+min = 8. H28 covol = 4*8192=32768; A5 covol=sqrt(6); two banks => center density 4/sqrt(3)

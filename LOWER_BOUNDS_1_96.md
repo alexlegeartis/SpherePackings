@@ -42,7 +42,7 @@ challenge value is discussed in that proof.
 | 30 | 2.19153534478302e-5 | [Vardy’s T30 (1999)](https://doi.org/10.1090/S0002-9947-99-02169-8); matched by the [quaternary-code lattice](research/quaternary_29_30_20261122/) |
 | 31 | 1.38411060495194e-5 | [Order-four Vardy-type shear](research/vardy30_shear31_20261123/README.md) |
 | 32 | 1.10407493088598e-5 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
-| 33 | 4.14068828964967e-6 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
+| 33 | 4.30349290013661e-6 | [Two-bank A5/E7 periodic packing](research/e7_a5_twobank33_20261125/README.md) |
 | 34 | 1.83644820734493e-6 | [Hermitian E7 glue: primitive section](research/e7_hermitian35_20261123/README.md) |
 | 35 | 1.33811531764358e-6 | [Five-block Hermitian E7 glue](research/e7_hermitian35_20261123/README.md) |
 | 36 | 1.11031619697710e-6 | [Hermitian E7 glue: order-four lift](research/e7_hermitian35_20261123/README.md) |

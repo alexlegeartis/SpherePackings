@@ -17,6 +17,8 @@ Reproducible certificates for unrestricted sphere packings, lattice-only upper b
 
 [All occupied-density lower bounds in dimensions 1–96](LOWER_BOUNDS_1_96.md).
 
+**25 November:** [Two A5 banks over four E7 factors](research/e7_a5_twobank33_20261125/) raise the **33D unrestricted lower bound by 3.93%** over Elkies's Q33. The period has a two-point motif and the packing is not a lattice; the lattice-only bound is unchanged.
+
 **23 November:** [An exact 96D four-Leech family ceiling](research/gamma96_fourleech_motif96_20261123/) rules out beating the current periodic bound when the three-block Γ72 carrier and integral horizontal phases are retained and the fourth Leech block has arbitrary scalar scale. The proof covers arbitrary nonlinear motifs and multiple fibres at a vertical residue. It does not exclude larger phase alphabets or arbitrary four-block geometry.
 
 **23 November:** [A quantitative 39D obstruction](research/e7_half_radical39_20261123/) rules out improving the current bound by assigning the five-E7 half-radical phases to every site of any 4D vertical lattice at the inherited minimum. It allows nonlinear phase assignment and small perturbations of phases and vertical sites. In 48D, [ternary phases cannot attain one-period equality](research/leech_order3_equality48_20261123/) and [mixed half-period motifs with a second factor of minimum at most 3](research/leech_mixed_half_period48_20261123/) stay below 72% of P48. These are family restrictions, not global upper bounds.
@@ -64,6 +66,7 @@ The [literature review dated 16 November 2026](research/covering_and_deep_cosets
 | ---: | --- | --- | ---: |
 | 29 | ≈3.41446469074224e-5<br>[B29* — Vardy (1999)](https://doi.org/10.1090/S0002-9947-99-02169-8) | **≥4.82878227389174e-5**<br>[Alternating Vardy-type layers, exact center density `1`](research/vardy28_stack29_20261122/) | **41.421356%** |
 | 31 | ≈1.18377651859338e-5<br>[Q31 — Quebbemann (1984), section of Q32](https://doi.org/10.1112/S0025579300010731) | **≥1.38411060495194e-5**<br>[Order-four shear of Vardy-type stocks, exact center density `sqrt(2)`](research/vardy30_shear31_20261123/) | **16.923303%** |
+| 33 | ≈4.14068828964967e-6<br>[Q33 — Elkies, in Conway–Sloane (1999), p. xx](https://neilsloane.com/doc/splag.html) | **≥4.30349290013661e-6**<br>[Two-bank A5/E7 packing; center density `4/sqrt(3)`](research/e7_a5_twobank33_20261125/) | **3.931825%** |
 | 34 | ≈1.76697388915406e-6<br>[Q34 — Elkies, in Conway–Sloane (1999), p. xx](https://neilsloane.com/doc/splag.html) | **≥1.83644820734493e-6**<br>[Hermitian E7 glue: primitive section; center density `4/sqrt(3)`](research/e7_hermitian35_20261123/) | **3.93%** |
 | 35 | ≈9.46190415115372e-7<br>[B35 — Nebe–Sloane catalogue](https://www.math.rwth-aachen.de/homes/Gabriele.Nebe/LATTICES/density.html) | **≥1.33811531764358e-6**<br>[Five-block Hermitian E7 glue; center density `4`](research/e7_hermitian35_20261123/) | **41.42%** |
 | 36 | ≈6.16146609469180e-7<br>[KP36 — Kschischang–Pasupathy (1992)](https://doi.org/10.1109/18.119683) | **≥1.11031619697710e-6**<br>[Hermitian E7 glue: order-four lift; center density `8`](research/e7_hermitian35_20261123/) | **80.20%** |
