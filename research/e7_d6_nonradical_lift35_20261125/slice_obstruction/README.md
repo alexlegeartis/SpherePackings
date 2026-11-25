@@ -1,0 +1,9 @@
+# Exact one-block shift obstruction for the 35D lift
+
+No new density and no general upper bound. This covers the published 34D horizontal lattice and a specific family of shifts used in its 35D lift. Keep any three exterior E7 half-phases at the record `(21,60,41,40)`, vary the fourth through its 128 classes, allow all 8192 integral exterior syndromes, and vary all six real D6 coordinates. The first-layer horizontal squared clearance never exceeds `13/2`; the known record attains equality. At squared minimum 8 this prevents vertical squared spacing below `3/2` by such a shift. Changes in two or more E7 phases, other metric carriers, and general 34D holes are not excluded.
+
+The replay represents identical syndrome translates by a quotient of size 128; each representative uses the two fundamental local boxes for the kernel. A min-plus convolution computes exact attainable exterior weights. Each box is then covered using one site or a rational weighted mean of two site costs, which is an upper bound on their minimum. Its maximum over the box is checked by the exact coordinate formula. Uncovered boxes subdivide; the theorem requires no unresolved boxes, no first-layer violations, and actual completion of the 509 profiles.
+
+Build `g++ -O3 -std=c++17 sweep.cpp -o sweep`. Full replay: `./sweep 900 4 0 509`, expecting `FINAL exam 195578112 unresolved 0 good 0 pairkill 832`. The independently replayed original-profile subset is `./sweep 60 4 0 1`, expecting 624896 boxes, zero unresolved and 256 two-site closures. The source is specialized to the pinned 34D parent data already used in the [35D construction](../).
+
+The complete enumeration here is a proof on a continuum of D6 coordinates, not a coordinate grid trial. Experimental exploratory higher-dimensional facet walks are not part of the proof.
