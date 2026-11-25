@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "dimension": 31,
+  "kind": "explicit lattice",
+  "minimum_squared": 32,
+  "gram_determinant": 4951760157141521099596496896,
+  "covolume": 70368744177664,
+  "center_density": "sqrt(2)",
+  "center_density_squared": "2",
+  "preceding_center_density_squared": "205891132094649/140737488355328",
+  "cohn_center_density_squared": "205891132094649/140737488355328",
+  "preceding_center_density": "3^15/2^(47/2)",
+  "gain_ratio": "2^24/3^15",
+  "occupied_density_verified_floor": "1.38411060495194e-5",
+  "method": "Shortened Cheng\u2013Sloane code with a parity-corrected weight-24 glue"
+}

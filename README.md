@@ -41,6 +41,8 @@ Reproducible certificates for unrestricted sphere packings, lattice-only upper b
 
 **23 November:** [A six-translate Ne64 packing](research/ne64_dual_matching59_20261123/) improves the unrestricted 59D density lower bound by **0.3246%**. It is not a lattice.
 
+**25 November:** [A parity-corrected lift of a shortened Cheng–Sloane code](research/cheng_sloane_lattice31_20261125/) attains 31D lattice center density `sqrt(2)`, **16.92%** above the catalogued Q31 lattice. It matches the existing unrestricted lower bound.
+
 **23 November:** [A four-layer shear](research/vardy30_shear31_20261123/) raises the unrestricted 31D packing lower bound by **16.92%**. The lattice-only bound is unchanged.
 
 **22 November:** [Half-root Γ72–D4 lattices](research/gamma72_root_tilt_20261122/) improve the preceding 77D and 78D bounds by **8.01%** and **21.72%**, respectively (net **15.47%** and **33.33%** over the bounds before the tilt search). The historical 79D lattice has since been superseded by the [bare MW80 section](research/lattice_lower_49_96_20261122/SOURCE_NOTES.md#79d-bare-mw80-section). The denser 79D periodic packing remains the unrestricted bound.
@@ -180,6 +182,7 @@ occupied-volume fractions. Periodic packings that are not lattices are excluded.
 |---:|---|---|---:|
 | 29 | ≈2.78789874568e-5<br>[B29 lattice — Bacher (1996)](https://doi.org/10.1007/S002220050180) · [Cohn’s lattice table](https://cohn.mit.edu/sphere-packing/#lattice-data) | **≥3.4144646907422e-5**<br>[Quaternary-code lattice section, exact center density `1/sqrt(2)`](research/quaternary_29_30_20261122/) | **22.47%** |
 | 30 | ≈1.44286438425e-5<br>[Q30 lattice — Quebbemann (1984)](https://doi.org/10.1112/S0025579300010731) · [Cohn’s lattice table](https://cohn.mit.edu/sphere-packing/#lattice-data) | **≥2.1915353447830e-5**<br>[Quaternary-code lattice, exact center density `1`](research/quaternary_29_30_20261122/) | **51.89%** |
+| 31 | ≈1.18377651859338e-5<br>[Q31 lattice — Quebbemann (1984), section of Q32](https://doi.org/10.1112/S0025579300010731) · [Nebe–Sloane catalog](https://www.math.rwth-aachen.de/homes/Gabriele.Nebe/LATTICES/density.html) | **≥1.38411060495194e-5**<br>[Parity-corrected Cheng–Sloane lattice, exact center density `sqrt(2)`](research/cheng_sloane_lattice31_20261125/) | **16.923303%** |
 | 34 | ≈1.76697388915406e-6<br>[Cohn’s pinned table, ref. 13](https://cohn.mit.edu/sphere-packing/#13) | **≥1.83644820734493e-6**<br>[Hermitian E7 glue: primitive section; center density `4/sqrt(3)`](research/e7_hermitian35_20261123/) | **3.93%** |
 | 35 | ≈9.46190415115372e-7<br>[Cohn’s pinned table, ref. 13](https://cohn.mit.edu/sphere-packing/#13) | **≥1.33811531764358e-6**<br>[Five-block Hermitian E7 glue; center density `4`](research/e7_hermitian35_20261123/) | **41.42%** |
 | 36 | ≈7.33034778316707e-7<br>[Previous 36D metric-deformation lattice](constructions/dim36/) (listed by Cohn) | **≥1.11031619697710e-6**<br>[Hermitian E7 glue: order-four lift; center density `8`](research/e7_hermitian35_20261123/) | **51.47%** |

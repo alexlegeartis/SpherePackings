@@ -14,6 +14,7 @@ is separate. This table does not claim optimality or exhaustive priority.
 |---:|---:|---:|---:|---:|---|
 | 29 | `3^(-1/2)` | **`1/sqrt(2)`** | **3.4144646907422e-5** | **22.47%** | [Section of quaternary-code lattice](research/quaternary_29_30_20261122/) |
 | 30 | `2^-22 * 3^(27/2)` | **`1`** | **2.1915353447830e-5** | **51.89%** | [Quaternary-code lattice](research/quaternary_29_30_20261122/) |
+| 31 | `2^(-47/2) * 3^15` | **`sqrt(2)`** | **1.3841106049519e-5** | **16.92%** | [Shortened Cheng–Sloane code with a parity-corrected weight-24 glue](research/cheng_sloane_lattice31_20261125/) |
 | 34 | `2^-25 * 3^(33/2)` | **`4/sqrt(3)`** | **1.8364482073449e-6** | **3.93%** | [Hermitian E7 glue: primitive section](research/e7_hermitian35_20261123/) |
 | 35 | `2^(3/2)` | **`4`** | **1.3381153176435e-6** | **41.42%** | [Five-block Hermitian E7 glue](research/e7_hermitian35_20261123/) |
 | 36 | `2^24 * 3^-3 * 7^-6` | **`8`** | **1.1103161969771e-6** | **51.47%** | [Hermitian E7 glue: order-four lift](research/e7_hermitian35_20261123/) |
@@ -24,6 +25,9 @@ The 29D and 30D lattices are strictly denser than B29 and Q30, respectively,
 and match the listed unrestricted B29* and T30 lower bounds. They supersede
 the repository’s [shifted Bacher lattices](research/bacher_slip_29_30_20261122/)
 by 1.55% and 28.09%, respectively.
+
+The 31D parity-corrected binary-code lattice improves the listed Q31 lattice
+and matches the repository’s existing unrestricted lower bound.
 
 The new Hermitian E7 family raises lattice and unrestricted lower bounds
 in 34–37D. The 38D coupled lift improves the listed lattice bound and
@@ -72,7 +76,7 @@ construction references in the pinned Cohn table, as listed on the review date.
 | 28 | `2 * 3^-1` | 6.9758736616563e-5 | [Cohn, ref. 1](https://cohn.mit.edu/sphere-packing/#1) |
 | 29 | **`1/sqrt(2)`** | 3.4144646907422e-5 | [Section of quaternary-code lattice](research/quaternary_29_30_20261122/) (improves Cohn’s listed lattice) |
 | 30 | **`1`** | 2.1915353447830e-5 | [Quaternary-code lattice](research/quaternary_29_30_20261122/) (improves Cohn’s listed lattice) |
-| 31 | `2^(-47/2) * 3^15` | 1.1837765185933e-5 | [Cohn, ref. 31](https://cohn.mit.edu/sphere-packing/#31) |
+| 31 | **`sqrt(2)`** | 1.3841106049519e-5 | [Shortened Cheng–Sloane code with a parity-corrected weight-24 glue](research/cheng_sloane_lattice31_20261125/) (improves Cohn’s listed lattice) |
 | 32 | `2^-24 * 3^16` | 1.1040749308859e-5 | [Cohn, ref. 31](https://cohn.mit.edu/sphere-packing/#31) |
 | 33 | `2^-25 * 3^(33/2)` | 4.1406882896496e-6 | [Cohn, ref. 13](https://cohn.mit.edu/sphere-packing/#13) |
 | 34 | **`4/sqrt(3)`** | 1.8364482073449e-6 | [Hermitian E7 glue: primitive section](research/e7_hermitian35_20261123/) (improves Cohn’s listed lattice) |
@@ -102,3 +106,4 @@ For the new lattices, run `python3 research/quaternary_29_30_20261122/verify.py`
 `python3 research/e7_hermitian35_20261123/verify.py` (with `basis.py` for the four Gram determinants).
 The 38D package includes its own basis and coset-minimum verification.
 The 37D section package replays that parent and checks the section basis.
+The 31D package `python3 research/cheng_sloane_lattice31_20261125/verify.py` checks the binary-code lift.

@@ -14,6 +14,7 @@ SLIP = "research/bacher_slip_29_30_20261122"
 E7 = "research/e7_hermitian35_20261123"
 E7L38 = "research/e7_lattice38_20261123"
 E7L37 = "research/e7_37_section_20261123"
+L31 = "research/cheng_sloane_lattice31_20261125"
 COHN = "https://cohn.mit.edu/sphere-packing/"
 LABELS = {29: "1/sqrt(2)", 30: "1"}
 METHODS = {29: "Section of quaternary-code lattice", 30: "Quaternary-code lattice"}
@@ -93,8 +94,14 @@ def render():
     assert F(sec37["cohn_center_density_squared"]) == F(e7_rows[37]["preceding_center_density_squared"])
     e7_rows[37] = sec37
     e7_rows[38] = lift
-    improvements.update(e7_rows)
+    lift31 = json.loads((ROOT / L31 / "results.json").read_text())
+    assert lift31["status"] == "PASS" and lift31["kind"] == "explicit lattice"
+    assert lift31["dimension"] == 31
+    assert F(lift31["center_density_squared"]) == 2
+    updates = {**e7_rows, 31: lift31}
+    improvements.update(updates)
     e7_path = {n: {37:E7L37,38:E7L38}.get(n,E7) for n in e7_rows}
+    update_paths = {**e7_path, 31: L31}
     pi_lo, pi_hi = pi_interval()
     t = ["""# Lattice sphere-packing lower bounds, dimensions 1–48
 
@@ -117,9 +124,9 @@ is separate. This table does not claim optimality or exhaustive priority.
         r = improvements[n]
         old = density_squared(factors)
         new = F(r["center_density_squared"])
-        if n in e7_rows:
+        if n in updates:
             assert old == F(r.get("cohn_center_density_squared", r["preceding_center_density_squared"])) < new
-            method, expression, package = r["method"], r["center_density"], e7_path[n]
+            method, expression, package = r["method"], r["center_density"], update_paths[n]
         else:
             assert old == F(r["cohn_lattice_center_density_squared"])
             assert old < predecessor[n] == F(r["preceding_repository_center_density_squared"]) < new
@@ -138,6 +145,9 @@ The 29D and 30D lattices are strictly denser than B29 and Q30, respectively,
 and match the listed unrestricted B29* and T30 lower bounds. They supersede
 the repository’s [shifted Bacher lattices](research/bacher_slip_29_30_20261122/)
 by 1.55% and 28.09%, respectively.
+
+The 31D parity-corrected binary-code lattice improves the listed Q31 lattice
+and matches the repository’s existing unrestricted lower bound.
 
 The new Hermitian E7 family raises lattice and unrestricted lower bounds
 in 34–37D. The 38D coupled lift improves the listed lattice bound and
@@ -160,11 +170,11 @@ construction references in the pinned Cohn table, as listed on the review date.
     for n, factors, ref in rows:
         sq, expression = density_squared(factors), center_formula(factors)
         source = f"[Cohn, ref. {ref}]({COHN}#{ref})" if ref is not None else "Integer lattice"
-        if n in e7_rows:
-            r = e7_rows[n]
+        if n in updates:
+            r = updates[n]
             sq = F(r["center_density_squared"])
             expression = f"**`{r['center_density']}`**"
-            source = f"[{r['method']}]({e7_path[n]}/) (improves Cohn’s listed lattice)"
+            source = f"[{r['method']}]({update_paths[n]}/) (improves Cohn’s listed lattice)"
         elif n in improvements:
             sq = F(improvements[n]["center_density_squared"])
             expression = f"**`{LABELS[n]}`**"
@@ -188,6 +198,7 @@ For the new lattices, run `python3 {PACK}/verify.py` and
 `python3 {E7}/verify.py` (with `basis.py` for the four Gram determinants).
 The 38D package includes its own basis and coset-minimum verification.
 The 37D section package replays that parent and checks the section basis.
+The 31D package `python3 {L31}/verify.py` checks the binary-code lift.
 """.rstrip())
     return "\n".join(t) + "\n"
 
@@ -201,7 +212,7 @@ def main():
         DEST.write_text(result, encoding="utf-8")
     elif DEST.read_text(encoding="utf-8") != result:
         raise SystemExit("Lattice lower-bound catalog is out of date")
-    print("PASS: 48 lattice rows, seven gains against the listed values")
+    print("PASS: 48 lattice rows, eight gains against the listed values")
 
 
 if __name__ == "__main__":
