@@ -16,6 +16,7 @@ E7L38 = "research/e7_lattice38_20261123"
 E7L37 = "research/e7_37_section_20261123"
 L31 = "research/cheng_sloane_lattice31_20261125"
 D6E7 = "research/e7_d6_lattice34_20261125"
+LIFT35 = "research/e7_d6_nonradical_lift35_20261125"
 COHN = "https://cohn.mit.edu/sphere-packing/"
 # Historical external references, not mutable comparison rows on the live table.
 EXTERNAL_SOURCES = {
@@ -117,10 +118,15 @@ def render():
     d6_rows = {r["dimension"]: r for r in d6["rows"]}
     assert set(d6_rows) == {33, 34} and all(r["kind"] == "explicit lattice" for r in d6_rows.values())
     assert F(d6_rows[34]["preceding_center_density_squared"]) == F(e7_rows[34]["center_density_squared"])
-    updates = {**e7_rows, 31: lift31, **d6_rows}
+    lift35 = json.loads((ROOT / LIFT35 / "results.json").read_text())
+    assert lift35["status"] == "PASS" and len(lift35["rows"]) == 1
+    lift35 = lift35["rows"][0]
+    assert lift35["dimension"] == 35 and lift35["kind"] == "explicit lattice"
+    assert F(lift35["preceding_center_density_squared"]) == F(e7_rows[35]["center_density_squared"])
+    updates = {**e7_rows, 31: lift31, **d6_rows, 35: lift35}
     improvements.update(updates)
     e7_path = {n: {37:E7L37,38:E7L38}.get(n,E7) for n in e7_rows}
-    update_paths = {**e7_path, 31: L31, 33: D6E7, 34: D6E7}
+    update_paths = {**e7_path, 31: L31, 33: D6E7, 34: D6E7, 35: LIFT35}
     pi_lo, pi_hi = pi_interval()
     t = ["""# Lattice sphere-packing lower bounds, dimensions 1–48
 

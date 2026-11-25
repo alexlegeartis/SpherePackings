@@ -1,5 +1,7 @@
 # Comparison sources and conventions
 
+**25 November 2026, 35D lattice and unrestricted lower bounds:** the [nonradical D6/E7 lift](research/e7_d6_nonradical_lift35_20261125/) has center density `8/sqrt(3)`, **15.470054%** above the [preceding lattice](research/e7_hermitian35_20261123/) and **63.299316%** above historical B35 from the [Nebe–Sloane catalogue](https://www.math.rwth-aachen.de/homes/Gabriele.Nebe/LATTICES/density.html). Existing registered upper-bound comparisons are unchanged.
+
 **25 November 2026, 34D and 33D lattice follow-through:** the [D6/E7 lattice and its section](research/e7_d6_lattice34_20261125/) provide exact center densities `4` and `4/sqrt(3)`. In 34D the named gains are **32.287566%** against the immediately preceding A6 periodic bound, **73.205081%** against the previous E7 lattice, and **80.015201%** against historical Elkies Q34. In 33D the section matches the previously certified unrestricted A5 bound and improves historical lattice Q33 by **3.931825%**. Neither upper-bound comparison registry is updated.
 
 **25 November 2026, 34D unrestricted lower bound:** [two A6/E7 banks](research/e7_a6_twobank34_20261125/) have center density `8/sqrt(7)`. This is **30.930734%** above the [preceding repository construction](research/e7_hermitian35_20261123/) at `4/sqrt(3)`, and **36.078701%** above historical Elkies Q34 (see [Nebe–Sloane, row 34](https://www.math.rwth-aachen.de/homes/Gabriele.Nebe/LATTICES/density.html)). The lattice-only row and registered historical upper-bound comparison do not change.

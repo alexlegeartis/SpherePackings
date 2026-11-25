@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "dimension": 35,
+      "kind": "explicit lattice",
+      "minimum_squared": 8,
+      "gram_determinant": 1610612736,
+      "center_density": "8/sqrt(3)",
+      "center_density_squared": "64/3",
+      "preceding_center_density_squared": "16",
+      "cohn_center_density_squared": "8",
+      "occupied_density_floor": "1.54512247769657e-6",
+      "method": "Nonradical D6/E7 lattice lift",
+      "first_bank_squared": [
+        "13/2",
+        "13/2"
+      ],
+      "second_bank_squared": [
+        "2",
+        "6"
+      ],
+      "second_syndrome": 975
+    }
+  ]
+}

@@ -18,7 +18,7 @@ is separate. This table does not claim optimality or exhaustive priority.
 | 31 | `2^(-47/2) * 3^15` · [Q31 — Quebbemann (1984)](https://doi.org/10.1112/S0025579300010731) | **`sqrt(2)`** | **1.3841106049519e-5** | **16.92%** | [Shortened Cheng–Sloane code with a parity-corrected weight-24 glue](research/cheng_sloane_lattice31_20261125/) |
 | 33 | `2^-25 * 3^(33/2)` · [Q33 — Elkies, in Conway–Sloane (1999), p. xx](https://neilsloane.com/doc/splag.html) | **`4/sqrt(3)`** | **4.3034929001366e-6** | **3.93%** | [Primitive section of D6/E7 glue](research/e7_d6_lattice34_20261125/) |
 | 34 | `2^-25 * 3^(33/2)` · [Q34 — Elkies, in Conway–Sloane (1999), p. xx](https://neilsloane.com/doc/splag.html) | **`4`** | **3.1808216005902e-6** | **80.02%** | [D6/E7 index-two lattice](research/e7_d6_lattice34_20261125/) |
-| 35 | `2^(3/2)` · [B35 — Nebe–Sloane catalogue](https://www.math.rwth-aachen.de/homes/Gabriele.Nebe/LATTICES/density.html) | **`4`** | **1.3381153176435e-6** | **41.42%** | [Five-block Hermitian E7 glue](research/e7_hermitian35_20261123/) |
+| 35 | `2^(3/2)` · [B35 — Nebe–Sloane catalogue](https://www.math.rwth-aachen.de/homes/Gabriele.Nebe/LATTICES/density.html) | **`8/sqrt(3)`** | **1.5451224776965e-6** | **63.30%** | [Nonradical D6/E7 lattice lift](research/e7_d6_nonradical_lift35_20261125/) |
 | 36 | `2^18 * 3^-10` · [KP36 — Kschischang–Pasupathy (1992)](https://doi.org/10.1109/18.119683) | **`8`** | **1.1103161969771e-6** | **80.20%** | [Hermitian E7 glue: order-four lift](research/e7_hermitian35_20261123/) |
 | 37 | `2^(5/2)` · [D37 — Conway–Sloane (1999), p. xxxvii](https://www.math.rwth-aachen.de/homes/Gabriele.Nebe/LATTICES/density.html) | **`16/sqrt(3)`** | **5.2477247835978e-7** | **63.30%** | [Hermitian E7 glue: primitive section of the coupled lift](research/e7_37_section_20261123/) |
 | 38 | `2^-19 * 3^(31/2) * 5^-1` · [Dorofeev–Sun–Wang (2026), Table 1](https://arxiv.org/html/2607.20359v4#S1.T1) | **`8*sqrt(2)`** | **2.5963183618476e-7** | **19.33%** | [Hermitian E7 glue: coupled rank-three lift](research/e7_lattice38_20261123/) |
@@ -82,7 +82,7 @@ construction references in the pinned Cohn table, as listed on the review date.
 | 32 | `2^-24 * 3^16` | 1.1040749308859e-5 | [Cohn, ref. 31](https://cohn.mit.edu/sphere-packing/#31) |
 | 33 | **`4/sqrt(3)`** | 4.3034929001366e-6 | [Primitive section of D6/E7 glue](research/e7_d6_lattice34_20261125/) (improves the historical external comparison) |
 | 34 | **`4`** | 3.1808216005902e-6 | [D6/E7 index-two lattice](research/e7_d6_lattice34_20261125/) (improves the historical external comparison) |
-| 35 | **`4`** | 1.3381153176435e-6 | [Five-block Hermitian E7 glue](research/e7_hermitian35_20261123/) (improves the historical external comparison) |
+| 35 | **`8/sqrt(3)`** | 1.5451224776965e-6 | [Nonradical D6/E7 lattice lift](research/e7_d6_nonradical_lift35_20261125/) (improves the historical external comparison) |
 | 36 | **`8`** | 1.1103161969771e-6 | [Hermitian E7 glue: order-four lift](research/e7_hermitian35_20261123/) (improves the historical external comparison) |
 | 37 | **`16/sqrt(3)`** | 5.2477247835978e-7 | [Hermitian E7 glue: primitive section of the coupled lift](research/e7_37_section_20261123/) (improves the historical external comparison) |
 | 38 | **`8*sqrt(2)`** | 2.5963183618476e-7 | [Hermitian E7 glue: coupled rank-three lift](research/e7_lattice38_20261123/) (improves the historical external comparison) |

@@ -82,6 +82,16 @@ def build_table():
         assert new == Fraction(row["minimum_squared"], 4)**n / int(row["gram_determinant"])
         add(n, new, row["method"], f"{package}/README.md", row["occupied_density_floor"])
 
+    package = "research/e7_d6_nonradical_lift35_20261125"
+    lift35 = data(f"{package}/results.json")
+    assert lift35["status"] == "PASS" and len(lift35["rows"]) == 1
+    row = lift35["rows"][0]
+    assert row["dimension"] == 35 and row["kind"] == "explicit lattice"
+    new = Fraction(row["center_density_squared"])
+    assert new == Fraction(row["minimum_squared"], 4)**35 / int(row["gram_determinant"])
+    assert new > Fraction(row["preceding_center_density_squared"]) == max(x[0] for x in candidates[35])
+    add(35, new, row["method"], f"{package}/README.md", row["occupied_density_floor"])
+
     package = "research/e7_37_section_20261123"
     sec37 = data(f"{package}/results.json")
     assert sec37["status"] == "PASS" and sec37["kind"] == "explicit lattice"

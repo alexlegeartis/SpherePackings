@@ -44,7 +44,7 @@ challenge value is discussed in that proof.
 | 32 | 1.10407493088598e-5 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 33 | 4.30349290013661e-6 | [Primitive section of D6/E7 glue](research/e7_d6_lattice34_20261125/README.md) |
 | 34 | 3.18082160059020e-6 | [D6/E7 index-two lattice](research/e7_d6_lattice34_20261125/README.md) |
-| 35 | 1.33811531764358e-6 | [Five-block Hermitian E7 glue](research/e7_hermitian35_20261123/README.md) |
+| 35 | 1.54512247769657e-6 | [Nonradical D6/E7 lattice lift](research/e7_d6_nonradical_lift35_20261125/README.md) |
 | 36 | 1.11031619697710e-6 | [Hermitian E7 glue: order-four lift](research/e7_hermitian35_20261123/README.md) |
 | 37 | 5.24772478359786e-7 | [Hermitian E7 glue: primitive section of the coupled lift](research/e7_37_section_20261123/README.md) |
 | 38 | 2.59631836184760e-7 | [Hermitian E7 glue: coupled rank-three lift](research/e7_lattice38_20261123/README.md) |
