@@ -14,3 +14,5 @@
 
 
 Run [the standalone checker](verify47.cjs) on the verified unpacked inputs.
+
+A separate [analytic stress proof](analytic-local-optimum.md) establishes strict **local** optimality of the external norm-8 antipode under arbitrary period-metric and relative-shift deformations with two translates.
