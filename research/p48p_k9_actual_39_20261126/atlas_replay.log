@@ -1,0 +1,20 @@
+exact clique 9 2
+exact clique 20 9
+exact clique 21 9
+exact clique 24 10
+exact clique 29 18
+Fourier 40 67
+Fourier 44 115
+Fourier 49 200
+Fourier 69 671
+All non-singleton normal-antipode certificates strictly below the bare section.
+cut 100 nodes 860001814 nonzero vectors 33596 classes 5600
+norm30 75 count 38
+norm30 84 count 560
+norm30 91 count 2742
+norm30 95 count 3396
+norm30 96 count 6930
+norm30 99 count 12142
+norm30 100 count 7788
+true lifts exactly 2 farther in squared norm: {84: 8, 85: 4, 89: 130, 96: 810, 105: 523}
+verified all 21,869 nonzero true class minima.

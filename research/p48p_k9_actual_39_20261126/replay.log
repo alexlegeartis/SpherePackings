@@ -1,0 +1,29 @@
+exact clique 9 2
+exact clique 20 9
+exact clique 21 9
+exact clique 24 10
+exact clique 29 18
+Fourier 40 67
+Fourier 44 115
+Fourier 49 200
+Fourier 69 671
+All non-singleton normal-antipode certificates strictly below the bare section.
+deficit 9 cap 2 nodes 1 neighbors 2
+deficit 20 cap 9 nodes 13 neighbors 74
+deficit 21 cap 10 nodes 1627 neighbors 244
+deficit 24 cap 14 nodes 3575 neighbors 420
+deficit 25 cap 16 nodes 1293 neighbors 424
+deficit 29 cap 27 nodes 437 neighbors 698
+deficit 36 cap 70 nodes 3 neighbors 1678
+deficit 40 cap 121 nodes 1 neighbors 2434
+deficit 41 cap 139 nodes 574 neighbors 3838
+deficit 44 cap 214 nodes 897 neighbors 5242
+deficit 45 cap 247 nodes 873 neighbors 5933
+deficit 49 cap 444 nodes 286 neighbors 7445
+deficit 56 cap 1296 nodes 1 neighbors 8849
+deficit 60 cap 2457 nodes 1 neighbors 9577
+deficit 61 cap 2893 nodes 1 neighbors 11089
+deficit 64 cap 4760 nodes 1 neighbors 12601
+deficit 65 cap 5636 nodes 1 neighbors 13303
+deficit 69 cap 11240 nodes 1 neighbors 14759
+True-metric bound: every non-singleton is <= 9*(8/9)^(39/2) times the singleton.
