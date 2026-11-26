@@ -1,0 +1,133 @@
+{
+  "affineShells": [
+    {
+      "D": 36,
+      "allClasses": 36,
+      "lowestRank": 21,
+      "energies": [
+        0,
+        12,
+        15,
+        24,
+        36,
+        39,
+        48,
+        60,
+        63
+      ],
+      "zero": {
+        "rank": 21,
+        "length": 0,
+        "count": 26082
+      },
+      "maxEnergy": 63
+    },
+    {
+      "D": 125,
+      "allClasses": 125,
+      "lowestRank": 20,
+      "energies": [
+        0,
+        50,
+        100,
+        150,
+        200,
+        250
+      ],
+      "zero": {
+        "rank": 20,
+        "length": 0,
+        "count": 12300
+      },
+      "maxEnergy": 250
+    }
+  ],
+  "cliqueAndDensity": [
+    {
+      "D": 36,
+      "rows": [
+        {
+          "b": 0,
+          "ub": 1,
+          "attains": false
+        },
+        {
+          "b": 12,
+          "ub": 2,
+          "attains": false
+        },
+        {
+          "b": 15,
+          "ub": 4,
+          "attains": true
+        },
+        {
+          "b": 24,
+          "ub": 5,
+          "attains": false
+        },
+        {
+          "b": 36,
+          "ub": 6,
+          "attains": false
+        },
+        {
+          "b": 39,
+          "ub": 7,
+          "attains": false
+        },
+        {
+          "b": 48,
+          "ub": 36,
+          "attains": false
+        },
+        {
+          "b": 60,
+          "ub": 36,
+          "attains": false
+        },
+        {
+          "b": 63,
+          "ub": 36,
+          "attains": false
+        }
+      ]
+    },
+    {
+      "D": 125,
+      "rows": [
+        {
+          "b": 0,
+          "ub": 1,
+          "attains": false
+        },
+        {
+          "b": 50,
+          "ub": 5,
+          "attains": true
+        },
+        {
+          "b": 100,
+          "ub": 10,
+          "attains": false
+        },
+        {
+          "b": 150,
+          "ub": 50,
+          "attains": false
+        },
+        {
+          "b": 200,
+          "ub": 125,
+          "attains": false
+        },
+        {
+          "b": 250,
+          "ub": 125,
+          "attains": false
+        }
+      ]
+    }
+  ],
+  "checks": "All 24 probing roots reconstructed as genuine Leech minimal roots. All pairings are divisible by 8; rank 24 over F2. Independent class minima, shell affine ranks and BigInt density comparisons."
+}
