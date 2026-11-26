@@ -29,3 +29,4 @@ Run `python3 verify.py` for a standalone finite integer replay of the 36 sheets,
 - [Sharp capacity of triangular binary/half-binary layers and two precise 15D comparisons](THEOREMS.md).
 - [Strict local optimality in every fixed finite supercell](RIGIDITY.md), including arbitrary independent site motions and full Gram strains. This is not a global upper bound.
 - [A separate rigidity proof in 13D](../../research/julin13_rigidity_20261126/README.md). Replay the finite common ingredients with `python3 verify_structural.py`.
+- [The largest contact shell has 1620 neighbors](KISSING.md); the best known 14D configuration still has 1932.
