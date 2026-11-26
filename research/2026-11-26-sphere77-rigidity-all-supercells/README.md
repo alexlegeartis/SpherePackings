@@ -20,3 +20,5 @@ Use the integer row 60d for the normalizing equation and rows Z=2z+60d for the m
 
 ## Running the checks
 Run `OPENBLAS_NUM_THREADS=1 python verify_primitive.py` for the exact positive base stress and `OPENBLAS_NUM_THREADS=1 python verify_supercells.py` for the full character certificate. Both require NumPy, SciPy, and SymPy. The mathematical implications of each integer/rational check are explained above. Baseline data are also available in the [preceding contact-transition packet](../2026-11-26-sphere76-contact-transition/).
+
+A further [analytic addendum](uniform_escape.md) obtains a single positive threshold in the supremum of the changes of the original within-bank bond vectors, independent of finite superperiod. It does not claim uniformity in an unlabeled geometry metric or exclude finite-amplitude deformations.
