@@ -3,7 +3,7 @@
 **Center density:** \(25/(384\sqrt3)=0.03758790815036626\ldots\).  
 **Occupied-volume density:** \(25\pi^7/(384\sqrt3\,7!)=0.02252510008588239\ldots\).  
 
-This is **4.1667% above** the \(\Lambda_{14}\) center density \(1/(16\sqrt3)\) documented by the [Nebe–Sloane catalogue](https://www.math.rwth-aachen.de/homes/Gabriele.Nebe/LATTICES/density.html), and the 14D general bound pinned in this repository from [Cohn's table](https://cohn.mit.edu/sphere-packing/). It is an explicit periodic **nonlattice** construction, not an optimality claim. No lattice-only bound changes.
+This is **4.1667% above** the \(\Lambda_{14}\) center density \(1/(16\sqrt3)\) documented by the [Nebe–Sloane catalogue](https://www.math.rwth-aachen.de/homes/Gabriele.Nebe/LATTICES/density.html), and the 14D general bound pinned in this repository from [Cohn's table](https://cohn.mit.edu/sphere-packing/). It is an explicit periodic **nonlattice** construction, not an optimality claim. No lattice-only bound changes. John Leech already constructed the 14-dimensional section and recorded its center density \(2^{-4-\log_2\sqrt3}=1/(16\sqrt3)\) in [his 1964 paper, §2.4 and Table II](https://doi.org/10.4153/CJM-1964-065-1); the [catalogue's Λ14 record](https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/LAMBDA14.html) has the matching density and contact number. The systematic laminated-lattice classification is [Conway–Sloane (1982)](https://annals.math.princeton.edu/1982/116-3/p07).
 
 ## Two binary codes on a triangular grid
 

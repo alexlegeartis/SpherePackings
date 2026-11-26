@@ -72,7 +72,7 @@ The [literature review dated 16 November 2026](research/covering_and_deep_cosets
 
 | n | Comparison density / method | Our density / method | Increase |
 | ---: | --- | --- | ---: |
-| 14 | ≈2.16240960824471e-2<br>[Λ14 — Nebe–Sloane catalogue](https://www.math.rwth-aachen.de/homes/Gabriele.Nebe/LATTICES/density.html) | **≥2.25251000858823e-2**<br>[Periodic nonlattice Hamming–Witt triangular stack; exact center density `25/(384 sqrt(3))`](constructions/dim14/) | **4.166667%** |
+| 14 | ≈2.16240960824471e-2<br>[Λ14 — Leech (1964), §2.4 & Table II](https://doi.org/10.4153/CJM-1964-065-1) · [Nebe–Sloane catalogue](https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/LAMBDA14.html) | **≥2.25251000858823e-2**<br>[Periodic nonlattice Hamming–Witt triangular stack; exact center density `25/(384 sqrt(3))`](constructions/dim14/) | **4.166667%** |
 | 29 | ≈3.41446469074224e-5<br>[B29* — Vardy (1999)](https://doi.org/10.1090/S0002-9947-99-02169-8) | **≥4.82878227389174e-5**<br>[Alternating Vardy-type layers, exact center density `1`](research/vardy28_stack29_20261122/) | **41.421356%** |
 | 31 | ≈1.18377651859338e-5<br>[Q31 — Quebbemann (1984), section of Q32](https://doi.org/10.1112/S0025579300010731) | **≥1.38411060495194e-5**<br>[Order-four shear of Vardy-type stocks, exact center density `sqrt(2)`](research/vardy30_shear31_20261123/) | **16.923303%** |
 | 33 | ≈4.14068828964967e-6<br>[Q33 — Elkies, in Conway–Sloane (1999), p. xx](https://neilsloane.com/doc/splag.html) | **≥4.30349290013661e-6**<br>[Primitive D6/E7 lattice section; center density `4/sqrt(3)`](research/e7_d6_lattice34_20261125/) | **3.931825%** |
