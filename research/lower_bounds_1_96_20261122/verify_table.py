@@ -197,6 +197,11 @@ def build_table():
         add(row["dimension"], row["center_density_squared"], "MW92 degree-13 covering refinement",
             f"{path}/README.md", row["occupied_density_floor"])
 
+    path = "research/mw92_eisenstein_repair95_20261126"
+    row = data(f"{path}/result.json")
+    add(95, row["squared_center_density"], "MW92 Eisenstein shear repair",
+        f"{path}/README.md", row["occupied_density_lower"])
+
     package = "mw92_96_periodic12_20261124"
     path = f"research/{package}"
     row = data(f"{path}/result.json")
