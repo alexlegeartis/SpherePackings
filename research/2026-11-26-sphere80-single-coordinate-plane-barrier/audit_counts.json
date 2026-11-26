@@ -1,0 +1,43 @@
+{
+  "scope": "One r-dimensional guest over one integral transverse residue with projected scaffold clearance, fixed binary period",
+  "source": "https://users.aalto.fi/~pat/opt/72_4.txt",
+  "normalization_sha256": "0f3fe74e631f11d3d3263c1c476d86ad142298ed6e2184f2b06370c771519d23",
+  "independent_counts": {
+    "2": {
+      "best": 5,
+      "arg": [
+        64,
+        511,
+        308
+      ],
+      "tests": 2703360
+    },
+    "3": {
+      "best": 13,
+      "arg": [
+        64,
+        255,
+        52
+      ],
+      "tests": 4055040
+    },
+    "5": {
+      "best": 38,
+      "arg": [
+        2,
+        756,
+        31
+      ],
+      "tests": 2838528
+    },
+    "6": {
+      "best": 52,
+      "arg": [
+        6,
+        62,
+        27
+      ],
+      "tests": 1419264
+    }
+  }
+}
