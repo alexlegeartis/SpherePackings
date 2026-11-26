@@ -1,0 +1,83 @@
+{
+  "method": "Multisource Hamming graph BFS to depth five on each punctured code, and independent pairwise XOR distances between odd cosets of depth at least seven.",
+  "results": [
+    {
+      "type": 0,
+      "weights": [
+        0,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        16
+      ],
+      "good3": 112,
+      "good4": 28,
+      "twoDuplicatedPairs": true,
+      "deep": 128,
+      "deepDiffMax": 4
+    },
+    {
+      "type": 1,
+      "weights": [
+        0,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "good3": 0,
+      "good4": 0,
+      "twoDuplicatedPairs": null,
+      "deep": 44,
+      "deepDiffMax": 6
+    },
+    {
+      "type": 2,
+      "weights": [
+        0,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        12,
+        12
+      ],
+      "good3": 0,
+      "good4": 0,
+      "twoDuplicatedPairs": null,
+      "deep": 32,
+      "deepDiffMax": 6
+    }
+  ]
+}
