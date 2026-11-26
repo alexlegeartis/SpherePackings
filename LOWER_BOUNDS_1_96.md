@@ -23,7 +23,7 @@ challenge value is discussed in that proof.
 | 11 | 6.62380270098011e-2 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 12 | 4.94541766242440e-2 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 13 | 3.20142921603497e-2 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
-| 14 | 2.16240960824471e-2 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
+| 14 | ≥2.25251000858823e-2 | [Triangular Hamming–Witt stack](constructions/dim14/) · [pinned comparator Λ14](https://www.math.rwth-aachen.de/homes/Gabriele.Nebe/LATTICES/density.html) |
 | 15 | 1.68575706567626e-2 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 16 | 1.47081643974308e-2 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 17 | 8.81131918232118e-3 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |

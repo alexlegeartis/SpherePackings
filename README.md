@@ -17,6 +17,8 @@ Reproducible certificates for unrestricted sphere packings, lattice-only upper b
 
 [All occupied-density lower bounds in dimensions 1–96](LOWER_BOUNDS_1_96.md).
 
+**26 November:** a [14D ternary triangular stack of Hamming cosets and Witt-code sheets](constructions/dim14/) raises the unrestricted lower bound by **4.17%** over the historical Λ14 packing. Exact center density: `25/(384 sqrt(3))`. The packing is periodic and nonlattice; the lattice lower bound is unchanged.
+
 **25 November:** a [35D lattice from nonradical E7 half-phases](research/e7_d6_nonradical_lift35_20261125/) raises the lattice and unrestricted density lower bounds to **1.54512247769657e-6** (center density `8/sqrt(3)`), **15.47%** above the preceding repository lattice and **63.30%** above the historical B35.
 
 **25 November:** an [index-two D6/E7 lattice](research/e7_d6_lattice34_20261125/) raises **34D** center density to `4`: +32.29% over the A6 periodic packing below, +73.21% over the preceding lattice and +80.02% over historical Elkies Q34. Its **33D primitive lattice section** matches the unrestricted A5/E7 value and raises the historical lattice lower bound by +3.93%.
