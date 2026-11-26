@@ -50,6 +50,10 @@ def build_table():
             source = cohn["source"] + "#data"
         add(n, center_squared, label, source)
 
+    # Exact center density 25/(384*sqrt(3)) from the verified 14D stack.
+    add(14, Fraction(25**2, 3*384**2), "Triangular Hamming–Witt stack",
+        "constructions/dim14/README.md", "2.25251000858823e-2")
+
     package = "research/vardy28_stack29_20261122"
     for row in data(f"{package}/results.json")["rows"]:
         assert row["dimension"] == 29 and row["kind"] == "explicit nonlattice periodic"
@@ -202,6 +206,12 @@ def build_table():
     add(95, row["squared_center_density"], "MW92 Eisenstein shear repair",
         f"{path}/README.md", row["occupied_density_lower"])
 
+    path = "research/mw92_paired_cover_9495_20261126"
+    for n, row in data(f"{path}/result.json").items():
+        assert int(n) in (94, 95)
+        add(int(n), row["center_density_squared"], "MW92 paired-cover shear",
+            f"{path}/README.md", row["occupied_density_floor"])
+
     package = "mw92_96_periodic12_20261124"
     path = f"research/{package}"
     row = data(f"{path}/result.json")
@@ -243,7 +253,12 @@ def build_table():
         density = (exact_floor or display_floor(occupied_squared)).lower()
         if n == 1:
             density = "1"
-        lines.append(f"| {n} | {density} | [{title}]({source}) |")
+        if n == 14 and title == "Triangular Hamming–Witt stack":
+            lines.append(f"| 14 | ≥{density} | [Triangular Hamming–Witt stack](constructions/dim14/) · [pinned comparator Λ14 — Leech (1964)](https://doi.org/10.4153/CJM-1964-065-1) |")
+        elif n == 30 and title == "Cohn’s literature table":
+            lines.append(f"| 30 | {density} | [Vardy’s T30 (1999)](https://doi.org/10.1090/S0002-9947-99-02169-8); matched by the [quaternary-code lattice](research/quaternary_29_30_20261122/) |")
+        else:
+            lines.append(f"| {n} | {density} | [{title}]({source}) |")
 
     lines.extend([
         "", "Rebuild the table with",

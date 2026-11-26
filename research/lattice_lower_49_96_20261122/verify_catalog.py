@@ -150,11 +150,14 @@ def readme_high_rows(data):
         source=f"[{prev['description']}]({prev['link']})"
         source += derived_tag(prev)
         eisenstein = new["link"] == "research/mw92_eisenstein_repair95_20261126/README.md"
-        refined = eisenstein or new["link"] == "research/mw92_cfr_taylor13_20261123/README.md"
+        paired = new["link"] == "research/mw92_paired_cover_9495_20261126/README.md"
+        refined = paired or eisenstein or new["link"] == "research/mw92_cfr_taylor13_20261123/README.md"
         new_display=float_floor(now*ball_squared(n,p), 16 if refined else 12)
         method=f"[{new['description']}]({new['link']})"
         method += derived_tag(new)
-        if eisenstein:
+        if paired:
+            method='[MW92 paired-cover shear; lattice existence proof](research/mw92_paired_cover_9495_20261126/)'
+        elif eisenstein:
             method='[MW92 Eisenstein shear repair; lattice existence proof](research/mw92_eisenstein_repair95_20261126/)'
         elif refined:
             method='[MW92 degree-13 covering refinement; lattice existence proof](research/mw92_cfr_taylor13_20261123/)'

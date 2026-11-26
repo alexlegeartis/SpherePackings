@@ -878,9 +878,9 @@
       },
       "repository": {
         "kind": "lattice existence",
-        "description": "MW92 degree-13 covering refinement",
-        "link": "research/mw92_cfr_taylor13_20261123/README.md",
-        "center_density_squared": "17654348630775039648288157752771561795287874687555097067520000000/220557491705482538844296604026377"
+        "description": "MW92 paired-cover shear",
+        "link": "research/mw92_paired_cover_9495_20261126/README.md",
+        "center_density_squared": "17654348630775039648288157752771561795287874687555097067520000000/218258222643155900411345646337957"
       }
     },
     {
@@ -897,9 +897,9 @@
       },
       "repository": {
         "kind": "lattice existence",
-        "description": "MW92 Eisenstein shear repair",
-        "link": "research/mw92_eisenstein_repair95_20261126/README.md",
-        "center_density_squared": "14123478904620031718630526202217249436230299750044077654016000000000000000/167436694218982824569873531782862662344067"
+        "description": "MW92 paired-cover shear",
+        "link": "research/mw92_paired_cover_9495_20261126/README.md",
+        "center_density_squared": "14123478904620031718630526202217249436230299750044077654016000000000000000/165474067041778738839546012018582545120509"
       }
     },
     {

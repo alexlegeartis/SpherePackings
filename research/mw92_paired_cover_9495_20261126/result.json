@@ -1,0 +1,31 @@
+{
+  "94": {
+    "previous_det": "859313833/45000000",
+    "generic_det": "187426112780529507/10000000000000000",
+    "fixed_det": "850355653/45000000",
+    "coverage_centers_per_L_cell": "5/2",
+    "squared_full_radius": "107840207/10000000",
+    "squared_weak_radius": "43520621/30000000",
+    "center_density_squared": "17654348630775039648288157752771561795287874687555097067520000000/218258222643155900411345646337957",
+    "occupied_density_floor": "8.078244769088839e-21",
+    "gain_percent_floor": "0.525351",
+    "derived_external_gain_percent_floor": "218.754679"
+  },
+  "95": {
+    "previous_det": "652349944595359843/9000000000000000",
+    "generic_det": "572786627/8000000",
+    "fixed_det": "644703354722796061/9000000000000000",
+    "worst_det": "644703354722796061/9000000000000000",
+    "generic_coverage_centers_per_L_cell": "8",
+    "fixed_coverage_centers_per_L_cell": "15/2",
+    "fixed_large_dimer_square_counts": [
+      6,
+      1,
+      4
+    ],
+    "center_density_squared": "14123478904620031718630526202217249436230299750044077654016000000000000000/165474067041778738839546012018582545120509",
+    "occupied_density_floor": "2.128470378304569e-21",
+    "gain_percent_floor": "0.591283",
+    "derived_external_gain_percent_floor": "434.695175"
+  }
+}
