@@ -38,6 +38,7 @@ def points(m,par=None):
   for x in range(lo,hi+1,step):
    v[k]=x;yield from rec(k-1,left-(e*x+s)**2*top[k]//bot[k])
  yield from rec(N-1,m*scale)
+assert next(points(2), None) is None # no roots; even Gram and positive LDL then give minimum >=4
 def canon(p):
  q=[x%24 for x in p];q[0]+=24*(sum((x-y)//24 for x,y in zip(p,q))%2);return tuple(q)
 def plus(p,q):return canon([x+y for x,y in zip(p,q)])
