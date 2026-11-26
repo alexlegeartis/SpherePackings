@@ -23,3 +23,9 @@ At vertical squared distance 3, the third color difference is 0. For binary shee
 The periods 6e and 6f preserve all labels and offsets. There are 12 sheets of each color in this cell and \(12(144+128+128)=4800\) sites per horizontal/vertical product cell. Its volume is \(2^{12}\cdot36\sqrt3/2=73728\sqrt3\). The ratio gives the density above. This set cannot be a lattice or a translate of one: fibers in the vertical projection would then be cosets of a common horizontal lattice and have the same number of sites per horizontal period, whereas these fibers have 144 or 128.
 
 Run `python3 verify.py` for a standalone finite integer replay of the 36 sheets, all short vertical offsets and every short horizontal pairing. Source attribution: the 144-word code is historical; the new ingredient is the mixed triangular stack, in which the three honeycomb edge directions use three distinct missing Hamming columns.
+
+## Scope of sharpness and local rigidity
+
+- [Sharp capacity of triangular binary/half-binary layers and two precise 15D comparisons](THEOREMS.md).
+- [Strict local optimality in every fixed finite supercell](RIGIDITY.md), including arbitrary independent site motions and full Gram strains. This is not a global upper bound.
+- [A separate rigidity proof in 13D](../../research/julin13_rigidity_20261126/README.md). Replay the finite common ingredients with `python3 verify_structural.py`.
