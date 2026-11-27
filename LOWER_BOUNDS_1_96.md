@@ -1,5 +1,7 @@
 # Sphere-packing lower bounds in dimensions 1–96
 
+[Cohn’s 1–48D unrestricted table](research/cohn_listing_20261128/) checked 28 November 2026 (Moscow time).
+
 The table gives occupied-volume density floors. It uses Cohn’s literature table for
 1–48D and replaces its bounds where this repository has verified improvements.
 For 49–96D it uses the strongest checked constructions in the repository’s audit
@@ -20,7 +22,7 @@ challenge value is discussed in that proof.
 | 8 | 2.53669507901048e-1 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 9 | 1.45774875808171e-1 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 10 | 9.96157828077088e-2 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
-| 11 | 6.6238027009816747e-2 | [Witt-derived phase-slip packing](research/witt11_phase_slip_20261127/PHASE_SLIP_11D.md) |
+| 11 | 6.63530235844709e-2 | [Cohn’s alternating Witt slabs (2026)](https://cohn.mit.edu/sphere-packing/#9), exact center density `577/16384`; adapts our [earlier phase-slip packing](research/witt11_phase_slip_20261127/PHASE_SLIP_11D.md) |
 | 12 | 4.94541766242440e-2 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 13 | 3.20142921603497e-2 | [Cohn’s literature table](https://cohn.mit.edu/sphere-packing/#data) |
 | 14 | ≥2.25251000858823e-2 | [Triangular Hamming–Witt stack](constructions/dim14/) · [pinned comparator Λ14 — Leech (1964)](https://doi.org/10.4153/CJM-1964-065-1) |

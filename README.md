@@ -1,11 +1,11 @@
 # Sphere-packing density bounds and constructions
 
-[Henry Cohn’s sphere-packing tables](https://cohn.mit.edu/sphere-packing/) cite this repository for the following records (**checked 17 November 2026**):
+[Henry Cohn’s sphere-packing tables](https://cohn.mit.edu/sphere-packing/) were **checked 28 November 2026 (Moscow time)**. They cite this repository for:
 - **Unrestricted upper bounds:** dimensions **4–7, 9–23 and 25–48**.
-- **Lattice-only upper bounds:** dimensions **14–23 and 25–48**.
-- **Packing lower bound:** dimension **36**, in both tables.
+- **Lattice-only upper bounds:** dimensions **14–23, 25–43 and 45–48**; the current 44D lattice upper bound instead cites [Zubrilina](https://cohn.mit.edu/sphere-packing/#37).
+- **Unrestricted lower bounds:** dimensions **14, 29, 31 and 33–38**; **lattice lower bounds:** dimensions **29–31 and 33–38**. The **11D unrestricted record** is [Cohn’s modification](https://cohn.mit.edu/sphere-packing/#9) of our earlier construction, not our density result.
 
-[Verified citation coverage and source snapshot](research/cohn_listing_20261117/). The current page lists dimensions 1–48; this is not a claim that every latest refinement, or any 49D+ result, is already listed. Citation does not establish optimality or independent verification by the table’s author.
+[Current source and attribution snapshot](research/cohn_listing_20261128/). Both live tables cover dimensions 1–48; this does not establish the status of 49D+ results or independently verify all cited constructions.
 
 Reproducible certificates for unrestricted sphere packings, lattice-only upper bounds and packing constructions are separated below. Comparisons remain source-attributed; derived guarantees, numerical benchmarks and certified bounds are not interchangeable, and no exhaustive worldwide-priority claim is made.
 
@@ -17,7 +17,9 @@ Reproducible certificates for unrestricted sphere packings, lattice-only upper b
 
 [All occupied-density lower bounds in dimensions 1–96](LOWER_BOUNDS_1_96.md).
 
-**27 November, 11D:** the [Witt-derived phase-slip packing](research/witt11_phase_slip_20261127/PHASE_SLIP_11D.md) raises the unrestricted occupied-density lower bound to **0.066238027009816747**, above the [Leech–Sloane P11a packing (1971)](https://neilsloane.com/doc/Me14.pdf), whose density is approximately **0.066238027009801180**. The relative gain is strictly greater than **2.350 × 10⁻¹³**, certified by exact arithmetic. The packing is periodic and nonlattice; the lattice-only bound is unchanged.
+**28 November check, 11D:** [Henry Cohn’s alternating Witt slab packing](https://cohn.mit.edu/sphere-packing/#9) supersedes our phase-slip result with center density `577/16384` (occupied density `0.0663530235844709…`). The [MIT coordinate archive, entry `dimension_11.2`](https://dspace.mit.edu/server/api/core/bitstreams/f62f3534-129f-4388-acf9-db34bf63bfbf/content) gives 577 centers. Cohn credits our construction as the starting point; the higher density is his. The lattice-only bound is unchanged.
+
+**27 November, 11D (historical project result, now superseded):** the [Witt-derived phase-slip packing](research/witt11_phase_slip_20261127/PHASE_SLIP_11D.md) gave the then-current unrestricted occupied-density lower bound **0.066238027009816747**, above the [Leech–Sloane P11a packing (1971)](https://neilsloane.com/doc/Me14.pdf), whose density is approximately **0.066238027009801180**. The relative gain is strictly greater than **2.350 × 10⁻¹³**, certified by exact arithmetic. The packing is periodic and nonlattice; the lattice-only bound is unchanged.
 
 **26 November:** [paired-cover shears in 94D and 95D](research/mw92_paired_cover_9495_20261126/) give improved lattice and unrestricted occupied-density floors of **8.078244769088839e-21** and **2.128470378304569e-21**, respectively. The gains over the previous certified bounds are **0.52535%** and **0.59128%**.
 
@@ -80,7 +82,7 @@ The [literature review dated 16 November 2026](research/covering_and_deep_cosets
 
 | n | Comparison density / method | Our density / method | Increase |
 | ---: | --- | --- | ---: |
-| 11 | ≈6.6238027009801180e-2<br>[P11a — Leech–Sloane (1971), §2.6](https://neilsloane.com/doc/Me14.pdf) | **≥6.6238027009816747e-2**<br>[Periodic nonlattice Witt-derived phase-slip packing](research/witt11_phase_slip_20261127/PHASE_SLIP_11D.md) | **>2.350 × 10⁻¹¹%** |
+| 11 | ≈6.6238027009801180e-2<br>[P11a — Leech–Sloane (1971), §2.6](https://neilsloane.com/doc/Me14.pdf) | **≥6.6238027009816747e-2**<br>[Periodic nonlattice Witt-derived phase-slip packing](research/witt11_phase_slip_20261127/PHASE_SLIP_11D.md)<br>**Superseded:** [Cohn, 2026](https://cohn.mit.edu/sphere-packing/#9), **0.0663530235844709…** | **>2.350 × 10⁻¹¹%** |
 | 14 | ≈2.16240960824471e-2<br>[Λ14 — Leech (1964), §2.4 & Table II](https://doi.org/10.4153/CJM-1964-065-1) · [Nebe–Sloane catalogue](https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/LAMBDA14.html) | **≥2.25251000858823e-2**<br>[Periodic nonlattice Hamming–Witt triangular stack; exact center density `25/(384 sqrt(3))`](constructions/dim14/) | **4.166667%** |
 | 29 | ≈3.41446469074224e-5<br>[B29* — Vardy (1999)](https://doi.org/10.1090/S0002-9947-99-02169-8) | **≥4.82878227389174e-5**<br>[Alternating Vardy-type layers, exact center density `1`](research/vardy28_stack29_20261122/) | **41.421356%** |
 | 31 | ≈1.18377651859338e-5<br>[Q31 — Quebbemann (1984), section of Q32](https://doi.org/10.1112/S0025579300010731) | **≥1.38411060495194e-5**<br>[Order-four shear of Vardy-type stocks, exact center density `sqrt(2)`](research/vardy30_shear31_20261123/) | **16.923303%** |
