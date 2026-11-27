@@ -51,12 +51,12 @@ def build_table():
         add(n, center_squared, label, source)
 
     # Constructed with 72(N-1)+1 centers in the axial supercell.
-    n_layers = 147_256_021_568
+    n_layers = 14_784_265_480
     center_squared = (72 + Fraction(1, n_layers - 1))**2
-    center_squared *= (1 - Fraction(1, 2**46))**11 / 2**22
+    center_squared *= (1 - Fraction(1, 4 * 1182**4))**11 / 2**22
     assert center_squared > max(x[0] for x in candidates[11])
     add(11, center_squared, "Witt-derived phase-slip packing",
-        "research/witt11_phase_slip_20261127/PHASE_SLIP_11D.md", "6.6238027009802250e-2")
+        "research/witt11_phase_slip_20261127/PHASE_SLIP_11D.md", "6.6238027009816747e-2")
 
     # Exact center density 25/(384*sqrt(3)) from the verified 14D stack.
     add(14, Fraction(25**2, 3*384**2), "Triangular Hamming–Witt stack",

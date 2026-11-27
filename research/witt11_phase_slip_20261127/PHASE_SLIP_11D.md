@@ -82,3 +82,45 @@ The exact Bernoulli relative improvement is now at least
 ```
 
 Replay both variants with `node verify_phase_slip.js`. It checks the literal core code, the rational compressed interval schedule, and both Bernoulli and exact squared density comparisons; the universal distance inequalities above cover each of the `N` steps without enumerating them.
+
+
+## Shorter, denser panel schedule
+
+Keep the same Witt core and transverse offset \((-1)^l s_l^2 e/2\).
+Use \(h=1/1182\), \(\epsilon=h^4\), and guaranteed squared separation
+\(\mu=4-\epsilon\). On \([0,1]\) take knots
+\(0,h,2h,4h,\ldots,1024h,1\). Divide every consecutive knot interval
+into 64 equal panels. In a panel \([a,b]\), take
+\[
+q_{a,b}=\left\lceil\frac{4(b-a)}{\epsilon+a^4}\right\rceil
+\]
+equal increments. Reflect the knots and subdivisions through 1 for
+the second half. The concatenation has \(N=14{,}784{,}265{,}480\)
+increments (768 panels on each half), giving the supplied axial period
+\(P=2(N-1)=29{,}568{,}530{,}958\). The period need not be primitive.
+With \(s_l=\min(\phi_l,2-\phi_l)\) and \(z_l=2l-\phi_l\), the same layers as
+above close at the seam since \(N\) is even.
+
+For an adjacent pair in a panel whose smaller endpoint distance from
+\(\{0,2\}\) is \(a\), the actual increment has
+\(d\le(\epsilon+a^4)/4\). Its alternating transverse gap lies between
+\(a^2\) and 1, so it is a shortest gap modulo the transverse period.
+The squared separation is at least
+\((2-d)^2+a^4\ge4-\epsilon\).
+Each \(d<1/2\), accounting for all nonadjacent layers by axial
+separation alone. The older core–layer bound \(4+s_l^2-2(s_l^2/2)=4\),
+the in-layer and core–core bounds, and the nonlattice proof are unchanged.
+
+The ratio to P11a is \((1+1/F)(1-\epsilon/4)^{11/2}\), where
+\(F=72(N-1)\). Its improvement is bounded below by the exact Bernoulli
+fraction
+\[
+\frac{3906505511629}{16622339265797396791163904}>2.350\times10^{-13}.
+\]
+The occupied-volume density is at least **0.066238027009816747**.
+The [table generator](../lower_bounds_1_96_20261122/verify_table.py)
+verifies the decimal floor with an exact rational lower bound on \(\pi\);
+the occupied-to-center-density factor is \(64\pi^5/10395\).
+Run `node verify_panel_phase_slip.js` (ordinary Node.js) for an independent
+integer replay of the compressed increment counts and the strict comparison
+to both P11a and the earlier long-period witness.
