@@ -17,6 +17,10 @@ Reproducible certificates for unrestricted sphere packings, lattice-only upper b
 
 [All occupied-density lower bounds in dimensions 1–96](LOWER_BOUNDS_1_96.md).
 
+<a id="packing-11d"></a>
+
+**27 November, 11D:** the [Witt-derived phase-slip packing](research/witt11_phase_slip_20261127/PHASE_SLIP_11D.md) raises the unrestricted occupied-density lower bound to **0.066238027009802250**, above the [Leech–Sloane P11a packing (1971)](https://neilsloane.com/doc/Me14.pdf), whose density is approximately **0.066238027009801180**. The relative gain is strictly greater than **1.6 × 10⁻¹⁴**, certified by exact arithmetic. The packing is periodic and nonlattice; the lattice-only bound is unchanged.
+
 **26 November:** [paired-cover shears in 94D and 95D](research/mw92_paired_cover_9495_20261126/) give improved lattice and unrestricted occupied-density floors of **8.078244769088839e-21** and **2.128470378304569e-21**, respectively. The gains over the previous certified bounds are **0.52535%** and **0.59128%**.
 
 **26 November:** an [Eisenstein shear repair in 95D](research/mw92_eisenstein_repair95_20261126/) gives a lattice packing with occupied density at least **2.115959060080788e-21**, improving the previous certified lattice and unrestricted lower bounds by **0.5657%**.
@@ -275,7 +279,7 @@ The exact comparison gives **35 smaller upper bounds** and **one tie**, the exac
 
 ## Recent updates
 
-**27 November, 11D:** an explicit periodic nonlattice packing beats the classical P11a density by a strictly positive but tiny amount (relative gain greater than 1.6 × 10⁻¹⁴). The gain comes from inserting one extra transverse layer over a long axial period. [Exact proof and replay](research/witt11_phase_slip_20261127/PHASE_SLIP_11D.md).
+**27 November:** [Strict 11D improvement over P11a](#packing-11d).
 **24 November:** a [twelve-color periodic MW92 packing](research/mw92_96_periodic12_20261124/) improves the **96D** occupied density lower bound to **≥6.367774598225213e-22**, up **1.8708%** from the preceding repository bound. The lattice-only lower bound is unchanged.
 
 **22 November:** a [quaternary-code lattice and its section](research/quaternary_29_30_20261122/) match the unrestricted lower-bound densities in **29D** and **30D**, improving the immediately preceding lattice bounds by **1.55%** and **28.09%**, respectively.
