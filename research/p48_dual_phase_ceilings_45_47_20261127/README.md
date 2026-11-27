@@ -74,3 +74,7 @@ For a primitive normal \(u\) of squared norm \(t=6,8,10\), the normal labels of 
 ## Remaining construction scope
 
 The proofs concern the displayed fixed normals and dual phases. They do not exclude continuous phases outside the dual group, different normal Gram types or deformation of the period metric. The most promising transferable ingredient is the degree-12 **cross-shell** constraint: a suspected missing projected contact at one shell can force a positive contact count at the next before any full shell enumeration.
+
+## Verified 44D addendum
+
+For the particular published determinant-605 normal realized in the literal P48p stock, [the 44D proof](CHEN44.md) gives exact explicit lifts in all 605 dual classes and a sharp density ceiling for every dual-phase union. This addendum is specific to that embedding.
