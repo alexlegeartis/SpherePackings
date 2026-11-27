@@ -275,6 +275,7 @@ The exact comparison gives **35 smaller upper bounds** and **one tie**, the exac
 
 ## Recent updates
 
+**27 November, 11D:** an explicit periodic nonlattice packing beats the classical P11a density by a strictly positive but tiny amount (relative gain greater than 1.6 × 10⁻¹⁴). The gain comes from inserting one extra transverse layer over a long axial period. [Exact proof and replay](research/witt11_phase_slip_20261127/PHASE_SLIP_11D.md).
 **24 November:** a [twelve-color periodic MW92 packing](research/mw92_96_periodic12_20261124/) improves the **96D** occupied density lower bound to **≥6.367774598225213e-22**, up **1.8708%** from the preceding repository bound. The lattice-only lower bound is unchanged.
 
 **22 November:** a [quaternary-code lattice and its section](research/quaternary_29_30_20261122/) match the unrestricted lower-bound densities in **29D** and **30D**, improving the immediately preceding lattice bounds by **1.55%** and **28.09%**, respectively.
