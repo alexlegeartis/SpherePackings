@@ -17,8 +17,6 @@ Reproducible certificates for unrestricted sphere packings, lattice-only upper b
 
 [All occupied-density lower bounds in dimensions 1–96](LOWER_BOUNDS_1_96.md).
 
-<a id="packing-11d"></a>
-
 **27 November, 11D:** the [Witt-derived phase-slip packing](research/witt11_phase_slip_20261127/PHASE_SLIP_11D.md) raises the unrestricted occupied-density lower bound to **0.066238027009802250**, above the [Leech–Sloane P11a packing (1971)](https://neilsloane.com/doc/Me14.pdf), whose density is approximately **0.066238027009801180**. The relative gain is strictly greater than **1.6 × 10⁻¹⁴**, certified by exact arithmetic. The packing is periodic and nonlattice; the lattice-only bound is unchanged.
 
 **26 November:** [paired-cover shears in 94D and 95D](research/mw92_paired_cover_9495_20261126/) give improved lattice and unrestricted occupied-density floors of **8.078244769088839e-21** and **2.128470378304569e-21**, respectively. The gains over the previous certified bounds are **0.52535%** and **0.59128%**.
@@ -78,8 +76,11 @@ this table are occupied-volume fractions.
 
 The [literature review dated 16 November 2026](research/covering_and_deep_cosets_20261115/PRIORITY.md) records the external guarantees and derived comparisons. Attribution and exact comparison arithmetic for 85D–90D were rechecked on 17 November. **Derived** does not mean that the source printed that dimension-specific record. For 89D–90D, the comparison is a newly evaluated consequence of pre-existing spherical linear-programming and section theorems, not a numerical record printed by those authors. It improves on the earlier Rogers-derived comparison. These are the strongest external-derived comparisons certified in this follow-up, not an exhaustive worldwide-priority claim. Numerical bootstrap spectra suggest stronger expected Cohn–Elkies (CE) comparisons for the 89D–90D section route, but the same-radius lift to a CE function is conjectural in general and the required function inequalities are not certified here; see the linked comparison note.
 
+<a id="packing-11d"></a>
+
 | n | Comparison density / method | Our density / method | Increase |
 | ---: | --- | --- | ---: |
+| 11 | ≈6.6238027009801180e-2<br>[P11a — Leech–Sloane (1971), §2.6](https://neilsloane.com/doc/Me14.pdf) | **≥6.6238027009802250e-2**<br>[Periodic nonlattice Witt-derived phase-slip packing](research/witt11_phase_slip_20261127/PHASE_SLIP_11D.md) | **>1.6 × 10⁻¹²%** |
 | 14 | ≈2.16240960824471e-2<br>[Λ14 — Leech (1964), §2.4 & Table II](https://doi.org/10.4153/CJM-1964-065-1) · [Nebe–Sloane catalogue](https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/LAMBDA14.html) | **≥2.25251000858823e-2**<br>[Periodic nonlattice Hamming–Witt triangular stack; exact center density `25/(384 sqrt(3))`](constructions/dim14/) | **4.166667%** |
 | 29 | ≈3.41446469074224e-5<br>[B29* — Vardy (1999)](https://doi.org/10.1090/S0002-9947-99-02169-8) | **≥4.82878227389174e-5**<br>[Alternating Vardy-type layers, exact center density `1`](research/vardy28_stack29_20261122/) | **41.421356%** |
 | 31 | ≈1.18377651859338e-5<br>[Q31 — Quebbemann (1984), section of Q32](https://doi.org/10.1112/S0025579300010731) | **≥1.38411060495194e-5**<br>[Order-four shear of Vardy-type stocks, exact center density `sqrt(2)`](research/vardy30_shear31_20261123/) | **16.923303%** |
