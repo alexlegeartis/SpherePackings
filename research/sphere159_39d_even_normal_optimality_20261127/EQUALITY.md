@@ -1,0 +1,13 @@
+# Sphere 159 equality addendum: the rank-nine determinant minimizer is a unique lattice
+
+This optional addendum strengthens both verified Sphere 159 proofs. Every even integral rank-nine K of squared minimum ≥6 with Gram determinant 21870 is **isometric to the Dorofeev–Sun–Wang K₉**. This does not identify its embedding into an ambient lattice or the isometry class of the complementary 39D section. The latter distinction is real: DSW already counted different kissing numbers for different embeddings.
+
+The global proof shows that every equality case contains S=√3E₈. The maximal squared dual glue depth of S is 8/3<6, so S is primitive. The rank-one quotient K/S has a generator whose projected squared length is det(K)/det(S)=21870/6561=10/3. Reduce the lift v by S so its horizontal component is the least vector of its dual class. Since |v|²≥6 and the depth is at most 8/3, that depth must equal 8/3, and |v|²=6. Thus it remains to check that all deepest dual classes are isometric by an automorphism of S. If so, changing the lift by seed vectors and optionally reversing the perpendicular coordinate identifies the entire extension.
+
+There are exactly 1920 deepest dual classes, and they form one orbit under just the eight standard simple-root reflections of E₈. Here is a standalone direct finite check:
+
+1. Use E₈ = D₈ ∪ (D₈+(1/2)^8), with the standard simple roots as in the root-seed note. For x∈E₈, twice its coordinates are either all even or all odd with sum divisible by 4. The Gram matrix of the simple roots has determinant 1.
+2. The class of x modulo 3E₈ is given by its eight pairings with the roots modulo 3. This is exact because the root Gram is unimodular. Enumerate the whole unscaled ball |x|²≤8, with doubled coordinates in [−5,5] and sum of their squares ≤32. The class minima of 4|x|² are 0,8,16,24,32 with multiplicities 1,240,2160,2240,1920. Their sum is 6561=3^8, so all classes and their actual minima are covered. Phase x/√3 is the corresponding vector in S*.
+3. In pairing coordinates m_i=⟨x,a_i⟩ modulo 3, the simple reflection at a_j sends m_i to m_i−m_j⟨a_j,a_i⟩. The closure of the first depth-32 class under those eight literal maps has size 1920, and every reached class still has depth 32. Therefore the entire deepest set is a single orbit.
+
+Run `node verify_equality.cjs`; the above count and group orbit take well below one second on a standard Node.js runtime. The [DSW Appendix A.2 K₉](https://arxiv.org/html/2607.20359v4#A1.SS2) is one equality example, so every minimizer is isometric to that K₉. Inherited-radius density and scope remain unchanged.
