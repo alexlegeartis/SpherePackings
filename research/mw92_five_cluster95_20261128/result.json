@@ -1,0 +1,10 @@
+{
+  "previous_det": "644703354722796061/9000000000000000",
+  "generic_det": "3578813470795833160453541/50000000000000000000000",
+  "fixed_det": "128730411665656171/1800000000000000",
+  "worst_det": "3578813470795833160453541/50000000000000000000000",
+  "generic_coverage_centers_per_L_cell": "8",
+  "fixed_coverage_centers_per_L_cell": "73/10",
+  "occupied_density_floor": "2.129324206844210e-21",
+  "gain_percent_floor": "0.040114"
+}
