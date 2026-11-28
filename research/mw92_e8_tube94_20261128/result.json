@@ -1,0 +1,18 @@
+{
+  "94": {
+    "old_tail_det": "850355653/45000000",
+    "tail_det": "8488711/450000",
+    "occupied_density_floor": "8.08530552528770e-21",
+    "center_density_floor": "9.00160537190e+15",
+    "gain_percent_floor": "0.0874"
+  },
+  "95": {
+    "old_tail_det": "128087542791988171/1800000000000000",
+    "tail_det": "12783236155039/180000000000",
+    "occupied_density_floor": "2.13767740764968e-21",
+    "center_density_floor": "9.27855676495e+15",
+    "gain_percent_floor": "0.09975"
+  },
+  "kind": "lattice existence (real shears)",
+  "minimum_squared_norm": 16
+}
