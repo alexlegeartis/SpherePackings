@@ -77,7 +77,7 @@ challenge value is discussed in that proof.
 | 63 | 1.56659999939401e-12 | [Elkies E63, Vardy1999 printed log2 prefix 23.92](https://doi.org/10.1090/S0002-9947-99-02169-8) |
 | 64 | 1.32606329668913e-12 | [Nebe Ne64](https://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/CQ64b.html) |
 | 65 | 3.89626482463401e-13 | [Explicit Ne65, certified depth 26/3](research/novel_routes_20261113/higher_parent/ne65_verified.json) |
-| 66 | 2.47245087470487e-13 | [Gamma72 product-normal packing, 16 translates](constructions/dim66/) |
+| 66 | 2.59301812299247e-13 | [Gamma72 simplex–triangle packing, 15 translates](constructions/dim66_k4_a2/) |
 | 67 | 2.25740310941595e-13 | [Gamma72 product-normal packing, 12 translates](constructions/dim67/) |
 | 68 | 2.20071022066104e-13 | [Gamma72 antipode, 5 translates](research/novel_routes_20261113/higher_parent/gamma72_verified.json) |
 | 69 | 1.90860666781911e-13 | [Gamma72 antipode, 4 translates](research/novel_routes_20261113/higher_parent/gamma72_verified.json) |
