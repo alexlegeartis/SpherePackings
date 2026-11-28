@@ -1,0 +1,13 @@
+{
+  "previous_det": "14260143213204819/200000000000000",
+  "generic_det": "35423551746542630582753447/500000000000000000000000",
+  "fixed_det": "128087542791988171/1800000000000000",
+  "worst_det": "128087542791988171/1800000000000000",
+  "generic_coverage_centers_per_L_cell": "27/4",
+  "fixed_coverage_centers_per_L_cell": "121/18",
+  "minimum_squared_norm": 16,
+  "occupied_density_floor": "2.13554696184854e-21",
+  "center_density_floor": "9.26930959687e+15",
+  "gain_percent_floor": "0.099",
+  "kind": "lattice existence (real shears)"
+}

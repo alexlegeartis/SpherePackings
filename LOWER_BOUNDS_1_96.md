@@ -106,7 +106,7 @@ challenge value is discussed in that proof.
 | 92 | 1.31340615344155e-19 | [Shioda MW92](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) |
 | 93 | 3.045564894259504e-20 | [MW92 degree-13 covering refinement](research/mw92_cfr_taylor13_20261123/README.md) |
 | 94 | 8.078244769088839e-21 | [MW92 paired-cover shear](research/mw92_paired_cover_9495_20261126/README.md) |
-| 95 | 2.133434801047687e-21 | [MW92 nine-site simplex covering repair](research/mw92_nine_cluster95_20261128/README.md) |
+| 95 | 2.13554696184854e-21 | [MW92 cross-phase covering; lattice existence proof](research/mw92_cross_phase_cover95_20261128/README.md) |
 | 96 | 6.367793872884866e-22 | [MW92 twelve-color metric refinement](research/mw92_96_refined_tail_20261125/README.md) |
 
 Rebuild the table with
