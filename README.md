@@ -242,7 +242,7 @@ occupied-volume fractions. Periodic packings that are not lattices are excluded.
 | 93 | ≈1.70235478236e-20<br>[Shioda MW92 x classical 1D lattice](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) (derived; 1991/2019 sources) | **≥3.045564894259504e-20**<br>[MW92 degree-13 covering refinement; lattice existence proof](research/mw92_cfr_taylor13_20261123/) | **+78.9030%** |
 | 94 | ≈2.53431409158e-21<br>[Shioda MW92 x classical 2D lattice](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) (derived; 1991/2019 sources) | **≥8.078244769088839e-21**<br>[MW92 paired-cover shear; lattice existence proof](research/mw92_paired_cover_9495_20261126/) | **+218.7546%** |
 | 95 | ≈3.98071737750e-22<br>[Shioda MW92 x classical 3D lattice](https://web.archive.org/web/20200209144320id_/http://www2.iag.uni-hannover.de/%7Eschuett/BookMWL17.pdf) (derived; 1991/2019 sources) | **≥2.133434801047687e-21**<br>[MW92 nine-site simplex covering repair; lattice existence proof](research/mw92_nine_cluster95_20261128/) | **+435.9422%** |
-| 96 | ≈2.79502329482e-22<br>[BCS96, Table 1 (1982)](https://neilsloane.com/doc/Me103.pdf) | **≥5.93710931559e-22**<br>[MW92 cusp reduction glued to D4](research/mw92_cusp_d4_20261122/README.md) | **+112.41%** |
+| 96 | ≈2.79502329482e-22<br>[BCS96, Table 1 (1982)](https://neilsloane.com/doc/Me103.pdf) | **≥5.938937064720705e-22**<br>[MW92 with an Eisenstein tail and torus shears](research/mw92_eisenstein96_20261128/README.md) | **+112.48%** |
 
 The 29D and 30D rows improve Cohn’s listed lattice bounds and tie his listed
 unrestricted bounds. The 34–37D E7 rows improve both pinned tables. The 36D
